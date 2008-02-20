@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="/home/desenvolvimento/f2ibuilder/distro/tmp/F2IBuilder/F2IBuilder.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/F2IBuilder/export_F2IBuilder.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="false" mainClassHandleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder{F2IBuilderMain.java[F2IBuilderMain" manifestLocation="/F2IBuilder/MANIFEST.MF" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="true">
+<packagesToSeal>
+<package handleIdentifier="=F2IBuilder/src&lt;br.org.codigolivre.pjmoo.f2ibuilder"/>
+<package handleIdentifier="=F2IBuilder/src&lt;br.org.codigolivre.pjmoo.f2ibuilder.acao.evento"/>
+<package handleIdentifier="=F2IBuilder/src&lt;br.org.codigolivre.pjmoo.f2ibuilder.bean"/>
+<package handleIdentifier="=F2IBuilder/src&lt;br.org.codigolivre.pjmoo.f2ibuilder.ui.componente"/>
+<package handleIdentifier="=F2IBuilder/src&lt;br.org.codigolivre.pjmoo.f2ibuilder.ui.janela"/>
+</packagesToSeal>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.acao.evento{Evento.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.acao.evento{ChangeListener.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.acao.evento{ActionListener.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente.cor{ColorPanel.java"/>
+<file path="/F2IBuilder/resource/dukitan.png"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{MetricsLimit.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente.cor{ColorGroup.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.entidade{Opcoes.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.entidade{TabelaCharset.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{Credito.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.util{InternetBrowser.java"/>
+<file path="/F2IBuilder/resource/david_ferreira.jpg"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente{SurfacePanel.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente.combo{ComboFonte.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder{F2IBuilderMain.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{CharsetMap.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{Sobre.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{Principal.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.util{Constante.java"/>
+<file path="/F2IBuilder/copying"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.util.dialog.filtros{FileMetricFilter.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.entidade{Fonte.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.acao.evento{ItemListener.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente{ImagePanel.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.util.dialog.filtros{FileImageFilter.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.janela{MetricsMap.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.util.dialog{FileDialog.java"/>
+<javaElement handleIdentifier="=F2IBuilder/src&lt;com.google.code.p.f2ibuilder.ui.componente.combo{ComboBox.java"/>
+</selectedElements>
+</jardesc>
