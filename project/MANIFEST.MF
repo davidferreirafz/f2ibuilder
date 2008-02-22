@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 Sealed: true
-Main-Class: com.google.code.p.f2ibuilder.F2IBuilderMain
+Main-Class: net.sourceforge.f2ibuilder.F2IBuilderMain
 

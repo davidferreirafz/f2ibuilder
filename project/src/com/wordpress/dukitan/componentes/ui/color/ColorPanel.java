@@ -25,83 +25,67 @@
 /* License.                                                                  */
 /*                                                                           */
 /*****************************************************************************/
-package net.sourceforge.f2ibuilder.components.dialog;
+package com.wordpress.dukitan.componentes.ui.color;
 
-import java.awt.Component;
-import java.io.File;
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
-import javax.swing.JFileChooser;
+import javax.swing.JPanel;
 
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
-
-
+import com.wordpress.dukitan.componentes.gof.observer.IObservable;
+import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
 
-public class FileDialog
+public class ColorPanel extends JPanel implements IObservable
 {
-	static private FileDialog instance;
-	
-	private JFileChooser dialogImagem;
-	private JFileChooser dialogMetrica;	
-	private String caminhoImagem;
-	private String caminhoMetrica;
-	
-	private FileDialog()
+	private static final long serialVersionUID = 3411829393903616525L;
+    private ColorPanelControl control;
+    private List<Observer> listObserver;
+    
+	public ColorPanel()
 	{
-		dialogImagem   = new JFileChooser();
-		dialogMetrica  = new JFileChooser();	
-		caminhoImagem  = "";
-		caminhoMetrica = "";
+        listObserver = new ArrayList<Observer>();
+        
+		control = new ColorPanelControl();
 		
-	
-		dialogImagem.setFileFilter(new FileImageFilter());
-		dialogMetrica.setFileFilter(new FileMetricFilter());
+		addMouseListener(control);
 	}
-	
-	static public FileDialog getInstance()
-	{
-		if (instance==null){
-			instance = new FileDialog();
-		}
-		return instance;
-	}
-	
-	public boolean showSaveDialogImage(Component componente)
-	{
-		int retorno = dialogImagem.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (retorno == JFileChooser.APPROVE_OPTION) {
-			File file = dialogImagem.getSelectedFile();
-			caminhoImagem=file.getAbsolutePath();
-			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
-			ok=true;
-		}
-		return ok;		
-	}
-	
-	public String getFilePathImage()
-	{
-		return caminhoImagem;
-	}
-	
-	public boolean showSaveDialogMetric(Component componente)
-	{
-		int returnVal = dialogMetrica.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
-			File file = dialogMetrica.getSelectedFile();
-			caminhoMetrica=file.getAbsolutePath();
-			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
-			ok=true;
-		}
-		return ok;
-	}
-	
-	public String getFilePathMetric()
-	{
-		return caminhoMetrica;
-	}
+
+    public void setTitulo(String titulo)
+    {
+    	control.setTitle(titulo);
+    }
+
+    @Override
+    public void desregister(Observer observer)
+    {
+        listObserver.remove(observer);
+    }
+
+    @Override
+    public void register(Observer observer)
+    {
+        listObserver.add(observer);
+    }
+    
+    @Override
+    public void setBackground(Color bg)
+    {
+        super.setBackground(bg);
+        updateObserver();
+    }
+    
+    protected void updateObserver()
+    {
+        if ((listObserver!=null)&&(!listObserver.isEmpty())){
+            ListIterator<Observer> i= listObserver.listIterator(0);
+        
+            while (i.hasNext()){
+                i.next().update();
+            }
+        }
+    }    
+
 }

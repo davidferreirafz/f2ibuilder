@@ -25,83 +25,43 @@
 /* License.                                                                  */
 /*                                                                           */
 /*****************************************************************************/
-package net.sourceforge.f2ibuilder.components.dialog;
+package com.wordpress.dukitan.componentes.ui.image;
 
-import java.awt.Component;
-import java.io.File;
+import java.awt.Graphics;
+import java.awt.Image;
 
-import javax.swing.JFileChooser;
-
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 
-
-
-public class FileDialog
+/**
+ * Classe para exibição de uma imagem dentro de um JPanel (Swing)
+ * Esta classe foi desenvolvida baseando na classe PicturePanel de
+ * Daniel F. Martins <daniel_tritone@terra.com.br>
+ * 
+ * @author David de A. Ferreira <davidferreira@uol.com.br>
+ * @version 1.0
+ */
+public class ImagePanel extends JPanel 
 {
-	static private FileDialog instance;
-	
-	private JFileChooser dialogImagem;
-	private JFileChooser dialogMetrica;	
-	private String caminhoImagem;
-	private String caminhoMetrica;
-	
-	private FileDialog()
+	private static final long serialVersionUID = -5855213845809007082L;
+	private Image image;
+
+	public void loadImage(String path)
 	{
-		dialogImagem   = new JFileChooser();
-		dialogMetrica  = new JFileChooser();	
-		caminhoImagem  = "";
-		caminhoMetrica = "";
+		this.image = new ImageIcon(path).getImage();
+
+		/* Redimensiona a imagem */
+		this.image = this.image.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
+	}
+	
+	public void paintComponent(Graphics g) 
+	{
+		super.paintComponent(g);
 		
-	
-		dialogImagem.setFileFilter(new FileImageFilter());
-		dialogMetrica.setFileFilter(new FileMetricFilter());
-	}
-	
-	static public FileDialog getInstance()
-	{
-		if (instance==null){
-			instance = new FileDialog();
+		if (this.image != null){
+			g.drawImage(image, 0, 0, this);
 		}
-		return instance;
-	}
+	}	
 	
-	public boolean showSaveDialogImage(Component componente)
-	{
-		int retorno = dialogImagem.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (retorno == JFileChooser.APPROVE_OPTION) {
-			File file = dialogImagem.getSelectedFile();
-			caminhoImagem=file.getAbsolutePath();
-			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
-			ok=true;
-		}
-		return ok;		
-	}
-	
-	public String getFilePathImage()
-	{
-		return caminhoImagem;
-	}
-	
-	public boolean showSaveDialogMetric(Component componente)
-	{
-		int returnVal = dialogMetrica.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
-			File file = dialogMetrica.getSelectedFile();
-			caminhoMetrica=file.getAbsolutePath();
-			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
-			ok=true;
-		}
-		return ok;
-	}
-	
-	public String getFilePathMetric()
-	{
-		return caminhoMetrica;
-	}
 }

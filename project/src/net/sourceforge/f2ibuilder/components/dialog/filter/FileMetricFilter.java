@@ -35,7 +35,6 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
 
 public class FileMetricFilter extends FileFilter 
 {
-	
 	public boolean accept(File f)
 	{        
         if (f.isDirectory()) {
@@ -47,7 +46,8 @@ public class FileMetricFilter extends FileFilter
         return fi.isMetrics();	        
 	}
 
-	public String getDescription() {
+	public String getDescription()
+	{
 		return "Metrics Description (.dat)";
 	}
 

@@ -25,83 +25,23 @@
 /* License.                                                                  */
 /*                                                                           */
 /*****************************************************************************/
-package net.sourceforge.f2ibuilder.components.dialog;
+package com.wordpress.dukitan.componentes.ui.combobox;
 
-import java.awt.Component;
-import java.io.File;
-
-import javax.swing.JFileChooser;
-
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
+import java.awt.GraphicsEnvironment;
 
 
-
-
-public class FileDialog
+public class ComboFonte extends ComboBox
 {
-	static private FileDialog instance;
-	
-	private JFileChooser dialogImagem;
-	private JFileChooser dialogMetrica;	
-	private String caminhoImagem;
-	private String caminhoMetrica;
-	
-	private FileDialog()
+	private static final long serialVersionUID = -5021290243258368931L;
+
+	public ComboFonte()
 	{
-		dialogImagem   = new JFileChooser();
-		dialogMetrica  = new JFileChooser();	
-		caminhoImagem  = "";
-		caminhoMetrica = "";
-		
-	
-		dialogImagem.setFileFilter(new FileImageFilter());
-		dialogMetrica.setFileFilter(new FileMetricFilter());
-	}
-	
-	static public FileDialog getInstance()
-	{
-		if (instance==null){
-			instance = new FileDialog();
-		}
-		return instance;
-	}
-	
-	public boolean showSaveDialogImage(Component componente)
-	{
-		int retorno = dialogImagem.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (retorno == JFileChooser.APPROVE_OPTION) {
-			File file = dialogImagem.getSelectedFile();
-			caminhoImagem=file.getAbsolutePath();
-			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
-			ok=true;
-		}
-		return ok;		
-	}
-	
-	public String getFilePathImage()
-	{
-		return caminhoImagem;
-	}
-	
-	public boolean showSaveDialogMetric(Component componente)
-	{
-		int returnVal = dialogMetrica.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
-			File file = dialogMetrica.getSelectedFile();
-			caminhoMetrica=file.getAbsolutePath();
-			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
-			ok=true;
-		}
-		return ok;
-	}
-	
-	public String getFilePathMetric()
-	{
-		return caminhoMetrica;
+	    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    
+	    String fontNames[] = ge.getAvailableFontFamilyNames();
+
+	    for (int i=0; i<fontNames.length; i++) {
+		    addItem(fontNames[i]);
+	    }
 	}
 }

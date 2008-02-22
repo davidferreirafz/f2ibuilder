@@ -1,4 +1,4 @@
-package net.sourceforge.f2ibuilder.application.controller.generics;
+package net.sourceforge.f2ibuilder.application.controller.open;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -8,14 +8,14 @@ import javax.swing.JComboBox;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
 
-public class OpenWindow extends WindowAdapter 
+public class LoadApplication extends WindowAdapter 
 {
     private FontText fontText;
     private JComboBox comboBox;
     private JComboBox comboBox2;
 
 
-    public OpenWindow(FontText fontText, JComboBox comboBox, JComboBox comboBox2)
+    public LoadApplication(FontText fontText, JComboBox comboBox, JComboBox comboBox2)
     {
         this.fontText=fontText;
         this.comboBox=comboBox;

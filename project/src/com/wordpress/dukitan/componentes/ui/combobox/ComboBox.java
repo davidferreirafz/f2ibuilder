@@ -25,83 +25,48 @@
 /* License.                                                                  */
 /*                                                                           */
 /*****************************************************************************/
-package net.sourceforge.f2ibuilder.components.dialog;
+package com.wordpress.dukitan.componentes.ui.combobox;
 
-import java.awt.Component;
-import java.io.File;
+import java.util.Iterator;
+import java.util.List;
 
-import javax.swing.JFileChooser;
+import javax.swing.JComboBox;
 
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
-import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
-
-
-
-
-public class FileDialog
+public class ComboBox extends JComboBox 
 {
-	static private FileDialog instance;
+	private static final long serialVersionUID = -7872186258314692520L;
+
 	
-	private JFileChooser dialogImagem;
-	private JFileChooser dialogMetrica;	
-	private String caminhoImagem;
-	private String caminhoMetrica;
 	
-	private FileDialog()
+	public boolean existeItem(String novoItem)
 	{
-		dialogImagem   = new JFileChooser();
-		dialogMetrica  = new JFileChooser();	
-		caminhoImagem  = "";
-		caminhoMetrica = "";
-		
-	
-		dialogImagem.setFileFilter(new FileImageFilter());
-		dialogMetrica.setFileFilter(new FileMetricFilter());
-	}
-	
-	static public FileDialog getInstance()
-	{
-		if (instance==null){
-			instance = new FileDialog();
+		boolean achou = false;
+		String item = null;
+		int total = getItemCount();
+
+		for (int i=0; i<total; i++){
+			item = getItemAt(i).toString();
+			if (item.equalsIgnoreCase(novoItem)){
+				achou = true;
+			}
 		}
-		return instance;
-	}
-	
-	public boolean showSaveDialogImage(Component componente)
-	{
-		int retorno = dialogImagem.showSaveDialog(componente);
-		boolean ok = false;
 		
-		if (retorno == JFileChooser.APPROVE_OPTION) {
-			File file = dialogImagem.getSelectedFile();
-			caminhoImagem=file.getAbsolutePath();
-			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
-			ok=true;
+		return achou;
+	}
+	
+    public void addItem(Object item) 
+    {
+    	if ((item!=null)&&(existeItem(item.toString())==false)){
+        	super.addItem(item);
+    	}
+    }
+    
+    @SuppressWarnings("unchecked")
+    public void setItens(List lista)
+    {
+		Iterator i =lista.iterator();
+		while(i.hasNext()){
+			addItem((String) i.next());
 		}
-		return ok;		
-	}
-	
-	public String getFilePathImage()
-	{
-		return caminhoImagem;
-	}
-	
-	public boolean showSaveDialogMetric(Component componente)
-	{
-		int returnVal = dialogMetrica.showSaveDialog(componente);
-		boolean ok = false;
-		
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
-			File file = dialogMetrica.getSelectedFile();
-			caminhoMetrica=file.getAbsolutePath();
-			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
-			ok=true;
-		}
-		return ok;
-	}
-	
-	public String getFilePathMetric()
-	{
-		return caminhoMetrica;
-	}
+    }
 }
