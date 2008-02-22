@@ -35,7 +35,6 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
 
 public class FileImageFilter extends FileFilter
 {
-	
 	public boolean accept(File f)
 	{
 	 	if (f.isDirectory()) {
@@ -46,10 +45,12 @@ public class FileImageFilter extends FileFilter
         
         return fi.isImage();
 	}
-
+    
 	public String getDescription()
 	{
 	    return "PNG or BMP Files";
 	}
+
+
 
 }

@@ -5,7 +5,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import com.google.code.p.f2ibuilder.util.Constante;
+import net.sourceforge.f2ibuilder.util.Constants;
+
 import com.wordpress.dukitan.componentes.browser.FacadeBrowser;
 
 
@@ -27,7 +28,7 @@ public class OpenWebSite extends MouseAdapter implements ActionListener
     
     private void action()
     {
-        FacadeBrowser.openURL(Constante.WEB_SITE);        
+        FacadeBrowser.openURL(Constants.WEB_SITE);        
     }
     
 

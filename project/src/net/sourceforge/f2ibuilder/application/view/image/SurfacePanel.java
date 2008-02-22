@@ -37,12 +37,7 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Scrollable;
@@ -56,7 +51,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
 
 
-public class SurfacePanel extends JPanel implements Scrollable, Observer 
+public class SurfacePanel extends JPanel implements Scrollable, Observer, FontImage 
 {
 	private static final long serialVersionUID = -5855213845809007082L;
 	private Image image;
@@ -80,68 +75,30 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
         fontText.register(this);
         options.register(this);
 	}	
-
-	public boolean salvar(String arquivo)
-	{
-
-	    try {
-			if (image!=null){
-				if (!arquivo.endsWith(options.getImagemTipo())){
-					arquivo+="."+options.getImagemTipo();
-				}
-				ImageIO.write((RenderedImage) image,options.getImagemTipo(),new File(arquivo));
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return true;
-	}
-	//TODO: mover para outra classe
-	public boolean salvarMetrica(String arquivo)
-	{
-		BufferedWriter out;
-		try {
-			char v[] = new char[256];			
-
-			for (int i=0; i<256; i++)
-			{
-				v[i]=(char) fontText.getCharacterMetric(i);
-			}
-
-			if (!arquivo.endsWith("dat")){
-				arquivo+=".dat";
-			}
-
-			out = new BufferedWriter(new FileWriter(arquivo));
-			out.write(v);
-	        out.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return true;
-	}
 	
-	private void desenharFundo()
+	public RenderedImage getImage()
+	{
+	    return (RenderedImage) image;
+	}
+		
+	private void drawBackground()
 	{
 		if (options.isImageTipoPNG()){
 			Graphics2D g2 = (Graphics2D) imageGraphic;
 			AlphaComposite ac =AlphaComposite.getInstance(AlphaComposite.SRC,1.0f);			
-			g2.setComposite(ac);
+			g2.setComposite(ac);			
 		} else {
 			imageGraphic.setColor(colorGroup.getCorFundo());
 			imageGraphic.fillRect(0,0,getSize().width, getSize().height);
 		}
 	}
 	
-	private void desenharGrid()
+	private void drawGrid()
 	{
 		if (options.isGrid()){
 			int l=0; int c=0;
 
-            Dimension posicao = getPosicaoLetra();
+            Dimension posicao = getCharSpace();
 
 			for (char i=0; i<256; i++){
 				imageGraphic.setColor(new Color(0,150,0));
@@ -155,12 +112,12 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 		}
 	}
 	
-	private void desenharFonte()
+	private void drawFont()
 	{
 		imageGraphic.setColor(colorGroup.getCorFonte());
 		int l=0;  int c=0;		
 
-        Dimension posicao = getPosicaoLetra();
+        Dimension posicao = getCharSpace();
 
 		int ajusteHorizontal = 0;
 		if (options.getSombraHorizontal()<0){
@@ -180,7 +137,7 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 		for (char i=0; i<256; i++){
 			
 			if (!options.isMetrica()){
-				imageGraphic.drawString(fontText.getCharacter(i),(c*posicao.width)+ajusteHorizontal-(fontText.getCharacterMetric(i)/2),(l*posicao.height)+ajusteVertical+fontText.getFontAscent());
+				imageGraphic.drawString(fontText.getCharacter(i),(c*posicao.width)+ajusteHorizontal-(fontText.getCharacterMetric(i)/2),(l*posicao.height)+ajusteVertical+fontText.getFontAscent());			
 			} else {
 				imageGraphic.drawString(fontText.getCharacter(i),(c*posicao.width)+ajusteHorizontal,(l*posicao.height)+ajusteVertical+fontText.getFontAscent());				
 			}
@@ -192,11 +149,11 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 		}
 	}
 	
-	private void desenharSombra()
+	private void drawShadow()
 	{
 		if ((options.getSombraHorizontal()!=0)||(options.getSombraVertical()!=0)){
 
-	        Dimension posicao = getPosicaoLetra();
+	        Dimension posicao = getCharSpace();
 	        
 			int ajusteHorizontal = options.getSombraHorizontal();
 			if (options.getSombraHorizontal()<0){
@@ -234,14 +191,13 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 	public void createImage()
 	{
 		definirFonte();
-		setPreferredSize(getTamanhoJanela());
-		prepararDesenho();
+		prepareWorkArea();
 	}
 	
-	protected void prepararDesenho()
+	protected void prepareWorkArea()
 	{
-		Dimension dimensao = getTamanhoJanela();
-
+		Dimension dimensao = getImageSize();
+        
 		//Padrão é usar RGB
 		int canalCor = BufferedImage.TYPE_INT_RGB;
 		//Caso a imagem seja PNG, usar RGB com Alpha
@@ -269,14 +225,14 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 		if (image!=null){
 			super.paint(g);
 
-			prepararDesenho();
-			desenharFundo();
-			desenharSombra();
-			desenharFonte();
-			desenharGrid();
+			prepareWorkArea();
+			drawBackground();
+			drawShadow();
+			drawFont();
+			drawGrid();
 			
 			int x=0;	
-			g.drawImage(image, x, 1, colorGroup.getCorFundo(),this);			
+			g.drawImage(image, x, 1, colorGroup.getCorFundo(),this);
 		}
 	}
 
@@ -287,7 +243,7 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 	
 	public Dimension getPreferredScrollableViewportSize()
 	{
-		return getTamanhoJanela();
+		return getImageSize();
 	}
 
 	public boolean getScrollableTracksViewportHeight()
@@ -309,7 +265,7 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 	{
 		int retorno=0;
 		
-		Dimension d=getTamanhoJanela();
+		Dimension d=getImageSize();
 		
 		if (orientation==SwingConstants.VERTICAL) {
 			retorno=d.height/16;
@@ -322,45 +278,47 @@ public class SurfacePanel extends JPanel implements Scrollable, Observer
 
     @Override
     public void update()
-    {
-//        carregarMetricas();        
+    { 
         createImage();
+        setPreferredSize(getImageSize());
+        setSize(getImageSize());
         repaint();
     }
-////////////////////////////////////////
-    private Dimension getPosicaoLetra()
+
+    
+    private Dimension getCharSpace()
     {
-        Dimension dimensao = new Dimension(0, 0);
+        Dimension dimensao;
 
         if (options.isTexturaAuto()) {
             dimensao = fontText.getDefaultCharDimension();
         } else {
-            dimensao = getTamanhoJanela();
+            dimensao = getImageSize();
 
-            dimensao.width = dimensao.width / 16;
+            dimensao.width  = dimensao.width / 16;
             dimensao.height = dimensao.height / 16;
         }
 
         return dimensao;
     } 
     
-    private Dimension getTamanhoJanela()
+    private Dimension getImageSize()
     {
-        Dimension tamanhoJanela = new Dimension(0, 0);
+        Dimension dimensao = new Dimension();
 
         switch (options.getTamanhoTextura()) {
             case 0:
-                tamanhoJanela = fontText.getDefaultCharDimension();
+                dimensao = fontText.getDefaultCharDimension();
                 
-                tamanhoJanela.width*=16;
-                tamanhoJanela.height*=16;
+                dimensao.width *=16;
+                dimensao.height*=16;
             break;
             default:
-                tamanhoJanela.width  = options.getTamanhoTextura();
-                tamanhoJanela.height = options.getTamanhoTextura();
+                dimensao.width  = options.getTamanhoTextura();
+                dimensao.height = options.getTamanhoTextura();
             break;
         }
 
-        return tamanhoJanela;
+        return dimensao;
     }     
 }

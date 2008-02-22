@@ -41,8 +41,8 @@ import javax.swing.border.TitledBorder;
 
 import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.util.Constants;
 
-import com.google.code.p.f2ibuilder.util.Constante;
 import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
 
 public class About extends JDialog {
@@ -191,7 +191,7 @@ public class About extends JDialog {
 		if (jPanel4 == null) {
 			jLabel9 = new JLabel();
 			jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-			jLabel9.setText("  "+Constante.WEB_SITE);
+			jLabel9.setText("  "+Constants.WEB_SITE);
 			jLabel9.setName("jLabel8");
 			jLabel9.addMouseListener(new OpenWebSite());
 			jPanel4 = new JPanel();
@@ -232,7 +232,7 @@ public class About extends JDialog {
 		if (jPanel6 == null) {
 			jLabel = new JLabel();
 			jLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-			jLabel.setText(Constante.VERSAO_EXPLICITA);
+			jLabel.setText(Constants.VERSAO_EXPLICITA);
 			jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 			jLabel.setName("jLabel6");
 			jPanel6 = new JPanel();
