@@ -27,17 +27,29 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.dialog.filter;
 
+import java.io.File;
+
+import javax.swing.filechooser.FileFilter;
+
 import com.wordpress.dukitan.componentes.util.FileInfo;
 
-public class FileImageFilter extends DialogFileFilter
+/**
+ * Design Pattern: GoF - Template Method
+ * @author david
+ *
+ */
+public abstract class DialogFileFilter extends FileFilter
 {
-    protected boolean isAccept(FileInfo info)
-    {
-        return info.isImage();
-    }
-    
-	public String getDescription()
+	final public boolean accept(File file)
 	{
-	    return "PNG or BMP Files";
+	 	if (file.isDirectory()) {
+            return true;
+        }
+	 	
+        FileInfo fileInfo = new FileInfo(file);
+        
+        return isAccept(fileInfo);
 	}
+
+	protected abstract boolean isAccept(FileInfo info);
 }
