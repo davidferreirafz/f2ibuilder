@@ -60,9 +60,9 @@ import net.sourceforge.f2ibuilder.application.controller.command.ShowGridCommand
 import net.sourceforge.f2ibuilder.application.controller.command.UseAntialiasCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.UseMetricsCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.SelectShadowCommand;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
-import net.sourceforge.f2ibuilder.application.controller.generics.SaveFileImage;
-import net.sourceforge.f2ibuilder.application.controller.generics.SaveFileMetrics;
 import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialog;
 import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialogObserver;
 import net.sourceforge.f2ibuilder.application.controller.open.LoadApplication;
@@ -98,6 +98,8 @@ public class Principal extends JFrame {
 	private JMenuItem jMenuItem = null;
 
 	private JMenuItem jMenuItem1 = null;
+	
+    private JMenuItem jMenuExportXNA = null;
 
 	private JToolBar jJToolBarBar = null;
 
@@ -311,8 +313,9 @@ public class Principal extends JFrame {
 			menuFile = new JMenu();
 			menuFile.setText("File");
 			menuFile.add(getJMenuItem());
-			menuFile.addSeparator();
 			menuFile.add(getJMenuItem1());
+            menuFile.addSeparator();
+            menuFile.add(getJMenuExportXNA());
 		}
 		return menuFile;
 	}
@@ -368,6 +371,17 @@ public class Principal extends JFrame {
 		return jMenuItem1;
 	}
 
+	private JMenuItem getJMenuExportXNA()
+	{
+        if (jMenuExportXNA == null) {
+            jMenuExportXNA = new JMenuItem();
+            jMenuExportXNA.setText("Export to XNA");
+            jMenuExportXNA.setName("ExportXNA");          
+            //jMenuExportXNA.addActionListener(new SaveFileMetrics(getFontText()));           
+        }
+        return jMenuExportXNA;
+	}
+	
 	/**
 	 * This method initializes jJToolBarBar	
 	 * 	

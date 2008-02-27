@@ -1,38 +1,22 @@
 package net.sourceforge.f2ibuilder.application.controller.charset;
 
-import java.awt.Font;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 import javax.swing.JLabel;
 import javax.swing.JTable;
 
+import net.sourceforge.f2ibuilder.application.controller.generics.SelectItemTable;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
 
-
-
-public class SelectChar extends MouseAdapter
-{
-    protected JTable table;
-    private JLabel asciiPreview;
-    private JLabel formatPreview;
-    private FontText fontText;    
-    
+public class SelectChar extends SelectItemTable
+{    
     public SelectChar(JTable table,JLabel asciiPreview, JLabel formatPreview, FontText fontText)
     {
-        this.table = table;
-        this.asciiPreview = asciiPreview;
-        this.formatPreview = formatPreview;
-        this.fontText = fontText;        
+        super(fontText,table,asciiPreview,formatPreview);
     }
-    
+
     @Override
-    public void mouseClicked(MouseEvent e)
+    protected String getPreview(int x, int y)
     {
-        int x = table.getSelectedColumn();
-        int y = table.getSelectedRow();
-        
         String t =(String) table.getModel().getValueAt(y,x);
         
         if ((t==null)||(t.equals(""))){
@@ -42,16 +26,9 @@ public class SelectChar extends MouseAdapter
         int a = Integer.parseInt(t);
         char ac = (char) a;
                 
-        asciiPreview.setText(String.valueOf(ac));
-        
-        int tamanho = fontText.getFontSize();        
-        if (tamanho > 26){
-            tamanho = 26;
-        }
-        
-        formatPreview.setFont(new Font(fontText.getFontName(),Font.PLAIN,tamanho));
-        formatPreview.setText(asciiPreview.getText());
+        return String.valueOf(ac);
     }
+    
     
 
 }
