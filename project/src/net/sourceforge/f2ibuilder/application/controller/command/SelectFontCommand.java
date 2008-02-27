@@ -1,25 +1,20 @@
 package net.sourceforge.f2ibuilder.application.controller.command;
 
-import java.awt.event.ItemEvent;
-
+import net.sourceforge.f2ibuilder.application.controller.generics.SelectComboboxCommand;
 import net.sourceforge.f2ibuilder.application.model.FontText;
+import net.sourceforge.f2ibuilder.application.model.Options;
 
 
-public class SelectFontCommand implements java.awt.event.ItemListener 
-{
-    private FontText fontText;
-    
-    public SelectFontCommand(FontText fontText)
+public class SelectFontCommand extends SelectComboboxCommand
+{   
+    public SelectFontCommand(Options options, FontText fontText)
     {
-        this.fontText=fontText;
+        super(options,fontText);
     }
 
     @Override
-    public void itemStateChanged(ItemEvent e)
-    {                
-        if (e.getStateChange()==ItemEvent.SELECTED){
-            //System.out.println("SelectFontCommand.itemStateChanged()"+e.getItem().toString());
-            fontText.setFontName(e.getItem().toString());
-        }          
+    protected void action(String value)
+    {
+        fontText.setFontName(value);        
     }   
 }

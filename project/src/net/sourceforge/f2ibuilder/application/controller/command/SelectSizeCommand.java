@@ -1,30 +1,23 @@
 package net.sourceforge.f2ibuilder.application.controller.command;
 
-import java.awt.event.ItemEvent;
-
+import net.sourceforge.f2ibuilder.application.controller.generics.SelectComboboxCommand;
 import net.sourceforge.f2ibuilder.application.model.FontText;
+import net.sourceforge.f2ibuilder.application.model.Options;
 
 
-public class SelectSizeCommand implements java.awt.event.ItemListener 
+public class SelectSizeCommand extends SelectComboboxCommand
 {
-    private FontText model;
-    
-    public SelectSizeCommand(FontText model)
+    public SelectSizeCommand(Options options, FontText fontText)
     {
-        this.model=model;
+        super(options,fontText);
     }
 
     @Override
-    public void itemStateChanged(ItemEvent e)
+    protected void action(String value)
     {
-        if (e.getStateChange()==ItemEvent.SELECTED){
-            //System.out.println("SelectSizeCommand.itemStateChanged()"+e.getItem().toString());
-            String t = e.getItem().toString();
-            
-            if (t!=null){
-                int size =Integer.parseInt(e.getItem().toString()); 
-                model.setFontSize(size);                
-            }
-        }                
+        if (!value.equals("")){
+            int size = Integer.parseInt(value); 
+            fontText.setFontSize(size);
+        }
     }   
 }

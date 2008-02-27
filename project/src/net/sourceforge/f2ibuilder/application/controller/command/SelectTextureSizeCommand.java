@@ -1,34 +1,26 @@
 package net.sourceforge.f2ibuilder.application.controller.command;
 
-import java.awt.event.ItemEvent;
-
+import net.sourceforge.f2ibuilder.application.controller.generics.SelectComboboxCommand;
+import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 
 
-public class SelectTextureSizeCommand implements java.awt.event.ItemListener 
+public class SelectTextureSizeCommand extends SelectComboboxCommand
 {
-    private Options options;
-    
-    public SelectTextureSizeCommand(Options options)
+    public SelectTextureSizeCommand(Options options, FontText fontText)
     {
-        this.options=options;
+        super(options,fontText);
     }
 
     @Override
-    public void itemStateChanged(ItemEvent e)
-    {                
-        if (e.getStateChange()==ItemEvent.SELECTED){
-            //System.out.println("SelectTextureSizeCommand.itemStateChanged()"+e.getItem().toString());
-            //fontText.setFontName(e.getItem().toString());
-            
-            String item = e.getItem().toString();
-            int size = 0;
-            
-            if (!item.equalsIgnoreCase("auto")){
-                size=Integer.parseInt(item);
-            }           
-            
-            options.setTextureSize(size);
-        }          
+    protected void action(String value)
+    {
+        int size = 0;
+        
+        if (!value.equalsIgnoreCase("auto")){
+            size=Integer.parseInt(value);
+        }           
+        
+        options.setTextureSize(size);
     }   
 }
