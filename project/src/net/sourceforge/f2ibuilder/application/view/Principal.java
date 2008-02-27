@@ -256,7 +256,7 @@ public class Principal extends JFrame {
 			comboFonte.setEditable(false);
 			comboFonte.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
 			comboFonte.setName("comboFonte");
-            comboFonte.addItemListener(new SelectFontCommand(getFontText()));			
+            comboFonte.addItemListener(new SelectFontCommand(getOptions(),getFontText()));			
 		}
 		return comboFonte;
 	}
@@ -445,7 +445,7 @@ public class Principal extends JFrame {
 			comboTamanho.addItem("34");		comboTamanho.addItem("36");
 			comboTamanho.addItem("38");		comboTamanho.addItem("40");
 			comboTamanho.addItem("42");		comboTamanho.addItem("44");
-			comboTamanho.addItemListener(new SelectSizeCommand(getFontText()));			
+			comboTamanho.addItemListener(new SelectSizeCommand(getOptions(),getFontText()));			
 		}
 		return comboTamanho;
 	}
@@ -870,7 +870,7 @@ public class Principal extends JFrame {
 			comboTexturaSize.addItem("Auto"); 		
 			comboTexturaSize.addItem("128"); comboTexturaSize.addItem("256");
 			comboTexturaSize.addItem("512"); comboTexturaSize.addItem("1024");
-			comboTexturaSize.addItemListener(new SelectTextureSizeCommand(getOptions()));			
+			comboTexturaSize.addItemListener(new SelectTextureSizeCommand(getOptions(),getFontText()));			
 		}
 		return comboTexturaSize;
 	}
