@@ -27,28 +27,17 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.dialog.filter;
 
-import java.io.File;
-
-import javax.swing.filechooser.FileFilter;
-
 import com.wordpress.dukitan.componentes.util.FileInfo;
 
-public class FileMetricFilter extends FileFilter 
+public class FileMetricFilter extends DialogFileFilter 
 {
-	public boolean accept(File f)
-	{        
-        if (f.isDirectory()) {
-            return true;
-        }
-        
-        FileInfo fi = new FileInfo(f);
-        
-        return fi.isMetrics();	        
-	}
-
+    protected boolean isAccept(FileInfo info)
+    {
+        return info.isMetrics();
+    }
+    
 	public String getDescription()
 	{
 		return "Metrics Description (.dat)";
 	}
-
 }

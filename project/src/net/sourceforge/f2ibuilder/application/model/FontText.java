@@ -144,9 +144,7 @@ public class FontText extends Observable
     }
     
     public void setCharacter(int i,int valor)
-    {
-        System.out.println("FontText.setCharacter("+i+")"+valor);
-        
+    {       
         workCharset[i]=valor;
         workMetrics[i]=workMetrics[valor];
         
@@ -157,9 +155,7 @@ public class FontText extends Observable
     public void setCharacterMetric(int i,int valor)
     {
         workMetrics[i]=valor;
- 
         searchLimits();
-        //applyMetricsLimit();        
         
         updateObserver();       
     }
@@ -281,5 +277,10 @@ public class FontText extends Observable
     public int getFontAscent()
     {
         return panel.getFontMetrics(font).getAscent();
+    }
+    
+    public String getDefaultID()
+    {
+        return getFontName()+"."+getFontSize();
     }
 }
