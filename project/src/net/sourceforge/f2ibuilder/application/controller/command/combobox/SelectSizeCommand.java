@@ -1,11 +1,10 @@
-package net.sourceforge.f2ibuilder.application.controller.command;
+package net.sourceforge.f2ibuilder.application.controller.command.combobox;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.SelectComboboxCommand;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 
 
-public class SelectSizeCommand extends SelectComboboxCommand
+public class SelectSizeCommand extends ComboboxCommand
 {
     public SelectSizeCommand(Options options, FontText fontText)
     {

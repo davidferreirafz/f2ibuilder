@@ -2,7 +2,7 @@ package net.sourceforge.f2ibuilder.application.controller.metrics;
 
 import javax.swing.JTextField;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.FontTextAction;
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
 

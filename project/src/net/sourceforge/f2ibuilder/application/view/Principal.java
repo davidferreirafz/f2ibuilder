@@ -51,15 +51,15 @@ import javax.swing.JScrollPane;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
-import net.sourceforge.f2ibuilder.application.controller.command.BoldCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.SelectFontCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.SelectImageTypeCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.SelectSizeCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.SelectTextureSizeCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.ShowGridCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.UseAntialiasCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.UseMetricsCommand;
-import net.sourceforge.f2ibuilder.application.controller.command.SelectShadowCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.button.BoldCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.ShowGridCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAntialiasCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseMetricsCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectFontCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectTextureSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectImageTypeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectShadowCommand;
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
@@ -506,7 +506,7 @@ public class Principal extends JFrame {
 		if (botaoNegrito == null) {
 			botaoNegrito = new JToggleButton();
 			botaoNegrito.setText("Bold");
-            botaoNegrito.addItemListener(new BoldCommand(getFontText()));
+            botaoNegrito.addItemListener(new BoldCommand(getOptions(),getFontText()));
 		}
 		return botaoNegrito;
 	}
@@ -545,7 +545,7 @@ public class Principal extends JFrame {
 			menuItemShowGrid = new JCheckBoxMenuItem();
 			menuItemShowGrid.setText("Show Grid");
 			menuItemShowGrid.setName("Grid");			
-			menuItemShowGrid.addItemListener(new ShowGridCommand(getOptions()));
+			menuItemShowGrid.addItemListener(new ShowGridCommand(getOptions(),getFontText()));
 		}
 		return menuItemShowGrid;
 	}
@@ -580,7 +580,7 @@ public class Principal extends JFrame {
 			jRadioButtonMenuItem.setText("PNG");
 			jRadioButtonMenuItem.setName("PNG");
 			jRadioButtonMenuItem.setSelected(true);
-			jRadioButtonMenuItem.addItemListener(new SelectImageTypeCommand(getOptions()));
+			jRadioButtonMenuItem.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
 		}
 		return jRadioButtonMenuItem;
 	}
@@ -595,7 +595,7 @@ public class Principal extends JFrame {
 			jRadioButtonMenuItem1 = new JRadioButtonMenuItem();
 			jRadioButtonMenuItem1.setText("BMP");
 			jRadioButtonMenuItem1.setName("BMP");			
-            jRadioButtonMenuItem1.addItemListener(new SelectImageTypeCommand(getOptions()));
+            jRadioButtonMenuItem1.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
 		}
 		return jRadioButtonMenuItem1;
 	}
@@ -666,7 +666,7 @@ public class Principal extends JFrame {
 			jRadioButtonMenuItem2.setText("None");
 			jRadioButtonMenuItem2.setName("HorizontalNone");			
 			jRadioButtonMenuItem2.setSelected(true);
-			jRadioButtonMenuItem2.addItemListener(new SelectShadowCommand(getOptions()));			
+			jRadioButtonMenuItem2.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonMenuItem2;
 	}
@@ -681,7 +681,7 @@ public class Principal extends JFrame {
 			jRadioButtonMenuItem3 = new JRadioButtonMenuItem();
 			jRadioButtonMenuItem3.setText("Left");
 			jRadioButtonMenuItem3.setName("HorizontalLeft");			
-            jRadioButtonMenuItem3.addItemListener(new SelectShadowCommand(getOptions()));			
+            jRadioButtonMenuItem3.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonMenuItem3;
 	}
@@ -696,7 +696,7 @@ public class Principal extends JFrame {
 			jRadioButtonMenuItem4 = new JRadioButtonMenuItem();
 			jRadioButtonMenuItem4.setText("Right");
 			jRadioButtonMenuItem4.setName("HorizontalRight");	
-            jRadioButtonMenuItem4.addItemListener(new SelectShadowCommand(getOptions()));			
+            jRadioButtonMenuItem4.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonMenuItem4;
 	}
@@ -712,7 +712,7 @@ public class Principal extends JFrame {
 			jRadioButtonShadowVerticalNone.setText("None");
 			jRadioButtonShadowVerticalNone.setName("VerticalNone");			
 			jRadioButtonShadowVerticalNone.setSelected(true);
-            jRadioButtonShadowVerticalNone.addItemListener(new SelectShadowCommand(getOptions()));			
+            jRadioButtonShadowVerticalNone.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonShadowVerticalNone;
 	}
@@ -727,7 +727,7 @@ public class Principal extends JFrame {
 			jRadioButtonShadowVerticalUp = new JRadioButtonMenuItem();
 			jRadioButtonShadowVerticalUp.setText("Up");
 			jRadioButtonShadowVerticalUp.setName("VerticalUp");			
-            jRadioButtonShadowVerticalUp.addItemListener(new SelectShadowCommand(getOptions()));			
+            jRadioButtonShadowVerticalUp.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonShadowVerticalUp;
 	}
@@ -742,7 +742,7 @@ public class Principal extends JFrame {
 			jRadioButtonShadowVerticalDown = new JRadioButtonMenuItem();
 			jRadioButtonShadowVerticalDown.setText("Down");
 			jRadioButtonShadowVerticalDown.setName("VerticalDown");			
-            jRadioButtonShadowVerticalDown.addItemListener(new SelectShadowCommand(getOptions()));			
+            jRadioButtonShadowVerticalDown.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
 		}
 		return jRadioButtonShadowVerticalDown;
 	}
@@ -758,7 +758,7 @@ public class Principal extends JFrame {
 			menuItemUseMetric.setText("Use Metrics");
 			menuItemUseMetric.setSelected(true);
 			menuItemUseMetric.setName("UseMetrics");
-			menuItemUseMetric.addItemListener(new UseMetricsCommand(getOptions()));
+			menuItemUseMetric.addItemListener(new UseMetricsCommand(getOptions(),getFontText()));
 		}
 		return menuItemUseMetric;
 	}
@@ -901,7 +901,7 @@ public class Principal extends JFrame {
 			menuItemAntialias.setName("Antialias");
 			menuItemAntialias.setText("Antialias");
 			menuItemAntialias.setSelected(true);
-			menuItemAntialias.addItemListener(new UseAntialiasCommand(getOptions()));		
+			menuItemAntialias.addItemListener(new UseAntialiasCommand(getOptions(),getFontText()));		
 		}
 		return menuItemAntialias;
 	}
