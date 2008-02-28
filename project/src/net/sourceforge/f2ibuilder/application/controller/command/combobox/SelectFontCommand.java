@@ -1,11 +1,10 @@
-package net.sourceforge.f2ibuilder.application.controller.command;
+package net.sourceforge.f2ibuilder.application.controller.command.combobox;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.SelectComboboxCommand;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 
 
-public class SelectFontCommand extends SelectComboboxCommand
+public class SelectFontCommand extends ComboboxCommand
 {   
     public SelectFontCommand(Options options, FontText fontText)
     {
@@ -15,6 +14,6 @@ public class SelectFontCommand extends SelectComboboxCommand
     @Override
     protected void action(String value)
     {
-        fontText.setFontName(value);        
+        fontText.setFontName(value);
     }   
 }
