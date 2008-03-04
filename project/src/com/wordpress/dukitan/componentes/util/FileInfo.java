@@ -28,21 +28,33 @@ package com.wordpress.dukitan.componentes.util;
 
 import java.io.File;
 
+/**
+ * Classe com meta informações sobre um arquivo.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class FileInfo
 {
     private File file;
     private String extension = "";
     
+    /**
+     * Construtor
+     * @param file instância de File
+     */
     public FileInfo(File file)
     {
         this.file = file;
+        
         process();
     }
     
-    /* @see http://java.sun.com/docs/books/tutorial/uiswing/components/example-1dot4/Utils.java
-     * Get the extension of a file.
+   
+    /**
+     * Processa as informações sobre o arquivo.
      */
-    
     protected void process()
     {
         if (file!=null){
@@ -56,11 +68,19 @@ public class FileInfo
         }
     }
     
+    /**
+     * Retorna a extensão do arquivo.
+     * @return extensão do arquivo
+     */
     public String getExtension()
     {
         return extension;
     }
     
+    /**
+     * Informa se o arquivo é uma imagem.
+     * @return retorna true em caso positivo.
+     */
     public boolean isImage()
     {
         if ((extension.equalsIgnoreCase("bmp"))||
@@ -71,6 +91,10 @@ public class FileInfo
         }
     }
     
+    /**
+     * Informa se o arquivo é um binário com métricas.
+     * @return retorna true em caso positivo.
+     */
     public boolean isMetrics()
     {
         if (extension.equalsIgnoreCase("dat")){

@@ -32,20 +32,24 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-
 /**
- * Classe para exibição de uma imagem dentro de um JPanel (Swing)
+ * Classe para exibição de uma imagem dentro de um JPanel (Swing).
  * Esta classe foi desenvolvida baseando na classe PicturePanel de
  * Daniel F. Martins <daniel_tritone@terra.com.br>
- * 
- * @author David de A. Ferreira <davidferreira@uol.com.br>
- * @version 1.0
+ *  
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
  */
 public class ImagePanel extends JPanel 
 {
 	private static final long serialVersionUID = -5855213845809007082L;
 	private Image image;
 
+	/**
+	 * Carrega a imagem a partir de uma caminho de imagem.
+	 * @param path
+	 */
 	public void loadImage(String path)
 	{
 		this.image = new ImageIcon(path).getImage();
@@ -54,6 +58,7 @@ public class ImagePanel extends JPanel
 		this.image = this.image.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
 	}
 	
+	@Override
 	public void paintComponent(Graphics g) 
 	{
 		super.paintComponent(g);

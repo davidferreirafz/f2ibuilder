@@ -27,11 +27,30 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.type;
 
+/**
+ * Classe para representar os limites máximo e mínimo
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class Limit
 {
+    /**
+     * limite mínimo.
+     */
     public int min;
+
+    /**
+     * limite máximo. 
+     */
     public int max;
-    
+   
+    /**
+     * Construtor
+     * @param min limite mínimo
+     * @param max limite máximo
+     */
     public Limit(int min, int max)
     {
         this.min=min;
