@@ -35,13 +35,20 @@ import net.sourceforge.f2ibuilder.application.view.Principal;
 
 
 
-
-public class F2IBuilderMain {
-
+/**
+ * Classe para iniciar a aplicação F2IBuilder
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
+public class F2IBuilderMain
+{
 	protected Principal janela = null;
 
-
-	
+	/**
+	 * Cria janela e a centraliza.
+	 */
 	public void criarJanela()
 	{
 		janela = new Principal();
@@ -52,6 +59,10 @@ public class F2IBuilderMain {
 		janela.setVisible(true);
 	}
 	
+	/**
+	 * Entry point da aplicação 
+	 * @param args
+	 */
 	public static void main(String[] args) 
 	{
 		try {

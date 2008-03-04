@@ -27,38 +27,72 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.type;
 
+/**
+ * Classe para representar um contador em estilo matriz, 
+ * que retorna o indice em formato de vetor.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class Counter
 {
+    /**
+     * Coluna da contagem.
+     */
     public int column;
+    /**
+     * Linha da contagem.
+     */
     public int line;
-    private int maxColumn;
     
+    //Total de colunas
+    private int maxColumn;
+    //Total de linhas
+    private int maxLine;
+    
+    /**
+     * Construtor
+     * @param maxLine informa o total de linhas
+     * @param maxColumn informa o total de colunas
+     */    
     public Counter(int maxColumn)
     {
         this.column=0;
-        this.line=0;
+        this.line=0;      
         this.maxColumn = maxColumn;
+//        this.maxLine = maxLine;         
     }
-    
+
+    /**
+     * Retorna o indice
+     * @return
+     */
     public int getIndice()
     {
-        return column*line;
+        return line*column;
     }
     
     @Override
     public String toString()
     {
-        return  "Counter ("+column+","+line+")";
+        return  "Counter ("+line+","+column+")";
     }
     
-    
+    /**
+     * Avança o contador
+     */
     public void next()
     {
         column++;
         
+        //Se a coluna for maior que a coluna máxima
         if (column>maxColumn){
+            //retorna para a primeira coluna
             column=0;
+            //e passa para a próxima linha
             line++;
         }
     }
+
 }

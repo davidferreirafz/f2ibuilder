@@ -27,6 +27,13 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.util;
 
+/**
+ * Constantes informativas da aplicação.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public final class Constants
 {
 	final static public String TITULO = "F2IBuilder v3.0";

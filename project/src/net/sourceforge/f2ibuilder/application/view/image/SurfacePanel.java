@@ -123,16 +123,17 @@ public class SurfacePanel extends PanelModel implements FontImage
 	private void drawText(Dimension dimensao, Dimension ajuste)
 	{
         Counter count = new Counter(15);
+
         Point point = new Point();
         
         for (char i=0; i<256; i++){
-            
+           
             point = options.metricStrategy().position(count, dimensao, ajuste, fontText);
             
             imageGraphic.drawString(fontText.getCharacter(i), point.x, point.y);
             
             count.next();
-        }     
+        }
 	}
 
 
