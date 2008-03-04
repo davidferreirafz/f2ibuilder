@@ -50,8 +50,8 @@ public class MetricNone extends MetricStrategy
     {
         Point p = new Point(0,0);
         
-        p.x=(count.column*dimensao.width)+ajuste.width - (fontText.getCharacterMetric(count.getIndice())/2);
-        p.y=(count.line*dimensao.height)+ajuste.height+fontText.getFontAscent();
+        p.x=(count.column()*dimensao.width)+ajuste.width - (fontText.getCharacterMetric(count.getIndice())/2);
+        p.y=(count.line()*dimensao.height)+ajuste.height+fontText.getFontAscent();
         
         return p;
     }
