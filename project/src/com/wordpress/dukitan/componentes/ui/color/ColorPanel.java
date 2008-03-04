@@ -36,13 +36,23 @@ import javax.swing.JPanel;
 import com.wordpress.dukitan.componentes.gof.observer.IObservable;
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
-
+/**
+ * Classe para Criar um painel para seleção de cores
+ *  
+ * Design Pattern: GoF - Observer
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ */
 public class ColorPanel extends JPanel implements IObservable
 {
 	private static final long serialVersionUID = 3411829393903616525L;
     private ColorPanelControl control;
     private List<Observer> listObserver;
-    
+   
+    /**
+     * Construtor
+     */
 	public ColorPanel()
 	{
         listObserver = new ArrayList<Observer>();
@@ -52,6 +62,10 @@ public class ColorPanel extends JPanel implements IObservable
 		addMouseListener(control);
 	}
 
+	/**
+	 * Título da Janela de Dialog para seleção de cores
+	 * @param titulo
+	 */
     public void setTitulo(String titulo)
     {
     	control.setTitle(titulo);
@@ -76,6 +90,9 @@ public class ColorPanel extends JPanel implements IObservable
         updateObserver();
     }
     
+    /**
+     * Notifica os Observers
+     */
     protected void updateObserver()
     {
         if ((listObserver!=null)&&(!listObserver.isEmpty())){

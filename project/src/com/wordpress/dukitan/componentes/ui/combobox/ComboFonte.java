@@ -28,19 +28,36 @@ package com.wordpress.dukitan.componentes.ui.combobox;
 
 import java.awt.GraphicsEnvironment;
 
-
+/**
+ * Combobox, que lista as fontes instaladas no sistema operacional.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class ComboFonte extends ComboBox
 {
 	private static final long serialVersionUID = -5021290243258368931L;
 
+	/**
+	 * Construtor padrão
+	 */
 	public ComboFonte()
 	{
-	    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    
-	    String fontNames[] = ge.getAvailableFontFamilyNames();
+	    load();
+	}
+	
+	/**
+	 * Carrega as fontes instaladas no sistema operacional.
+	 */
+	private void load()
+	{
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        
+        String fontNames[] = ge.getAvailableFontFamilyNames();
 
-	    for (int i=0; i<fontNames.length; i++) {
-		    addItem(fontNames[i]);
-	    }
+        for (int i=0; i<fontNames.length; i++) {
+            addItem(fontNames[i]);
+        }	    
 	}
 }
