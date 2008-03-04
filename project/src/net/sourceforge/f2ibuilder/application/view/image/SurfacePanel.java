@@ -77,16 +77,14 @@ public class SurfacePanel extends PanelModel implements FontImage
 	private void drawGrid()
 	{
 		if (options.isGrid()){
-		    Counter count = new Counter(15);
+		    Counter count = new Counter(16,16);
 
             Dimension dimensao = getCharSpace();
             imageGraphic.setColor(new Color(0,150,0));
             
-			for (char i=0; i<256; i++){
+			while (count.next()){
+				imageGraphic.drawRect((count.column()*dimensao.width),(count.line()*dimensao.height),dimensao.width,dimensao.height);
 
-				imageGraphic.drawRect((count.column*dimensao.width),(count.line*dimensao.height),dimensao.width,dimensao.height);
-				
-				count.next();
 			}
 		}
 	}
@@ -122,18 +120,14 @@ public class SurfacePanel extends PanelModel implements FontImage
 	
 	private void drawText(Dimension dimensao, Dimension ajuste)
 	{
-        Counter count = new Counter(15);
-
+	    Counter count = new Counter(16,16);
         Point point = new Point();
         
-        for (char i=0; i<256; i++){
-           
+        while (count.next()){
             point = options.metricStrategy().position(count, dimensao, ajuste, fontText);
             
-            imageGraphic.drawString(fontText.getCharacter(i), point.x, point.y);
-            
-            count.next();
-        }
+            imageGraphic.drawString(fontText.getCharacter(count.getIndice()), point.x, point.y);
+         }
 	}
 
 

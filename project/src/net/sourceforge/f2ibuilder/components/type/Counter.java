@@ -37,62 +37,93 @@ package net.sourceforge.f2ibuilder.components.type;
  */
 public class Counter
 {
-    /**
-     * Coluna da contagem.
-     */
-    public int column;
-    /**
-     * Linha da contagem.
-     */
-    public int line;
-    
-    //Total de colunas
-    private int maxColumn;
-    //Total de linhas
-    private int maxLine;
+    //Coluna da contagem.
+    private int column;
+    //Linha da contagem.
+    private int line;
+    //Contar até
+    private int maxCount;
+    //Variavel contador interno
+    private int i;
     
     /**
      * Construtor
-     * @param maxLine informa o total de linhas
-     * @param maxColumn informa o total de colunas
+     * @param maxCount o valor máximo da contagem
      */    
-    public Counter(int maxColumn)
+    public Counter(int maxCount)
+    {
+        this.maxCount = maxCount;    
+        reset();
+    }
+    
+    /**
+     * Constutor
+     * @param line quantidade total de linhas
+     * @param column quantidade total de colunas
+     */
+    public Counter(int line, int column)
+    {
+        this(line*column);
+    }
+
+    private void reset()
     {
         this.column=0;
         this.line=0;      
-        this.maxColumn = maxColumn;
-//        this.maxLine = maxLine;         
+        i=0;
     }
-
+    
     /**
      * Retorna o indice
      * @return
      */
     public int getIndice()
     {
-        return line*column;
+        return i;
     }
     
     @Override
     public String toString()
     {
-        return  "Counter ("+line+","+column+")";
+        return  "Counter ("+line+","+column+"):"+i;
+    }
+
+    /**
+     * Efetua a contagem
+     * @return true enquanto estiver contando
+     */
+    public boolean next()
+    {
+        i++;
+        
+        if (i<maxCount){
+            return true;
+        } else {
+            i=maxCount;
+            return false;
+        }
     }
     
     /**
-     * Avança o contador
+     * Retorna o indice da coluna, simulando uma contagem em uma matriz
+     * @return indice da coluna
      */
-    public void next()
-    {
-        column++;
+    public int column()
+    {    
+        column = i % 16;
         
-        //Se a coluna for maior que a coluna máxima
-        if (column>maxColumn){
-            //retorna para a primeira coluna
-            column=0;
-            //e passa para a próxima linha
-            line++;
-        }
+        return column;
+    }
+    
+    /**
+     * Retorna o indice da line, simulando uma contagem em uma matriz 
+     * @return indice da coluna
+     */
+    public int line()
+    {
+        line = (i / 16);
+        
+        return line;
     }
 
 }
