@@ -35,30 +35,45 @@ import javax.swing.JFileChooser;
 import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
 import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
 
-
-
-
+/**
+ * Caixa de Dialogo para salvar os arquivos.
+ * Esta classe suporte as opções de salvar a imagem e a métrica das fontes.
+ * 
+ * Designer Pattern: Singleton
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class FileDialog
 {
+    //instância única da classe
 	static private FileDialog instance;
 	
+	//Caixas de dialogo para salvar
 	private JFileChooser dialogImagem;
-	private JFileChooser dialogMetrica;	
-	private String caminhoImagem;
-	private String caminhoMetrica;
+	private JFileChooser dialogMetrica;
+	//Caminhos dos arquivos
+	private String imageFilePath;
+	private String metricFilePath;
 	
+	/**
+	 * Construtor privado para implementação do Singleton
+	 */
 	private FileDialog()
 	{
 		dialogImagem   = new JFileChooser();
 		dialogMetrica  = new JFileChooser();	
-		caminhoImagem  = "";
-		caminhoMetrica = "";
-		
+		imageFilePath  = "";
+		metricFilePath = "";		
 	
 		dialogImagem.setFileFilter(new FileImageFilter());
 		dialogMetrica.setFileFilter(new FileMetricFilter());
 	}
-	
+	/**
+	 * Retorna a instância de FileDialog.
+	 * @return instância de FileDialog
+	 */
 	static public FileDialog getInstance()
 	{
 		if (instance==null){
@@ -66,42 +81,63 @@ public class FileDialog
 		}
 		return instance;
 	}
-	
+	/**
+	 * Exibe a caixa de dialogo para salvar a imagem.
+	 * @param componente 
+	 * @return true em caso de sucesso
+	 */
 	public boolean showSaveDialogImage(Component componente)
 	{
-		int retorno = dialogImagem.showSaveDialog(componente);
+		int codeOption = dialogImagem.showSaveDialog(componente);
 		boolean ok = false;
 		
-		if (retorno == JFileChooser.APPROVE_OPTION) {
+		if (codeOption == JFileChooser.APPROVE_OPTION) {
 			File file = dialogImagem.getSelectedFile();
-			caminhoImagem=file.getAbsolutePath();
+			
+			imageFilePath=file.getAbsolutePath();
+			
 			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
 			ok=true;
 		}
+		
 		return ok;		
 	}
-	
+	/**
+	 * Retorna o caminho da imagem 
+     * @return caminho do arquivo
+	 */
 	public String getFilePathImage()
 	{
-		return caminhoImagem;
+		return imageFilePath;
 	}
 	
+	/**
+     * Exibe a caixa de dialogo para salvar a imagem.
+	 * @param componente
+     * @return true em caso de sucesso
+	 */
 	public boolean showSaveDialogMetric(Component componente)
 	{
-		int returnVal = dialogMetrica.showSaveDialog(componente);
+		int codeOption = dialogMetrica.showSaveDialog(componente);
 		boolean ok = false;
 		
-		if (returnVal == JFileChooser.APPROVE_OPTION) {
+		if (codeOption == JFileChooser.APPROVE_OPTION) {
 			File file = dialogMetrica.getSelectedFile();
-			caminhoMetrica=file.getAbsolutePath();
+			
+			metricFilePath=file.getAbsolutePath();
+			
 			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
 			ok=true;
 		}
+		
 		return ok;
 	}
-	
+    /**
+     * Retorna o caminho do arquivo de métricas.
+     * @return caminho do arquivo
+     */
 	public String getFilePathMetric()
 	{
-		return caminhoMetrica;
+		return metricFilePath;
 	}
 }
