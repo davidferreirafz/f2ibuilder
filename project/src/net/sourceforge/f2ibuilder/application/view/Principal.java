@@ -1,12 +1,11 @@
 /*****************************************************************************/
-/* F2IBuilder      -  Gerador de Fontes Bitmap / Bitmap Font Generator       */
-/* Version 1.5     -  Java Version                                           */
+/* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://code.google.com/p/f2ibuilder                    */
-/* Blog            -  http://davidferreira-fz.blogspot.com                   */ 
+/* Site            -  http://f2ibuilder.sourceforge.net                      */
+/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
-/* Copyright (C) 2006-2007  David de Almeida Ferreira                        */
+/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
 /* Este arquivo é parte do programa F2IBuilder.                              */
@@ -53,6 +52,7 @@ import javax.swing.JToolBar;
 
 import net.sourceforge.f2ibuilder.application.controller.command.button.BoldCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.checkbox.ShowGridCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAlphaCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAntialiasCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseMetricsCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectFontCommand;
@@ -63,6 +63,8 @@ import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectSha
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.application.controller.mediator.Colleague;
+import net.sourceforge.f2ibuilder.application.controller.mediator.MediatorView;
 import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialog;
 import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialogObserver;
 import net.sourceforge.f2ibuilder.application.controller.open.LoadApplication;
@@ -95,13 +97,13 @@ public class Principal extends JFrame {
 
 	private JMenu menuAjuda = null;
 
-	private JMenuItem jMenuItem = null;
+	private JMenuItem itemSaveImage = null;
 
-	private JMenuItem jMenuItem1 = null;
+	private JMenuItem itemSaveFontMetrics = null;
 	
-    private JMenuItem jMenuExportXNA = null;
+    private JMenuItem itemExportToXNA = null;
 
-	private JToolBar jJToolBarBar = null;
+	private JToolBar toolBar = null;
 
 	private JPanel jPanel1 = null;
 
@@ -119,17 +121,17 @@ public class Principal extends JFrame {
 
 	private JCheckBoxMenuItem menuItemShowGrid = null;
 
-	private JMenu jMenu = null;
+	private JMenu menuImageType = null;
 
-	private JRadioButtonMenuItem jRadioButtonMenuItem = null;
+	private JRadioButtonMenuItem itemImageTypePNG = null;
 
-	private JRadioButtonMenuItem jRadioButtonMenuItem1 = null;
+	private JRadioButtonMenuItem itemImageTypeBMP = null;
 
-	private JMenu jMenu1 = null;
+	private JMenu menuShadow = null;
 
-	private JMenu jMenu2 = null;
+	private JMenu menuShadowVertical = null;
 
-	private JMenu jMenu3 = null;
+	private JMenu menuShadowHorizontal = null;
 
 	private JRadioButtonMenuItem jRadioButtonMenuItem2 = null;
 
@@ -145,7 +147,7 @@ public class Principal extends JFrame {
 
 	private JCheckBoxMenuItem menuItemUseMetric = null;
 
-	private JMenu jMenu4 = null;
+	private JMenu menuCharacterSet = null;
 
 	private JRadioButtonMenuItem jRadioButtonMenuItem8 = null;
 
@@ -175,6 +177,9 @@ public class Principal extends JFrame {
 
     private Options options;
     private FontText fontText;
+
+    private JCheckBoxMenuItem menuItemUseAlpha;
+    private MediatorView mediador;
 	
 	/**
 	 * This is the default constructor
@@ -183,6 +188,10 @@ public class Principal extends JFrame {
 		super();
         getOptions();
 		getFontText();
+		
+		mediador = MediatorView.getInstance();		
+		Colleague.setMediator(mediador);
+		
 		initialize();
 	}
 
@@ -238,7 +247,7 @@ public class Principal extends JFrame {
 			jPanel.setLayout(new BorderLayout());
 			jPanel.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
 			jPanel.setPreferredSize(new java.awt.Dimension(512,512));
-			jPanel.add(getJJToolBarBar(), java.awt.BorderLayout.NORTH);
+			jPanel.add(getToolBar(), java.awt.BorderLayout.NORTH);
 			jPanel.add(getJScrollPane(),java.awt.BorderLayout.CENTER);
 		}
 		return jPanel;
@@ -312,10 +321,10 @@ public class Principal extends JFrame {
 		if (menuFile == null) {
 			menuFile = new JMenu();
 			menuFile.setText("File");
-			menuFile.add(getJMenuItem());
-			menuFile.add(getJMenuItem1());
+			menuFile.add(getItemSaveImage());
+			menuFile.add(getItemSaveFontMetrics());
             menuFile.addSeparator();
-            menuFile.add(getJMenuExportXNA());
+            menuFile.add(getItemExportToXNA());
 		}
 		return menuFile;
 	}
@@ -340,67 +349,69 @@ public class Principal extends JFrame {
 	}
 
 	/**
-	 * This method initializes jMenuItem	
+	 * This method initializes itemSaveImage	
 	 * 	
 	 * @return javax.swing.JMenuItem	
 	 */
-	private JMenuItem getJMenuItem()
+	private JMenuItem getItemSaveImage()
 	{
-		if (jMenuItem == null) {
-			jMenuItem = new JMenuItem();
-			jMenuItem.setText("Save Image");
-			jMenuItem.setName("SaveImage");		
-			jMenuItem.addActionListener(new SaveFileImage(getOptions(),(FontImage) getWorkspace()));
+		if (itemSaveImage == null) {
+			itemSaveImage = new JMenuItem();
+			itemSaveImage.setText("Save Image");
+			itemSaveImage.setName("SaveImage");		
+			itemSaveImage.addActionListener(new SaveFileImage(getOptions(),(FontImage) getWorkspace()));
 		}
-		return jMenuItem;
+		return itemSaveImage;
 	}
 
 	/**
-	 * This method initializes jMenuItem1	
+	 * This method initializes itemSaveFontMetrics	
 	 * 	
 	 * @return javax.swing.JMenuItem	
 	 */
-	private JMenuItem getJMenuItem1()
+	private JMenuItem getItemSaveFontMetrics()
 	{
-		if (jMenuItem1 == null) {
-			jMenuItem1 = new JMenuItem();
-			jMenuItem1.setText("Save Font Metrics");
-			jMenuItem1.setName("SaveFontMetrics");			
-			jMenuItem1.addActionListener(new SaveFileMetrics(getFontText()));			
+		if (itemSaveFontMetrics == null) {
+			itemSaveFontMetrics = new JMenuItem();
+			itemSaveFontMetrics.setText("Save Font Metrics");
+			itemSaveFontMetrics.setName("SaveFontMetrics");			
+			itemSaveFontMetrics.addActionListener(new SaveFileMetrics(getFontText()));
+            mediador.register("itemSaveFontMetrics", itemSaveFontMetrics);			
 		}
-		return jMenuItem1;
+		return itemSaveFontMetrics;
 	}
 
-	private JMenuItem getJMenuExportXNA()
+	private JMenuItem getItemExportToXNA()
 	{
-        if (jMenuExportXNA == null) {
-            jMenuExportXNA = new JMenuItem();
-            jMenuExportXNA.setText("Export to XNA");
-            jMenuExportXNA.setName("ExportXNA");          
-            //jMenuExportXNA.addActionListener(new SaveFileMetrics(getFontText()));           
+        if (itemExportToXNA == null) {
+            itemExportToXNA = new JMenuItem();
+            itemExportToXNA.setText("Export to XNA");
+            itemExportToXNA.setName("ExportToXNA");        
+            itemExportToXNA.setEnabled(false);
+            //itemExportToXNA.addActionListener(new SaveFileMetrics(getFontText()));           
         }
-        return jMenuExportXNA;
+        return itemExportToXNA;
 	}
 	
 	/**
-	 * This method initializes jJToolBarBar	
+	 * This method initializes toolBar	
 	 * 	
 	 * @return javax.swing.JToolBar	
 	 */
-	private JToolBar getJJToolBarBar()
+	private JToolBar getToolBar()
 	{
-		if (jJToolBarBar == null) {
-			jJToolBarBar = new JToolBar();
-			jJToolBarBar.setFloatable(false);
-			jJToolBarBar.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
-			jJToolBarBar.setPreferredSize(new java.awt.Dimension(37,60));
-			jJToolBarBar.add(getJPanel1());
-			jJToolBarBar.add(getJPanel2());
-			jJToolBarBar.add(getJPanel3());
-			jJToolBarBar.add(getJPanel4());
-			jJToolBarBar.add(getColorGrupo());
+		if (toolBar == null) {
+			toolBar = new JToolBar();
+			toolBar.setFloatable(false);
+			toolBar.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
+			toolBar.setPreferredSize(new java.awt.Dimension(37,60));
+			toolBar.add(getJPanel1());
+			toolBar.add(getJPanel2());
+			toolBar.add(getJPanel3());
+			toolBar.add(getJPanel4());
+			toolBar.add(getColorGrupo());
 		}
-		return jJToolBarBar;
+		return toolBar;
 	}
 
 	/**
@@ -520,12 +531,14 @@ public class Principal extends JFrame {
 		if (menuConfiguracao == null) {
 			menuConfiguracao = new JMenu();
 			menuConfiguracao.setText("Option");
-			menuConfiguracao.add(getJMenu());
-			menuConfiguracao.add(getJMenu1());
-			menuConfiguracao.add(getJMenu4());			
+			menuConfiguracao.add(getMenuImageType());
+			menuConfiguracao.add(getMenuShadow());
+			menuConfiguracao.add(getMenuCharacterSet());			
 			menuConfiguracao.addSeparator();
 			menuConfiguracao.add(getMenuItemUseMetric());
-			menuConfiguracao.addSeparator();			
+			menuConfiguracao.addSeparator();
+            menuConfiguracao.add(getMenuItemUseAlpha());
+            menuConfiguracao.addSeparator();           
 			menuConfiguracao.add(getMenuItemAntialias());
 			menuConfiguracao.addSeparator();
 			menuConfiguracao.add(getMenuItemShowGrid());			
@@ -551,108 +564,111 @@ public class Principal extends JFrame {
 	}
 
 	/**
-	 * This method initializes jMenu	
+	 * This method initializes menuImageType	
 	 * 	
 	 * @return javax.swing.JMenu	
 	 */
-	private JMenu getJMenu() {
-		if (jMenu == null) {
-			jMenu = new JMenu();
-			jMenu.setText("Image Type");
+	private JMenu getMenuImageType() {
+		if (menuImageType == null) {
+			menuImageType = new JMenu();
+			menuImageType.setText("Image Type");
 			ButtonGroup grupo = new ButtonGroup();
-			grupo.add(getJRadioButtonMenuItem());
-			grupo.add(getJRadioButtonMenuItem1());
-			jMenu.add(getJRadioButtonMenuItem());
-			jMenu.add(getJRadioButtonMenuItem1());
+			grupo.add(getItemImageTypePNG());
+			grupo.add(getItemImageTypeBMP());
+			menuImageType.add(getItemImageTypePNG());
+			menuImageType.add(getItemImageTypeBMP());
 
 		}
-		return jMenu;
+		return menuImageType;
 	}
 
 	/**
-	 * This method initializes jRadioButtonMenuItem	
+	 * This method initializes itemImageTypePNG	
 	 * 	
 	 * @return javax.swing.JRadioButtonMenuItem	
 	 */
-	private JRadioButtonMenuItem getJRadioButtonMenuItem() {
-		if (jRadioButtonMenuItem == null) {
-			jRadioButtonMenuItem = new JRadioButtonMenuItem();
-			jRadioButtonMenuItem.setText("PNG");
-			jRadioButtonMenuItem.setName("PNG");
-			jRadioButtonMenuItem.setSelected(true);
-			jRadioButtonMenuItem.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+	private JRadioButtonMenuItem getItemImageTypePNG() {
+		if (itemImageTypePNG == null) {
+			itemImageTypePNG = new JRadioButtonMenuItem();
+			itemImageTypePNG.setText("PNG");
+			itemImageTypePNG.setName("PNG");
+			itemImageTypePNG.setSelected(true);
+			itemImageTypePNG.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("itemImageTypePNG", itemImageTypePNG);			
 		}
-		return jRadioButtonMenuItem;
+		return itemImageTypePNG;
 	}
 
 	/**
-	 * This method initializes jRadioButtonMenuItem1	
+	 * This method initializes itemImageTypeBMP	
 	 * 	
 	 * @return javax.swing.JRadioButtonMenuItem	
 	 */
-	private JRadioButtonMenuItem getJRadioButtonMenuItem1() {
-		if (jRadioButtonMenuItem1 == null) {
-			jRadioButtonMenuItem1 = new JRadioButtonMenuItem();
-			jRadioButtonMenuItem1.setText("BMP");
-			jRadioButtonMenuItem1.setName("BMP");			
-            jRadioButtonMenuItem1.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+	private JRadioButtonMenuItem getItemImageTypeBMP() {
+		if (itemImageTypeBMP == null) {
+			itemImageTypeBMP = new JRadioButtonMenuItem();
+			itemImageTypeBMP.setText("BMP");
+			itemImageTypeBMP.setName("BMP");
+			itemImageTypeBMP.setEnabled(false);
+            itemImageTypeBMP.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("itemImageTypeBMP", itemImageTypeBMP);       
 		}
-		return jRadioButtonMenuItem1;
+		return itemImageTypeBMP;
 	}
 
 	/**
-	 * This method initializes jMenu1	
+	 * This method initializes menuShadow	
 	 * 	
 	 * @return javax.swing.JMenu	
 	 */
-	private JMenu getJMenu1() {
-		if (jMenu1 == null) {
-			jMenu1 = new JMenu();
-			jMenu1.setText("Shadow");
-			jMenu1.add(getJMenu2());
-			jMenu1.add(getJMenu3());
+	private JMenu getMenuShadow() {
+		if (menuShadow == null) {
+			menuShadow = new JMenu();
+			menuShadow.setText("Shadow");
+			menuShadow.add(getMenuShadowVertical());
+			menuShadow.add(getMenuShadowHorizontal());
 		}
-		return jMenu1;
+		return menuShadow;
 	}
 
 	/**
-	 * This method initializes jMenu2	
+	 * This method initializes menuShadowVertical	
 	 * 	
 	 * @return javax.swing.JMenu	
 	 */
-	private JMenu getJMenu2() {
-		if (jMenu2 == null) {
-			jMenu2 = new JMenu();
-			jMenu2.setText("Vertical");
+	private JMenu getMenuShadowVertical() {
+		if (menuShadowVertical == null) {
+			menuShadowVertical = new JMenu();
+			menuShadowVertical.setText("Vertical");
 			ButtonGroup grupo = new ButtonGroup();
 			grupo.add(getjRadioButtonShadowVerticalNone());
 			grupo.add(getjRadioButtonShadowVerticalUp());
 			grupo.add(getjRadioButtonShadowVerticalDown());				
-			jMenu2.add(getjRadioButtonShadowVerticalNone());
-			jMenu2.add(getjRadioButtonShadowVerticalUp());
-			jMenu2.add(getjRadioButtonShadowVerticalDown());
+			menuShadowVertical.add(getjRadioButtonShadowVerticalNone());
+			menuShadowVertical.add(getjRadioButtonShadowVerticalUp());
+			menuShadowVertical.add(getjRadioButtonShadowVerticalDown());
 		}
-		return jMenu2;
+		return menuShadowVertical;
 	}
 
 	/**
-	 * This method initializes jMenu3	
+	 * This method initializes menuShadowHorizontal	
 	 * 	
 	 * @return javax.swing.JMenu	
 	 */
-	private JMenu getJMenu3() {
-		if (jMenu3 == null) {
-			jMenu3 = new JMenu();
-			jMenu3.setText("Horizontal");
+	private JMenu getMenuShadowHorizontal() {
+		if (menuShadowHorizontal == null) {
+			menuShadowHorizontal = new JMenu();
+			menuShadowHorizontal.setText("Horizontal");
 			ButtonGroup grupo = new ButtonGroup();
 			grupo.add(getJRadioButtonMenuItem2());
 			grupo.add(getJRadioButtonMenuItem3());
 			grupo.add(getJRadioButtonMenuItem4());			
-			jMenu3.add(getJRadioButtonMenuItem2());
-			jMenu3.add(getJRadioButtonMenuItem3());
-			jMenu3.add(getJRadioButtonMenuItem4());
+			menuShadowHorizontal.add(getJRadioButtonMenuItem2());
+			menuShadowHorizontal.add(getJRadioButtonMenuItem3());
+			menuShadowHorizontal.add(getJRadioButtonMenuItem4());
 		}
-		return jMenu3;
+		return menuShadowHorizontal;
 	}
 
 	/**
@@ -759,23 +775,41 @@ public class Principal extends JFrame {
 			menuItemUseMetric.setSelected(true);
 			menuItemUseMetric.setName("UseMetrics");
 			menuItemUseMetric.addItemListener(new UseMetricsCommand(getOptions(),getFontText()));
+            mediador.register("menuItemUseMetric", menuItemUseMetric);			
 		}
 		return menuItemUseMetric;
 	}
 
+    /**
+     * This method initializes jCheckBoxMenuItem1   
+     *  
+     * @return javax.swing.JCheckBoxMenuItem    
+     */
+    private JCheckBoxMenuItem getMenuItemUseAlpha() {
+        if (menuItemUseAlpha == null) {
+            menuItemUseAlpha = new JCheckBoxMenuItem();
+            menuItemUseAlpha.setText("Use Alpha");
+            menuItemUseAlpha.setSelected(true);
+            menuItemUseAlpha.setName("UseAlpha");
+            menuItemUseAlpha.addItemListener(new UseAlphaCommand(getOptions(),getFontText()));
+            mediador.register("menuItemUseAlpha", menuItemUseAlpha);            
+        }
+        return menuItemUseAlpha;
+    }
+    
 	/**
-	 * This method initializes jMenu4	
+	 * This method initializes menuCharacterSet	
 	 * 	
 	 * @return javax.swing.JMenu	
 	 */
-	private JMenu getJMenu4() {
-		if (jMenu4 == null) {
-			jMenu4 = new JMenu();
-			jMenu4.setText("Character Set");
-			jMenu4.add(getJRadioButtonMenuItem8());
-			jMenu4.add(getJRadioButtonMenuItem9());
+	private JMenu getMenuCharacterSet() {
+		if (menuCharacterSet == null) {
+			menuCharacterSet = new JMenu();
+			menuCharacterSet.setText("Character Set");
+			menuCharacterSet.add(getJRadioButtonMenuItem8());
+			menuCharacterSet.add(getJRadioButtonMenuItem9());
 		}
-		return jMenu4;
+		return menuCharacterSet;
 	}
 
 	/**

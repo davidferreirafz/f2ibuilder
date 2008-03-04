@@ -1,11 +1,11 @@
 /*****************************************************************************/
-/* F2IBuilder      -  Gerador de Fontes Bitmap / Bitmap Font Generator       */
+/* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://code.google.com/p/f2ibuilder                    */
-/* Blog            -  http://davidferreira-fz.blogspot.com                   */ 
+/* Site            -  http://f2ibuilder.sourceforge.net                      */
+/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
-/* Copyright (C) 2006-2007  David de Almeida Ferreira                        */
+/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
 /* Este arquivo é parte do programa F2IBuilder.                              */
