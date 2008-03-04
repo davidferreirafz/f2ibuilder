@@ -34,75 +34,108 @@ import javax.swing.JPanel;
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
 import com.wordpress.dukitan.componentes.ui.color.ColorPanel;
 
-
-public class ColorGroup extends JPanel {
-
+/**
+ * Agrupamento de ColorPanel, é usado para montar a exibição das três
+ * caixas de cores, as quais representam:
+ *  Cor de Fundo, Cor da Fonte e Cor da Sombra
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
+public class ColorGroup extends JPanel
+{
 	private static final long serialVersionUID = 9172638517131619642L;
-	private ColorPanel painelFonte;
-	private ColorPanel painelSombra;
-	private ColorPanel painelFundo;
 	
+	private ColorPanel panelFontColor;
+	private ColorPanel panelFontShadowColor;
+	private ColorPanel panelBackgroundColor;
+
+	/**
+	 * Construtor
+	 */
 	public ColorGroup()
 	{
 		setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Color", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), null));		
-		add(getPainelFonte(), null);
-		add(getPainelSombra(), null);
-		add(getPainelFundo(), null);
-	}
-	
+		add(getPanelFontColor(), null);
+		add(getPanelFontShadowColor(), null);
+		add(getPanelBackgroundColor(), null);
+	}	
+	/**
+	 * Registra os paineis de cores no Observer
+	 * @param observer instância da classe Observer
+	 */
 	public void register(Observer observer)
 	{
-	    painelFonte.register(observer);
-	    painelSombra.register(observer);
-	    painelFundo.register(observer);
-	}
-	
+	    panelFontColor.register(observer);
+	    panelFontShadowColor.register(observer);
+	    panelBackgroundColor.register(observer);
+	}	
+	/**
+	 * Retorna a cor de fundo
+	 * @return cor de fundo
+	 */
 	public Color getCorFundo()
 	{
-		return painelFundo.getBackground();
+		return panelBackgroundColor.getBackground();
 	}
+	/**
+	 * Retorna a cor da sombra da fonte
+	 * @return cor da sombra
+	 */
 	public Color getCorSombra()
 	{
-		return painelSombra.getBackground();
+		return panelFontShadowColor.getBackground();
 	}	
+	/**
+	 * Retorna a cor da fonte
+	 * @return cor da fonte
+	 */
 	public Color getCorFonte()
 	{
-		return painelFonte.getBackground();
+		return panelFontColor.getBackground();
 	}	
-	private JPanel getPainelFonte()
+	/**
+	 * Inicializa o painel de cor da fonte
+	 * @return JPanel
+	 */
+	private JPanel getPanelFontColor()
 	{
-		if (painelFonte == null) {
-			painelFonte = new ColorPanel();
-			painelFonte.setBackground(java.awt.Color.white);
-			painelFonte.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-			painelFonte.setToolTipText("Font Color");
-			painelFonte.setTitulo("Choose Font Color");
+		if (panelFontColor == null) {
+			panelFontColor = new ColorPanel();
+			panelFontColor.setBackground(java.awt.Color.white);
+			panelFontColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelFontColor.setToolTipText("Font Color");
+			panelFontColor.setTitulo("Choose Font Color");
 		}
-		return painelFonte;		
+		return panelFontColor;		
 	}
-	
-	private JPanel getPainelSombra() {
-		if (painelSombra == null) {
-			painelSombra = new ColorPanel();
-			painelSombra.setBackground(java.awt.Color.DARK_GRAY);
-			painelSombra.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-			painelSombra.setToolTipText("Shadow Color");
-			painelSombra.setTitulo("Choose Shadow Color");
+	/**
+     * Inicializa o painel de cor da sombra da fonte  
+	 * @return JPanel
+	 */
+	private JPanel getPanelFontShadowColor() {
+		if (panelFontShadowColor == null) {
+			panelFontShadowColor = new ColorPanel();
+			panelFontShadowColor.setBackground(java.awt.Color.DARK_GRAY);
+			panelFontShadowColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelFontShadowColor.setToolTipText("Shadow Color");
+			panelFontShadowColor.setTitulo("Choose Shadow Color");
 		}
-		return painelSombra;
+		return panelFontShadowColor;
 	}
-
-	private JPanel getPainelFundo() {
-		if (painelFundo == null) {
-			painelFundo = new ColorPanel();
-			painelFundo.setBackground(java.awt.Color.black);
-			painelFundo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-			painelFundo.setToolTipText("Background Color");
-			painelFundo.setTitulo("Choose Background Color");		
+	/**
+     * Inicializa o painel de cor de fundo 
+	 * @return JPanel
+	 */
+	private JPanel getPanelBackgroundColor() {
+		if (panelBackgroundColor == null) {
+			panelBackgroundColor = new ColorPanel();
+			panelBackgroundColor.setBackground(java.awt.Color.black);
+			panelBackgroundColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelBackgroundColor.setToolTipText("Background Color");
+			panelBackgroundColor.setTitulo("Choose Background Color");		
 		}
-		return painelFundo;
+		return panelBackgroundColor;
 	}
-
-	
-
 }
