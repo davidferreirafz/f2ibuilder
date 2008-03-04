@@ -33,20 +33,38 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JColorChooser;
 
+/**
+ * Classe de Controle para ColorPanel, encapsula as ações de seleção de cores
+ * e muda a cor de ColorPanel para a cor selecionada.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ */
 public class ColorPanelControl extends MouseAdapter
 {
     private String title;
-    
+
+    /**
+     * Constutor
+     */
     ColorPanelControl()
     {
         setTitle("Choose Color");
     }
-            
+
+    /**
+     * Informa título da janela de dialog
+     * @param title título da janela
+     */
     public void setTitle(String title)
     {
         this.title = title;
     }
 
+    /**
+     * Retorna o título da janela
+     * @return título da janela
+     */
     public String getTitle()
     {
         return title;
@@ -60,6 +78,10 @@ public class ColorPanelControl extends MouseAdapter
         }
     }
     
+    /**
+     * Executa a operação de abrir a caixa de dialog e selecionar a cor.
+     * @param component
+     */
     protected void execute(Component component)
     {
         Color cor = JColorChooser.showDialog(component,getTitle(),component.getForeground());

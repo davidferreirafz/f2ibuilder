@@ -31,12 +31,24 @@ import java.util.List;
 
 import javax.swing.JComboBox;
 
+/**
+ * Classe de ComboBox para manipular a lista de itens,
+ * controla a lista para não haver repetições, além de poder adicionar
+ * itens por meio de uma List.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class ComboBox extends JComboBox 
 {
 	private static final long serialVersionUID = -7872186258314692520L;
-
 	
-	
+	/**
+	 * Verifica se o item existe
+	 * @param novoItem a ser verificado
+	 * @return true se o item existir
+	 */
 	public boolean existeItem(String novoItem)
 	{
 		boolean achou = false;
@@ -53,6 +65,9 @@ public class ComboBox extends JComboBox
 		return achou;
 	}
 	
+	/**
+	 * Adiciona item na combobox
+	 */
     public void addItem(Object item) 
     {
     	if ((item!=null)&&(existeItem(item.toString())==false)){
@@ -60,6 +75,10 @@ public class ComboBox extends JComboBox
     	}
     }
     
+    /**
+     * Configura uma lista de itens
+     * @param lista lista de itens para adicionar a combobox
+     */
     @SuppressWarnings("unchecked")
     public void setItens(List lista)
     {
