@@ -29,17 +29,26 @@ package com.wordpress.dukitan.componentes.browser;
 import com.wordpress.dukitan.componentes.browser.type.Browser;
 
 /**
+ * Classe de fachada para simplificar a abertura do 
+ * browser no sistema operacional.
+ * 
  * Design Pattern: GoF - Facade
  * 
- * @author david
- *
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  */
 public class FacadeBrowser
 {
+    /**
+     * Abre a URL no navegador
+     * @param url a ser aberta no navegador.
+     */
 	static public void openURL(String url)
 	{
+	    //Obtem uma instance de browser
         Browser browser = BrowserFactory.getBrowser();
         
-        browser.execute(url);
+        //Tenta abrir a url no navegador
+        browser.open(url);
 	}
 }

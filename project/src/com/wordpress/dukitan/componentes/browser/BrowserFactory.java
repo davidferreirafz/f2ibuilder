@@ -31,21 +31,31 @@ import com.wordpress.dukitan.componentes.browser.type.BrowserMsWindows;
 import com.wordpress.dukitan.componentes.browser.type.Browser;
 
 /**
+ * Classe Factory para determinar qual implementação
+ * concreta de Browser deve ser utilizada. 
+ * 
  * Design Pattern: GoF - Factory Method
  * 
- * @author david
- *
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  */
 public class BrowserFactory
 {
+    /**
+     * Retorna uma implementação concreta da Interface Browser
+     * @return instância de Browser
+     */
     public static Browser getBrowser()
     {
+        //Pega a propriedade com o nome do Sistema Operacional
         String so = System.getProperty("os.name");
         Browser browser;
         
+        //Se o nome do sistema operacional começa com Windows
         if (so.startsWith("Windows")){
             browser = new BrowserMsWindows();
         } else {
+            //Nos outros casos, assume-se que o sistema é Linux
             System.out.println(so);
             browser = new BrowserLinux();
         }        

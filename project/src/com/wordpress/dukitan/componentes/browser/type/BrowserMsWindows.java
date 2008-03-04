@@ -29,20 +29,25 @@ package com.wordpress.dukitan.componentes.browser.type;
 import java.io.IOException;
 
 /**
- * Design Pattern: GoF - Factory Method
+ * Implementação da Interface Browser para abertura
+ * do navegador no MS-Windows
  * 
- * @author david
- *
+ * Design Pattern: GoF - Factory Method
+ *  
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com 
  */
 public class BrowserMsWindows implements Browser
 {   
     @Override
-    public boolean execute(String url)
+    public boolean open(String url)
     {
         boolean open = true;
         Runtime rt = Runtime.getRuntime();
         
         try {
+            //tenta executar o browser padrão por meio da integração
+            //com a shellapi do ms-windows
             rt.exec("rundll32 SHELL32.DLL,ShellExec_RunDLL "+url);
         } catch (IOException e) {
             open = false;
