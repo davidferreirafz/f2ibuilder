@@ -32,35 +32,46 @@ import java.util.ListIterator;
 
 
 /**
+ * Implementação de IObservable, está classe notificará as 
+ * classes Observer sobre alterações.
+ *  
  * Design Pattern: GoF - Observer
  * 
- * @author david
- *
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  */
 public class Observable implements IObservable
 {
     private List<Observer> listObserver;
-    private boolean autocommit = true;
+    private boolean autoCommit = true;
     
     public Observable()
     {
         listObserver = new ArrayList<Observer>();
     }
     
+    @Override
     public void register(Observer observer)
     {
         listObserver.add(observer);
     }
     
+    @Override
     public void desregister(Observer observer)
     {
         listObserver.remove(observer);
     }
     
-    //TODO: Implementar Iterator tb
+    /**
+     * Notifica os observadores sobre as alterações de seu estado.
+     * Este método deve ser chamado pela classes que implementamente
+     * Observable nos métodos de alteração de seus valores ou que forem
+     * importantes.
+     */
     protected void updateObserver()
     {
-        if (autocommit){
+        //Se a autonotificação estiva ativa ela informa sua lista de observers
+        if (autoCommit){
             if ((listObserver!=null)&&(!listObserver.isEmpty())){
                 ListIterator<Observer> i= listObserver.listIterator(0);
             
@@ -70,15 +81,25 @@ public class Observable implements IObservable
             }
         }
     }
-    
+
+    /**
+     * Configura o Observable para não notificar as alterações.
+     * É aplicado um esquema transacional para evitar que a notificação
+     * sejam aplicada durante uma sequencia de modificações.
+     */
     public void beginModify()
     {
-        autocommit = false;
+        autoCommit = false;
     }
     
+    /**
+     * Configura o Observable para notificar qualquer modificação
+     * aos Observers.
+     * Executa imediatamente a notificação aos Observers 
+     */
     public void endModify()
     {
-        autocommit = true;
+        autoCommit = true;
         updateObserver();
     }    
 }

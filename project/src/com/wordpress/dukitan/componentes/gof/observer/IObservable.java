@@ -27,15 +27,26 @@
 package com.wordpress.dukitan.componentes.gof.observer;
 
 /**
+ * Interface para implementação de classes observaveis.
+ * Esta interface notificará as classes interessadas 'Observer'.
+ * 
  * Design Pattern: GoF - Observer
  * 
- * @author david
- *
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  */
 public interface IObservable
 {
+    /**
+     * Registra um observador 
+     * @param observer instancia de um observer
+     */
     public void register(Observer observer);
     
+    /**
+     * Desregistra um observador
+     * @param observer instancia de um observer
+     */
     public void desregister(Observer observer);
 
 }
