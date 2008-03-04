@@ -1,11 +1,11 @@
 /*****************************************************************************/
-/* F2IBuilder      -  Gerador de Fontes Bitmap / Bitmap Font Generator       */
+/* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://code.google.com/p/f2ibuilder                    */
-/* Blog            -  http://davidferreira-fz.blogspot.com                   */
+/* Site            -  http://f2ibuilder.sourceforge.net                      */
+/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
-/* Copyright (C) 2006-2007  David de Almeida Ferreira                        */
+/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
 /* Este arquivo é parte do programa F2IBuilder.                              */
@@ -27,6 +27,18 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.application.model;
 
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasNone;
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundApha;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundFill;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricNone;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowStrategy;
+
 import com.wordpress.dukitan.componentes.gof.observer.Observable;
 
 public class Options extends Observable
@@ -38,6 +50,10 @@ public class Options extends Observable
     private int     sombraVertical;
     private int     sombraHorizontal;
     private int     tamanhoTextura;
+    private BackgroundStrategy backgroundStrategy;
+    private AntialiasStrategy antialiasStrategy;
+    private MetricStrategy metricStrategy;
+    private ShadowStrategy shadowStrategy;
 
     static public int IMAGE_TYPE_PNG = 0;
     static public int IMAGE_TYPE_BMP = 1;    
@@ -47,13 +63,15 @@ public class Options extends Observable
     
     private Options()
     {
-        metrica    = true;
-        antialias  = true;
-        grid       = false;
-        imagemTipo = "png";
-        sombraVertical   = 0;
-        sombraHorizontal = 0;
-        tamanhoTextura   = 0;
+        grid = false;
+        tamanhoTextura = 0;
+        
+        setAlpha(true);        
+        setImageType(IMAGE_TYPE_PNG);
+        setAntialias(true);
+        setMetrica(true);
+        setSombraHorizontal(0);
+        setSombraVertical(0);
     }
     
     public static Options getInstance()
@@ -65,11 +83,6 @@ public class Options extends Observable
         return instance;
     }  
 
-    public boolean isAntialias()
-    {
-        return antialias;
-    }
-
     /**
      * 
      * @param antialias
@@ -78,6 +91,12 @@ public class Options extends Observable
     public void setAntialias(boolean antialias)
     {
         this.antialias = antialias;
+        
+        if (antialias){
+            antialiasStrategy = new AntialiasEffect();
+        } else {
+            antialiasStrategy = new AntialiasNone();
+        }
         
         updateObserver();
     }
@@ -99,11 +118,6 @@ public class Options extends Observable
         updateObserver();
     }
 
-    public boolean isMetrica()
-    {
-        return metrica;
-    }
-
     /**
      * 
      * @param metrica
@@ -112,6 +126,12 @@ public class Options extends Observable
     public void setMetrica(boolean metrica)
     {
         this.metrica = metrica;
+
+        if (metrica){
+            metricStrategy = new MetricEffect();
+        } else {
+            metricStrategy = new MetricNone();
+        }
         
         updateObserver();
     }
@@ -121,33 +141,29 @@ public class Options extends Observable
         return imagemTipo;
     }
 
-    /**
-     * 
-     * @param imageType
-     */
+
     public void setImageType(int imageType)
     {
         switch (imageType){
             case 1:
                     this.imagemTipo = "bmp";
                 break;
-                
             case 0:
             default:
                     this.imagemTipo = "png";
                 break;
         }
     }
-
-    public boolean isImageTipoPNG()
+    
+    public void setAlpha(boolean value)
     {
-        return imagemTipo.equalsIgnoreCase("png");
+        if (value){
+            backgroundStrategy = new BackgroundApha();            
+        }else {
+            backgroundStrategy = new BackgroundFill();            
+        }
     }
 
-    public int getSombraHorizontal()
-    {
-        return sombraHorizontal;
-    }
     /**
      * 
      * @param sombraHorizontal
@@ -156,14 +172,17 @@ public class Options extends Observable
     public void setSombraHorizontal(int sombraHorizontal)
     {
         this.sombraHorizontal = sombraHorizontal;
-        
-        updateObserver();
+
+        setSombra(sombraHorizontal, sombraVertical);        
     }
 
-    public int getSombraVertical()
+    private void setSombra(int horizontal, int vertical)
     {
-        return sombraVertical;
+        shadowStrategy = new ShadowEffect(horizontal,vertical);
+        
+        updateObserver();        
     }
+    
 
     /**
      * 
@@ -173,8 +192,8 @@ public class Options extends Observable
     public void setSombraVertical(int sombraVertical)
     {
         this.sombraVertical = sombraVertical;
-        
-        updateObserver();
+         
+        setSombra(sombraHorizontal, sombraVertical);
     }
 
     public boolean isTexturaAuto()
@@ -201,5 +220,25 @@ public class Options extends Observable
         this.tamanhoTextura = tamanhoTextura;
         
         updateObserver();
+    }
+    
+    public BackgroundStrategy backgroundStrategy()
+    {
+        return backgroundStrategy;
+    }
+    
+    public AntialiasStrategy antialiasStrategy()
+    {
+        return antialiasStrategy; 
+    }
+
+    public MetricStrategy metricStrategy()
+    {    
+        return metricStrategy;
+    }
+
+    public ShadowStrategy shadowStrategy()
+    {
+        return shadowStrategy;
     }
 }

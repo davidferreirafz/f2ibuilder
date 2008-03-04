@@ -1,11 +1,11 @@
 /*****************************************************************************/
-/* F2IBuilder      -  Gerador de Fontes Bitmap / Bitmap Font Generator       */
+/* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://code.google.com/p/f2ibuilder                    */
-/* Blog            -  http://davidferreira-fz.blogspot.com                   */ 
+/* Site            -  http://f2ibuilder.sourceforge.net                      */
+/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
-/* Copyright (C) 2006-2007  David de Almeida Ferreira                        */
+/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
 /* Este arquivo é parte do programa F2IBuilder.                              */
@@ -29,9 +29,9 @@ package net.sourceforge.f2ibuilder.util;
 
 public final class Constants
 {
-	final static public String TITULO = "F2IBuilder v2.9";
-	final static public String VERSAO = "2.9";	
-	final static public String VERSAO_EXPLICITA = "Version 2.9 - GPLv3 (Free Software)";
+	final static public String TITULO = "F2IBuilder v3.0";
+	final static public String VERSAO = "3.0";	
+	final static public String VERSAO_EXPLICITA = "Version 3.0 - GPLv3 (Free Software)";
 	final static public String GPL    = "GPL (Free Software)";
 	final static public String WEB_SITE = "http://f2ibuilder.sourceforge.net";
 }
