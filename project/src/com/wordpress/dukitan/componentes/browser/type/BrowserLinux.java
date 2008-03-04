@@ -29,22 +29,28 @@ package com.wordpress.dukitan.componentes.browser.type;
 import java.io.IOException;
 
 /**
- * Design Pattern: GoF - Factory Method
+ * Implementação da Interface Browser para abertura
+ * do navegador no GNU/Linux
  * 
- * @author david
- *
+ * Design Pattern: GoF - Factory Method
+ *  
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com 
  */
 public class BrowserLinux implements Browser
 {   
     @Override
-    public boolean execute(String url)
+    public boolean open(String url)
     {
-        boolean open = true;
-        
+        boolean open = true;        
         Runtime rt = Runtime.getRuntime();
+        
         try {
+            //tenta executar o firefox pelo comando 'firefox'
             rt.exec("firefox "+url);
         } catch (IOException e) {
+            //caso não consiga executar pelo comando 'firefox'
+            //tenta executar pelo comando mozilla-firefox
             try {
                 rt.exec("mozilla-firefox "+url);
             } catch (IOException e1) {

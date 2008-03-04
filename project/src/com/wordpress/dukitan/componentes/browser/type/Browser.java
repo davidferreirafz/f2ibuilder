@@ -28,12 +28,20 @@
 package com.wordpress.dukitan.componentes.browser.type;
 
 /**
+ * Interface para definição de abertura do 
+ * browser no sistema operacional.
+ * 
  * Design Pattern: GoF - Factory Method
  * 
- * @author david
- *
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  */
 public interface Browser
 {
-    public boolean execute(String url);
+    /**
+     * Executa a url passada abrindo-a no browser.
+     * @param url a ser aberta no navegador
+     * @return retorna true em caso de abertura com sucesso.
+     */
+    public boolean open(String url);
 }
