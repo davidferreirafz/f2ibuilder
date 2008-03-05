@@ -36,6 +36,15 @@ import net.sourceforge.f2ibuilder.components.type.Limit;
 
 import com.wordpress.dukitan.componentes.gof.observer.Observable;
 
+/**
+ * Classe com os dados relacionados a fonte selecionada.
+ * 
+ * Designer Pattern: Observer, Singleton
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class FontText extends Observable
 {
     private String fontName;
@@ -53,7 +62,11 @@ public class FontText extends Observable
     
     private static FontText instance;
     
-    
+   
+    /**
+     * Instância de FontText
+     * @return instância única de FontText
+     */
     public static FontText getInstance()
     {
         if (instance == null){
@@ -63,6 +76,9 @@ public class FontText extends Observable
         return instance;
     }
     
+    /**
+     * Construtor privado para implementação do Singleton
+     */
     private FontText()
     {
         workCharset = new int[256];
@@ -80,7 +96,7 @@ public class FontText extends Observable
     }
     
     /**
-     * Chamado externo, deve notificar mudanças
+     * Configura uma nova fonte a ser usada.
      */
     public void make()
     {
@@ -91,13 +107,18 @@ public class FontText extends Observable
         updateObserver();
     }   
     
+    /**
+     * Cria a fonte a ser usada.
+     */
     private void apllyNewFont()
     {
         font = new Font(fontName,fontStyle,fontSize);
         
         panel.setFont(font);
     }
-    
+    /**
+     * Obtem as informações de métrica da fonte.
+     */
     private void metricsDefault()
     {
         originalMetrics=panel.getFontMetrics(font).getWidths();
@@ -118,7 +139,9 @@ public class FontText extends Observable
         
         limit.max=dimensionDefault.width;
     }
-    
+    /**
+     * Aplica os limites das métricas
+     */
     private void applyMetricsLimit()
     {
         workMetrics=originalMetrics.clone();
@@ -133,9 +156,8 @@ public class FontText extends Observable
         
         dimensionDefault.width=limit.max;
     }
-    
     /**
-     * Chamado externo, deve notificar mudanças
+     * Retonar as métricas para a definição default da fonte.
      */
     public void resetMetrics()
     {
@@ -148,8 +170,7 @@ public class FontText extends Observable
     }
 
     /**
-     * Chamado externo, notificação por mudanças delegado para método
-     * 'resetMetrics'
+     * Retorna os caracteres para definição default da tabelas ascii.
      */
     public void resetCharset()
     {
@@ -159,17 +180,29 @@ public class FontText extends Observable
         
         resetMetrics();
     }
-    
+    /**
+     * Pega o caracter correspondente ao indice da tabela de caracteres passado.
+     * @param i indice na tabela de caracteres
+     * @return retorna a Letra correspondente
+     */
     public String getCharacter(int i)
     {
         return String.valueOf((char)workCharset[i]);
     }
-    
+    /**
+     * Pega o código ascii do caracter correspondente ao indice da tabela de caracteres passado.
+     * @param i indice na tabela de caracteres
+     * @return retorna o código ascii do caracter correspondente
+     */
     public int getCharacterNumber(int i)
     {
         return workCharset[i];
     }
-    
+    /**
+     * Define outro caracter na tabela
+     * @param i indice na tabela de caracteres
+     * @param valor código ascii do caracter
+     */
     public void setCharacter(int i,int valor)
     {       
         workCharset[i]=valor;
@@ -177,8 +210,11 @@ public class FontText extends Observable
         
         updateObserver();
     }
-    
-    
+    /**
+     * Define a métrica para um caracter.
+     * @param i indice na tabela de caracteres
+     * @param valor da largura do caracter
+     */    
     public void setCharacterMetric(int i,int valor)
     {
         workMetrics[i]=valor;
@@ -186,7 +222,10 @@ public class FontText extends Observable
         
         updateObserver();       
     }
-    
+    /**
+     * Define as métricas para todos os caracteres
+     * @param metricas array com as métricas de todos os caracteres
+     */
     public void setMetrics(int[] metricas)
     {
         originalMetrics=metricas;    
@@ -195,12 +234,11 @@ public class FontText extends Observable
         
         updateObserver();       
     }        
+
     /**
-     * 
-     * @param min
-     * @param max
-     * 
-     * Chamado externo, deve notificar mudanças
+     * Configura os novos limites das métricas.
+     * @param min largura mínima para os caracteres
+     * @param max largura máxima para os caracteres
      */
     public void setLimits(int min, int max)
     {
@@ -211,7 +249,9 @@ public class FontText extends Observable
         updateObserver();
     }
     
-     
+    /**
+     * Procura pelos limites default.
+     */
     protected void searchLimits()
     {
         limit.max=0; limit.min=1000;
@@ -240,11 +280,6 @@ public class FontText extends Observable
         return font;
     }
 
-    /**
-     * @param size
-     * Chamada externo, notificação por mudanças delegado para
-     * método 'make'
-     */
     public void setFontSize(int size)
     {
         this.fontSize=size;
@@ -257,12 +292,6 @@ public class FontText extends Observable
         return fontSize;
     }
     
-    /**
-     * 
-     * @param fontName
-     * Chamada externo, notificação por mudanças delegado para
-     * método 'make'
-     */
     public void setFontName(String fontName)
     {
         this.fontName=fontName;
@@ -273,17 +302,18 @@ public class FontText extends Observable
     {
         return fontName;
     }
-    
+    /**
+     * Retorna a largura do caracter
+     * @param i indice na tabela de caracteres
+     * @return largura do caracter
+     */
     public int getCharacterMetric(int i)
     {
         return workMetrics[i];
     }
-
     /**
-     * 
-     * @param value
-     * Chamada externo, notificação por mudanças delegado para
-     * método 'make'
+     * Configura o Estilo da Fonte, se é negrito ou não
+     * @param value true para utilizar negrito
      */
     public void setBold(boolean value)
     {
@@ -295,17 +325,27 @@ public class FontText extends Observable
         
         make();
     }    
-    
+    /**
+     * Retorna a dimensão default(Máxima) do caracter.
+     * @return
+     */
     public Dimension getDefaultCharDimension()
     {
         return (Dimension) dimensionDefault.clone();
     }
-    
+    /**
+     * Retorna a distancia entre o ponto que se deseja desenhar (virtual)
+     * e o ponto que de fato a fonte é desenhada.
+     * @return distancia
+     */   
     public int getFontAscent()
     {
         return panel.getFontMetrics(font).getAscent();
     }
-    
+    /**
+     * Retorna o nome da fonte mais a informação de seu tamanho
+     * @return FonteName+"."+FontSize
+     */
     public String getDefaultID()
     {
         return getFontName()+"."+getFontSize();
