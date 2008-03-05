@@ -41,6 +41,15 @@ import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowStrat
 
 import com.wordpress.dukitan.componentes.gof.observer.Observable;
 
+/**
+ * Classe com os dados relacionados as opções para geração da imagem.
+ * 
+ * Designer Pattern: Observer, Singleton
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class Options extends Observable
 {
     private boolean grid;
@@ -60,7 +69,9 @@ public class Options extends Observable
     
     static private Options instance;
 
-    
+    /**
+     * Construtor privado para implementação do Singleton
+     */
     private Options()
     {
         grid = false;
@@ -83,11 +94,6 @@ public class Options extends Observable
         return instance;
     }  
 
-    /**
-     * 
-     * @param antialias
-     * Chamada externa, deve notificar mudanças
-     */
     public void setAntialias(boolean antialias)
     {
         this.antialias = antialias;
@@ -106,11 +112,6 @@ public class Options extends Observable
         return grid;
     }
 
-    /**
-     * 
-     * @param grid
-     * Chamada externa, deve notificar mudanças
-     */
     public void setGrid(boolean grid)
     {
         this.grid = grid;
@@ -118,11 +119,6 @@ public class Options extends Observable
         updateObserver();
     }
 
-    /**
-     * 
-     * @param metrica
-     * Chamada externa, deve notificar mudanças
-     */
     public void setMetrica(boolean metrica)
     {
         this.metrica = metrica;
@@ -164,11 +160,6 @@ public class Options extends Observable
         }
     }
 
-    /**
-     * 
-     * @param sombraHorizontal
-     * Chamada externa, deve notificar mudanças
-     */
     public void setSombraHorizontal(int sombraHorizontal)
     {
         this.sombraHorizontal = sombraHorizontal;
@@ -182,13 +173,7 @@ public class Options extends Observable
         
         updateObserver();        
     }
-    
-
-    /**
-     * 
-     * @param sombraVertical
-     * Chamada externa, deve notificar mudanças
-     */
+ 
     public void setSombraVertical(int sombraVertical)
     {
         this.sombraVertical = sombraVertical;
@@ -210,11 +195,6 @@ public class Options extends Observable
         return tamanhoTextura;
     }
 
-    /**
-     * 
-     * @param tamanhoTextura
-     * Chamada externa, deve notificar mudanças
-     */
     public void setTextureSize(int tamanhoTextura)
     {
         this.tamanhoTextura = tamanhoTextura;
