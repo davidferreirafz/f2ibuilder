@@ -31,10 +31,20 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
 
-
+/**
+ * Aplica o algoritmo para utilizar antialias na imagem.
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class AntialiasEffect extends AntialiasStrategy
 {
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void apply(Graphics2D graphics)
     {

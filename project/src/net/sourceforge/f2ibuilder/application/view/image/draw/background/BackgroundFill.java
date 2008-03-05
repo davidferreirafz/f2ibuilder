@@ -33,9 +33,20 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 
-
+/**
+ * Aplica o algoritmo para usar background com preenchimento completo.
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class BackgroundFill extends BackgroundStrategy
 {
+    /**
+     * {@inheritDoc}
+     */    
     public void draw(Graphics graphics, Color color, Dimension dimension)
     {
         graphics.setColor(color);
@@ -43,6 +54,9 @@ public class BackgroundFill extends BackgroundStrategy
     }
 
     @Override
+    /**
+     * {@inheritDoc}
+     */    
     public int getColorChannel()
     {
         //Padrão é usar RGB

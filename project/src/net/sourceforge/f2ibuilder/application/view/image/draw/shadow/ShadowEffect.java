@@ -30,14 +30,29 @@ package net.sourceforge.f2ibuilder.application.view.image.draw.shadow;
 import java.awt.Dimension;
 
 
-
+/**
+ * Determina o posicionamento para o efeito de sombra
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class ShadowEffect extends ShadowStrategy
 {
+    /**
+     * Construtor
+     * @param horizontal posição horizontal da sombra em relação a fonte
+     * @param vertical posição vertical da sombra em relação a fonte
+     */
     public ShadowEffect(int horizontal, int vertical)
     {
         super(horizontal, vertical);
     }
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Dimension adjustShadow()
     {
@@ -55,6 +70,9 @@ public class ShadowEffect extends ShadowStrategy
     }
 
     @Override
+    /**
+     * {@inheritDoc}
+     */
     public Dimension adjustFont()
     {
         Dimension ajuste = new Dimension(0,0);

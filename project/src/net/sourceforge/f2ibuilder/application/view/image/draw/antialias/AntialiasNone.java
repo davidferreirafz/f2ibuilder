@@ -30,10 +30,20 @@ package net.sourceforge.f2ibuilder.application.view.image.draw.antialias;
 import java.awt.Graphics2D;
 
 
-
+/**
+ * Aplica o algoritmo para não utilizar antialias na imagem.
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class AntialiasNone extends AntialiasStrategy
 {
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void apply(Graphics2D graphics)
     {
