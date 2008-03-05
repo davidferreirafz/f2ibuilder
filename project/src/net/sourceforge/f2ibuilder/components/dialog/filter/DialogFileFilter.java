@@ -61,12 +61,12 @@ public abstract class DialogFileFilter extends FileFilter
         return isAccept(fileInfo);
 	}
 
-	/**
-	 * Implementa a verificação do tipo de arquivo.
+    /**
+     * Verifica se o arquivo passado é aceito.
      * Obs.: Este método implementa o Designer Pattern "GoF - Template Method".
      * 
-	 * @param info instância de FileInfo
-	 * @return true em caso de sucesso
-	 */
+     * @param info instância de FileInfo
+     * @return true em caso de sucesso
+     */	
 	protected abstract boolean isAccept(FileInfo info);
 }

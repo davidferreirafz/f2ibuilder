@@ -50,13 +50,17 @@ public class Observable implements IObservable
         listObserver = new ArrayList<Observer>();
     }
     
-    @Override
+    /**
+     * {@inheritDoc}
+     */  
     public void register(Observer observer)
     {
         listObserver.add(observer);
     }
     
-    @Override
+    /**
+     * {@inheritDoc}
+     */  
     public void desregister(Observer observer)
     {
         listObserver.remove(observer);

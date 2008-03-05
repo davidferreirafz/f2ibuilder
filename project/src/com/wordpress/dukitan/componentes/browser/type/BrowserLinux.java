@@ -39,6 +39,9 @@ import java.io.IOException;
  */
 public class BrowserLinux implements Browser
 {   
+    /**
+     * {@inheritDoc}
+     */  
     @Override
     public boolean open(String url)
     {
