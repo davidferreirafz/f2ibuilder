@@ -30,9 +30,7 @@ package net.sourceforge.f2ibuilder.components.type;
 /**
  * Classe para representar os limites máximo e mínimo
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Limit
 {

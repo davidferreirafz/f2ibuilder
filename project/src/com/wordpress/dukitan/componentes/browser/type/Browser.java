@@ -33,8 +33,7 @@ package com.wordpress.dukitan.componentes.browser.type;
  * 
  * Design Pattern: GoF - Factory Method
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public interface Browser
 {

@@ -38,9 +38,7 @@ import net.sourceforge.f2ibuilder.application.view.Principal;
 /**
  * Classe para iniciar a aplicação F2IBuilder
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class F2IBuilderMain
 {

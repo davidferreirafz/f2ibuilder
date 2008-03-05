@@ -49,9 +49,7 @@ import net.sourceforge.f2ibuilder.components.type.Counter;
  * 
  * Designer Pattern: Observer, Strategy
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class SurfacePanel extends PanelModel implements FontImage 
 {

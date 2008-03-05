@@ -37,8 +37,7 @@ import javax.swing.JColorChooser;
  * Classe de Controle para ColorPanel, encapsula as ações de seleção de cores
  * e muda a cor de ColorPanel para a cor selecionada.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ColorPanelControl extends MouseAdapter
 {

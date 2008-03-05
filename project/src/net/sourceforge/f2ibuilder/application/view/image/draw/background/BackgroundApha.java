@@ -40,9 +40,7 @@ import java.awt.image.BufferedImage;
  * 
  * Designer Pattern: Strategy
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class BackgroundApha extends BackgroundStrategy
 {

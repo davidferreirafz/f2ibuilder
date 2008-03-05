@@ -41,9 +41,7 @@ import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
  * 
  * Designer Pattern: Singleton
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class FileDialog
 {

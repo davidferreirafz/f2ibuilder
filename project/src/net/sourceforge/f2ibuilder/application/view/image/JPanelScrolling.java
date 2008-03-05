@@ -38,9 +38,7 @@ import javax.swing.SwingConstants;
  * Panel com barra de Scrolling.
  * 
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public abstract class JPanelScrolling extends JPanel implements Scrollable
 {

@@ -31,9 +31,7 @@ import java.awt.GraphicsEnvironment;
 /**
  * Combobox, que lista as fontes instaladas no sistema operacional.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ComboFonte extends ComboBox
 {

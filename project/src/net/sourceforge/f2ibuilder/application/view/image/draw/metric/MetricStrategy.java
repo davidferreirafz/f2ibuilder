@@ -38,9 +38,7 @@ import net.sourceforge.f2ibuilder.components.type.Counter;
  * 
  * Design Pattern: GoF - Strategy 
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 abstract public class MetricStrategy
 {

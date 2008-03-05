@@ -35,9 +35,7 @@ import java.awt.Graphics2D;
  * 
  * Designer Pattern: Strategy
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class AntialiasNone extends AntialiasStrategy
 {

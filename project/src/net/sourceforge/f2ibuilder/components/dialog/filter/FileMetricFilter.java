@@ -33,9 +33,7 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
  * Classe para filtrar a exibição dos arquivos,
  * exibe apenas os arquivos (.dat) de métricas.
  *  
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class FileMetricFilter extends DialogFileFilter 
 {

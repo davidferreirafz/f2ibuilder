@@ -37,9 +37,7 @@ import javax.swing.JPanel;
  * Esta classe foi desenvolvida baseando na classe PicturePanel de
  * Daniel F. Martins <daniel_tritone@terra.com.br>
  *  
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ImagePanel extends JPanel 
 {

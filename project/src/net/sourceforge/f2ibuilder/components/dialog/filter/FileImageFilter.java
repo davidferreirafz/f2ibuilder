@@ -33,9 +33,7 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
  * Classe para filtrar a exibição dos arquivos,
  * exibe apenas os arquivos PNG ou BMP de imagens.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class FileImageFilter extends DialogFileFilter
 {

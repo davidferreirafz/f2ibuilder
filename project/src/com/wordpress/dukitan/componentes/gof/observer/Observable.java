@@ -37,8 +37,7 @@ import java.util.ListIterator;
  *  
  * Design Pattern: GoF - Observer
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Observable implements IObservable
 {

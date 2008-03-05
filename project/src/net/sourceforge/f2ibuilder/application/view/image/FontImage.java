@@ -32,9 +32,7 @@ import java.awt.image.RenderedImage;
 /**
  * Interface para que se obtenha externamente uma imagem.
  *  
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public interface FontImage
 {

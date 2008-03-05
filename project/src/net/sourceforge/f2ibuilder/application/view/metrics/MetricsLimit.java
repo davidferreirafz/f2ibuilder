@@ -55,9 +55,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observer;
  * Designer Pattern: GoF - Observer
  * Implementa mecanismo para receber as notificações de mudanças.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class MetricsLimit extends JDialog implements Observer{
 
@@ -96,8 +94,6 @@ public class MetricsLimit extends JDialog implements Observer{
 
 	/**
 	 * This method initializes this
-	 * 
-	 * @return void
 	 */
 	private void initialize() {
 		this.setSize(280, 200);

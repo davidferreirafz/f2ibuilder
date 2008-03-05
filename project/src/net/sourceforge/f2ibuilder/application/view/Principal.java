@@ -85,9 +85,7 @@ import com.wordpress.dukitan.componentes.ui.combobox.ComboFonte;
  * Classe da tela Principal.
  * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Principal extends JFrame
 {
@@ -228,8 +226,6 @@ public class Principal extends JFrame
 	
 	/**
 	 * This method initializes this
-	 * 
-	 * @return void
 	 */
 	private void initialize() {
 		this.setSize(634, 300);

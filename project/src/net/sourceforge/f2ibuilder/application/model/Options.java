@@ -46,9 +46,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observable;
  * 
  * Designer Pattern: Observer, Singleton
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Options extends Observable
 {

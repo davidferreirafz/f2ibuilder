@@ -38,9 +38,7 @@ import net.sourceforge.f2ibuilder.components.type.Counter;
  * 
  * Designer Pattern: Strategy
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class MetricNone extends MetricStrategy
 {
