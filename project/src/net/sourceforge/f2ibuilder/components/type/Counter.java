@@ -31,9 +31,7 @@ package net.sourceforge.f2ibuilder.components.type;
  * Classe para representar um contador em estilo matriz, 
  * que retorna o indice em formato de vetor.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Counter
 {
@@ -75,7 +73,7 @@ public class Counter
     
     /**
      * Retorna o indice
-     * @return
+     * @return indice
      */
     public int getIndice()
     {

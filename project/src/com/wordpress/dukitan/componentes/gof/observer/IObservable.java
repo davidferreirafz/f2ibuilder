@@ -32,8 +32,7 @@ package com.wordpress.dukitan.componentes.gof.observer;
  * 
  * Design Pattern: GoF - Observer
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public interface IObservable
 {

@@ -34,9 +34,7 @@ import java.awt.Dimension;
  * 
  * Design Pattern: GoF - Strategy 
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public abstract class ShadowStrategy
 {

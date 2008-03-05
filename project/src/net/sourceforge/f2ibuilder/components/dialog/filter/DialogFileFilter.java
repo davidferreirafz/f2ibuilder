@@ -38,9 +38,7 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
  * 
  * Designer Pattern: GoF - Template Method
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public abstract class DialogFileFilter extends FileFilter
 {

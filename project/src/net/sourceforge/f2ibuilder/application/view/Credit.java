@@ -48,9 +48,7 @@ import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
  * Classe da tela Credit.
  * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class Credit extends JDialog {
 
@@ -76,8 +74,6 @@ public class Credit extends JDialog {
 
 	/**
 	 * This method initializes this
-	 * 
-	 * @return void
 	 */
 	private void initialize() {
 		this.setSize(409, 396);

@@ -45,9 +45,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observer;
  * @see ColorGroup
  * @see Options
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public abstract class PanelModel extends JPanelScrolling implements Observer
 {   

@@ -41,9 +41,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observable;
  * 
  * Designer Pattern: Observer, Singleton
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class FontText extends Observable
 {
@@ -327,7 +325,7 @@ public class FontText extends Observable
     }    
     /**
      * Retorna a dimensão default(Máxima) do caracter.
-     * @return
+     * @return dimensao do caracter 
      */
     public Dimension getDefaultCharDimension()
     {

@@ -36,9 +36,7 @@ import javax.swing.JComboBox;
  * controla a lista para não haver repetições, além de poder adicionar
  * itens por meio de uma List.
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ComboBox extends JComboBox 
 {

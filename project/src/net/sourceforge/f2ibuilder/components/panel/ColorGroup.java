@@ -39,9 +39,7 @@ import com.wordpress.dukitan.componentes.ui.color.ColorPanel;
  * caixas de cores, as quais representam:
  *  Cor de Fundo, Cor da Fonte e Cor da Sombra
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
- *
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ColorGroup extends JPanel
 {

@@ -41,8 +41,7 @@ import com.wordpress.dukitan.componentes.gof.observer.Observer;
  *  
  * Design Pattern: GoF - Observer
  * 
- * @author David Ferreira 
- * @email davidferreira.fz@gmail.com
+ * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public class ColorPanel extends JPanel implements IObservable
 {
