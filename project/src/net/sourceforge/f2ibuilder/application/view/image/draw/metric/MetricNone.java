@@ -33,10 +33,22 @@ import java.awt.Point;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.components.type.Counter;
 
+/**
+ * Aplica o algoritmo que não utiliza métricas, centralizando a letra.
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class MetricNone extends MetricStrategy
 {
 
     @Override
+    /**
+     * {@inheritDoc}
+     */    
     public Dimension adjust(Dimension ajuste, Dimension dimensao, FontText fontText)
     {
         ajuste.width  +=(dimensao.width/2);
@@ -46,6 +58,9 @@ public class MetricNone extends MetricStrategy
     }
 
     @Override
+    /**
+     * {@inheritDoc}
+     */    
     public Point position(Counter count, Dimension dimensao, Dimension ajuste, FontText fontText)
     {
         Point p = new Point(0,0);

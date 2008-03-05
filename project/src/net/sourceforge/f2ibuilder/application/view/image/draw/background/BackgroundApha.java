@@ -35,16 +35,29 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 
-
+/**
+ * Aplica o algoritmo para usar alpha no background.
+ * 
+ * Designer Pattern: Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class BackgroundApha extends BackgroundStrategy
 {
+    /**
+     * {@inheritDoc}
+     */    
     public void draw(Graphics graphics, Color color, Dimension dimension)
     {
         Graphics2D g2 = (Graphics2D) graphics;
         AlphaComposite ac =AlphaComposite.getInstance(AlphaComposite.SRC,1.0f);         
         g2.setComposite(ac);
     }
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int getColorChannel()
     {
