@@ -48,6 +48,17 @@ import net.sourceforge.f2ibuilder.application.model.FontText;
 
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
+/**
+ * Classe da tela MetricsLimit.
+ * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+ * 
+ * Designer Pattern: GoF - Observer
+ * Implementa mecanismo para receber as notificações de mudanças.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class MetricsLimit extends JDialog implements Observer{
 
 	private static final long serialVersionUID = 1L;
@@ -56,7 +67,7 @@ public class MetricsLimit extends JDialog implements Observer{
 
 	private JButton jButton = null;
 
-    private FontText tableChar = null;  //  @jve:decl-index=0:
+    private FontText fontText = null;  //  @jve:decl-index=0:
 
 	private JButton jButton2 = null;
 
@@ -75,12 +86,12 @@ public class MetricsLimit extends JDialog implements Observer{
 	/**
 	 * @param owner
 	 */
-	public MetricsLimit(Frame owner, FontText tableChar) {
+	public MetricsLimit(Frame owner, FontText fontText) {
         super(owner);
-        this.tableChar = tableChar;
+        this.fontText = fontText;
         initialize();        
         
-        tableChar.register(this);            
+        fontText.register(this);            
 	}
 
 	/**
@@ -129,7 +140,7 @@ public class MetricsLimit extends JDialog implements Observer{
 			jButton.setText("Apply");
 //TODO: remover dependencia			
 //			jButton.addActionListener((java.awt.event.ActionListener) ActionListener.getInstance());
-			jButton.addActionListener(new SaveMetricLimit(tableChar,getMenorLimite(),getMaiorLimite()));
+			jButton.addActionListener(new SaveMetricLimit(fontText,getMenorLimite(),getMaiorLimite()));
 		}
 		return jButton;
 	}
@@ -144,7 +155,7 @@ public class MetricsLimit extends JDialog implements Observer{
             jButton11 = new JButton();
             jButton11.setBounds(new Rectangle(15, 135, 85, 25));
             jButton11.setText("Reset");
-            jButton11.addActionListener(new ResetMetrics(tableChar));
+            jButton11.addActionListener(new ResetMetrics(fontText));
         }
         return jButton11;
     }
@@ -242,9 +253,14 @@ public class MetricsLimit extends JDialog implements Observer{
 	}
 
     @Override
+    /**
+     * Implementação da notificação de mudanças nos objetos Observable.
+     * 
+     * @see Observer
+     */
     public void update()
     {
-        menorLimite.setText(String.valueOf(tableChar.getMenorLargura()));
-        maiorLimite.setText(String.valueOf(tableChar.getMaiorLargura()));
+        menorLimite.setText(String.valueOf(fontText.getMenorLargura()));
+        maiorLimite.setText(String.valueOf(fontText.getMaiorLargura()));
     }
 }  //  @jve:decl-index=0:visual-constraint="10,10"
