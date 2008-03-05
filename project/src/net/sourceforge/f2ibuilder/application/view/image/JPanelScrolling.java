@@ -34,9 +34,19 @@ import javax.swing.JPanel;
 import javax.swing.Scrollable;
 import javax.swing.SwingConstants;
 
+/**
+ * Panel com barra de Scrolling.
+ * 
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public abstract class JPanelScrolling extends JPanel implements Scrollable
 {
-
+    /**
+     * Construtor
+     */
     public JPanelScrolling()
     {
         setDoubleBuffered(true);
@@ -82,5 +92,9 @@ public abstract class JPanelScrolling extends JPanel implements Scrollable
         return retorno;
     }
 
+    /**
+     * Retorna o tamanho da area do panel.
+     * @return Dimensão do panel
+     */
     abstract protected Dimension getWindowSize();
 }

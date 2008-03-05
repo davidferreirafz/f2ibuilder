@@ -36,14 +36,32 @@ import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
 
-
+/**
+ * Panel com Scrollbar e acesso aos dados da aplicação.
+ * 
+ * Designer Pattern: GoF - Observer
+ * 
+ * @see FontText
+ * @see ColorGroup
+ * @see Options
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public abstract class PanelModel extends JPanelScrolling implements Observer
 {   
     protected FontText fontText;
 	protected ColorGroup colorGroup;
 	protected Options options;
 
-	
+	/**
+	 * Construtor
+	 * 
+	 * @param fontText instância de FontText
+	 * @param options instância de Options
+	 * @param colorGroup instância de ColorGroup
+	 */
 	public PanelModel(FontText fontText, Options options, ColorGroup colorGroup)
     {
 		super();
@@ -56,6 +74,10 @@ public abstract class PanelModel extends JPanelScrolling implements Observer
         this.options.register(this);
 	}	
 
+	/**
+	 * Retorna a dimensão default do maior caracter possível.
+	 * @return dimensão do caracter
+	 */
     protected Dimension getCharSpace()
     {
         Dimension dimensao;
@@ -73,6 +95,9 @@ public abstract class PanelModel extends JPanelScrolling implements Observer
     } 
 
     @Override 
+    /**
+     * Retorna o tamanho da imagem
+     */
     protected Dimension getWindowSize()
     {    
         Dimension dimensao = new Dimension();

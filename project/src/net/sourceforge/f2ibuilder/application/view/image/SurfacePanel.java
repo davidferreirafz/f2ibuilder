@@ -44,36 +44,60 @@ import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 import net.sourceforge.f2ibuilder.components.type.Counter;
 
 
-
+/**
+ * Panel que desenha a imagem das letras e demais opções de acordo com as classes de modelo
+ * 
+ * Designer Pattern: Observer, Strategy
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class SurfacePanel extends PanelModel implements FontImage 
 {
 	private static final long serialVersionUID = -5855213845809007082L;
 	private Image image;
     private Graphics imageGraphic;
 	
+    /**
+     * Construtor
+     * @param fontText instância de {@link FontText}
+     * @param options  instância de {@link Options}
+     * @param colorGroup instância de {@link ColorGroup}
+     */
 	public SurfacePanel(FontText fontText, Options options, ColorGroup colorGroup)
     {
 		super(fontText,options,colorGroup);
 	}	
 	
+	/**
+	 * Cria a imagem
+	 */
     private void createImage()
     {
         setFont(fontText.getFont());
         prepareWorkArea();
     }
 
-    
+    /**
+     * {@inheritDoc}
+     */
 	public RenderedImage getImage()
 	{
 	    return (RenderedImage) image;
 	}
 		
-	
+	/**
+	 * Desenha a imagem de Fundo
+	 */
 	private void drawBackground()
 	{
         options.backgroundStrategy().draw(imageGraphic,colorGroup.getCorFundo(),getSize());        
 	}
 	
+	/**
+	 * Desenha a grid
+	 */
 	private void drawGrid()
 	{
 		if (options.isGrid()){
@@ -88,7 +112,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 			}
 		}
 	}
-	
+	/**
+	 * Desenha a Letra
+	 */
 	private void drawFont()
 	{
 		imageGraphic.setColor(colorGroup.getCorFonte());
@@ -101,7 +127,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 		
         drawText(dimensao,ajuste);
 	}
-	
+	/**
+	 * Desenha a Sombra da Letra
+	 */
 	private void drawShadow()
 	{
 		if (options.shadowStrategy().isActive()){
@@ -117,7 +145,12 @@ public class SurfacePanel extends PanelModel implements FontImage
 	        drawText(dimensao,ajuste);
 		}
 	}
-	
+	/**
+	 * Desenha o texto.
+	 * <BR> É utilizada por drawFont e drawShadow
+	 * @param dimensao Dimensão padrão da fonte
+	 * @param ajuste Ajuste necessário para o posicionamento da letra
+	 */
 	private void drawText(Dimension dimensao, Dimension ajuste)
 	{
 	    Counter count = new Counter(16,16);
@@ -129,9 +162,9 @@ public class SurfacePanel extends PanelModel implements FontImage
             imageGraphic.drawString(fontText.getCharacter(count.getIndice()), point.x, point.y);
          }
 	}
-
-
-	
+	/**
+	 * Prepara a imagem para ser desenhada.
+	 */
 	private void prepareWorkArea()
 	{
 		Dimension dimensao = getWindowSize();
@@ -145,6 +178,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 		options.antialiasStrategy().apply((Graphics2D) imageGraphic);
 	}
 
+    /**
+     * {@inheritDoc}
+     */
 	public void paint(Graphics g)
 	{
 		if (image!=null){
@@ -161,6 +197,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 	}
 
     @Override
+    /**
+     * {@inheritDoc}
+     */
     public void update()
     { 
         createImage();
