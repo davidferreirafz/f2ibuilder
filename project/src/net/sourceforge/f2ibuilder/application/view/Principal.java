@@ -81,8 +81,16 @@ import net.sourceforge.f2ibuilder.util.Constants;
 import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
 import com.wordpress.dukitan.componentes.ui.combobox.ComboFonte;
 
-
-public class Principal extends JFrame {
+/**
+ * Classe da tela Principal.
+ * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
+public class Principal extends JFrame
+{
 
 	private static final long serialVersionUID = -2624245426643411739L;
 	
