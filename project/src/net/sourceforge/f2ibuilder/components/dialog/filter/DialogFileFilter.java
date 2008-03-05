@@ -34,12 +34,22 @@ import javax.swing.filechooser.FileFilter;
 import com.wordpress.dukitan.componentes.util.FileInfo;
 
 /**
- * Design Pattern: GoF - Template Method
- * @author david
+ * Classe de filtros, permite filtras os tipos de arquivos aceitos.
+ * 
+ * Designer Patterns: GoF - Template Method
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
  *
  */
 public abstract class DialogFileFilter extends FileFilter
 {
+    /**
+     * Verifica se o tipo de arquivo passado é válido pelo filtro.
+     * 
+     * @param file Arquivo
+     * @return true em caso de sucesso
+     */
 	final public boolean accept(File file)
 	{
 	 	if (file.isDirectory()) {
@@ -51,5 +61,12 @@ public abstract class DialogFileFilter extends FileFilter
         return isAccept(fileInfo);
 	}
 
+	/**
+	 * Implementa a verificação do tipo de arquivo.
+     * Obs.: Este método implementa o Designer Pattern "GoF - Template Method".
+     * 
+	 * @param info instância de FileInfo
+	 * @return true em caso de sucesso
+	 */
 	protected abstract boolean isAccept(FileInfo info);
 }

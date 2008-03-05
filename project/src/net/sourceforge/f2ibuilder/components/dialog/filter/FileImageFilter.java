@@ -29,13 +29,33 @@ package net.sourceforge.f2ibuilder.components.dialog.filter;
 
 import com.wordpress.dukitan.componentes.util.FileInfo;
 
+/**
+ * Classe para filtrar a exibição dos arquivos,
+ * exibe apenas os arquivos PNG ou BMP de imagens.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class FileImageFilter extends DialogFileFilter
 {
+    /**
+     * Verifica se o arquivo passado é aceito.
+     * Obs.: Este método implementa o Designer Pattern "GoF - Template Method".
+     * 
+     * @param info instância de FileInfo
+     * @return true em caso de sucesso
+     */
     protected boolean isAccept(FileInfo info)
     {
         return info.isImage();
     }
     
+    @Override
+    /**
+     * Retorna o texto de exibição dos tipos aceitos.
+     * @return tipos aceitos 
+     */
 	public String getDescription()
 	{
 	    return "PNG or BMP Files";
