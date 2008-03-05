@@ -29,17 +29,35 @@ package net.sourceforge.f2ibuilder.application.view.image.draw.shadow;
 
 import java.awt.Dimension;
 
+/**
+ * Algoritmo para Aplicação de Sombra a Fonte.
+ * 
+ * Design Pattern: GoF - Strategy 
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public abstract class ShadowStrategy
 {
     private int horizontal;
     private int vertical;
     
+    /**
+     * Construtor
+     * @param horizontal posição horizontal da sombra em relação a fonte
+     * @param vertical posição vertical da sombra em relação a fonte
+     */
     public ShadowStrategy(int horizontal, int vertical)
     {
         this.horizontal=horizontal;
         this.vertical=vertical;
     }
     
+    /**
+     * Informa se o desenho da sombra está ativo
+     * @return true em caso de ativo
+     */
     public boolean isActive()
     {
         return ((horizontal!=0)||(vertical!=0));
@@ -55,7 +73,15 @@ public abstract class ShadowStrategy
         return vertical;
     }
     
+    /**
+     * Ajusta a posição a ser desenhada para a Sombra.
+     * @return deslocamento para desenho da sombra.
+     */
     abstract public Dimension adjustShadow();
     
+    /**
+     * Ajusta a posição a ser desenhada para a Fonte. 
+     * @return deslocamento para desenho da fonte.
+     */
     abstract public Dimension adjustFont();    
 }

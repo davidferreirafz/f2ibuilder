@@ -33,6 +33,15 @@ import java.awt.Point;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.components.type.Counter;
 
+/**
+ * Algoritmo para Aplicação de Métricas a Fonte.
+ * 
+ * Design Pattern: GoF - Strategy 
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 abstract public class MetricStrategy
 {
     public abstract Dimension adjust(Dimension ajuste, Dimension posicao, FontText fontText);
