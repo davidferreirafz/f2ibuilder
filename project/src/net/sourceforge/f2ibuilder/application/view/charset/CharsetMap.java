@@ -57,6 +57,17 @@ import net.sourceforge.f2ibuilder.application.model.FontText;
 
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
 
+/**
+ * Classe da tela CharsetMap.
+ * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+ * 
+ * Designer Pattern: GoF - Observer
+ * Implementa mecanismo para receber as notificações de mudanças.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class CharsetMap extends JDialog implements Observer
 {
 	private static final long serialVersionUID = 1L;
@@ -69,7 +80,7 @@ public class CharsetMap extends JDialog implements Observer
 
 	private JTable jTable = null;
 	
-	private	FontText tableChar = null;  //  @jve:decl-index=0:
+	private	FontText fontText = null;  //  @jve:decl-index=0:
 
 	private JButton jButton2 = null;
 
@@ -86,12 +97,12 @@ public class CharsetMap extends JDialog implements Observer
 	/**
 	 * @param owner
 	 */
-	public CharsetMap(Frame owner, FontText tableChar) {
+	public CharsetMap(Frame owner, FontText fontText) {
 		super(owner);
-        this.tableChar = tableChar;
+        this.fontText = fontText;
         
 		initialize();	
-		tableChar.register(this);		
+		fontText.register(this);		
 	}
 
 	/**
@@ -163,7 +174,7 @@ public class CharsetMap extends JDialog implements Observer
 			jButton = new JButton();
 			jButton.setBounds(new Rectangle(10, 305, 85, 25));
 			jButton.setText("Apply");
-			jButton.addActionListener(new SaveCharset(tableChar,getJTable()));
+			jButton.addActionListener(new SaveCharset(fontText,getJTable()));
 		}
 		return jButton;
 	}
@@ -178,7 +189,7 @@ public class CharsetMap extends JDialog implements Observer
             jButton11 = new JButton();
             jButton11.setBounds(new Rectangle(100, 305, 85, 25));
             jButton11.setText("Reset");
-            jButton11.addActionListener(new ResetCharset(tableChar));
+            jButton11.addActionListener(new ResetCharset(fontText));
         }
         return jButton11;
     }
@@ -221,7 +232,7 @@ public class CharsetMap extends JDialog implements Observer
 			jTable.setName("jTable");
 			jTable.setModel(defaultTableModel);
 			jTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-			jTable.addMouseListener(new SelectChar(jTable,getAsciiLabel(),getFormatLabel(),tableChar));
+			jTable.addMouseListener(new SelectChar(jTable,getAsciiLabel(),getFormatLabel(),fontText));
 		}
 		
 		return jTable;
@@ -290,12 +301,17 @@ public class CharsetMap extends JDialog implements Observer
 	}
 
     @Override
+    /**
+     * Implementação da notificação de mudanças nos objetos Observable.
+     * 
+     * @see Observer
+     */
     public void update()
     {       
         int caracter=0;
         for (int l=0; l<16; l++){
             for (int c=0;c<16;c++){
-                String o = Integer.valueOf(tableChar.getCharacterNumber(caracter)).toString();
+                String o = Integer.valueOf(fontText.getCharacterNumber(caracter)).toString();
                 jTable.getModel().setValueAt(o,l, c);
                 caracter++;             
             }
