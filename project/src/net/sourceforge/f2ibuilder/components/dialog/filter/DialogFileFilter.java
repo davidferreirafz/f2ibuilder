@@ -36,7 +36,7 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
 /**
  * Classe de filtros, permite filtras os tipos de arquivos aceitos.
  * 
- * Designer Patterns: GoF - Template Method
+ * Designer Pattern: GoF - Template Method
  * 
  * @author David Ferreira 
  * @email davidferreira.fz@gmail.com
