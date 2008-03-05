@@ -45,6 +45,14 @@ import net.sourceforge.f2ibuilder.util.Constants;
 
 import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
 
+/**
+ * Classe da tela About.
+ * Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public class About extends JDialog {
 
 	private static final long serialVersionUID = 6054475434937524760L;
