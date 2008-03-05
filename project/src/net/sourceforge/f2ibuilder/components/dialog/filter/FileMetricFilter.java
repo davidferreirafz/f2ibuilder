@@ -40,12 +40,8 @@ import com.wordpress.dukitan.componentes.util.FileInfo;
 public class FileMetricFilter extends DialogFileFilter 
 {
     /**
-     * Verifica se o arquivo passado é aceito.
-     * Obs.: Este método implementa o Designer Pattern "GoF - Template Method".
-     * 
-     * @param info instância de FileInfo
-     * @return true em caso de sucesso
-     */
+     * {@inheritDoc}
+     */    
     protected boolean isAccept(FileInfo info)
     {
         return info.isMetrics();
