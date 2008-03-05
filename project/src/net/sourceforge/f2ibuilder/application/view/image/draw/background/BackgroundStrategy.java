@@ -31,11 +31,29 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
+/**
+ * Algoritmo para desenhar o background da imagem.
+ * 
+ * Design Pattern: GoF - Strategy 
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 abstract public class BackgroundStrategy
 {
+    /**
+     * Desenha a cor de fundo
+     * @param graphics Contexto Gráfico
+     * @param color cor de fundo
+     * @param dimension dimensão da imagem
+     */
     public abstract void draw(Graphics graphics, Color color, Dimension dimension);
 
+    /**
+     * Retorna o tipo de sistema de cores a ser utilizado na imagem
+     * @return Tipo de cores a ser utilizado
+     */
     public abstract int getColorChannel();
-
 
 }

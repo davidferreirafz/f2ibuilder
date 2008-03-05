@@ -29,7 +29,20 @@ package net.sourceforge.f2ibuilder.application.view.image.draw.antialias;
 
 import java.awt.Graphics2D;
 
+/**
+ * Algoritmo para Aplicação de Antialias a Fonte
+ * 
+ * Design Pattern: GoF - Strategy 
+ * 
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 abstract public class AntialiasStrategy
 {
+    /**
+     * Aplica o algoritmo ao contexto gráfico passado
+     * @param graphics Contexto gráfico
+     */
     public abstract void apply(Graphics2D graphics);
 }
