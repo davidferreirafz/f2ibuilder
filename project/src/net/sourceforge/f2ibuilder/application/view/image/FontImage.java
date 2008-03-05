@@ -29,9 +29,19 @@ package net.sourceforge.f2ibuilder.application.view.image;
 
 import java.awt.image.RenderedImage;
 
+/**
+ * Interface para que se obtenha externamente uma imagem.
+ *  
+ * @author David Ferreira 
+ * @email davidferreira.fz@gmail.com
+ *
+ */
 public interface FontImage
 {
-    
-    public RenderedImage getImage();
-    
+    /**
+     * Retorna uma imagem para ser manipulada externamente.
+     * Ex.: Salvar em arquivo.
+     * @return imagem
+     */
+    public RenderedImage getImage();    
 }
