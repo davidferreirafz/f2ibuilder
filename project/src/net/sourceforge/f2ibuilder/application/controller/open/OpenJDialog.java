@@ -34,7 +34,10 @@ import javax.swing.JDialog;
 /**
  * Design Pattern: GoF - Template Method
  * 
- * @author david
+ * @author David Ferreira <davidferreira.fz@gmail.com>
+ *
+ * Project: F2IBuilder
+ * Date: 08/03/2008
  *
  */
 public class OpenJDialog implements ActionListener

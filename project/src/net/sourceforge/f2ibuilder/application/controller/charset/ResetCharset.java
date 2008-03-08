@@ -33,9 +33,9 @@ import net.sourceforge.f2ibuilder.application.model.FontText;
 
 public class ResetCharset extends FontTextAction
 {
-    public ResetCharset(FontText tableChar)
+    public ResetCharset(FontText fontText)
     {
-        super(tableChar);        
+        super(fontText);        
     }
 
     @Override

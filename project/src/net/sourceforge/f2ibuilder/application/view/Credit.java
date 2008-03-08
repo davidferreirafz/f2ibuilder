@@ -38,6 +38,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
+import net.sourceforge.f2ibuilder.application.controller.CreditActionFactory;
 import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
 import net.sourceforge.f2ibuilder.util.Constants;
@@ -97,7 +98,7 @@ public class Credit extends JDialog {
 			jButton = new JButton();
 			jButton.setText("Ok");
 			jButton.setBounds(new java.awt.Rectangle(135,315,136,28));
-			jButton.addActionListener(new CloseWindow(this));
+			jButton.addActionListener(CreditActionFactory.makeCloseWindow(this));
 		}
 		return jButton;
 	}
@@ -133,7 +134,7 @@ public class Credit extends JDialog {
 			jLabel9.setText("  "+Constants.WEB_SITE);
 			jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 			jLabel9.setName("jLabel8");
-			jLabel9.addMouseListener(new OpenWebSite());
+			jLabel9.addMouseListener(CreditActionFactory.makeOpenWebSite());
 			jPanel4 = new JPanel();
 			jPanel4.setLayout(new CardLayout());
 			jPanel4.setBounds(new java.awt.Rectangle(105,60,286,46));

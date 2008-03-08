@@ -43,6 +43,9 @@ public abstract class ButtonCommand extends SelectCommand
         super(options,fontText);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     final public void itemStateChanged(ItemEvent e)
     {                

@@ -49,10 +49,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.plaf.basic.BasicPanelUI;
 import javax.swing.table.DefaultTableModel;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
-import net.sourceforge.f2ibuilder.application.controller.metrics.ResetMetrics;
-import net.sourceforge.f2ibuilder.application.controller.metrics.SaveMetric;
-import net.sourceforge.f2ibuilder.application.controller.metrics.SelectMetric;
+import net.sourceforge.f2ibuilder.application.controller.MetricsActionFactory;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
@@ -170,9 +167,7 @@ public class MetricsMap extends JDialog implements Observer{
 			jButton = new JButton();
 			jButton.setBounds(new Rectangle(10, 305, 85, 25));
 			jButton.setText("Apply");
-//TODO: remover dependencia
-//			jButton.addActionListener((java.awt.event.ActionListener) ActionListener.getInstance());
-			jButton.addActionListener(new SaveMetric(fontText,getJTable()));
+			jButton.addActionListener(MetricsActionFactory.makeSaveMetric(fontText,getJTable()));
 		}
 		return jButton;
 	}
@@ -187,7 +182,7 @@ public class MetricsMap extends JDialog implements Observer{
             jButton11 = new JButton();
             jButton11.setBounds(new Rectangle(100, 305, 85, 25));
             jButton11.setText("Reset");
-            jButton11.addActionListener(new ResetMetrics(fontText));
+            jButton11.addActionListener(MetricsActionFactory.makeResetMetrics(fontText));
         }
         return jButton11;
     }	
@@ -208,7 +203,7 @@ public class MetricsMap extends JDialog implements Observer{
 			jTable.setName("jTable");
 			jTable.setModel(defaultTableModel);
 			jTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-			jTable.addMouseListener(new SelectMetric(jTable,fontText,getAsciiLabel(),getFormatLabel()));
+			jTable.addMouseListener(MetricsActionFactory.makeSelectMetric(jTable,fontText,getAsciiLabel(),getFormatLabel()));
 		}
 		
 		return jTable;
@@ -226,7 +221,7 @@ public class MetricsMap extends JDialog implements Observer{
 			jButton2.setBounds(new Rectangle(216, 305, 85, 25));
 			jButton2.setText("Close");
 			jButton2.setActionCommand("Fechar");
-			jButton2.addActionListener(new CloseWindow(this));
+			jButton2.addActionListener(MetricsActionFactory.makeCloseWindow(this));
 		}
 		return jButton2;
 	}
