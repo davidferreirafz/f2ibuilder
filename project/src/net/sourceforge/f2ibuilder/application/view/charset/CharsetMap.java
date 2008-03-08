@@ -49,10 +49,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.plaf.basic.BasicPanelUI;
 import javax.swing.table.DefaultTableModel;
 
-import net.sourceforge.f2ibuilder.application.controller.charset.ResetCharset;
-import net.sourceforge.f2ibuilder.application.controller.charset.SaveCharset;
-import net.sourceforge.f2ibuilder.application.controller.charset.SelectChar;
-import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.CharsetActionFactory;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
 import com.wordpress.dukitan.componentes.gof.observer.Observer;
@@ -170,7 +167,7 @@ public class CharsetMap extends JDialog implements Observer
 			jButton = new JButton();
 			jButton.setBounds(new Rectangle(10, 305, 85, 25));
 			jButton.setText("Apply");
-			jButton.addActionListener(new SaveCharset(fontText,getJTable()));
+			jButton.addActionListener(CharsetActionFactory.makeSaveCharset(fontText,getJTable()));
 		}
 		return jButton;
 	}
@@ -185,7 +182,7 @@ public class CharsetMap extends JDialog implements Observer
             jButton11 = new JButton();
             jButton11.setBounds(new Rectangle(100, 305, 85, 25));
             jButton11.setText("Reset");
-            jButton11.addActionListener(new ResetCharset(fontText));
+            jButton11.addActionListener(CharsetActionFactory.makeResetCharset(fontText));
         }
         return jButton11;
     }
@@ -228,7 +225,7 @@ public class CharsetMap extends JDialog implements Observer
 			jTable.setName("jTable");
 			jTable.setModel(defaultTableModel);
 			jTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-			jTable.addMouseListener(new SelectChar(jTable,getAsciiLabel(),getFormatLabel(),fontText));
+			jTable.addMouseListener(CharsetActionFactory.makeSelectChar(jTable,getAsciiLabel(),getFormatLabel(),fontText));
 		}
 		
 		return jTable;
@@ -246,7 +243,7 @@ public class CharsetMap extends JDialog implements Observer
 			jButton2.setBounds(new Rectangle(216, 305, 85, 25));
 			jButton2.setText("Close");
 			jButton2.setActionCommand("Fechar");
-			jButton2.addActionListener(new CloseWindow(this));
+			jButton2.addActionListener(CharsetActionFactory.makeCloseWindow(this));
 		}
 		return jButton2;
 	}

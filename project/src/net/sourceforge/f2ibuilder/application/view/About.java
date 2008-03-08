@@ -39,8 +39,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
-import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.application.controller.AboutActionFactory;
 import net.sourceforge.f2ibuilder.util.Constants;
 
 import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
@@ -105,7 +104,7 @@ public class About extends JDialog {
 			jButton = new JButton();
 			jButton.setText("Ok");
 			jButton.setBounds(new java.awt.Rectangle(135,375,121,28));
-			jButton.addActionListener(new CloseWindow(this));
+			jButton.addActionListener(AboutActionFactory.makeCloseWindow(this));
 		}
 		return jButton;
 	}
@@ -197,7 +196,7 @@ public class About extends JDialog {
 			jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 			jLabel9.setText("  "+Constants.WEB_SITE);
 			jLabel9.setName("jLabel8");
-			jLabel9.addMouseListener(new OpenWebSite());
+			jLabel9.addMouseListener(AboutActionFactory.makeOpenWebSite());
 			jPanel4 = new JPanel();
 			jPanel4.setLayout(new CardLayout());
 			jPanel4.setBounds(new java.awt.Rectangle(15,195,361,46));
