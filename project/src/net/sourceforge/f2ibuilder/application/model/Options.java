@@ -47,11 +47,17 @@ import com.wordpress.dukitan.componentes.gof.observer.Observable;
  * Designer Pattern: Observer, Singleton
  * 
  * @author David Ferreira - davidferreira.fz@gmail.com
+ * 
  */
+//Em futura versões o estado interno dessa classe será exportado para uma nova features
+//que basicamente sera 'salvar projeto', talvez seja ideal aplicar o 
+//Design Pattern GoF - Memento
 public class Options extends Observable
 {
     private boolean grid;
+    @SuppressWarnings("unused")
     private boolean metrica;
+    @SuppressWarnings("unused")
     private boolean antialias;
     private String  imagemTipo;
     private int     sombraVertical;
