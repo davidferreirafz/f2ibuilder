@@ -140,7 +140,7 @@ public class About extends JDialog {
 		if (jPanel1 == null) {
 			jPanel1 = new ImagePanel();
 			jPanel1.setBounds(new java.awt.Rectangle(15,15,151,106));
-			jPanel1.loadImage(".//resource/david_ferreira.jpg");
+			jPanel1.loadImage("resource/david_ferreira.jpg");
 		}
 		return jPanel1;
 	}

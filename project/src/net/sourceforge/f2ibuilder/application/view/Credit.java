@@ -211,7 +211,7 @@ public class Credit extends JDialog {
 		if (imagePanel == null) {
 			imagePanel = new ImagePanel();
 			imagePanel.setBounds(new java.awt.Rectangle(15,14,76,77));
-			imagePanel.loadImage(".//resource/dukitan.png");			
+			imagePanel.loadImage("resource/dukitan.png");			
 		}
 		return imagePanel;
 	}
