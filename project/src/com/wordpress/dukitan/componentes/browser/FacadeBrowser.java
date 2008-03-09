@@ -42,12 +42,12 @@ public class FacadeBrowser
      * Abre a URL no navegador
      * @param url a ser aberta no navegador.
      */
-	static public void openURL(String url)
-	{
-	    //Obtem uma instance de browser
+    static public void openURL(String url)
+    {
+        //Obtem uma instance de browser
         Browser browser = BrowserFactory.getBrowser();
         
         //Tenta abrir a url no navegador
         browser.open(url);
-	}
+    }
 }

@@ -73,7 +73,7 @@ public class Observable implements IObservable
      */
     protected void updateObserver()
     {
-        //Se a autonotificação estiva ativa ela informa sua lista de observers
+        //Se a auto notificação estiver ativa ela informa sua lista de observers
         if (autoCommit){
             if ((listObserver!=null)&&(!listObserver.isEmpty())){
                 ListIterator<Observer> i= listObserver.listIterator(0);

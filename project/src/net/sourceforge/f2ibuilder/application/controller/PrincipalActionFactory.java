@@ -159,8 +159,7 @@ public class PrincipalActionFactory extends ActionFactory
      * @return
      */
     public static ItemListener makeUseAlphaCommand(Options options,
-            FontText fontText)
-    {
+            FontText fontText)  {
         return new UseAlphaCommand(options,fontText);
     }
 
@@ -180,8 +179,7 @@ public class PrincipalActionFactory extends ActionFactory
      * @param fontText
      * @return
      */
-    public static ItemListener makeUseAntialiasCommand(Options options,
-            FontText fontText)
+    public static ItemListener makeUseAntialiasCommand(Options options,FontText fontText)
     {
         return new UseAntialiasCommand(options,fontText);
     }

@@ -107,5 +107,4 @@ public class MediatorView implements IMediatorView
             itemSaveFontMetrics.setEnabled(false);
         }
     }
-
 }

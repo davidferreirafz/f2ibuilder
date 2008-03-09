@@ -934,7 +934,7 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemAdjustCharset() {
 		if (menuItemAdjustCharset == null) {
 			menuItemAdjustCharset = new JMenuItem();
-			menuItemAdjustCharset.setText("Adjust Charset Map");
+			menuItemAdjustCharset.setText("Adjust Charset Map...");
 			menuItemAdjustCharset.addActionListener(PrincipalActionFactory.makeOpenCharsetMap(null,getFontText()));
 		}
 		return menuItemAdjustCharset;
@@ -964,7 +964,7 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemAdjustMetrics() {
 		if (menuItemAdjustMetrics == null) {
 			menuItemAdjustMetrics = new JMenuItem();
-			menuItemAdjustMetrics.setActionCommand("Adjust Metrics Map");
+			menuItemAdjustMetrics.setActionCommand("Adjust Metrics Map...");
 			menuItemAdjustMetrics.setText("Adjust Metrics Map");
 			menuItemAdjustMetrics.addActionListener(PrincipalActionFactory.makeOpenMetricsMap(null,getFontText()));
 		}
@@ -979,7 +979,7 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemMetricsLimit() {
 		if (menuItemMetricsLimit == null) {
 			menuItemMetricsLimit = new JMenuItem();
-			menuItemMetricsLimit.setActionCommand("Adjust Metrics Limit");
+			menuItemMetricsLimit.setActionCommand("Adjust Metrics Limit...");
 			menuItemMetricsLimit.setText("Adjust Metrics Limit");			
 			menuItemMetricsLimit.addActionListener(PrincipalActionFactory.makeOpenMetricsLimit(null,getFontText()));
 		}
