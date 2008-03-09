@@ -28,6 +28,7 @@ package com.wordpress.dukitan.componentes.ui.image;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -50,7 +51,18 @@ public class ImagePanel extends JPanel
 	 */
 	public void loadImage(String path)
 	{
-		this.image = new ImageIcon(path).getImage();
+		ClassLoader classLoader = this.getClass().getClassLoader();
+
+		ImageIcon icon = null;  
+		URL res = classLoader.getResource(path); 
+		
+		if(res!=null)  {  
+		    icon = new ImageIcon(res);  
+		} else {  
+		    icon = new ImageIcon(path);  
+		}  
+  		
+		image = icon.getImage();
 
 		/* Redimensiona a imagem */
 		this.image = this.image.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
