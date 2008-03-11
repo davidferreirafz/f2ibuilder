@@ -59,7 +59,6 @@ public class OpenJDialog implements ActionListener
         this.window.setModal(true);
     }
 
-    @Override
     final public void actionPerformed(ActionEvent e)
     {
         show();

@@ -70,13 +70,13 @@ public class ColorPanel extends JPanel implements IObservable
     	control.setTitle(titulo);
     }
 
-    @Override
+
     public void desregister(Observer observer)
     {
         listObserver.remove(observer);
     }
 
-    @Override
+
     public void register(Observer observer)
     {
         listObserver.add(observer);

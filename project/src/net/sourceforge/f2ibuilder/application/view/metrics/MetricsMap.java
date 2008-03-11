@@ -293,7 +293,7 @@ public class MetricsMap extends JDialog implements Observer{
         return formatLabel;
     }
     
-    @Override
+
     /**
      * Implementação da notificação de mudanças nos objetos Observable.
      * 

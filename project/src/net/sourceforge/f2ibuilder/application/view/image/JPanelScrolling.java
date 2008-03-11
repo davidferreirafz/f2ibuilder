@@ -50,31 +50,31 @@ public abstract class JPanelScrolling extends JPanel implements Scrollable
         setDoubleBuffered(true);
     }
     
-    @Override
+
     final public Dimension getPreferredScrollableViewportSize()
     {
         return getWindowSize();
     }
     
-    @Override
+
     public int getScrollableBlockIncrement(Rectangle visibleRect, int orientation, int direction)
     {
         return getScrollableUnitIncrement(visibleRect, orientation, direction)*4;
     }  
 
-    @Override
+
     public boolean getScrollableTracksViewportHeight()
     {
         return false;
     }
 
-    @Override
+
     public boolean getScrollableTracksViewportWidth()
     {
         return false;
     }
    
-    @Override
+
     final public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction)
     {
         int retorno=0;

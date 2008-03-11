@@ -293,7 +293,7 @@ public class CharsetMap extends JDialog implements Observer
 		return panelPreviewFormatado;
 	}
 
-    @Override
+
     /**
      * Implementação da notificação de mudanças nos objetos Observable.
      * 

@@ -46,7 +46,6 @@ public abstract class ButtonCommand extends SelectCommand
     /**
      * {@inheritDoc}
      */
-    @Override
     final public void itemStateChanged(ItemEvent e)
     {                
         if (e.getSource() instanceof JToggleButton) {
