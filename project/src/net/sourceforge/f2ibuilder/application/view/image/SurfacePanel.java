@@ -194,7 +194,6 @@ public class SurfacePanel extends PanelModel implements FontImage
 		}
 	}
 
-    @Override
     /**
      * {@inheritDoc}
      */

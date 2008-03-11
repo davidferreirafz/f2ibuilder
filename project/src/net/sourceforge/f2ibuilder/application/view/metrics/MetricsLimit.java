@@ -244,7 +244,7 @@ public class MetricsLimit extends JDialog implements Observer{
 		return jPanel2;
 	}
 
-    @Override
+
     /**
      * Implementação da notificação de mudanças nos objetos Observable.
      * 

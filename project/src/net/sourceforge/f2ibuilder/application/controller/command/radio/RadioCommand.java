@@ -43,7 +43,9 @@ public abstract class RadioCommand extends SelectCommand
         super(options,fontText);
     }
 
-    @Override
+    /**
+     * {@inheritDoc}
+     */  
     final public void itemStateChanged(ItemEvent e)
     {                       
         if (e.getSource() instanceof JRadioButtonMenuItem) {

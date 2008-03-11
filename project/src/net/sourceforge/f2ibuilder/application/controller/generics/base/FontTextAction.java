@@ -46,34 +46,31 @@ public abstract class FontTextAction implements ActionListener, MouseListener
 
     abstract protected void action();
     
-    @Override
     final public void actionPerformed(ActionEvent e)
     {
         action();
     }
     
-    @Override
     final public void mouseClicked(MouseEvent e)
     {
         action();
     }
 
-    @Override
     public void mouseEntered(MouseEvent e)
     {
     }
 
-    @Override
+
     public void mouseExited(MouseEvent e)
     {
     }
 
-    @Override
+
     public void mousePressed(MouseEvent e)
     {
     }
 
-    @Override
+
     public void mouseReleased(MouseEvent e)
     {
     }

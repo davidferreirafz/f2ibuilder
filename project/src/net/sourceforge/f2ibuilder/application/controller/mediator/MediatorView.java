@@ -69,7 +69,7 @@ public class MediatorView implements IMediatorView
     }
     
 
-    @Override
+
     public void selectedUseAlpha(boolean value)
     {
         JRadioButtonMenuItem radioItemBMP = (JRadioButtonMenuItem) get("itemImageTypeBMP");
@@ -83,7 +83,7 @@ public class MediatorView implements IMediatorView
         }
     }
     
-    @Override    
+   
     public void selectedImageTypeBMP(boolean value)
     {
         JCheckBoxMenuItem checkUseAlpha = (JCheckBoxMenuItem) get("menuItemUseAlpha");
@@ -96,7 +96,7 @@ public class MediatorView implements IMediatorView
         }
     }
 
-    @Override
+
     public void selectedUseMetrics(boolean value)
     {
         AbstractButton itemSaveFontMetrics = get("itemSaveFontMetrics");

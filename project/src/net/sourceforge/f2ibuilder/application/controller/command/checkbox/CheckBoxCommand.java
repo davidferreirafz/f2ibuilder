@@ -43,7 +43,6 @@ public abstract class CheckBoxCommand extends SelectCommand
         super(options,fontText);
     }
 
-    @Override
     final public void itemStateChanged(ItemEvent e)
     {                
         if (e.getSource() instanceof JCheckBoxMenuItem) {

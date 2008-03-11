@@ -45,7 +45,6 @@ public class CloseWindow implements ActionListener
         return window;
     }
     
-    @Override
     public void actionPerformed(ActionEvent e)
     {
         if (window!=null){

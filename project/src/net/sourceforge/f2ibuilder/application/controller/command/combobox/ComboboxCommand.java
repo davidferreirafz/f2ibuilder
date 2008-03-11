@@ -41,7 +41,9 @@ public abstract class ComboboxCommand extends SelectCommand
         super(options,fontText);
     }
 
-    @Override
+    /**
+     * {@inheritDoc}
+     */  
     final public void itemStateChanged(ItemEvent e)
     {                
         if (e.getStateChange()==ItemEvent.SELECTED){
