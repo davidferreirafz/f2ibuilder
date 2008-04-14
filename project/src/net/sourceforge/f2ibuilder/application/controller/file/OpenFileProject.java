@@ -32,8 +32,8 @@ import java.io.File;
 
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenFile;
 import net.sourceforge.f2ibuilder.application.view.Principal;
-import net.sourceforge.f2ibuilder.components.MementoXML;
 import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
+import net.sourceforge.f2ibuilder.components.memento.MementoXML;
 
 public class OpenFileProject extends OpenFile
 {
