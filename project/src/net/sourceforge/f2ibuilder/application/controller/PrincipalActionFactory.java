@@ -83,10 +83,10 @@ public class PrincipalActionFactory extends ActionFactory
      * @param fontImage
      * @return
      */
-    public static ActionListener makeSaveFileImage(Options options,
+    public static ActionListener makeSaveFileImage(FontText fontText, Options options,
             FontImage fontImage)
     {
-        return new SaveFileImage(options,fontImage);
+        return new SaveFileImage(fontText,options,fontImage);
     }
 
     /**
