@@ -35,6 +35,13 @@ import org.jdom.Element;
 import com.wordpress.dukitan.componentes.xml.XMLFile;
 
 /**
+ * Classe resposavel por transformar o objeto em xml, e o xml em objeto.
+ * 
+ * Obs.: Devido a inúmeras recomendações encontradas na Internet, decidimos 
+ * que não implementariamos a serelização default, e sim um mecanismo próprio
+ * baseado em xml, o qual permitirá um maior controle e flexibilidade para 
+ * manuteções e compatibilidades futuras.
+ * 
  * @author David Ferreira <davidferreira.fz@gmail.com>
  *
  * Project: F2IBuilder
