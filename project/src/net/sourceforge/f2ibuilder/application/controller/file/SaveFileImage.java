@@ -35,6 +35,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import net.sourceforge.f2ibuilder.application.controller.generics.SaveFile;
+import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 import net.sourceforge.f2ibuilder.application.view.image.FontImage;
 import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
@@ -43,9 +44,11 @@ public class SaveFileImage extends SaveFile
 {
     private FontImage fontImage;
     private Options options;
+    private FontText fontText;
     
-    public SaveFileImage(Options options,FontImage fontImage)
+    public SaveFileImage(FontText fontText, Options options,FontImage fontImage)
     {
+        this.fontText=fontText;
         this.options=options;
         this.fontImage=fontImage;
     }
@@ -58,7 +61,6 @@ public class SaveFileImage extends SaveFile
         if(fd.showSaveDialogImage(component)){
             
             String filename = fd.getFilePathImage();
-            
             RenderedImage image = fontImage.getImage();
             
             try {
@@ -66,6 +68,7 @@ public class SaveFileImage extends SaveFile
                     if (!filename.endsWith(options.getImagemTipo())){
                         filename+="."+options.getImagemTipo();
                     }
+
                     ImageIO.write(image,options.getImagemTipo(),new File(filename));
                 }
                 
