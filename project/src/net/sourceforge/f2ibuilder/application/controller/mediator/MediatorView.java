@@ -72,8 +72,8 @@ public class MediatorView implements IMediatorView
 
     public void selectedUseAlpha(boolean value)
     {
-        JRadioButtonMenuItem radioItemBMP = (JRadioButtonMenuItem) get("itemImageTypeBMP");
-        JRadioButtonMenuItem radioItemPNG = (JRadioButtonMenuItem) get("itemImageTypePNG");        
+        JRadioButtonMenuItem radioItemBMP = (JRadioButtonMenuItem) get("radioImageTypeBMP");
+        JRadioButtonMenuItem radioItemPNG = (JRadioButtonMenuItem) get("radioImageTypePNG");        
 
         if (value){
             radioItemBMP.setEnabled(false);
