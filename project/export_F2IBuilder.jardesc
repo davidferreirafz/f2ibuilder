@@ -17,97 +17,105 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.antialias{AntialiasNone.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{CheckBoxCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.shadow{ShadowStrategy.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{SaveItemTable.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics.base{FontTextAction.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{FileImageFilter.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.antialias{AntialiasEffect.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image{SurfacePanel.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.panel{ColorGroup.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{SaveCharset.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser{FacadeBrowser.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view{Principal.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.metrics{MetricsLimit.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{FileMetricFilter.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.open{LoadApplication.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.combobox{ComboFonte.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{ResetCharset.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.open{OpenJDialogObserver.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{FileMetricFilter.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{SaveFile.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser{BrowserFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.metric{MetricEffect.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.type{Limit.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SelectMetric.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.gof.observer{IObservable.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{FileProjectFilter.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{ShowGridCommand.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectTextureSizeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.open{OpenJDialog.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseAntialiasCommand.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder{F2IBuilderMain.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseAlphaCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.gof.observer{Observer.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser.type{BrowserMsWindows.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.button{BoldCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view{Credit.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{OpenFileProject.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.button{ButtonCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image{JPanelScrolling.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{ActionFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{RadioCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.metric{MetricStrategy.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.gof.observer{Observable.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.image{ImagePanel.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectSizeCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseMetricsCommand.java"/>
+        <file path="/F2IBuilder/copying"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{Options.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{Colleague.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{MementoXML.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.xml{XMLFile.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics.base{SelectCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetricLimit.java"/>
+        <file path="/F2IBuilder/resource/david_ferreira.jpg"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{CreditActionFactory.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.antialias{AntialiasStrategy.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.shadow{ShadowEffect.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{IMediatorView.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileMetrics.java"/>
+        <file path="/F2IBuilder/resource/dukitan.png"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectFontCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{MediatorView.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.util{FileInfo.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.background{BackgroundFill.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{FontText.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectShadowCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{SelectChar.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{OpenFile.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.background{BackgroundApha.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.color{ColorPanelControl.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.metric{MetricNone.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{CloseWindow.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.antialias{AntialiasNone.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{CheckBoxCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{SaveItemTable.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics.base{FontTextAction.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{FileImageFilter.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.panel{ColorGroup.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser{FacadeBrowser.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{SaveCharset.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.metrics{MetricsLimit.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.combobox{ComboFonte.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{ResetCharset.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.open{OpenJDialogObserver.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.metric{MetricEffect.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.type{Limit.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SelectMetric.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectTextureSizeCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder{F2IBuilderMain.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileProject.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseAlphaCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser.type{BrowserMsWindows.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.button{BoldCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{RadioCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.util{Constants.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{OpenWebSite.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser.type{BrowserLinux.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.image{ImagePanel.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.combobox{ComboBox.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectSizeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.color{ColorPanel.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseMetricsCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{CharsetActionFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileXNA.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view{About.java"/>
-        <file path="/F2IBuilder/copying"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{Options.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileXNA.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectImageTypeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetMap.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{AboutActionFactory.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{PrincipalMemento.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetric.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{Colleague.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetricLimit.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics.base{SelectCommand.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{CreditActionFactory.java"/>
-        <file path="/F2IBuilder/resource/david_ferreira.jpg"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.antialias{AntialiasStrategy.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.shadow{ShadowEffect.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{SelectItemTable.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileMetrics.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{IMediatorView.java"/>
-        <file path="/F2IBuilder/resource/dukitan.png"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{ResetMetrics.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectFontCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser.type{Browser.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog{FileDialog.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{MediatorView.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.util{FileInfo.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.background{BackgroundStrategy.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.background{BackgroundFill.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image{FontImage.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{FontText.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.metrics{MetricsMap.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{SelectChar.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{PrincipalActionFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectShadowCommand.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{DialogFileFilter.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.radio{RadioGroup.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.type{Counter.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog.filter{DialogFileFilter.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{ComboboxCommand.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.ui.color{ColorPanelControl.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.background{BackgroundApha.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileImage.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image.draw.metric{MetricNone.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{MetricsActionFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{CloseWindow.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.image{PanelModel.java"/>
     </selectedElements>
 </jardesc>
