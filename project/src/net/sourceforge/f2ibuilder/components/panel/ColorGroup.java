@@ -77,6 +77,11 @@ public class ColorGroup extends JPanel
 	{
 		return panelBackgroundColor.getBackground();
 	}
+    public void setCorFundo(Color color)
+    {
+        panelBackgroundColor.setBackground(color);
+    }
+    
 	/**
 	 * Retorna a cor da sombra da fonte
 	 * @return cor da sombra
@@ -85,6 +90,11 @@ public class ColorGroup extends JPanel
 	{
 		return panelFontShadowColor.getBackground();
 	}	
+    public void setCorSombra(Color color)
+    {
+        panelFontShadowColor.setBackground(color);
+    }
+    
 	/**
 	 * Retorna a cor da fonte
 	 * @return cor da fonte
@@ -93,6 +103,13 @@ public class ColorGroup extends JPanel
 	{
 		return panelFontColor.getBackground();
 	}	
+	
+	public void setCorFonte(Color color)
+	{
+	    panelFontColor.setBackground(color);
+	}
+	
+	
 	/**
 	 * Inicializa o painel de cor da fonte
 	 * @return JPanel
