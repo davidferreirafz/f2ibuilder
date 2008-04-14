@@ -58,6 +58,7 @@ import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 import net.sourceforge.f2ibuilder.application.view.image.FontImage;
 import net.sourceforge.f2ibuilder.application.view.image.SurfacePanel;
+import net.sourceforge.f2ibuilder.components.memento.PrincipalMemento;
 import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 import net.sourceforge.f2ibuilder.util.Constants;
 
@@ -1016,8 +1017,13 @@ public class Principal extends JFrame
 		return jScrollPane;
 	}
 	
-////////////
-	
+
+	/**
+	 * Implementação do suporte para a externalização do estado da classe, sem expor
+	 * seus valores para manipulação de outras classes.
+	 * 
+	 * Suporte ao design pattern: GoF - Memento
+	 */
     public PrincipalMemento createMemento()
     {
         PrincipalMemento memento = new PrincipalMemento();
@@ -1045,6 +1051,13 @@ public class Principal extends JFrame
         return memento;
     }
 
+    /**
+     * Suporte para recuperação de um estado anterior
+     * 
+     * Suporte ao design pattern: GoF - Memento
+     * 
+     * @param memento objeto com o estado anterior
+     */
     public void setMemento(PrincipalMemento memento)
     {      
         menuItemUseAlpha.setSelected(memento.isUseAlpha());
