@@ -37,7 +37,6 @@ import java.awt.GridLayout;
 import java.awt.Rectangle;
 
 import javax.swing.BorderFactory;
-import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -51,6 +50,8 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
 import net.sourceforge.f2ibuilder.application.controller.PrincipalActionFactory;
+import net.sourceforge.f2ibuilder.application.controller.file.OpenFileProject;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileProject;
 import net.sourceforge.f2ibuilder.application.controller.mediator.Colleague;
 import net.sourceforge.f2ibuilder.application.controller.mediator.MediatorView;
 import net.sourceforge.f2ibuilder.application.model.FontText;
@@ -62,6 +63,7 @@ import net.sourceforge.f2ibuilder.util.Constants;
 
 import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
 import com.wordpress.dukitan.componentes.ui.combobox.ComboFonte;
+import com.wordpress.dukitan.componentes.ui.radio.RadioGroup;
 
 /**
  * Classe da tela Principal.
@@ -91,6 +93,10 @@ public class Principal extends JFrame
 	
     private JMenuItem itemExportToXNA = null;
 
+    private JMenuItem itemOpenProject = null;
+    
+    private JMenuItem itemSaveProject = null;
+    
 	private JToolBar toolBar = null;
 
 	private JPanel jPanel1 = null;
@@ -101,7 +107,7 @@ public class Principal extends JFrame
 
 	private JPanel jPanel3 = null;
 
-	private ColorGroup colorGroupo = null;
+	private ColorGroup colorGroup = null;
 
 	private JToggleButton botaoNegrito = null;
 
@@ -109,17 +115,17 @@ public class Principal extends JFrame
 
 	private JCheckBoxMenuItem menuItemShowGrid = null;
 
-	private JMenu menuImageType = null;
+	private RadioGroup menuImageType = null;	
+	
+	private JRadioButtonMenuItem radioImageTypePNG = null;
 
-	private JRadioButtonMenuItem itemImageTypePNG = null;
-
-	private JRadioButtonMenuItem itemImageTypeBMP = null;
+	private JRadioButtonMenuItem radioImageTypeBMP = null;
 
 	private JMenu menuShadow = null;
 
-	private JMenu menuShadowVertical = null;
-
-	private JMenu menuShadowHorizontal = null;
+    private RadioGroup menuShadowVertical = null;
+    
+	private RadioGroup menuShadowHorizontal = null;
 
 	private JRadioButtonMenuItem radioShadowHorizontalNone = null;
 
@@ -162,7 +168,9 @@ public class Principal extends JFrame
 	private JMenuItem menuItemMetricsLimit = null;
 
 	private JScrollPane jScrollPane = null;
+   
 
+    
     private Options options;
     private FontText fontText;
 
@@ -310,6 +318,9 @@ public class Principal extends JFrame
 			menuFile.add(getItemSaveImage());
 			menuFile.add(getItemSaveFontMetrics());
             menuFile.addSeparator();
+            menuFile.add(getItemOpenProject());
+            menuFile.add(getItemSaveProject());            
+            menuFile.addSeparator();            
             menuFile.add(getItemExportToXNA());
 		}
 		return menuFile;
@@ -345,7 +356,7 @@ public class Principal extends JFrame
 			itemSaveImage = new JMenuItem();
 			itemSaveImage.setText("Save Image...");
 			itemSaveImage.setName("SaveImage");		
-			itemSaveImage.addActionListener(PrincipalActionFactory.makeSaveFileImage(getOptions(),(FontImage) getWorkspace()));
+			itemSaveImage.addActionListener(PrincipalActionFactory.makeSaveFileImage(getFontText(),getOptions(),(FontImage) getWorkspace()));
 		}
 		return itemSaveImage;
 	}
@@ -379,6 +390,28 @@ public class Principal extends JFrame
         return itemExportToXNA;
 	}
 	
+    private JMenuItem getItemOpenProject()
+    {
+        if (itemOpenProject == null) {
+            itemOpenProject = new JMenuItem();
+            itemOpenProject.setText("Open Project...");
+            itemOpenProject.setName("OpenProject");        
+            itemOpenProject.addActionListener(new OpenFileProject(this));           
+        }
+
+        return itemOpenProject;
+    }	
+	
+    private JMenuItem getItemSaveProject()
+    {
+        if (itemSaveProject == null) {
+            itemSaveProject = new JMenuItem();
+            itemSaveProject.setText("Save Project...");
+            itemSaveProject.setName("SaveProject");        
+            itemSaveProject.addActionListener(new SaveFileProject(this));           
+        }
+        return itemSaveProject;
+    }       
 	/**
 	 * This method initializes toolBar	
 	 * 	
@@ -488,10 +521,10 @@ public class Principal extends JFrame
 	 * @return javax.swing.JPanel	
 	 */
 	private JPanel getColorGrupo() {
-		if (colorGroupo == null) {
-			colorGroupo = new ColorGroup();
+		if (colorGroup == null) {
+			colorGroup = new ColorGroup();
 		}
-		return colorGroupo;
+		return colorGroup;
 	}
 
 	/**
@@ -556,50 +589,46 @@ public class Principal extends JFrame
 	 */
 	private JMenu getMenuImageType() {
 		if (menuImageType == null) {
-			menuImageType = new JMenu();
-			menuImageType.setText("Image Type");
-			ButtonGroup grupo = new ButtonGroup();
-			grupo.add(getItemImageTypePNG());
-			grupo.add(getItemImageTypeBMP());
-			menuImageType.add(getItemImageTypePNG());
-			menuImageType.add(getItemImageTypeBMP());
-
+		    menuImageType = new RadioGroup();		    
+			menuImageType.setText("Image Type");			
+			menuImageType.add(getRadioImageTypePNG());
+			menuImageType.add(getRadioImageTypeBMP());			
 		}
 		return menuImageType;
 	}
 
 	/**
-	 * This method initializes itemImageTypePNG	
+	 * This method initializes radioImageTypePNG	
 	 * 	
 	 * @return javax.swing.JRadioButtonMenuItem	
 	 */
-	private JRadioButtonMenuItem getItemImageTypePNG() {
-		if (itemImageTypePNG == null) {
-			itemImageTypePNG = new JRadioButtonMenuItem();
-			itemImageTypePNG.setText("PNG");
-			itemImageTypePNG.setName("PNG");
-			itemImageTypePNG.setSelected(true);
-			itemImageTypePNG.addItemListener(PrincipalActionFactory.makeSelectImageTypeCommand(getOptions(),getFontText()));
-            mediador.register("itemImageTypePNG", itemImageTypePNG);			
+	private JRadioButtonMenuItem getRadioImageTypePNG() {
+		if (radioImageTypePNG == null) {
+			radioImageTypePNG = new JRadioButtonMenuItem();
+			radioImageTypePNG.setText("PNG");
+			radioImageTypePNG.setName("PNG");
+			radioImageTypePNG.setSelected(true);
+			radioImageTypePNG.addItemListener(PrincipalActionFactory.makeSelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("radioImageTypePNG", radioImageTypePNG);			
 		}
-		return itemImageTypePNG;
+		return radioImageTypePNG;
 	}
 
 	/**
-	 * This method initializes itemImageTypeBMP	
+	 * This method initializes radioImageTypeBMP	
 	 * 	
 	 * @return javax.swing.JRadioButtonMenuItem	
 	 */
-	private JRadioButtonMenuItem getItemImageTypeBMP() {
-		if (itemImageTypeBMP == null) {
-			itemImageTypeBMP = new JRadioButtonMenuItem();
-			itemImageTypeBMP.setText("BMP");
-			itemImageTypeBMP.setName("BMP");
-			itemImageTypeBMP.setEnabled(false);
-            itemImageTypeBMP.addItemListener(PrincipalActionFactory.makeSelectImageTypeCommand(getOptions(),getFontText()));
-            mediador.register("itemImageTypeBMP", itemImageTypeBMP);       
+	private JRadioButtonMenuItem getRadioImageTypeBMP() {
+		if (radioImageTypeBMP == null) {
+			radioImageTypeBMP = new JRadioButtonMenuItem();
+			radioImageTypeBMP.setText("BMP");
+			radioImageTypeBMP.setName("BMP");
+			radioImageTypeBMP.setEnabled(false);
+            radioImageTypeBMP.addItemListener(PrincipalActionFactory.makeSelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("radioImageTypeBMP", radioImageTypeBMP);       
 		}
-		return itemImageTypeBMP;
+		return radioImageTypeBMP;
 	}
 
 	/**
@@ -624,12 +653,8 @@ public class Principal extends JFrame
 	 */
 	private JMenu getMenuShadowVertical() {
 		if (menuShadowVertical == null) {
-			menuShadowVertical = new JMenu();
-			menuShadowVertical.setText("Vertical");
-			ButtonGroup grupo = new ButtonGroup();
-			grupo.add(getRadioShadowVerticalNone());
-			grupo.add(getRadioShadowVerticalUp());
-			grupo.add(getRadioShadowVerticalDown());				
+			menuShadowVertical = new RadioGroup();
+			menuShadowVertical.setText("Vertical");			
 			menuShadowVertical.add(getRadioShadowVerticalNone());
 			menuShadowVertical.add(getRadioShadowVerticalUp());
 			menuShadowVertical.add(getRadioShadowVerticalDown());
@@ -644,12 +669,8 @@ public class Principal extends JFrame
 	 */
 	private JMenu getMenuShadowHorizontal() {
 		if (menuShadowHorizontal == null) {
-			menuShadowHorizontal = new JMenu();
+		    menuShadowHorizontal = new RadioGroup();
 			menuShadowHorizontal.setText("Horizontal");
-			ButtonGroup grupo = new ButtonGroup();
-			grupo.add(getRadioShadowHorizontalNone());
-			grupo.add(getRadioShadowHorizontalLeft());
-			grupo.add(getRadioShadowHorizontalRight());			
 			menuShadowHorizontal.add(getRadioShadowHorizontalNone());
 			menuShadowHorizontal.add(getRadioShadowHorizontalLeft());
 			menuShadowHorizontal.add(getRadioShadowHorizontalRight());
@@ -887,9 +908,9 @@ public class Principal extends JFrame
 			comboTexturaSize.setMaximumSize(new Dimension(60, 60));
 			comboTexturaSize.setEditable(false);
 			comboTexturaSize.setCursor(new Cursor(Cursor.HAND_CURSOR));
-			comboTexturaSize.addItem("Auto"); 		
-			comboTexturaSize.addItem("128"); comboTexturaSize.addItem("256");
-			comboTexturaSize.addItem("512"); comboTexturaSize.addItem("1024");
+			comboTexturaSize.addItem("Auto");		
+			comboTexturaSize.addItem("128");  comboTexturaSize.addItem("256");
+			comboTexturaSize.addItem("512");  comboTexturaSize.addItem("1024");
 			comboTexturaSize.addItemListener(PrincipalActionFactory.makeSelectTextureSizeCommand(getOptions(),getFontText()));			
 		}
 		return comboTexturaSize;
@@ -994,5 +1015,57 @@ public class Principal extends JFrame
 		}
 		return jScrollPane;
 	}
+	
+////////////
+	
+    public PrincipalMemento createMemento()
+    {
+        PrincipalMemento memento = new PrincipalMemento();
+        
+        memento.setShowGrid(menuItemShowGrid.getState());
+        memento.setUseAlpha(menuItemUseAlpha.getState());
+        memento.setUseMetrics(menuItemUseMetric.getState());
+        memento.setAntialias(menuItemAntialias.getState());
+        
+        memento.setBold(botaoNegrito.isSelected());
+        
+        memento.setFontSize((String)comboTamanho.getSelectedItem());
+        memento.setFontName((String)comboFonte.getSelectedItem());
+        memento.setTexturaSize((String)comboTexturaSize.getSelectedItem());
+        
+        memento.setFontColor(colorGroup.getCorFonte().getRGB());
+        memento.setShadowColor(colorGroup.getCorSombra().getRGB());
+        memento.setBackgroundColor(colorGroup.getCorFundo().getRGB());
+        
+        memento.setHorizontalShadow(menuShadowHorizontal.getSelected());
+        memento.setVerticalShadow(menuShadowVertical.getSelected());
+
+        memento.setImageType(menuImageType.getSelected());
+        
+        return memento;
+    }
+
+    public void setMemento(PrincipalMemento memento)
+    {      
+        menuItemUseAlpha.setSelected(memento.isUseAlpha());
+        menuItemShowGrid.setSelected(memento.isShowGrid());
+        menuItemUseMetric.setSelected(memento.isUseMetrics());
+        menuItemAntialias.setSelected(memento.isAntialias());
+        
+        botaoNegrito.setSelected(memento.isBold());
+        
+        comboTamanho.setSelectedItem(memento.getFontSize());
+        comboFonte.setSelectedItem(memento.getFontName());
+        comboTexturaSize.setSelectedItem(memento.getTexturaSize());
+        
+        colorGroup.setCorFonte(memento.getFontColor());
+        colorGroup.setCorSombra(memento.getShadowColor());
+        colorGroup.setCorFundo(memento.getBackgroundColor());        
+        
+        menuShadowHorizontal.setSelected(memento.getHorizontalShadow());
+        menuShadowVertical.setSelected(memento.getVerticalShadow());        
+        
+        menuImageType.setSelected(memento.getImageType());
+    }	
 	
 }  //  @jve:decl-index=0:visual-constraint="-35,-24"
