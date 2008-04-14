@@ -100,5 +100,18 @@ public class FileInfo
         } else {
             return false;
         }
+    }   
+    
+    /**
+     * Informa se o arquivo é um arquivo de projeto.
+     * @return retorna true em caso positivo.
+     */
+    public boolean isProject()
+    {
+        if (extension.equalsIgnoreCase("f2i")){
+            return true;
+        } else {
+            return false;
+        }
     }    
 }
