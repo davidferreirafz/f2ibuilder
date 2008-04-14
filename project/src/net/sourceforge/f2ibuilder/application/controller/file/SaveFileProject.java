@@ -30,37 +30,37 @@ package net.sourceforge.f2ibuilder.application.controller.file;
 import java.awt.Component;
 import java.io.File;
 
-import net.sourceforge.f2ibuilder.application.controller.generics.OpenFile;
+import net.sourceforge.f2ibuilder.application.controller.generics.SaveFile;
 import net.sourceforge.f2ibuilder.application.view.Principal;
 import net.sourceforge.f2ibuilder.components.MementoXML;
 import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
 
-public class OpenFileProject extends OpenFile
+public class SaveFileProject extends SaveFile
 {
     private Principal form;
     
-    public OpenFileProject(Principal form)
+    public SaveFileProject(Principal form)
     {
-        this.form = form;
+        this.form=form;
     }
 
     @Override
     protected void action(Component component)
-    {        
+    {   
         FileDialog fd = FileDialog.getInstance();            
         
-        if(fd.showOpenDialogProject(component)){
+        if(fd.showSaveDialogProject(component)){
             
             String filename = fd.getFilePathProject();
- 
+
             if (!filename.endsWith(".f2i")){
                 filename+=".f2i";
             }
             
             MementoXML xml = new MementoXML(new File(filename));
-            
-            form.setMemento(xml.toMemento());
-        }        
+
+            xml.toFile(form.createMemento());
+        }
     }
 
 }
