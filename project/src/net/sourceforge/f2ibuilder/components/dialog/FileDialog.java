@@ -34,6 +34,7 @@ import javax.swing.JFileChooser;
 
 import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
 import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
+import net.sourceforge.f2ibuilder.components.dialog.filter.FileProjectFilter;
 
 /**
  * Caixa de Dialogo para salvar os arquivos.
@@ -51,9 +52,12 @@ public class FileDialog
 	//Caixas de dialogo para salvar
 	private JFileChooser dialogImagem;
 	private JFileChooser dialogMetrica;
+	private JFileChooser dialogProject;
+	
 	//Caminhos dos arquivos
 	private String imageFilePath;
 	private String metricFilePath;
+    private String projectFilePath;	
 	
 	/**
 	 * Construtor privado para implementação do Singleton
@@ -61,12 +65,16 @@ public class FileDialog
 	private FileDialog()
 	{
 		dialogImagem   = new JFileChooser();
-		dialogMetrica  = new JFileChooser();	
-		imageFilePath  = "";
-		metricFilePath = "";		
+		dialogMetrica  = new JFileChooser();
+		dialogProject  = new JFileChooser();
+		
+		imageFilePath   = "";
+		metricFilePath  = "";		
+		projectFilePath = "";
 	
 		dialogImagem.setFileFilter(new FileImageFilter());
 		dialogMetrica.setFileFilter(new FileMetricFilter());
+		dialogProject.setFileFilter(new FileProjectFilter());		
 	}
 	/**
 	 * Retorna a instância de FileDialog.
@@ -124,7 +132,8 @@ public class FileDialog
 			
 			metricFilePath=file.getAbsolutePath();
 			
-			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
+			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());	
+
 			ok=true;
 		}
 		
@@ -138,4 +147,46 @@ public class FileDialog
 	{
 		return metricFilePath;
 	}
+    /**
+     * @param component
+     * @return
+     */
+    public boolean showSaveDialogProject(Component component)
+    {
+        int codeOption = dialogProject.showSaveDialog(component);
+        boolean ok = false;
+        
+        if (codeOption == JFileChooser.APPROVE_OPTION) {
+            File file = dialogProject.getSelectedFile();
+            
+            projectFilePath=file.getAbsolutePath();
+
+            ok=true;
+        }
+        
+        return ok;
+    }
+    
+    public boolean showOpenDialogProject(Component component)
+    {
+        int codeOption = dialogProject.showOpenDialog(component);
+        boolean ok = false;
+        
+        if (codeOption == JFileChooser.APPROVE_OPTION) {
+            File file = dialogProject.getSelectedFile();
+            
+            projectFilePath=file.getAbsolutePath();
+
+            ok=true;
+        }
+        
+        return ok;
+    }    
+    /**
+     * @return
+     */
+    public String getFilePathProject()
+    {
+        return projectFilePath;
+    }
 }
