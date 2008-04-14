@@ -47,7 +47,7 @@ public class FontText extends Observable
 {
     private String fontName;
     private int fontSize;
-    private int fontStyle;    
+    private int fontStyle;
     private Font font;
     private JPanel panel;
     private Dimension dimensionDefault;
