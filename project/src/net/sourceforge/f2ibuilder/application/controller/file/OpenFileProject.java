@@ -30,16 +30,18 @@ package net.sourceforge.f2ibuilder.application.controller.file;
 import java.awt.Component;
 import java.io.File;
 
+import javax.swing.JOptionPane;
+
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenFile;
-import net.sourceforge.f2ibuilder.application.view.Principal;
 import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
 import net.sourceforge.f2ibuilder.components.memento.MementoXML;
 
 public class OpenFileProject extends OpenFile
 {
-    private Principal form;
+    private IMementoSupported form;
     
-    public OpenFileProject(Principal form)
+    public OpenFileProject(IMementoSupported form)
     {
         this.form = form;
     }
@@ -47,7 +49,7 @@ public class OpenFileProject extends OpenFile
     @Override
     protected void action(Component component)
     {        
-        FileDialog fd = FileDialog.getInstance();            
+        FileDialog fd = FileDialog.getInstance();
         
         if(fd.showOpenDialogProject(component)){
             
@@ -59,7 +61,11 @@ public class OpenFileProject extends OpenFile
             
             MementoXML xml = new MementoXML(new File(filename));
             
-            form.setMemento(xml.toMemento());
+            try {
+                form.setMemento(xml.toMemento());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null,"Open Project: "+e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+            }
         }        
     }
 

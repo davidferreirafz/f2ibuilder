@@ -30,16 +30,18 @@ package net.sourceforge.f2ibuilder.application.controller.file;
 import java.awt.Component;
 import java.io.File;
 
+import javax.swing.JOptionPane;
+
 import net.sourceforge.f2ibuilder.application.controller.generics.SaveFile;
-import net.sourceforge.f2ibuilder.application.view.Principal;
 import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
 import net.sourceforge.f2ibuilder.components.memento.MementoXML;
 
 public class SaveFileProject extends SaveFile
 {
-    private Principal form;
+    private IMementoSupported form;
     
-    public SaveFileProject(Principal form)
+    public SaveFileProject(IMementoSupported form)
     {
         this.form=form;
     }
@@ -59,7 +61,11 @@ public class SaveFileProject extends SaveFile
             
             MementoXML xml = new MementoXML(new File(filename));
 
-            xml.toFile(form.createMemento());
+            try {
+                xml.toFile(form.createMemento());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null,"Save Project: "+e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
     }
 
