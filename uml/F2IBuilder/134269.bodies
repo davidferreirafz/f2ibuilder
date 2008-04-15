@@ -1,0 +1,6 @@
+class SaveFile
+!!!140413.java!!!	actionPerformed(inout e : ActionEvent) : void
+       
+        if (e.getSource() instanceof Component) {
+            action((Component) e.getSource());        
+        }    

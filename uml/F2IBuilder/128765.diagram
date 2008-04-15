@@ -1,0 +1,24 @@
+format 55
+
+classcanvas 128125 class_ref 129149 // ColorPanel
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 83 264 2000
+  end
+classcanvas 128253 class_ref 129405 // ColorPanelControl
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 78 22 3005
+  end
+classcanvas 128509 class_ref 129277 // JPanel
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language uml show_context_mode uml auto_label_position default show_infonote default shadow default
+  color lightgray
+  xyz 576 325 2004
+  end
+relationcanvas 128381 relation_ref 128893 // <unidirectional association>
+  from ref 128125 z 1999 to ref 128253
+  role_a_pos 233 172 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128637 relation_ref 128637 // <generalisation>
+  from ref 128125 z 1999 to ref 128509
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

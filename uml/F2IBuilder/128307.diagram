@@ -1,0 +1,48 @@
+format 55
+
+classcanvas 128029 class_ref 131965 // SelectCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 355 422 2004
+  end
+classcanvas 128051 class_ref 135037 // MediatorView
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 104 219 3005
+  end
+classcanvas 128563 class_ref 132221 // IMediatorView
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 252 42 3010
+  end
+classcanvas 128819 class_ref 132093 // Colleague
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 408 229 2004
+  end
+relationcanvas 128157 relation_ref 130941 // <generalisation>
+  geometry VHV
+  from ref 128029 z 1999 to point 418 360
+  line 128541 z 1999 to point 471 360
+  line 128669 z 1999 to ref 128819
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128179 relation_ref 134781 // <unidirectional association>
+  from ref 128051 z 1999 to point 74 219
+  line 128307 z 1999 to point 74 249
+  line 128435 z 1999 to ref 128051
+  role_a_pos 44 248 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128691 relation_ref 134653 // <realization>
+  geometry VH
+  from ref 128051 z 1999 to point 198 96
+  line 128285 z 1999 to ref 128563
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128947 relation_ref 130813 // <unidirectional association>
+  geometry HVr
+  from ref 128819 z 1999 to point 471 96
+  line 128413 z 1999 to ref 128563
+  role_a_pos 438 76 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

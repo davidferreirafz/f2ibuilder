@@ -1,0 +1,7 @@
+class SelectMetric
+!!!144253.java!!!	SelectMetric(inout table : JTable, inout fontText : FontText, inout asciiPreview : JLabel, inout formatPreview : JLabel)
+        super(fontText,table,asciiPreview,formatPreview);
+!!!144381.java!!!	getPreview(in x : int, in y : int) : String
+        int position = (0+x)+(16*y);
+        
+        return fontText.getCharacter(position);

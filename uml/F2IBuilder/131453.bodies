@@ -1,0 +1,14 @@
+class SelectChar
+!!!135549.java!!!	SelectChar(inout table : JTable, inout asciiPreview : JLabel, inout formatPreview : JLabel, inout fontText : FontText)
+        super(fontText,table,asciiPreview,formatPreview);
+!!!135677.java!!!	getPreview(in x : int, in y : int) : String
+        String t =(String) table.getModel().getValueAt(y,x);
+        
+        if ((t==null)||(t.equals(""))){
+            t = "0";
+        }
+        
+        int a = Integer.parseInt(t);
+        char ac = (char) a;
+                
+        return String.valueOf(ac);

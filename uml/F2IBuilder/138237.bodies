@@ -1,0 +1,3 @@
+class AntialiasNone
+!!!165501.java!!!	apply(inout graphics : Graphics2D) : void
+        //sem antialias

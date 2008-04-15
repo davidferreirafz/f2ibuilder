@@ -1,0 +1,46 @@
+class FileDialog
+!!!171517.java!!!	FileDialog()
+		dialogImagem   = new JFileChooser();
+		dialogMetrica  = new JFileChooser();	
+		imageFilePath  = "";
+		metricFilePath = "";		
+	
+		dialogImagem.setFileFilter(new FileImageFilter());
+		dialogMetrica.setFileFilter(new FileMetricFilter());
+!!!171645.java!!!	getInstance() : FileDialog
+		if (instance==null){
+			instance = new FileDialog();
+		}
+		return instance;
+!!!171773.java!!!	showSaveDialogImage(inout componente : Component) : boolean
+		int codeOption = dialogImagem.showSaveDialog(componente);
+		boolean ok = false;
+		
+		if (codeOption == JFileChooser.APPROVE_OPTION) {
+			File file = dialogImagem.getSelectedFile();
+			
+			imageFilePath=file.getAbsolutePath();
+			
+			dialogMetrica.setCurrentDirectory(dialogImagem.getCurrentDirectory());
+			ok=true;
+		}
+		
+		return ok;		
+!!!171901.java!!!	getFilePathImage() : String
+		return imageFilePath;
+!!!172029.java!!!	showSaveDialogMetric(inout componente : Component) : boolean
+		int codeOption = dialogMetrica.showSaveDialog(componente);
+		boolean ok = false;
+		
+		if (codeOption == JFileChooser.APPROVE_OPTION) {
+			File file = dialogMetrica.getSelectedFile();
+			
+			metricFilePath=file.getAbsolutePath();
+			
+			dialogImagem.setCurrentDirectory(dialogMetrica.getCurrentDirectory());			
+			ok=true;
+		}
+		
+		return ok;
+!!!172157.java!!!	getFilePathMetric() : String
+		return metricFilePath;

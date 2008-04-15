@@ -1,0 +1,5 @@
+class ResetCharset
+!!!134141.java!!!	ResetCharset(inout tableChar : FontText)
+        super(tableChar);        
+!!!134269.java!!!	action() : void
+        fontText.resetCharset();

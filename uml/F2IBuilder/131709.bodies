@@ -1,0 +1,9 @@
+class BoldCommand
+!!!136445.java!!!	BoldCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!136573.java!!!	action(inout button : JToggleButton) : void
+        if (button.isSelected()){
+            fontText.setBold(true);
+        } else {
+            fontText.setBold(false);                   
+        }

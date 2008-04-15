@@ -1,0 +1,3 @@
+class Colleague
+!!!135805.java!!!	setMediator(inout m : IMediatorView) : void
+        mediator = m;

@@ -1,0 +1,43 @@
+class MediatorView
+!!!142589.java!!!	MediatorView()
+        table = new HashMap<String,AbstractButton>();
+!!!142717.java!!!	getInstance() : MediatorView
+        if (instance==null){
+            instance = new MediatorView();
+        }
+        return instance;
+!!!142845.java!!!	register(in name : String, inout component : AbstractButton) : void
+        table.put(name, component);
+!!!142973.java!!!	get(in key : String) : AbstractButton
+        if (table.containsKey(key)){
+            return table.get(key);
+        } else {
+            return null;
+        }
+!!!143101.java!!!	selectedUseAlpha(inout value : boolean) : void
+        JRadioButtonMenuItem radioItemBMP = (JRadioButtonMenuItem) get("itemImageTypeBMP");
+        JRadioButtonMenuItem radioItemPNG = (JRadioButtonMenuItem) get("itemImageTypePNG");        
+
+        if (value){
+            radioItemBMP.setEnabled(false);
+            radioItemPNG.setSelected(true);
+        } else {
+            radioItemBMP.setEnabled(true);
+        }
+!!!143229.java!!!	selectedImageTypeBMP(inout value : boolean) : void
+        JCheckBoxMenuItem checkUseAlpha = (JCheckBoxMenuItem) get("menuItemUseAlpha");
+
+        if (value){
+            checkUseAlpha.setState(false);
+            checkUseAlpha.setEnabled(false);
+        } else {
+            checkUseAlpha.setEnabled(true);
+        }
+!!!143357.java!!!	selectedUseMetrics(inout value : boolean) : void
+        AbstractButton itemSaveFontMetrics = get("itemSaveFontMetrics");
+
+        if (value){
+            itemSaveFontMetrics.setEnabled(true);
+        } else {
+            itemSaveFontMetrics.setEnabled(false);
+        }

@@ -1,0 +1,30 @@
+class SaveFileMetrics
+!!!140925.java!!!	SaveFileMetrics(inout fontText : FontText)
+        this.fontText=fontText;
+!!!141053.java!!!	action(inout component : Component) : void
+        BufferedWriter out;        
+        FileDialog fd = FileDialog.getInstance();            
+        
+        if(fd.showSaveDialogMetric(component)){
+            
+            String filename = fd.getFilePathMetric();
+            
+            try {
+                char v[] = new char[256];           
+
+                for (int i=0; i<256; i++)
+                {
+                    v[i]=(char) fontText.getCharacterMetric(i);
+                }
+
+                if (!filename.endsWith("dat")){
+                    filename+=".dat";
+                }
+
+                out = new BufferedWriter(new FileWriter(filename));
+                out.write(v);
+                out.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
+        }

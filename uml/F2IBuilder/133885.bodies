@@ -1,0 +1,11 @@
+class SelectImageTypeCommand
+!!!139773.java!!!	SelectImageTypeCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!139901.java!!!	action(inout radio : JRadioButtonMenuItem) : void
+        if (radio.getName().equalsIgnoreCase("BMP")){
+            options.setImageType(Options.IMAGE_TYPE_BMP);
+            mediator.selectedImageTypeBMP(true);                   
+        } else {
+            options.setImageType(Options.IMAGE_TYPE_PNG);
+            mediator.selectedImageTypeBMP(false);
+        }

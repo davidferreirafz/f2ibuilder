@@ -1,0 +1,484 @@
+class Principal
+!!!154237.java!!!	Principal()
+		super();
+        getOptions();
+		getFontText();
+		
+		mediador = MediatorView.getInstance();		
+		Colleague.setMediator(mediador);
+		
+		initialize();
+!!!154365.java!!!	getFontText() : FontText
+	    if (fontText==null){
+	        fontText = FontText.getInstance();
+	    }
+	    
+	    return fontText;
+!!!154493.java!!!	getOptions() : Options
+        if (options==null){
+            options = Options.getInstance();
+        }
+        
+        return options;
+!!!154621.java!!!	getImagePanel() : SurfacePanel
+		return (SurfacePanel)getWorkspace();
+!!!154749.java!!!	initialize() : void
+		this.setSize(634, 300);
+		this.setPreferredSize(new java.awt.Dimension(520,300));
+		this.setJMenuBar(getJJMenuBar());
+		this.setMinimumSize(new java.awt.Dimension(640,480));
+		this.setContentPane(getJPanel());
+		this.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
+		this.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+		this.setResizable(true);
+		this.setTitle(Constants.TITULO);
+		this.addWindowListener(new LoadApplication(getFontText(),getComboFonte(),getComboTamanho()));
+!!!154877.java!!!	getJPanel() : JPanel
+		if (jPanel == null) {
+			jPanel = new JPanel();
+			jPanel.setLayout(new BorderLayout());
+			jPanel.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
+			jPanel.setPreferredSize(new java.awt.Dimension(512,512));
+			jPanel.add(getToolBar(), java.awt.BorderLayout.NORTH);
+			jPanel.add(getJScrollPane(),java.awt.BorderLayout.CENTER);
+		}
+		return jPanel;
+!!!155005.java!!!	getComboFonte() : JComboBox
+		if (comboFonte == null) {
+			comboFonte = new ComboFonte();
+			comboFonte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+			comboFonte.setEditable(false);
+			comboFonte.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
+			comboFonte.setName("comboFonte");
+            comboFonte.addItemListener(new SelectFontCommand(getOptions(),getFontText()));			
+		}
+		return comboFonte;
+!!!155133.java!!!	getWorkspace() : JPanel
+		if (workspace == null) {
+			workspace = new SurfacePanel(getFontText(),getOptions(),(ColorGroup)getColorGrupo());
+			workspace.setAutoscrolls(false);
+			workspace.setLayout(new FlowLayout());
+			workspace.setLayout(null);
+			workspace.setBorder(BorderFactory.createEmptyBorder(2, 2, 0, 0));
+			workspace.setName("workspace");
+			workspace.setAlignmentX(0.0F);
+			workspace.setAlignmentY(0.0F);
+			workspace.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+			workspace.setBackground(Color.lightGray);
+			workspace.setBounds(new Rectangle(0, 0, 0, 0));
+		}
+		
+		return workspace;
+!!!155261.java!!!	getJJMenuBar() : JMenuBar
+		if (jJMenuBar == null) {
+			jJMenuBar = new JMenuBar();
+			jJMenuBar.setPreferredSize(new java.awt.Dimension(0,30));
+			jJMenuBar.add(getMenuFile());
+			jJMenuBar.add(getMenuConfiguracao());
+			jJMenuBar.add(getMenuAjuda());
+		}
+		return jJMenuBar;
+!!!155389.java!!!	getMenuFile() : JMenu
+		if (menuFile == null) {
+			menuFile = new JMenu();
+			menuFile.setText("File");
+			menuFile.add(getItemSaveImage());
+			menuFile.add(getItemSaveFontMetrics());
+            menuFile.addSeparator();
+            menuFile.add(getItemExportToXNA());
+		}
+		return menuFile;
+!!!155517.java!!!	getMenuAjuda() : JMenu
+		if (menuAjuda == null) {
+			menuAjuda = new JMenu();
+			menuAjuda.setText("Help");
+			menuAjuda.add(getMenuSobre());
+			menuAjuda.addSeparator();			
+			menuAjuda.add(getMenuCreditos());
+			menuAjuda.addSeparator();
+			menuAjuda.add(getMenuWebSite());
+		}
+		return menuAjuda;
+!!!155645.java!!!	getItemSaveImage() : JMenuItem
+		if (itemSaveImage == null) {
+			itemSaveImage = new JMenuItem();
+			itemSaveImage.setText("Save Image");
+			itemSaveImage.setName("SaveImage");		
+			itemSaveImage.addActionListener(new SaveFileImage(getOptions(),(FontImage) getWorkspace()));
+		}
+		return itemSaveImage;
+!!!155773.java!!!	getItemSaveFontMetrics() : JMenuItem
+		if (itemSaveFontMetrics == null) {
+			itemSaveFontMetrics = new JMenuItem();
+			itemSaveFontMetrics.setText("Save Font Metrics");
+			itemSaveFontMetrics.setName("SaveFontMetrics");			
+			itemSaveFontMetrics.addActionListener(new SaveFileMetrics(getFontText()));
+            mediador.register("itemSaveFontMetrics", itemSaveFontMetrics);			
+		}
+		return itemSaveFontMetrics;
+!!!155901.java!!!	getItemExportToXNA() : JMenuItem
+        if (itemExportToXNA == null) {
+            itemExportToXNA = new JMenuItem();
+            itemExportToXNA.setText("Export to XNA");
+            itemExportToXNA.setName("ExportToXNA");        
+            itemExportToXNA.setEnabled(false);
+            //itemExportToXNA.addActionListener(new SaveFileMetrics(getFontText()));           
+        }
+        return itemExportToXNA;
+!!!156029.java!!!	getToolBar() : JToolBar
+		if (toolBar == null) {
+			toolBar = new JToolBar();
+			toolBar.setFloatable(false);
+			toolBar.setComponentOrientation(java.awt.ComponentOrientation.LEFT_TO_RIGHT);
+			toolBar.setPreferredSize(new java.awt.Dimension(37,60));
+			toolBar.add(getJPanel1());
+			toolBar.add(getJPanel2());
+			toolBar.add(getJPanel3());
+			toolBar.add(getJPanel4());
+			toolBar.add(getColorGrupo());
+		}
+		return toolBar;
+!!!156157.java!!!	getJPanel1() : JPanel
+		if (jPanel1 == null) {
+			GridLayout gridLayout1 = new GridLayout();
+			gridLayout1.setRows(1);
+			jPanel1 = new JPanel();
+			jPanel1.setLayout(gridLayout1);
+			jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Font", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), java.awt.Color.black));
+			jPanel1.add(getComboFonte(), null);
+		}
+		return jPanel1;
+!!!156285.java!!!	getComboTamanho() : ComboBox
+		if (comboTamanho == null) {
+			comboTamanho = new ComboBox();
+			comboTamanho.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+			comboTamanho.setEditable(true);
+			comboTamanho.setName("comboTamanho");
+			comboTamanho.setMaximumSize(new java.awt.Dimension(60,60));
+			comboTamanho.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			comboTamanho.addItem("8"); 		comboTamanho.addItem("9");
+			comboTamanho.addItem("10");  	comboTamanho.addItem("12");
+			comboTamanho.addItem("14");		comboTamanho.addItem("16");
+			comboTamanho.addItem("18");		comboTamanho.addItem("20");			
+			comboTamanho.addItem("24");     comboTamanho.addItem("24");		
+			comboTamanho.addItem("26");		comboTamanho.addItem("28");	
+			comboTamanho.addItem("30");		comboTamanho.addItem("32");
+			comboTamanho.addItem("34");		comboTamanho.addItem("36");
+			comboTamanho.addItem("38");		comboTamanho.addItem("40");
+			comboTamanho.addItem("42");		comboTamanho.addItem("44");
+			comboTamanho.addItemListener(new SelectSizeCommand(getOptions(),getFontText()));			
+		}
+		return comboTamanho;
+!!!156413.java!!!	getJPanel2() : JPanel
+		if (jPanel2 == null) {
+			GridLayout gridLayout = new GridLayout();
+			gridLayout.setRows(1);
+			jPanel2 = new JPanel();
+			jPanel2.setLayout(gridLayout);
+			jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Size", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), java.awt.Color.black));
+			jPanel2.add(getComboTamanho(), null);
+		}
+		return jPanel2;
+!!!156541.java!!!	getJPanel3() : JPanel
+		if (jPanel3 == null) {
+			jPanel3 = new JPanel();
+			jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Style", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), null));
+			jPanel3.setSize(new java.awt.Dimension(80,56));
+			jPanel3.setPreferredSize(new java.awt.Dimension(60,62));
+			jPanel3.add(getBotaoNegrito(), null);
+		}
+		return jPanel3;
+!!!156669.java!!!	getColorGrupo() : JPanel
+		if (colorGroupo == null) {
+			colorGroupo = new ColorGroup();
+		}
+		return colorGroupo;
+!!!156797.java!!!	getBotaoNegrito() : JToggleButton
+		if (botaoNegrito == null) {
+			botaoNegrito = new JToggleButton();
+			botaoNegrito.setText("Bold");
+            botaoNegrito.addItemListener(new BoldCommand(getOptions(),getFontText()));
+		}
+		return botaoNegrito;
+!!!156925.java!!!	getMenuConfiguracao() : JMenu
+		if (menuConfiguracao == null) {
+			menuConfiguracao = new JMenu();
+			menuConfiguracao.setText("Option");
+			menuConfiguracao.add(getMenuImageType());
+			menuConfiguracao.add(getMenuShadow());
+			menuConfiguracao.add(getMenuCharacterSet());			
+			menuConfiguracao.addSeparator();
+			menuConfiguracao.add(getMenuItemUseMetric());
+			menuConfiguracao.addSeparator();
+            menuConfiguracao.add(getMenuItemUseAlpha());
+            menuConfiguracao.addSeparator();           
+			menuConfiguracao.add(getMenuItemAntialias());
+			menuConfiguracao.addSeparator();
+			menuConfiguracao.add(getMenuItemShowGrid());			
+			menuConfiguracao.addSeparator();
+			menuConfiguracao.add(getMenuAvancado());
+		}
+		return menuConfiguracao;
+!!!157053.java!!!	getMenuItemShowGrid() : JCheckBoxMenuItem
+		if (menuItemShowGrid == null) {
+			menuItemShowGrid = new JCheckBoxMenuItem();
+			menuItemShowGrid.setText("Show Grid");
+			menuItemShowGrid.setName("Grid");			
+			menuItemShowGrid.addItemListener(new ShowGridCommand(getOptions(),getFontText()));
+		}
+		return menuItemShowGrid;
+!!!157181.java!!!	getMenuImageType() : JMenu
+		if (menuImageType == null) {
+			menuImageType = new JMenu();
+			menuImageType.setText("Image Type");
+			ButtonGroup grupo = new ButtonGroup();
+			grupo.add(getItemImageTypePNG());
+			grupo.add(getItemImageTypeBMP());
+			menuImageType.add(getItemImageTypePNG());
+			menuImageType.add(getItemImageTypeBMP());
+
+		}
+		return menuImageType;
+!!!157309.java!!!	getItemImageTypePNG() : JRadioButtonMenuItem
+		if (itemImageTypePNG == null) {
+			itemImageTypePNG = new JRadioButtonMenuItem();
+			itemImageTypePNG.setText("PNG");
+			itemImageTypePNG.setName("PNG");
+			itemImageTypePNG.setSelected(true);
+			itemImageTypePNG.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("itemImageTypePNG", itemImageTypePNG);			
+		}
+		return itemImageTypePNG;
+!!!157437.java!!!	getItemImageTypeBMP() : JRadioButtonMenuItem
+		if (itemImageTypeBMP == null) {
+			itemImageTypeBMP = new JRadioButtonMenuItem();
+			itemImageTypeBMP.setText("BMP");
+			itemImageTypeBMP.setName("BMP");
+			itemImageTypeBMP.setEnabled(false);
+            itemImageTypeBMP.addItemListener(new SelectImageTypeCommand(getOptions(),getFontText()));
+            mediador.register("itemImageTypeBMP", itemImageTypeBMP);       
+		}
+		return itemImageTypeBMP;
+!!!157565.java!!!	getMenuShadow() : JMenu
+		if (menuShadow == null) {
+			menuShadow = new JMenu();
+			menuShadow.setText("Shadow");
+			menuShadow.add(getMenuShadowVertical());
+			menuShadow.add(getMenuShadowHorizontal());
+		}
+		return menuShadow;
+!!!157693.java!!!	getMenuShadowVertical() : JMenu
+		if (menuShadowVertical == null) {
+			menuShadowVertical = new JMenu();
+			menuShadowVertical.setText("Vertical");
+			ButtonGroup grupo = new ButtonGroup();
+			grupo.add(getjRadioButtonShadowVerticalNone());
+			grupo.add(getjRadioButtonShadowVerticalUp());
+			grupo.add(getjRadioButtonShadowVerticalDown());				
+			menuShadowVertical.add(getjRadioButtonShadowVerticalNone());
+			menuShadowVertical.add(getjRadioButtonShadowVerticalUp());
+			menuShadowVertical.add(getjRadioButtonShadowVerticalDown());
+		}
+		return menuShadowVertical;
+!!!157821.java!!!	getMenuShadowHorizontal() : JMenu
+		if (menuShadowHorizontal == null) {
+			menuShadowHorizontal = new JMenu();
+			menuShadowHorizontal.setText("Horizontal");
+			ButtonGroup grupo = new ButtonGroup();
+			grupo.add(getJRadioButtonMenuItem2());
+			grupo.add(getJRadioButtonMenuItem3());
+			grupo.add(getJRadioButtonMenuItem4());			
+			menuShadowHorizontal.add(getJRadioButtonMenuItem2());
+			menuShadowHorizontal.add(getJRadioButtonMenuItem3());
+			menuShadowHorizontal.add(getJRadioButtonMenuItem4());
+		}
+		return menuShadowHorizontal;
+!!!157949.java!!!	getJRadioButtonMenuItem2() : JRadioButtonMenuItem
+		if (jRadioButtonMenuItem2 == null) {
+			jRadioButtonMenuItem2 = new JRadioButtonMenuItem();
+			jRadioButtonMenuItem2.setText("None");
+			jRadioButtonMenuItem2.setName("HorizontalNone");			
+			jRadioButtonMenuItem2.setSelected(true);
+			jRadioButtonMenuItem2.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonMenuItem2;
+!!!158077.java!!!	getJRadioButtonMenuItem3() : JRadioButtonMenuItem
+		if (jRadioButtonMenuItem3 == null) {
+			jRadioButtonMenuItem3 = new JRadioButtonMenuItem();
+			jRadioButtonMenuItem3.setText("Left");
+			jRadioButtonMenuItem3.setName("HorizontalLeft");			
+            jRadioButtonMenuItem3.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonMenuItem3;
+!!!158205.java!!!	getJRadioButtonMenuItem4() : JRadioButtonMenuItem
+		if (jRadioButtonMenuItem4 == null) {
+			jRadioButtonMenuItem4 = new JRadioButtonMenuItem();
+			jRadioButtonMenuItem4.setText("Right");
+			jRadioButtonMenuItem4.setName("HorizontalRight");	
+            jRadioButtonMenuItem4.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonMenuItem4;
+!!!158333.java!!!	getjRadioButtonShadowVerticalNone() : JRadioButtonMenuItem
+		if (jRadioButtonShadowVerticalNone == null) {
+			jRadioButtonShadowVerticalNone = new JRadioButtonMenuItem();
+			jRadioButtonShadowVerticalNone.setText("None");
+			jRadioButtonShadowVerticalNone.setName("VerticalNone");			
+			jRadioButtonShadowVerticalNone.setSelected(true);
+            jRadioButtonShadowVerticalNone.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonShadowVerticalNone;
+!!!158461.java!!!	getjRadioButtonShadowVerticalUp() : JRadioButtonMenuItem
+		if (jRadioButtonShadowVerticalUp == null) {
+			jRadioButtonShadowVerticalUp = new JRadioButtonMenuItem();
+			jRadioButtonShadowVerticalUp.setText("Up");
+			jRadioButtonShadowVerticalUp.setName("VerticalUp");			
+            jRadioButtonShadowVerticalUp.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonShadowVerticalUp;
+!!!158589.java!!!	getjRadioButtonShadowVerticalDown() : JRadioButtonMenuItem
+		if (jRadioButtonShadowVerticalDown == null) {
+			jRadioButtonShadowVerticalDown = new JRadioButtonMenuItem();
+			jRadioButtonShadowVerticalDown.setText("Down");
+			jRadioButtonShadowVerticalDown.setName("VerticalDown");			
+            jRadioButtonShadowVerticalDown.addItemListener(new SelectShadowCommand(getOptions(),getFontText()));			
+		}
+		return jRadioButtonShadowVerticalDown;
+!!!158717.java!!!	getMenuItemUseMetric() : JCheckBoxMenuItem
+		if (menuItemUseMetric == null) {
+			menuItemUseMetric = new JCheckBoxMenuItem();
+			menuItemUseMetric.setText("Use Metrics");
+			menuItemUseMetric.setSelected(true);
+			menuItemUseMetric.setName("UseMetrics");
+			menuItemUseMetric.addItemListener(new UseMetricsCommand(getOptions(),getFontText()));
+            mediador.register("menuItemUseMetric", menuItemUseMetric);			
+		}
+		return menuItemUseMetric;
+!!!158845.java!!!	getMenuItemUseAlpha() : JCheckBoxMenuItem
+        if (menuItemUseAlpha == null) {
+            menuItemUseAlpha = new JCheckBoxMenuItem();
+            menuItemUseAlpha.setText("Use Alpha");
+            menuItemUseAlpha.setSelected(true);
+            menuItemUseAlpha.setName("UseAlpha");
+            menuItemUseAlpha.addItemListener(new UseAlphaCommand(getOptions(),getFontText()));
+            mediador.register("menuItemUseAlpha", menuItemUseAlpha);            
+        }
+        return menuItemUseAlpha;
+!!!158973.java!!!	getMenuCharacterSet() : JMenu
+		if (menuCharacterSet == null) {
+			menuCharacterSet = new JMenu();
+			menuCharacterSet.setText("Character Set");
+			menuCharacterSet.add(getJRadioButtonMenuItem8());
+			menuCharacterSet.add(getJRadioButtonMenuItem9());
+		}
+		return menuCharacterSet;
+!!!159101.java!!!	getJRadioButtonMenuItem8() : JRadioButtonMenuItem
+		if (jRadioButtonMenuItem8 == null) {
+			jRadioButtonMenuItem8 = new JRadioButtonMenuItem();
+			jRadioButtonMenuItem8.setSelected(true);
+			jRadioButtonMenuItem8.setText("Full");
+		}
+		return jRadioButtonMenuItem8;
+!!!159229.java!!!	getJRadioButtonMenuItem9() : JRadioButtonMenuItem
+		if (jRadioButtonMenuItem9 == null) {
+			jRadioButtonMenuItem9 = new JRadioButtonMenuItem();
+			jRadioButtonMenuItem9.setText("Numeric");
+			jRadioButtonMenuItem9.setEnabled(false);
+		}
+		return jRadioButtonMenuItem9;
+!!!159357.java!!!	getMenuSobre() : JMenuItem
+		if (menuSobre == null) {
+			menuSobre = new JMenuItem();
+			menuSobre.setText("About");
+			menuSobre.addActionListener(new OpenJDialog(new About()));			
+		}
+		return menuSobre;
+!!!159485.java!!!	getMenuWebSite() : JMenuItem
+		if (menuWebSite == null) {
+			menuWebSite = new JMenuItem();
+			menuWebSite.setName("website");
+			menuWebSite.setText("Go to WebSite");
+			menuWebSite.addActionListener(new OpenWebSite());			
+		}
+		return menuWebSite;
+!!!159613.java!!!	getJPanel4() : JPanel
+		if (jPanel4 == null) {
+			GridLayout gridLayout2 = new GridLayout();
+			gridLayout2.setRows(1);
+			jPanel4 = new JPanel();
+			jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Texture Size", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), java.awt.Color.black));
+			jPanel4.setSize(new java.awt.Dimension(90,56));
+			jPanel4.setPreferredSize(new java.awt.Dimension(80,51));
+			jPanel4.setLayout(gridLayout2);
+			jPanel4.add(getComboTexturaSize(), null);
+		}
+		return jPanel4;
+!!!159741.java!!!	getComboTexturaSize() : ComboBox
+		if (comboTexturaSize == null) {
+			comboTexturaSize = new ComboBox();
+			comboTexturaSize.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+			comboTexturaSize.setName("comboTexturaSize");
+			comboTexturaSize.setMaximumSize(new Dimension(60, 60));
+			comboTexturaSize.setEditable(false);
+			comboTexturaSize.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			comboTexturaSize.addItem("Auto"); 		
+			comboTexturaSize.addItem("128"); comboTexturaSize.addItem("256");
+			comboTexturaSize.addItem("512"); comboTexturaSize.addItem("1024");
+			comboTexturaSize.addItemListener(new SelectTextureSizeCommand(getOptions(),getFontText()));			
+		}
+		return comboTexturaSize;
+!!!159869.java!!!	getMenuCreditos() : JMenuItem
+		if (menuCreditos == null) {
+			menuCreditos = new JMenuItem();
+			menuCreditos.setText("Credits");
+			menuCreditos.setName("Creditos");	
+			menuCreditos.addActionListener(new OpenJDialog(new Credit()));
+		}
+		return menuCreditos;
+!!!159997.java!!!	getMenuItemAntialias() : JCheckBoxMenuItem
+		if (menuItemAntialias == null) {
+			menuItemAntialias = new JCheckBoxMenuItem();
+			menuItemAntialias.setName("Antialias");
+			menuItemAntialias.setText("Antialias");
+			menuItemAntialias.setSelected(true);
+			menuItemAntialias.addItemListener(new UseAntialiasCommand(getOptions(),getFontText()));		
+		}
+		return menuItemAntialias;
+!!!160125.java!!!	getMenuItemAdjustCharset() : JMenuItem
+		if (menuItemAdjustCharset == null) {
+			menuItemAdjustCharset = new JMenuItem();
+			menuItemAdjustCharset.setText("Adjust Charset Map");
+			menuItemAdjustCharset.addActionListener(new OpenJDialogObserver(new CharsetMap(null,getFontText())));
+		}
+		return menuItemAdjustCharset;
+!!!160253.java!!!	getMenuAvancado() : JMenu
+		if (menuAvancado == null) {
+			menuAvancado = new JMenu();
+			menuAvancado.setText("Advanced");
+			menuAvancado.add(getMenuItemAdjustCharset());
+			menuAvancado.add(getMenuItemAdjustMetrics());
+			menuAvancado.add(getMenuItemMetricsLimit());
+		}
+		return menuAvancado;
+!!!160381.java!!!	getMenuItemAdjustMetrics() : JMenuItem
+		if (menuItemAdjustMetrics == null) {
+			menuItemAdjustMetrics = new JMenuItem();
+			menuItemAdjustMetrics.setActionCommand("Adjust Metrics Map");
+			menuItemAdjustMetrics.setText("Adjust Metrics Map");
+			menuItemAdjustMetrics.addActionListener(new OpenJDialogObserver(new MetricsMap(null,getFontText())));
+		}
+		return menuItemAdjustMetrics;
+!!!160509.java!!!	getMenuItemMetricsLimit() : JMenuItem
+		if (menuItemMetricsLimit == null) {
+			menuItemMetricsLimit = new JMenuItem();
+			menuItemMetricsLimit.setActionCommand("Adjust Metrics Limit");
+			menuItemMetricsLimit.setText("Adjust Metrics Limit");			
+			menuItemMetricsLimit.addActionListener(new OpenJDialogObserver(new MetricsLimit(null,getFontText())));
+		}
+		return menuItemMetricsLimit;
+!!!160637.java!!!	getJScrollPane() : JScrollPane
+		if (jScrollPane == null) {
+			jScrollPane = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+			jScrollPane.setBorder(null);
+			jScrollPane.setViewportView(getWorkspace());
+		}
+		return jScrollPane;

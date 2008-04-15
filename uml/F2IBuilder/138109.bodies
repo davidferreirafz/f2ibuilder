@@ -1,0 +1,4 @@
+class AntialiasEffect
+!!!165373.java!!!	apply(inout graphics : Graphics2D) : void
+        graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        graphics.setRenderingHint(RenderingHints.KEY_RENDERING,RenderingHints.VALUE_RENDER_QUALITY);

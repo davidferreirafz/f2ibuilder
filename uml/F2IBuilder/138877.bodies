@@ -1,0 +1,13 @@
+class MetricNone
+!!!166909.java!!!	adjust(inout ajuste : Dimension, inout dimensao : Dimension, inout fontText : FontText) : Dimension
+        ajuste.width  +=(dimensao.width/2);
+        ajuste.height +=(dimensao.height/2) - (fontText.getDefaultCharDimension().height/2);
+        
+        return ajuste;
+!!!167037.java!!!	position(inout count : Counter, inout dimensao : Dimension, inout ajuste : Dimension, inout fontText : FontText) : Point
+        Point p = new Point(0,0);
+        
+        p.x=(count.column()*dimensao.width)+ajuste.width - (fontText.getCharacterMetric(count.getIndice())/2);
+        p.y=(count.line()*dimensao.height)+ajuste.height+fontText.getFontAscent();
+        
+        return p;

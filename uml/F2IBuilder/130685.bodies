@@ -1,0 +1,7 @@
+class FontTextAction
+!!!133117.java!!!	FontTextAction(inout tableChar : FontText)
+        this.fontText = tableChar;        
+!!!133373.java!!!	actionPerformed(inout e : ActionEvent) : void
+        action();
+!!!133501.java!!!	mouseClicked(inout e : MouseEvent) : void
+        action();

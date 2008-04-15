@@ -1,0 +1,10 @@
+class LoadApplication
+!!!144509.java!!!	LoadApplication(inout fontText : FontText, inout comboBox : JComboBox, inout comboBox2 : JComboBox)
+        this.fontText=fontText;
+        this.comboBox=comboBox;
+        this.comboBox2=comboBox2;
+!!!144637.java!!!	windowOpened(inout e : WindowEvent) : void
+        fontText.setFontName(comboBox.getSelectedItem().toString());
+        int size = Integer.parseInt(comboBox2.getSelectedItem().toString());
+        fontText.setFontSize(size);
+        fontText.make();

@@ -1,0 +1,112 @@
+class Options
+!!!149245.java!!!	Options()
+
+        grid = false;
+        tamanhoTextura = 0;
+        
+        setAlpha(true);        
+        setImageType(IMAGE_TYPE_PNG);
+        setAntialias(true);
+        setMetrica(true);
+        setSombraHorizontal(0);
+        setSombraVertical(0);
+!!!149373.java!!!	getInstance() : Options
+
+        if (instance==null){
+            instance = new Options();
+        }
+        
+        return instance;
+!!!149501.java!!!	setAntialias(inout antialias : boolean) : void
+
+        this.antialias = antialias;
+        
+        if (antialias){
+            antialiasStrategy = new AntialiasEffect();
+        } else {
+            antialiasStrategy = new AntialiasNone();
+        }
+        
+        updateObserver();
+!!!149629.java!!!	isGrid() : boolean
+
+        return grid;
+!!!149757.java!!!	setGrid(inout grid : boolean) : void
+
+        this.grid = grid;
+        
+        updateObserver();
+!!!149885.java!!!	setMetrica(inout metrica : boolean) : void
+
+        this.metrica = metrica;
+
+        if (metrica){
+            metricStrategy = new MetricEffect();
+        } else {
+            metricStrategy = new MetricNone();
+        }
+        
+        updateObserver();
+!!!150013.java!!!	getImagemTipo() : String
+
+        return imagemTipo;
+!!!150141.java!!!	setImageType(in imageType : int) : void
+
+        switch (imageType){
+            case 1:
+                    this.imagemTipo = "bmp";
+                break;
+            case 0:
+            default:
+                    this.imagemTipo = "png";
+                break;
+        }
+!!!150269.java!!!	setAlpha(inout value : boolean) : void
+
+        if (value){
+            backgroundStrategy = new BackgroundApha();            
+        }else {
+            backgroundStrategy = new BackgroundFill();            
+        }
+!!!150397.java!!!	setSombraHorizontal(in sombraHorizontal : int) : void
+
+        this.sombraHorizontal = sombraHorizontal;
+
+        setSombra(sombraHorizontal, sombraVertical);        
+!!!150525.java!!!	setSombra(in horizontal : int, in vertical : int) : void
+
+        shadowStrategy = new ShadowEffect(horizontal,vertical);
+        
+        updateObserver();        
+!!!150653.java!!!	setSombraVertical(in sombraVertical : int) : void
+
+        this.sombraVertical = sombraVertical;
+         
+        setSombra(sombraHorizontal, sombraVertical);
+!!!150781.java!!!	isTexturaAuto() : boolean
+
+        boolean auto = false;
+        if (tamanhoTextura == 0) {
+            auto = true;
+        }
+        return auto;
+!!!150909.java!!!	getTamanhoTextura() : int
+
+        return tamanhoTextura;
+!!!151037.java!!!	setTextureSize(in tamanhoTextura : int) : void
+
+        this.tamanhoTextura = tamanhoTextura;
+        
+        updateObserver();
+!!!151165.java!!!	backgroundStrategy() : BackgroundStrategy
+
+        return backgroundStrategy;
+!!!151293.java!!!	antialiasStrategy() : AntialiasStrategy
+
+        return antialiasStrategy; 
+!!!151421.java!!!	metricStrategy() : MetricStrategy
+    
+        return metricStrategy;
+!!!151549.java!!!	shadowStrategy() : ShadowStrategy
+
+        return shadowStrategy;

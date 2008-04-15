@@ -1,0 +1,8 @@
+class ButtonCommand
+!!!136061.java!!!	ButtonCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!136189.java!!!	itemStateChanged(inout e : ItemEvent) : void
+                
+        if (e.getSource() instanceof JToggleButton) {
+            action((JToggleButton) e.getSource());
+        }         

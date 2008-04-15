@@ -1,0 +1,116 @@
+format 55
+
+packagecanvas 128022 
+  package_ref 134013 // charset
+  name_in_tab yes show_context_mode java_package color lightblue  xyzwh 138 59 1994 323 265
+classcanvas 128095 class_ref 128893 // Observer
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 9 37 2004
+  end
+classcanvas 128150 class_ref 137597 // CharsetMap
+  draw_all_relations default hide_attributes default hide_operations no show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_operations
+    operation_ref 160765 // CharsetMap
+    operation_ref 160893 // initialize
+    operation_ref 161021 // getJContentPane
+    operation_ref 161149 // getCharset
+    operation_ref 161277 // getJButton
+    operation_ref 161405 // getJButton11
+    operation_ref 161533 // getAsciiLabel
+    operation_ref 161661 // getFormatLabel
+    operation_ref 161789 // getJTable
+    operation_ref 161917 // getJButton2
+    operation_ref 162045 // getPanelPreview
+    operation_ref 162173 // getPanelPreviewFormatado
+  xyz 259 151 2005
+  end
+packagecanvas 128278 
+  package_ref 131197 // model
+  name_in_tab yes show_context_mode java_package color lightmagenta  xyzwh 93 418 1994 349 180
+classcanvas 128351 class_ref 136957 // JDialog
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightgray
+  xyz 18 243 2004
+  end
+classcanvas 128406 class_ref 131069 // FontText
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 179 500 2005
+  end
+classcanvas 129174 class_ref 130557 // ResetCharset
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 807 289 2000
+  end
+classcanvas 129302 class_ref 131197 // SaveCharset
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 757 364 2000
+  end
+classcanvas 129430 class_ref 131453 // SelectChar
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 707 430 2000
+  end
+packagecanvas 130198 
+  package_ref 130813 // charset
+  name_in_tab yes show_context_mode java_package  xyzwh 606 230 1995 361 257
+classcanvas 130271 class_ref 134781 // CloseWindow
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 672 104 2000
+  end
+packagecanvas 130326 
+  package_ref 130941 // generics
+  name_in_tab yes show_context_mode java_package color transparent  xyzwh 598 48 1995 355 115
+packagecanvas 131167 
+  package_ref 130685 // controller
+   color lightgreen  xyzwh 498 12 1990 495 511
+relationcanvas 128223 relation_ref 138877 // <realization>
+  from ref 128150 z 1999 to ref 128095
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128479 relation_ref 138749 // <generalisation>
+  geometry HVH
+  from ref 128150 z 1999 to point 165 176
+  line 130655 z 1999 to point 165 261
+  line 130783 z 1999 to ref 128351
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128534 relation_ref 136189 // <unidirectional association>
+  from ref 128406 z 1999 to point 149 500
+  line 128662 z 1999 to point 149 530
+  line 128790 z 1999 to ref 128406
+  role_a_pos 119 509 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128863 relation_ref 128095 // <dependency>
+  geometry HVH
+  from ref 128150 z 1999 to point 548 176
+  line 129759 z 1999 to point 548 382
+  line 129887 z 1999 to ref 129302
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128918 relation_ref 139005 // <unidirectional association>
+  geometry VHV
+  from ref 128150 z 1999 to point 299 350
+  line 131423 z 1999 to point 275 350
+  line 131551 z 1999 to ref 128406
+  role_a_pos 287 477 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129247 relation_ref 128223 // <dependency>
+  geometry HVH
+  from ref 128150 z 1999 to point 573 176
+  line 130015 z 1999 to point 573 307
+  line 130143 z 1999 to ref 129174
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129375 relation_ref 128351 // <dependency>
+  geometry HVH
+  from ref 128150 z 1999 to point 523 176
+  line 129503 z 1999 to point 523 448
+  line 129631 z 1999 to ref 129430
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130399 relation_ref 128479 // <dependency>
+  geometry HV
+  from ref 128150 z 1999 to point 718 176
+  line 130527 z 1999 to ref 130271
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

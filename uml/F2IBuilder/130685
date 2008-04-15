@@ -1,0 +1,1040 @@
+format 55
+"controller" // src::net::sourceforge::f2ibuilder::application::controller
+  revision 2
+  modified_by 13 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/controller"
+  java_package "net.sourceforge.f2ibuilder.application.controller"
+  package_ref 130813 // charset
+
+  package_ref 130941 // generics
+
+  package_ref 131325 // command
+
+  package_ref 131581 // mediator
+
+  package_ref 132477 // file
+
+  package_ref 132733 // metrics
+
+  package_ref 132861 // open
+
+  classview 128013 "controller"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 128269 "CharsetActionFactory"
+      visibility public stereotype "DiS - StaticFactory"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+@author David Ferreira 
+@email davidferreira.fz@gmail.com
+
+"
+      operation 129037 "makeResetCharset"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 129165 "makeSaveCharset"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "table" explicit_type "JTable"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param fontText
+@param table
+@return
+"
+      end
+
+      operation 129293 "makeSelectChar"
+	class_operation public explicit_return_type "MouseListener"
+	nparams 4
+	  param inout name "table" explicit_type "JTable"
+	  param inout name "asciiLabel" explicit_type "JLabel"
+	  param inout name "formatLabel" explicit_type "JLabel"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param table
+@param asciiLabel
+@param formatLabel
+@param fontText
+@return
+"
+      end
+
+      operation 129421 "makeCloseWindow"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "window" explicit_type "Window"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param charsetMap
+@return
+"
+      end
+
+      classrelation 128781 // <dependency>
+	relation 128781 -_->
+	  a default
+	    classrelation_ref 128781 // <dependency>
+	  b parent class_ref 131453 // SelectChar
+      end
+
+      classrelation 128909 // <dependency>
+	relation 128909 -_->
+	  a default
+	    classrelation_ref 128909 // <dependency>
+	  b parent class_ref 131197 // SaveCharset
+      end
+
+      classrelation 129037 // <dependency>
+	relation 129037 -_->
+	  a default
+	    classrelation_ref 129037 // <dependency>
+	  b parent class_ref 130557 // ResetCharset
+      end
+
+      classrelation 129677 // <generalisation>
+	relation 129677 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129677 // <generalisation>
+	  b parent class_ref 128653 // ActionFactory
+      end
+    end
+
+    class 128397 "MetricsActionFactory"
+      visibility public stereotype "DiS - StaticFactory"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+@author David Ferreira 
+@email davidferreira.fz@gmail.com
+
+"
+      operation 129549 "makeSaveMetric"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "table" explicit_type "JTable"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param fontText
+@param table
+@return
+"
+      end
+
+      operation 129677 "makeResetMetrics"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param fontText
+@return
+"
+      end
+
+      operation 129805 "makeSelectMetric"
+	class_operation public explicit_return_type "MouseListener"
+	nparams 4
+	  param inout name "table" explicit_type "JTable"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "asciiLabel" explicit_type "JLabel"
+	  param inout name "formatLabel" explicit_type "JLabel"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param table
+@param fontText
+@param asciiLabel
+@param formatLabel
+@return
+"
+      end
+
+      operation 129933 "makeCloseWindow"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "window" explicit_type "Window"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param metricsMap
+@return
+"
+      end
+
+      classrelation 130061 // <generalisation>
+	relation 130061 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 130061 // <generalisation>
+	  b parent class_ref 128653 // ActionFactory
+      end
+
+      classrelation 130189 // <dependency>
+	relation 130189 -_->
+	  a default
+	    classrelation_ref 130189 // <dependency>
+	  b parent class_ref 135549 // SelectMetric
+      end
+
+      classrelation 130317 // <dependency>
+	relation 130317 -_->
+	  a default
+	    classrelation_ref 130317 // <dependency>
+	  b parent class_ref 135293 // SaveMetric
+      end
+
+      classrelation 130445 // <dependency>
+	relation 130445 -_->
+	  a default
+	    classrelation_ref 130445 // <dependency>
+	  b parent class_ref 135165 // ResetMetrics
+      end
+
+      classrelation 130573 // <dependency>
+	relation 130573 -_->
+	  a default
+	    classrelation_ref 130573 // <dependency>
+	  b parent class_ref 135421 // SaveMetricLimit
+      end
+    end
+
+    class 128525 "AboutActionFactory"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+
+Designer Pattern : DiS - StaticFactory
+
+@author David Ferreira <davidferreira.fz@gmail.com>
+
+Project: F2IBuilder
+Date: 08/03/2008
+
+"
+      classrelation 129293 // <generalisation>
+	relation 129293 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129293 // <generalisation>
+	  b parent class_ref 128653 // ActionFactory
+      end
+
+      operation 130189 "makeOpenWebSite"
+	class_operation public explicit_return_type "MouseListener"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 131213 // <dependency>
+	relation 131213 -_->
+	  a default
+	    classrelation_ref 131213 // <dependency>
+	  b parent class_ref 134909 // OpenWebSite
+      end
+    end
+
+    class 128653 "ActionFactory"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+@author David Ferreira <davidferreira.fz@gmail.com>
+
+Project: F2IBuilder
+Date: 08/03/2008
+
+"
+      operation 130061 "makeCloseWindow"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "window" explicit_type "Window"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 129805 // <dependency>
+	relation 129805 -_->
+	  a default
+	    classrelation_ref 129805 // <dependency>
+	  b parent class_ref 134781 // CloseWindow
+      end
+    end
+
+    class 128781 "CreditActionFactory"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+
+Designer Pattern : DiS - StaticFactory
+
+@author David Ferreira <davidferreira.fz@gmail.com>
+
+Project: F2IBuilder
+Date: 08/03/2008
+
+"
+      classrelation 129421 // <generalisation>
+	relation 129421 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129421 // <generalisation>
+	  b parent class_ref 128653 // ActionFactory
+      end
+
+      operation 130317 "makeOpenWebSite"
+	class_operation public explicit_return_type "MouseListener"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 131085 // <dependency>
+	relation 131085 -_->
+	  a default
+	    classrelation_ref 131085 // <dependency>
+	  b parent class_ref 134909 // OpenWebSite
+      end
+    end
+
+    class 128909 "PrincipalActionFactory"
+      visibility public stereotype "DiS - StaticFactory"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+
+Designer Pattern : DiS - StaticFactory
+
+@author David Ferreira <davidferreira.fz@gmail.com>
+
+Project: F2IBuilder
+Date: 08/03/2008
+
+"
+      classrelation 129549 // <generalisation>
+	relation 129549 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129549 // <generalisation>
+	  b parent class_ref 128653 // ActionFactory
+      end
+
+      operation 130445 "makeOpenWebSite"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 130573 "makeLoadApplication"
+	class_operation public explicit_return_type "WindowListener"
+	nparams 3
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "comboFonte" explicit_type "JComboBox"
+	  param inout name "comboTamanho" type class_ref 129661 // ComboBox
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param fontText
+@param comboFonte
+@param comboTamanho
+@return
+"
+      end
+
+      operation 130701 "makeSelectFontCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 130829 "makeSaveFileImage"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontImage" type class_ref 134397 // FontImage
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontImage
+@return
+"
+      end
+
+      operation 130957 "makeSaveFileMetrics"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 1
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param fontText
+@return
+"
+      end
+
+      operation 131085 "makeSelectSizeCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131213 "makeBoldCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131341 "makeShowGridCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131469 "makeSelectImageTypeCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131597 "makeSelectShadowCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131725 "makeUseAlphaCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131853 "makeSelectTextureSizeCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 131981 "makeUseAntialiasCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 132109 "makeUseMetricsCommand"
+	class_operation public return_type class_ref 132349 // ItemListener
+	nparams 2
+	  param inout name "options" type class_ref 132477 // Options
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param options
+@param fontText
+@return
+"
+      end
+
+      operation 132237 "makeOpenCharsetMap"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "frame" explicit_type "Frame"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132365 "makeOpenMetricsMap"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "frame" explicit_type "Frame"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132493 "makeOpenMetricsLimit"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 2
+	  param inout name "frame" explicit_type "Frame"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132621 "makeOpenAbout"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132749 "makeOpenCredit"
+	class_operation public explicit_return_type "ActionListener"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 131469 // <dependency>
+	relation 131469 -_->
+	  a default
+	    classrelation_ref 131469 // <dependency>
+	  b parent class_ref 134909 // OpenWebSite
+      end
+
+      classrelation 131597 // <dependency>
+	relation 131597 -_->
+	  a default
+	    classrelation_ref 131597 // <dependency>
+	  b parent class_ref 135677 // LoadApplication
+      end
+
+      classrelation 131725 // <dependency>
+	relation 131725 -_->
+	  a default
+	    classrelation_ref 131725 // <dependency>
+	  b parent class_ref 136061 // OpenJDialogObserver
+      end
+
+      classrelation 131853 // <dependency>
+	relation 131853 -_->
+	  a default
+	    classrelation_ref 131853 // <dependency>
+	  b parent class_ref 135933 // OpenJDialog
+      end
+
+      classrelation 131981 // <dependency>
+	relation 131981 -_->
+	  a default
+	    classrelation_ref 131981 // <dependency>
+	  b parent class_ref 131709 // BoldCommand
+      end
+
+      classrelation 132109 // <dependency>
+	relation 132109 -_->
+	  a default
+	    classrelation_ref 132109 // <dependency>
+	  b parent class_ref 132733 // ShowGridCommand
+      end
+
+      classrelation 132237 // <dependency>
+	relation 132237 -_->
+	  a default
+	    classrelation_ref 132237 // <dependency>
+	  b parent class_ref 132861 // UseAlphaCommand
+      end
+
+      classrelation 132365 // <dependency>
+	relation 132365 -_->
+	  a default
+	    classrelation_ref 132365 // <dependency>
+	  b parent class_ref 132989 // UseAntialiasCommand
+      end
+
+      classrelation 132493 // <dependency>
+	relation 132493 -_->
+	  a default
+	    classrelation_ref 132493 // <dependency>
+	  b parent class_ref 133117 // UseMetricsCommand
+      end
+
+      classrelation 132621 // <dependency>
+	relation 132621 -_->
+	  a default
+	    classrelation_ref 132621 // <dependency>
+	  b parent class_ref 133629 // SelectTextureSizeCommand
+      end
+
+      classrelation 132749 // <dependency>
+	relation 132749 -_->
+	  a default
+	    classrelation_ref 132749 // <dependency>
+	  b parent class_ref 133373 // SelectFontCommand
+      end
+
+      classrelation 132877 // <dependency>
+	relation 132877 -_->
+	  a default
+	    classrelation_ref 132877 // <dependency>
+	  b parent class_ref 133501 // SelectSizeCommand
+      end
+
+      classrelation 133005 // <dependency>
+	relation 133005 -_->
+	  a default
+	    classrelation_ref 133005 // <dependency>
+	  b parent class_ref 133885 // SelectImageTypeCommand
+      end
+
+      classrelation 133133 // <dependency>
+	relation 133133 -_->
+	  a default
+	    classrelation_ref 133133 // <dependency>
+	  b parent class_ref 134013 // SelectShadowCommand
+      end
+
+      classrelation 133261 // <dependency>
+	relation 133261 -_->
+	  a default
+	    classrelation_ref 133261 // <dependency>
+	  b parent class_ref 134525 // SaveFileMetrics
+      end
+
+      classrelation 133389 // <dependency>
+	relation 133389 -_->
+	  a default
+	    classrelation_ref 133389 // <dependency>
+	  b parent class_ref 134141 // SaveFileImage
+      end
+    end
+  end
+
+  deploymentview 128013 "controller"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 128269 "CharsetActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Window;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.charset.ResetCharset;
+import net.sourceforge.f2ibuilder.application.controller.charset.SaveCharset;
+import net.sourceforge.f2ibuilder.application.controller.charset.SelectChar;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 128269 // CharsetActionFactory
+      end
+    end
+
+    artifact 128397 "MetricsActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Window;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.metrics.ResetMetrics;
+import net.sourceforge.f2ibuilder.application.controller.metrics.SaveMetric;
+import net.sourceforge.f2ibuilder.application.controller.metrics.SelectMetric;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 128397 // MetricsActionFactory
+      end
+    end
+
+    artifact 128525 "ActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Window;
+import java.awt.event.ActionListener;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+${definition}"
+      associated_classes
+	class_ref 128653 // ActionFactory
+      end
+    end
+
+    artifact 128653 "AboutActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.event.MouseListener;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+${definition}"
+      associated_classes
+	class_ref 128525 // AboutActionFactory
+      end
+    end
+
+    artifact 128781 "CreditActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.event.MouseListener;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+${definition}"
+      associated_classes
+	class_ref 128781 // CreditActionFactory
+      end
+    end
+
+    artifact 128909 "PrincipalActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Frame;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import java.awt.event.WindowListener;
+import javax.swing.JComboBox;
+import net.sourceforge.f2ibuilder.application.controller.command.button.BoldCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.ShowGridCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAlphaCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAntialiasCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseMetricsCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectFontCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectTextureSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectImageTypeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectShadowCommand;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.application.controller.open.LoadApplication;
+import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialog;
+import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialogObserver;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+import net.sourceforge.f2ibuilder.application.model.Options;
+import net.sourceforge.f2ibuilder.application.view.About;
+import net.sourceforge.f2ibuilder.application.view.Credit;
+import net.sourceforge.f2ibuilder.application.view.charset.CharsetMap;
+import net.sourceforge.f2ibuilder.application.view.image.FontImage;
+import net.sourceforge.f2ibuilder.application.view.metrics.MetricsLimit;
+import net.sourceforge.f2ibuilder.application.view.metrics.MetricsMap;
+import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
+${definition}"
+      associated_classes
+	class_ref 128909 // PrincipalActionFactory
+      end
+    end
+  end
+end

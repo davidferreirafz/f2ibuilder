@@ -1,0 +1,3 @@
+class ActionFactory
+!!!130061.java!!!	makeCloseWindow(inout window : Window) : ActionListener
+        return new CloseWindow(window);

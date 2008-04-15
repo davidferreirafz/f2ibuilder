@@ -1,0 +1,23 @@
+class SelectShadowCommand
+!!!140029.java!!!	SelectShadowCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!140157.java!!!	action(inout radio : JRadioButtonMenuItem) : void
+        String label = radio.getName();
+        
+        if (label.startsWith("Horizontal")){
+            options.setSombraHorizontal(getValue(label));
+        } else if (label.startsWith("Vertical")){
+            options.setSombraVertical(getValue(label));
+        }
+!!!140285.java!!!	getValue(in label : String) : int
+        int retorno = 0;
+        
+        if (label.endsWith("None")){
+            retorno = 0;
+        } else if ((label.endsWith("Up"))||(label.endsWith("Left"))){
+            retorno = -1;            
+        } else if ((label.endsWith("Down")||(label.endsWith("Right")))){
+            retorno = 1;
+        }
+        
+        return retorno;

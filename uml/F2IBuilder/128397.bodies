@@ -1,0 +1,9 @@
+class MetricsActionFactory
+!!!129549.java!!!	makeSaveMetric(inout fontText : FontText, inout table : JTable) : ActionListener
+        return new SaveMetric(fontText,table);
+!!!129677.java!!!	makeResetMetrics(inout fontText : FontText) : ActionListener
+        return new ResetMetrics(fontText);
+!!!129805.java!!!	makeSelectMetric(inout table : JTable, inout fontText : FontText, inout asciiLabel : JLabel, inout formatLabel : JLabel) : MouseListener
+        return new SelectMetric(table,fontText,asciiLabel,formatLabel);
+!!!129933.java!!!	makeCloseWindow(inout window : Window) : ActionListener
+        return new CloseWindow(window);

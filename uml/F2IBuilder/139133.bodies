@@ -1,0 +1,108 @@
+class MetricsLimit
+!!!168317.java!!!	MetricsLimit(inout owner : Frame, inout fontText : FontText)
+
+        super(owner);
+        this.fontText = fontText;
+        initialize();        
+        
+        fontText.register(this);            
+!!!168445.java!!!	initialize() : void
+
+		this.setSize(280, 200);
+		this.setContentPane(getJContentPane());
+		this.setResizable(false);
+		this.setAlwaysOnTop(true);
+		this.setTitle("Adjust Metrics Limit");
+		Dimension dim = getToolkit().getScreenSize(); 		
+		int x = (int) (dim.getWidth()  - getSize().getWidth() )/2;
+		int y = (int) (dim.getHeight() - getSize().getHeight())/2;
+		this.setLocation(x,y);	
+!!!168573.java!!!	getJContentPane() : JPanel
+
+		if (jContentPane == null) {
+			jContentPane = new JPanel();
+			jContentPane.setLayout(null);
+			jContentPane.add(getJButton(), null);
+			jContentPane.add(getJButton2(), null);
+			jContentPane.add(getJButton11(), null);
+			jContentPane.add(getJPanel2(), null);
+		}
+		return jContentPane;
+!!!168701.java!!!	getJButton() : JButton
+
+		if (jButton == null) {
+			jButton = new JButton();
+			jButton.setBounds(new Rectangle(15, 105, 85, 25));
+			jButton.setText("Apply");
+//TODO: remover dependencia			
+//			jButton.addActionListener((java.awt.event.ActionListener) ActionListener.getInstance());
+			jButton.addActionListener(new SaveMetricLimit(fontText,getMenorLimite(),getMaiorLimite()));
+		}
+		return jButton;
+!!!168829.java!!!	getJButton11() : JButton
+
+        if (jButton11 == null) {
+            jButton11 = new JButton();
+            jButton11.setBounds(new Rectangle(15, 135, 85, 25));
+            jButton11.setText("Reset");
+            jButton11.addActionListener(new ResetMetrics(fontText));
+        }
+        return jButton11;
+!!!168957.java!!!	getJButton2() : JButton
+
+		if (jButton2 == null) {
+			jButton2 = new JButton();
+			jButton2.setBounds(new Rectangle(180, 135, 85, 25));
+			jButton2.setText("Close");
+			jButton2.setActionCommand("Fechar");
+			jButton2.addActionListener(new CloseWindow(this));
+		}
+		return jButton2;
+!!!169085.java!!!	getJPanelMenor() : JPanel
+
+		if (jPanelMenor == null) {
+			jPanelMenor = new JPanel();
+			jPanelMenor.setLayout(new CardLayout());	
+			jPanelMenor.setBorder(BorderFactory.createTitledBorder(null, "Lesser Limit", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
+			jPanelMenor.setBounds(new Rectangle(15, 15, 110, 50));
+			jPanelMenor.add(getMenorLimite(), getMenorLimite().getName());
+		}
+		return jPanelMenor;
+!!!169213.java!!!	getJPanelMaior() : JPanel
+
+		if (jPanelMaior == null) {
+			jPanelMaior = new JPanel();
+			jPanelMaior.setLayout(new CardLayout());
+			jPanelMaior.setBorder(BorderFactory.createTitledBorder(null, "Bigger Limit", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
+			jPanelMaior.setBounds(new Rectangle(150, 15, 110, 50));
+			jPanelMaior.add(getMaiorLimite(), getMaiorLimite().getName());
+		}
+		return jPanelMaior;
+!!!169341.java!!!	getMenorLimite() : JTextField
+
+		if (menorLimite == null) {
+			menorLimite = new JTextField();
+			menorLimite.setName("menorLimite");
+		}
+		return menorLimite;
+!!!169469.java!!!	getMaiorLimite() : JTextField
+
+		if (maiorLimite == null) {
+			maiorLimite = new JTextField();
+			maiorLimite.setName("maiorLimite");
+		}
+		return maiorLimite;
+!!!169597.java!!!	getJPanel2() : JPanel
+
+		if (jPanel2 == null) {
+			jPanel2 = new JPanel();
+			jPanel2.setLayout(null);
+			jPanel2.setBounds(new Rectangle(0, 0, 271, 91));
+			jPanel2.add(getJPanelMenor(), null);
+			jPanel2.add(getJPanelMaior(), null);
+		}
+		return jPanel2;
+!!!169725.java!!!	update() : void
+
+        menorLimite.setText(String.valueOf(fontText.getMenorLargura()));
+        maiorLimite.setText(String.valueOf(fontText.getMaiorLargura()));

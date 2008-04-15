@@ -1,0 +1,26 @@
+class SaveFileImage
+!!!140669.java!!!	SaveFileImage(inout options : Options, inout fontImage : FontImage)
+        this.options=options;
+        this.fontImage=fontImage;
+!!!140797.java!!!	action(inout component : Component) : void
+        FileDialog fd = FileDialog.getInstance(); 
+        
+        if(fd.showSaveDialogImage(component)){
+            
+            String filename = fd.getFilePathImage();
+            
+            RenderedImage image = fontImage.getImage();
+            
+            try {
+                if (image!=null){
+                    if (!filename.endsWith(options.getImagemTipo())){
+                        filename+="."+options.getImagemTipo();
+                    }
+                    ImageIO.write(image,options.getImagemTipo(),new File(filename));
+                }
+                
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
+        }
+

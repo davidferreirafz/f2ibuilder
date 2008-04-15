@@ -1,0 +1,8 @@
+class UseAlphaCommand
+!!!137341.java!!!	UseAlphaCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!137469.java!!!	action(inout checkbox : JCheckBoxMenuItem) : void
+        boolean state = checkbox.getState();
+
+        options.setAlpha(state);
+        mediator.selectedUseAlpha(state);

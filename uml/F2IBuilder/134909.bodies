@@ -1,0 +1,7 @@
+class OpenWebSite
+!!!141821.java!!!	mouseClicked(inout e : MouseEvent) : void
+        action();
+!!!141949.java!!!	actionPerformed(inout e : ActionEvent) : void
+        action();
+!!!142077.java!!!	action() : void
+        FacadeBrowser.openURL(Constants.WEB_SITE);        

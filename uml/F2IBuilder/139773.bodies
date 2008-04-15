@@ -1,0 +1,5 @@
+class FileImageFilter
+!!!172541.java!!!	isAccept(inout info : FileInfo) : boolean
+        return info.isImage();
+!!!172669.java!!!	getDescription() : String
+	    return "PNG or BMP Files";

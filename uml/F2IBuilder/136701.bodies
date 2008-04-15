@@ -1,0 +1,10 @@
+class ShadowStrategy
+!!!167165.java!!!	ShadowStrategy(in horizontal : int, in vertical : int)
+        this.horizontal=horizontal;
+        this.vertical=vertical;
+!!!167293.java!!!	isActive() : boolean
+        return ((horizontal!=0)||(vertical!=0));
+!!!167421.java!!!	horizontal() : int
+        return horizontal;
+!!!167549.java!!!	vertical() : int
+        return vertical;

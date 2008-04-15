@@ -1,0 +1,9 @@
+class CharsetActionFactory
+!!!129037.java!!!	makeResetCharset(inout fontText : FontText) : ActionListener
+       return new ResetCharset(fontText);
+!!!129165.java!!!	makeSaveCharset(inout fontText : FontText, inout table : JTable) : ActionListener
+        return new SaveCharset(fontText,table);
+!!!129293.java!!!	makeSelectChar(inout table : JTable, inout asciiLabel : JLabel, inout formatLabel : JLabel, inout fontText : FontText) : MouseListener
+        return new SelectChar(table,asciiLabel,formatLabel,fontText);
+!!!129421.java!!!	makeCloseWindow(inout window : Window) : ActionListener
+        return new CloseWindow(window);

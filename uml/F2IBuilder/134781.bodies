@@ -1,0 +1,11 @@
+class CloseWindow
+!!!141437.java!!!	CloseWindow(inout window : Window)
+        this.window=window;
+!!!141565.java!!!	getWindow() : Window
+        return window;
+!!!141693.java!!!	actionPerformed(inout e : ActionEvent) : void
+        if (window!=null){
+            window.dispose();
+        } else {
+            System.err.println("No window set! Please see CloseWindow constructor");
+        }

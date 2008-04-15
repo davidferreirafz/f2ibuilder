@@ -1,0 +1,127 @@
+class About
+!!!151677.java!!!	About()
+    
+		super();
+		initialize();
+!!!151805.java!!!	initialize() : void
+		this.setSize(396, 452);
+		this.setContentPane(getJPanel());
+		this.setResizable(false);
+		this.setAlwaysOnTop(true);
+		this.setTitle("About :: F2IBuidler - Font To Image Builder");
+		Dimension dim = getToolkit().getScreenSize(); 		
+		int x = (int) (dim.getWidth()  - getSize().getWidth() )/2;
+		int y = (int) (dim.getHeight() - getSize().getHeight())/2;
+		this.setLocation(x,y);        
+!!!151933.java!!!	getJButton() : JButton
+		if (jButton == null) {
+			jButton = new JButton();
+			jButton.setText("Ok");
+			jButton.setBounds(new java.awt.Rectangle(135,375,121,28));
+			jButton.addActionListener(new CloseWindow(this));
+		}
+		return jButton;
+!!!152061.java!!!	getJPanel() : JPanel
+		if (jPanel == null) {
+			jPanel = new JPanel();
+			jPanel.setLayout(null);
+			jPanel.add(getJPanel1(), null);
+			jPanel.add(getJButton(), null);
+			jPanel.add(getJPanel2(), null);
+			jPanel.add(getJPanel3(), null);
+			jPanel.add(getJPanel4(), null);
+			jPanel.add(getJPanel5(), null);
+			jPanel.add(getJPanel6(), null);
+			jPanel.add(getJPanel7(), null);
+			
+		}
+		return jPanel;
+!!!152189.java!!!	getJPanel1() : JPanel
+		if (jPanel1 == null) {
+			jPanel1 = new ImagePanel();
+			jPanel1.setBounds(new java.awt.Rectangle(15,15,151,106));
+			jPanel1.loadImage(".//resource/david_ferreira.jpg");
+		}
+		return jPanel1;
+!!!152317.java!!!	getJPanel2() : JPanel
+		if (jPanel2 == null) {
+			jLabel7 = new JLabel();
+			jLabel7.setText("  David de Almeida Ferreira");
+			jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel7.setName("jLabel7");
+			jPanel2 = new JPanel();
+			jPanel2.setLayout(new CardLayout());
+			jPanel2.setBounds(new java.awt.Rectangle(180,15,196,37));
+			jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Author", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel2.add(jLabel7, jLabel7.getName());
+		}
+		return jPanel2;
+!!!152445.java!!!	getJPanel3() : JPanel
+		if (jPanel3 == null) {
+			jLabel8 = new JLabel();
+			jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel8.setText("  davidferreira.fz@gmail.com");
+			jLabel8.setName("jLabel8");
+			jPanel3 = new JPanel();
+			jPanel3.setLayout(new CardLayout());
+			jPanel3.setBounds(new java.awt.Rectangle(180,75,196,46));
+			jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "E-Mail / G.Talk", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), new java.awt.Color(51,51,51)));
+			jPanel3.add(jLabel8, jLabel8.getName());
+		}
+		return jPanel3;
+!!!152573.java!!!	getJPanel4() : JPanel
+		if (jPanel4 == null) {
+			jLabel9 = new JLabel();
+			jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+			jLabel9.setText("  "+Constants.WEB_SITE);
+			jLabel9.setName("jLabel8");
+			jLabel9.addMouseListener(new OpenWebSite());
+			jPanel4 = new JPanel();
+			jPanel4.setLayout(new CardLayout());
+			jPanel4.setBounds(new java.awt.Rectangle(15,195,361,46));
+			jPanel4.setBorder(BorderFactory.createTitledBorder(null, "Site", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel4.add(jLabel9, jLabel9.getName());
+		}
+		return jPanel4;
+!!!152701.java!!!	getJPanel5() : JPanel
+		if (jPanel5 == null) {
+			jLabel10 = new JLabel();
+			jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel10.setText("  21877381 / davidaf@uol.com.br");
+			jLabel10.setName("jLabel8");
+			jPanel5 = new JPanel();
+			jPanel5.setLayout(new CardLayout());
+			jPanel5.setBounds(new java.awt.Rectangle(15,135,361,46));
+			jPanel5.setBorder(BorderFactory.createTitledBorder(null, "ICQ / MSN", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel5.add(jLabel10, jLabel10.getName());
+		}
+		return jPanel5;
+!!!152829.java!!!	getJPanel6() : JPanel
+		if (jPanel6 == null) {
+			jLabel = new JLabel();
+			jLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel.setText(Constants.VERSAO_EXPLICITA);
+			jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			jLabel.setName("jLabel6");
+			jPanel6 = new JPanel();
+			jPanel6.setLayout(new CardLayout());
+			jPanel6.setBounds(new java.awt.Rectangle(15,255,361,46));
+			jPanel6.setBorder(BorderFactory.createTitledBorder(null, "Info", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel6.add(jLabel, jLabel.getName());
+		}
+		return jPanel6;
+!!!152957.java!!!	getJPanel7() : JPanel
+		if (jPanel7 == null) {
+			jLabel1 = new JLabel();
+			jLabel1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+			jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
+			jLabel1.setText("Fortaleza - Ceará - Brasil");
+			jLabel1.setName("jLabel6");
+			jPanel7 = new JPanel();
+			jPanel7.setLayout(new CardLayout());
+			jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Made in", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), new java.awt.Color(51,51,51)));
+			jPanel7.setName("jPanel7");
+			jPanel7.setBounds(new java.awt.Rectangle(15,315,361,42));
+			jPanel7.add(jLabel1, jLabel1.getName());
+		}
+		return jPanel7;

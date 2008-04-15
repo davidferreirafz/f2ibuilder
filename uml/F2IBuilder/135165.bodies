@@ -1,0 +1,5 @@
+class ResetMetrics
+!!!143485.java!!!	ResetMetrics(inout tableChar : FontText)
+        super(tableChar);        
+!!!143613.java!!!	action() : void
+        fontText.resetMetrics();

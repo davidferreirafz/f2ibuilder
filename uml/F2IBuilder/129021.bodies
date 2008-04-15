@@ -1,0 +1,23 @@
+class Observable
+!!!129021.java!!!	Observable()
+        listObserver = new ArrayList<Observer>();
+!!!129149.java!!!	register(inout observer : Observer) : void
+        listObserver.add(observer);
+!!!129277.java!!!	desregister(inout observer : Observer) : void
+        listObserver.remove(observer);
+!!!129405.java!!!	updateObserver() : void
+        //Se a autonotificação estiva ativa ela informa sua lista de observers
+        if (autoCommit){
+            if ((listObserver!=null)&&(!listObserver.isEmpty())){
+                ListIterator<Observer> i= listObserver.listIterator(0);
+            
+                while (i.hasNext()){
+                    i.next().update();
+                }
+            }
+        }
+!!!129533.java!!!	beginModify() : void
+        autoCommit = false;
+!!!129661.java!!!	endModify() : void
+        autoCommit = true;
+        updateObserver();

@@ -1,0 +1,8 @@
+class UseMetricsCommand
+!!!137853.java!!!	UseMetricsCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!137981.java!!!	action(inout checkbox : JCheckBoxMenuItem) : void
+        boolean state = checkbox.getState();        
+        options.setMetrica(state);
+        
+        mediator.selectedUseMetrics(state);        

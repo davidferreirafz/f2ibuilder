@@ -1,0 +1,88 @@
+format 55
+
+classcanvas 128068 class_ref 135165 // ResetMetrics
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 111 202 2000
+  end
+classcanvas 128196 class_ref 135293 // SaveMetric
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 206 457 2000
+  end
+classcanvas 128324 class_ref 135421 // SaveMetricLimit
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 27 295 2000
+  end
+classcanvas 128452 class_ref 135549 // SelectMetric
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 469 262 2000
+  end
+classcanvas 128708 class_ref 130685 // FontTextAction
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 303 39 2005
+  end
+classcanvas 129220 class_ref 131325 // SaveItemTable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 370 360 2005
+  end
+classcanvas 129604 class_ref 131581 // SelectItemTable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 478 48 2005
+  end
+classcanvas 131140 class_ref 131069 // FontText
+  draw_all_relations default hide_attributes yes hide_operations yes show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity no show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 83 23 3005
+  end
+relationcanvas 128836 relation_ref 135165 // <generalisation>
+  geometry HV
+  from ref 128324 z 1999 to point 371 345
+  line 132676 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128964 relation_ref 134909 // <generalisation>
+  geometry HV
+  from ref 128068 z 1999 to point 365 235
+  line 132548 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129348 relation_ref 130301 // <generalisation>
+  geometry VHV
+  from ref 129220 z 1999 to point 429 301
+  line 133188 z 1999 to point 371 301
+  line 133316 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129476 relation_ref 135037 // <generalisation>
+  geometry HV
+  from ref 128196 z 1999 to point 429 491
+  line 132804 z 1999 to ref 129220
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129732 relation_ref 130557 // <generalisation>
+  from ref 129604 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129860 relation_ref 135293 // <generalisation>
+  geometry VHV
+  from ref 128452 z 1999 to point 520 230
+  line 132932 z 1999 to point 539 230
+  line 133060 z 1999 to ref 129604
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131268 relation_ref 136189 // <unidirectional association>
+  from ref 131140 z 1999 to point 53 23
+  line 131396 z 1999 to point 53 53
+  line 131524 z 1999 to ref 131140
+  role_a_pos 23 32 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131652 relation_ref 130045 // <unidirectional association>
+  geometry HVH
+  from ref 128708 z 1999 to point 289 141
+  line 132292 z 1999 to point 289 52
+  line 132420 z 1999 to ref 131140
+  role_a_pos 289 32 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

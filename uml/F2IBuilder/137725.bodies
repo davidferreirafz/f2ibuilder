@@ -1,0 +1,23 @@
+class JPanelScrolling
+!!!162557.java!!!	JPanelScrolling()
+        setDoubleBuffered(true);
+!!!162685.java!!!	getPreferredScrollableViewportSize() : Dimension
+        return getWindowSize();
+!!!162813.java!!!	getScrollableBlockIncrement(inout visibleRect : Rectangle, in orientation : int, in direction : int) : int
+        return getScrollableUnitIncrement(visibleRect, orientation, direction)*4;
+!!!162941.java!!!	getScrollableTracksViewportHeight() : boolean
+        return false;
+!!!163069.java!!!	getScrollableTracksViewportWidth() : boolean
+        return false;
+!!!163197.java!!!	getScrollableUnitIncrement(inout visibleRect : Rectangle, in orientation : int, in direction : int) : int
+        int retorno=0;
+        
+        Dimension d=getSize();
+        
+        if (orientation==SwingConstants.VERTICAL) {
+            retorno=d.height/16;
+        } else {
+            retorno=d.width/16;         
+        }
+
+        return retorno;

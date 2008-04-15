@@ -1,0 +1,6 @@
+class Limit
+!!!175101.java!!!	Limit(in min : int, in max : int)
+        this.min=min;
+        this.max=max;
+!!!175229.java!!!	toString() : String
+        return  "Limit ("+min+","+max+")";

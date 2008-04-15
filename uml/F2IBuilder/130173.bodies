@@ -1,0 +1,30 @@
+class FileInfo
+!!!132221.java!!!	FileInfo(inout file : File)
+        this.file = file;
+        
+        process();
+!!!132349.java!!!	process() : void
+        if (file!=null){
+            String nome = file.getName();
+            
+            int i = nome.lastIndexOf('.');              
+            
+            if (i > 0 &&  i < nome.length() - 1) {
+                extension = nome.substring(i+1).toLowerCase();
+            }
+        }
+!!!132477.java!!!	getExtension() : String
+        return extension;
+!!!132605.java!!!	isImage() : boolean
+        if ((extension.equalsIgnoreCase("bmp"))||
+            (extension.equalsIgnoreCase("png"))){
+            return true;
+        } else {
+            return false;
+        }
+!!!132733.java!!!	isMetrics() : boolean
+        if (extension.equalsIgnoreCase("dat")){
+            return true;
+        } else {
+            return false;
+        }

@@ -1,0 +1,5 @@
+class SelectFontCommand
+!!!138493.java!!!	SelectFontCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!138621.java!!!	action(in value : String) : void
+        fontText.setFontName(value);

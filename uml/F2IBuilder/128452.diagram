@@ -1,0 +1,167 @@
+format 55
+
+classcanvas 128068 class_ref 136317 // BackgroundStrategy
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 280 46 2000
+  end
+classcanvas 128196 class_ref 138365 // BackgroundApha
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 484 99 2004
+  end
+classcanvas 128270 class_ref 132477 // Options
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 131965 // grid
+    attribute_ref 132093 // metrica
+    attribute_ref 132221 // antialias
+    attribute_ref 132349 // imagemTipo
+    attribute_ref 132477 // sombraVertical
+    attribute_ref 132605 // sombraHorizontal
+    attribute_ref 132733 // tamanhoTextura
+    attribute_ref 132861 // IMAGE_TYPE_PNG
+    attribute_ref 132989 // IMAGE_TYPE_BMP
+  hidden_operations
+    operation_ref 149245 // Options
+    operation_ref 149373 // getInstance
+    operation_ref 149501 // setAntialias
+    operation_ref 149629 // isGrid
+    operation_ref 149757 // setGrid
+    operation_ref 149885 // setMetrica
+    operation_ref 150013 // getImagemTipo
+    operation_ref 150141 // setImageType
+    operation_ref 150269 // setAlpha
+    operation_ref 150397 // setSombraHorizontal
+    operation_ref 150525 // setSombra
+    operation_ref 150653 // setSombraVertical
+    operation_ref 150781 // isTexturaAuto
+    operation_ref 150909 // getTamanhoTextura
+    operation_ref 151037 // setTextureSize
+    operation_ref 151165 // backgroundStrategy
+    operation_ref 151293 // antialiasStrategy
+    operation_ref 151421 // metricStrategy
+    operation_ref 151549 // shadowStrategy
+  xyz 0 278 3005
+  end
+classcanvas 128452 class_ref 138493 // BackgroundFill
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 484 17 2004
+  end
+classcanvas 128708 class_ref 136445 // AntialiasStrategy
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 283 206 2000
+  end
+classcanvas 128836 class_ref 138109 // AntialiasEffect
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 486 251 2004
+  end
+classcanvas 129092 class_ref 138237 // AntialiasNone
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 485 185 2009
+  end
+classcanvas 129348 class_ref 136573 // MetricStrategy
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 290 346 2000
+  end
+classcanvas 129476 class_ref 138621 // MetricEffect
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 487 314 2004
+  end
+classcanvas 129732 class_ref 138877 // MetricNone
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 489 397 2004
+  end
+classcanvas 129988 class_ref 136701 // ShadowStrategy
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  hidden_operations
+    operation_ref 167421 // horizontal
+    operation_ref 167549 // vertical
+  xyz 291 464 2000
+  end
+classcanvas 130116 class_ref 139005 // ShadowEffect
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 489 486 2004
+  end
+relationcanvas 128324 relation_ref 140541 // <generalisation>
+  geometry HVH
+  from ref 128196 z 1999 to point 449 133
+  line 131396 z 1999 to point 449 91
+  line 131524 z 1999 to ref 128068
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128398 relation_ref 136445 // <unidirectional association>
+  geometry VH
+  from ref 128270 z 1999 to point 96 91
+  line 129294 z 1999 to ref 128068
+  role_a_pos 153 71 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128526 relation_ref 136573 // <unidirectional association>
+  geometry VH
+  from ref 128270 z 1999 to point 96 241
+  line 129422 z 1999 to ref 128708
+  role_a_pos 175 221 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128580 relation_ref 140669 // <generalisation>
+  geometry HVH
+  from ref 128452 z 1999 to point 449 51
+  line 131652 z 1999 to point 449 91
+  line 131780 z 1999 to ref 128068
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128654 relation_ref 136701 // <unidirectional association>
+  geometry VH
+  from ref 128270 z 1999 to point 96 391
+  line 129678 z 1999 to ref 129348
+  role_a_pos 194 371 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128782 relation_ref 136829 // <unidirectional association>
+  geometry VH
+  from ref 128270 z 1999 to point 96 544
+  line 129550 z 1999 to ref 129988
+  role_a_pos 187 524 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128910 relation_ref 136957 // <unidirectional association>
+  from ref 128270 z 1999 to point -30 278
+  line 129038 z 1999 to point -30 308
+  line 129166 z 1999 to ref 128270
+  role_a_pos -60 287 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128964 relation_ref 140285 // <generalisation>
+  geometry HVH
+  from ref 128836 z 1999 to point 447 276
+  line 130884 z 1999 to point 447 241
+  line 131012 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129220 relation_ref 140413 // <generalisation>
+  geometry HVH
+  from ref 129092 z 1999 to point 447 210
+  line 131140 z 1999 to point 447 241
+  line 131268 z 1999 to ref 128708
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129604 relation_ref 140797 // <generalisation>
+  geometry HVH
+  from ref 129476 z 1999 to point 451 348
+  line 130628 z 1999 to point 451 391
+  line 130756 z 1999 to ref 129348
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129860 relation_ref 140925 // <generalisation>
+  geometry HVH
+  from ref 129732 z 1999 to point 452 431
+  line 130372 z 1999 to point 452 391
+  line 130500 z 1999 to ref 129348
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130244 relation_ref 141053 // <generalisation>
+  geometry HVH
+  from ref 130116 z 1999 to point 453 530
+  line 128014 z 1999 to point 453 544
+  line 128142 z 1999 to ref 129988
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

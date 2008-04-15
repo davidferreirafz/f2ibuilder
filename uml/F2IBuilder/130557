@@ -1,0 +1,2252 @@
+format 55
+"view" // src::net::sourceforge::f2ibuilder::application::view
+  revision 6
+  modified_by 13 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/view"
+  java_package "net.sourceforge.f2ibuilder.application.view"
+  classview 129277 "view"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 130429 "Principal"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe da tela Principal.
+Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 137597 // <generalisation>
+	relation 137597 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 137597 // <generalisation>
+	  b parent class_ref 137213 // JFrame
+      end
+
+      attribute 136189 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  -2624245426643411739L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136317 "jPanel"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137725 // comboFonte (<unidirectional association>)
+	relation 137725 --->
+	  a role_name "comboFonte" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137725 // comboFonte (<unidirectional association>)
+	  b parent class_ref 129917 // ComboFonte
+      end
+
+      classrelation 137853 // workspace (<unidirectional association>)
+	relation 137853 --->
+	  a role_name "workspace" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137853 // workspace (<unidirectional association>)
+	  b parent class_ref 137341 // SurfacePanel
+      end
+
+      attribute 136445 "jJMenuBar"
+	private explicit_type "JMenuBar"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136573 "menuFile"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136701 "menuAjuda"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136829 "itemSaveImage"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136957 "itemSaveFontMetrics"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137085 "itemExportToXNA"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137213 "toolBar"
+	private explicit_type "JToolBar"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137341 "jPanel1"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137981 // comboTamanho (<unidirectional association>)
+	relation 137981 --->
+	  a role_name "comboTamanho" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137981 // comboTamanho (<unidirectional association>)
+	  b parent class_ref 129661 // ComboBox
+      end
+
+      attribute 137469 "jPanel2"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137597 "jPanel3"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 138109 // colorGroupo (<unidirectional association>)
+	relation 138109 --->
+	  a role_name "colorGroupo" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138109 // colorGroupo (<unidirectional association>)
+	  b parent class_ref 137469 // ColorGroup
+      end
+
+      attribute 137725 "botaoNegrito"
+	private explicit_type "JToggleButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137853 "menuConfiguracao"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137981 "menuItemShowGrid"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138109 "menuImageType"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138237 "itemImageTypePNG"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138365 "itemImageTypeBMP"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138493 "menuShadow"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138621 "menuShadowVertical"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138749 "menuShadowHorizontal"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138877 "jRadioButtonMenuItem2"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139005 "jRadioButtonMenuItem3"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139133 "jRadioButtonMenuItem4"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139261 "jRadioButtonShadowVerticalNone"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139389 "jRadioButtonShadowVerticalUp"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139517 "jRadioButtonShadowVerticalDown"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139645 "menuItemUseMetric"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139773 "menuCharacterSet"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139901 "jRadioButtonMenuItem8"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140029 "jRadioButtonMenuItem9"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140157 "menuSobre"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140285 "menuWebSite"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140413 "jPanel4"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 138237 // comboTexturaSize (<unidirectional association>)
+	relation 138237 --->
+	  a role_name "comboTexturaSize" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138237 // comboTexturaSize (<unidirectional association>)
+	  b parent class_ref 129661 // ComboBox
+      end
+
+      attribute 140541 "menuCreditos"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140669 "menuItemAntialias"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140797 "menuItemAdjustCharset"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140925 "menuAvancado"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141053 "menuItemAdjustMetrics"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141181 "menuItemMetricsLimit"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141309 "jScrollPane"
+	private explicit_type "JScrollPane"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 138365 // options (<unidirectional association>)
+	relation 138365 --->
+	  a role_name "options" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138365 // options (<unidirectional association>)
+	  b parent class_ref 132477 // Options
+      end
+
+      classrelation 138493 // fontText (<unidirectional association>)
+	relation 138493 --->
+	  a role_name "fontText" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138493 // fontText (<unidirectional association>)
+	  b parent class_ref 131069 // FontText
+      end
+
+      attribute 141437 "menuItemUseAlpha"
+	private explicit_type "JCheckBoxMenuItem"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 138621 // mediador (<unidirectional association>)
+	relation 138621 --->
+	  a role_name "mediador" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138621 // mediador (<unidirectional association>)
+	  b parent class_ref 135037 // MediatorView
+      end
+
+      operation 154237 "Principal"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This is the default constructor
+"
+      end
+
+      operation 154365 "getFontText"
+	private return_type class_ref 131069 // FontText
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 154493 "getOptions"
+	private return_type class_ref 132477 // Options
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 154621 "getImagePanel"
+	protected return_type class_ref 137341 // SurfacePanel
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 154749 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes this
+"
+      end
+
+      operation 154877 "getJPanel"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 155005 "getComboFonte"
+	private explicit_return_type "JComboBox"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes comboURL	
+	
+@return javax.swing.JComboBox	
+"
+      end
+
+      operation 155133 "getWorkspace"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel2	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 155261 "getJJMenuBar"
+	private explicit_return_type "JMenuBar"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jJMenuBar	
+	
+@return javax.swing.JMenuBar	
+"
+      end
+
+      operation 155389 "getMenuFile"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes File	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 155517 "getMenuAjuda"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuSobre	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 155645 "getItemSaveImage"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes itemSaveImage	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 155773 "getItemSaveFontMetrics"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes itemSaveFontMetrics	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 155901 "getItemExportToXNA"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 156029 "getToolBar"
+	private explicit_return_type "JToolBar"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes toolBar	
+	
+@return javax.swing.JToolBar	
+"
+      end
+
+      operation 156157 "getJPanel1"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel1	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 156285 "getComboTamanho"
+	private return_type class_ref 129661 // ComboBox
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes comboBox	
+	
+@return br.org.codigolivre.fanad.vpu.ui.componente.ComboBox	
+"
+      end
+
+      operation 156413 "getJPanel2"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel2	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 156541 "getJPanel3"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel3	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 156669 "getColorGrupo"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel4	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 156797 "getBotaoNegrito"
+	private explicit_return_type "JToggleButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes botaoNegrito	
+	
+@return javax.swing.JToggleButton	
+"
+      end
+
+      operation 156925 "getMenuConfiguracao"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuConfiguracao	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 157053 "getMenuItemShowGrid"
+	private explicit_return_type "JCheckBoxMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jCheckBoxMenuItem	
+	
+@return javax.swing.JCheckBoxMenuItem	
+"
+      end
+
+      operation 157181 "getMenuImageType"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuImageType	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 157309 "getItemImageTypePNG"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes itemImageTypePNG	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 157437 "getItemImageTypeBMP"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes itemImageTypeBMP	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 157565 "getMenuShadow"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuShadow	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 157693 "getMenuShadowVertical"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuShadowVertical	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 157821 "getMenuShadowHorizontal"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuShadowHorizontal	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 157949 "getJRadioButtonMenuItem2"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem2	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158077 "getJRadioButtonMenuItem3"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem3	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158205 "getJRadioButtonMenuItem4"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem4	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158333 "getjRadioButtonShadowVerticalNone"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem5	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158461 "getjRadioButtonShadowVerticalUp"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem6	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158589 "getjRadioButtonShadowVerticalDown"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem7	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 158717 "getMenuItemUseMetric"
+	private explicit_return_type "JCheckBoxMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jCheckBoxMenuItem1	
+	
+@return javax.swing.JCheckBoxMenuItem	
+"
+      end
+
+      operation 158845 "getMenuItemUseAlpha"
+	private explicit_return_type "JCheckBoxMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jCheckBoxMenuItem1   
+ 
+@return javax.swing.JCheckBoxMenuItem    
+"
+      end
+
+      operation 158973 "getMenuCharacterSet"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuCharacterSet	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 159101 "getJRadioButtonMenuItem8"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem8	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 159229 "getJRadioButtonMenuItem9"
+	private explicit_return_type "JRadioButtonMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jRadioButtonMenuItem9	
+	
+@return javax.swing.JRadioButtonMenuItem	
+"
+      end
+
+      operation 159357 "getMenuSobre"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jMenuItem2	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 159485 "getMenuWebSite"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jMenuItem3	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 159613 "getJPanel4"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel4	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 159741 "getComboTexturaSize"
+	private return_type class_ref 129661 // ComboBox
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes comboBox	
+	
+@return br.org.codigolivre.pjmoo.f2ibuilder.ui.componente.ComboBox	
+"
+      end
+
+      operation 159869 "getMenuCreditos"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jMenuItem4	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 159997 "getMenuItemAntialias"
+	private explicit_return_type "JCheckBoxMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jCheckBoxMenuItem2	
+	
+@return javax.swing.JCheckBoxMenuItem	
+"
+      end
+
+      operation 160125 "getMenuItemAdjustCharset"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuItemAdjustCharset	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 160253 "getMenuAvancado"
+	private explicit_return_type "JMenu"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuAvancado	
+	
+@return javax.swing.JMenu	
+"
+      end
+
+      operation 160381 "getMenuItemAdjustMetrics"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuItemAdjustMetrics	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 160509 "getMenuItemMetricsLimit"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menuItemMetricsLimit	
+	
+@return javax.swing.JMenuItem	
+"
+      end
+
+      operation 160637 "getJScrollPane"
+	private explicit_return_type "JScrollPane"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 131341 // <dependency>
+	relation 131341 -_->
+	  a default
+	    classrelation_ref 131341 // <dependency>
+	  b parent class_ref 128909 // PrincipalActionFactory
+      end
+    end
+
+    class 136829 "About"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe da tela About.
+Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 137085 // <generalisation>
+	relation 137085 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 137085 // <generalisation>
+	  b parent class_ref 136957 // JDialog
+      end
+
+      attribute 133117 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  6054475434937524760L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133245 "jButton"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133373 "jPanel"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137213 // jPanel1 (<unidirectional association>)
+	relation 137213 --->
+	  a role_name "jPanel1" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137213 // jPanel1 (<unidirectional association>)
+	  b parent class_ref 130045 // ImagePanel
+      end
+
+      attribute 133501 "jPanel2"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133629 "jLabel7"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133757 "jPanel3"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133885 "jLabel8"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134013 "jPanel4"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134141 "jLabel9"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134269 "jPanel5"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134397 "jLabel10"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134525 "jPanel6"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134653 "jLabel"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134781 "jPanel7"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134909 "jLabel1"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 151677 "About"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This is the default constructor
+"
+      end
+
+      operation 151805 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes this
+"
+      end
+
+      operation 151933 "getJButton"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 152061 "getJPanel"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152189 "getJPanel1"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel1	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152317 "getJPanel2"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel2	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152445 "getJPanel3"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel3	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152573 "getJPanel4"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel4	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152701 "getJPanel5"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel5	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152829 "getJPanel6"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel6	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 152957 "getJPanel7"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel7	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      classrelation 130829 // <dependency>
+	relation 130829 -_->
+	  a default
+	    classrelation_ref 130829 // <dependency>
+	  b parent class_ref 128525 // AboutActionFactory
+      end
+    end
+
+    class 137085 "Credit"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe da tela Credit.
+Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 137341 // <generalisation>
+	relation 137341 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 137341 // <generalisation>
+	  b parent class_ref 136957 // JDialog
+      end
+
+      attribute 135037 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  6054475434937524760L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135165 "jButton"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135293 "jPanel"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135421 "jPanel4"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135549 "jPanel5"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135677 "jPanel6"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135805 "jLabel"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135933 "jLabel9"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136061 "jTextArea"
+	private explicit_type "JTextArea"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137469 // imagePanel (<unidirectional association>)
+	relation 137469 --->
+	  a role_name "imagePanel" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137469 // imagePanel (<unidirectional association>)
+	  b parent class_ref 130045 // ImagePanel
+      end
+
+      operation 153085 "Credit"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This is the default constructor
+"
+      end
+
+      operation 153213 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes this
+"
+      end
+
+      operation 153341 "getJButton"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 153469 "getJPanel"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 153597 "getJPanel4"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel4	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 153725 "getJPanel5"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel5	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 153853 "getJPanel6"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel6	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 153981 "getJTextArea"
+	private explicit_return_type "JTextArea"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jTextArea	
+	
+@return javax.swing.JTextArea	
+"
+      end
+
+      operation 154109 "getImagePanel"
+	private return_type class_ref 130045 // ImagePanel
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes imagePanel	
+	
+@return br.org.codigolivre.pjmoo.f2ibuilder.ui.componente.ImagePanel	
+"
+      end
+
+      classrelation 130957 // <dependency>
+	relation 130957 -_->
+	  a default
+	    classrelation_ref 130957 // <dependency>
+	  b parent class_ref 128781 // CreditActionFactory
+      end
+    end
+  end
+
+  package_ref 132605 // image
+
+  deploymentview 130685 "view"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 135037 "About"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.CardLayout;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.util.Constants;
+import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
+${definition}"
+      associated_classes
+	class_ref 136829 // About
+      end
+    end
+
+    artifact 135165 "Credit"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.CardLayout;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.border.TitledBorder;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.util.Constants;
+import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
+${definition}"
+      associated_classes
+	class_ref 137085 // Credit
+      end
+    end
+
+    artifact 135293 "Principal"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
+import net.sourceforge.f2ibuilder.application.controller.command.button.BoldCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.ShowGridCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAlphaCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseAntialiasCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.checkbox.UseMetricsCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectFontCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectTextureSizeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectImageTypeCommand;
+import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectShadowCommand;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
+import net.sourceforge.f2ibuilder.application.controller.mediator.Colleague;
+import net.sourceforge.f2ibuilder.application.controller.mediator.MediatorView;
+import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialog;
+import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialogObserver;
+import net.sourceforge.f2ibuilder.application.controller.open.LoadApplication;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+import net.sourceforge.f2ibuilder.application.model.Options;
+import net.sourceforge.f2ibuilder.application.view.charset.CharsetMap;
+import net.sourceforge.f2ibuilder.application.view.image.FontImage;
+import net.sourceforge.f2ibuilder.application.view.image.SurfacePanel;
+import net.sourceforge.f2ibuilder.application.view.metrics.MetricsLimit;
+import net.sourceforge.f2ibuilder.application.view.metrics.MetricsMap;
+import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
+import net.sourceforge.f2ibuilder.util.Constants;
+import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
+import com.wordpress.dukitan.componentes.ui.combobox.ComboFonte;
+${definition}"
+      associated_classes
+	class_ref 130429 // Principal
+      end
+    end
+  end
+
+  package_ref 134013 // charset
+
+  package_ref 134141 // metrics
+end
