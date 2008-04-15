@@ -58,7 +58,9 @@ public class RadioGroup extends JMenu
     
     public void setSelected(String key)
     {
-        table.get(key).setSelected(true);
+        if (table.containsKey(key)){
+            table.get(key).setSelected(true);            
+        }
     }
     
     public String getSelected()
