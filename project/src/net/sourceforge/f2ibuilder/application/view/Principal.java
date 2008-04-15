@@ -50,15 +50,14 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
 import net.sourceforge.f2ibuilder.application.controller.PrincipalActionFactory;
-import net.sourceforge.f2ibuilder.application.controller.file.OpenFileProject;
-import net.sourceforge.f2ibuilder.application.controller.file.SaveFileProject;
 import net.sourceforge.f2ibuilder.application.controller.mediator.Colleague;
 import net.sourceforge.f2ibuilder.application.controller.mediator.MediatorView;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 import net.sourceforge.f2ibuilder.application.view.image.FontImage;
 import net.sourceforge.f2ibuilder.application.view.image.SurfacePanel;
-import net.sourceforge.f2ibuilder.components.memento.PrincipalMemento;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
+import net.sourceforge.f2ibuilder.components.memento.ProjectMemento;
 import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 import net.sourceforge.f2ibuilder.util.Constants;
 
@@ -72,7 +71,7 @@ import com.wordpress.dukitan.componentes.ui.radio.RadioGroup;
  * 
  * @author David Ferreira - davidferreira.fz@gmail.com
  */
-public class Principal extends JFrame
+public class Principal extends JFrame implements IMementoSupported
 {
 
 	private static final long serialVersionUID = -2624245426643411739L;
@@ -357,7 +356,7 @@ public class Principal extends JFrame
 			itemSaveImage = new JMenuItem();
 			itemSaveImage.setText("Save Image...");
 			itemSaveImage.setName("SaveImage");		
-			itemSaveImage.addActionListener(PrincipalActionFactory.makeSaveFileImage(getFontText(),getOptions(),(FontImage) getWorkspace()));
+			itemSaveImage.addActionListener(PrincipalActionFactory.makeSaveFileImage(getOptions(),(FontImage) getWorkspace()));
 		}
 		return itemSaveImage;
 	}
@@ -397,7 +396,7 @@ public class Principal extends JFrame
             itemOpenProject = new JMenuItem();
             itemOpenProject.setText("Open Project...");
             itemOpenProject.setName("OpenProject");        
-            itemOpenProject.addActionListener(new OpenFileProject(this));           
+            itemOpenProject.addActionListener(PrincipalActionFactory.makeOpenFileProject(this));            
         }
 
         return itemOpenProject;
@@ -409,7 +408,7 @@ public class Principal extends JFrame
             itemSaveProject = new JMenuItem();
             itemSaveProject.setText("Save Project...");
             itemSaveProject.setName("SaveProject");        
-            itemSaveProject.addActionListener(new SaveFileProject(this));           
+            itemSaveProject.addActionListener(PrincipalActionFactory.makeSaveFileProject(this));
         }
         return itemSaveProject;
     }       
@@ -956,6 +955,7 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemAdjustCharset() {
 		if (menuItemAdjustCharset == null) {
 			menuItemAdjustCharset = new JMenuItem();
+			menuItemAdjustCharset.setActionCommand("Adjust Charset Map");			
 			menuItemAdjustCharset.setText("Adjust Charset Map...");
 			menuItemAdjustCharset.addActionListener(PrincipalActionFactory.makeOpenCharsetMap(null,getFontText()));
 		}
@@ -986,8 +986,8 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemAdjustMetrics() {
 		if (menuItemAdjustMetrics == null) {
 			menuItemAdjustMetrics = new JMenuItem();
-			menuItemAdjustMetrics.setActionCommand("Adjust Metrics Map...");
-			menuItemAdjustMetrics.setText("Adjust Metrics Map");
+			menuItemAdjustMetrics.setActionCommand("Adjust Metrics Map");
+			menuItemAdjustMetrics.setText("Adjust Metrics Map...");
 			menuItemAdjustMetrics.addActionListener(PrincipalActionFactory.makeOpenMetricsMap(null,getFontText()));
 		}
 		return menuItemAdjustMetrics;
@@ -1001,8 +1001,8 @@ public class Principal extends JFrame
 	private JMenuItem getMenuItemMetricsLimit() {
 		if (menuItemMetricsLimit == null) {
 			menuItemMetricsLimit = new JMenuItem();
-			menuItemMetricsLimit.setActionCommand("Adjust Metrics Limit...");
-			menuItemMetricsLimit.setText("Adjust Metrics Limit");			
+			menuItemMetricsLimit.setActionCommand("Adjust Metrics Limit");
+			menuItemMetricsLimit.setText("Adjust Metrics Limit...");			
 			menuItemMetricsLimit.addActionListener(PrincipalActionFactory.makeOpenMetricsLimit(null,getFontText()));
 		}
 		return menuItemMetricsLimit;
@@ -1024,9 +1024,9 @@ public class Principal extends JFrame
 	 * 
 	 * Suporte ao design pattern: GoF - Memento
 	 */
-    public PrincipalMemento createMemento()
+    public ProjectMemento createMemento()
     {
-        PrincipalMemento memento = new PrincipalMemento();
+        ProjectMemento memento = new ProjectMemento();
         
         memento.setShowGrid(menuItemShowGrid.getState());
         memento.setUseAlpha(menuItemUseAlpha.getState());
@@ -1058,7 +1058,7 @@ public class Principal extends JFrame
      * 
      * @param memento objeto com o estado anterior
      */
-    public void setMemento(PrincipalMemento memento)
+    public void setMemento(ProjectMemento memento)
     {      
         menuItemUseAlpha.setSelected(memento.isUseAlpha());
         menuItemShowGrid.setSelected(memento.isShowGrid());
