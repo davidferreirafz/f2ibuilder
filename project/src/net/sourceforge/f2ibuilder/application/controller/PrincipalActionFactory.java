@@ -20,8 +20,10 @@ import net.sourceforge.f2ibuilder.application.controller.command.combobox.Select
 import net.sourceforge.f2ibuilder.application.controller.command.combobox.SelectTextureSizeCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectImageTypeCommand;
 import net.sourceforge.f2ibuilder.application.controller.command.radio.SelectShadowCommand;
+import net.sourceforge.f2ibuilder.application.controller.file.OpenFileProject;
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileImage;
 import net.sourceforge.f2ibuilder.application.controller.file.SaveFileMetrics;
+import net.sourceforge.f2ibuilder.application.controller.file.SaveFileProject;
 import net.sourceforge.f2ibuilder.application.controller.generics.OpenWebSite;
 import net.sourceforge.f2ibuilder.application.controller.open.LoadApplication;
 import net.sourceforge.f2ibuilder.application.controller.open.OpenJDialog;
@@ -34,6 +36,7 @@ import net.sourceforge.f2ibuilder.application.view.charset.CharsetMap;
 import net.sourceforge.f2ibuilder.application.view.image.FontImage;
 import net.sourceforge.f2ibuilder.application.view.metrics.MetricsLimit;
 import net.sourceforge.f2ibuilder.application.view.metrics.MetricsMap;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
 
 import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
 
@@ -83,10 +86,9 @@ public class PrincipalActionFactory extends ActionFactory
      * @param fontImage
      * @return
      */
-    public static ActionListener makeSaveFileImage(FontText fontText, Options options,
-            FontImage fontImage)
+    public static ActionListener makeSaveFileImage(Options options,FontImage fontImage)
     {
-        return new SaveFileImage(fontText,options,fontImage);
+        return new SaveFileImage(options,fontImage);
     }
 
     /**
@@ -98,6 +100,26 @@ public class PrincipalActionFactory extends ActionFactory
         return new SaveFileMetrics(fontText);
     }
 
+    /**
+     * 
+     * @param form
+     * @return
+     */
+    public static ActionListener makeSaveFileProject(IMementoSupported form)
+    {
+        return new SaveFileProject(form);
+    }     
+
+    /**
+     * 
+     * @param form
+     * @return
+     */
+    public static ActionListener makeOpenFileProject(IMementoSupported form)
+    {
+        return new OpenFileProject(form);
+    }   
+    
     /**
      * @param options
      * @param fontText
@@ -219,5 +241,7 @@ public class PrincipalActionFactory extends ActionFactory
     public static ActionListener makeOpenCredit()
     {
         return new OpenJDialog(new Credit());
-    }      
+    }
+
+   
 }
