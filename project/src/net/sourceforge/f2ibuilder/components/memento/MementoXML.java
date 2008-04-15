@@ -28,6 +28,7 @@
 package net.sourceforge.f2ibuilder.components.memento;
 
 import java.io.File;
+import java.io.IOException;
 
 
 import org.jdom.Element;
@@ -62,8 +63,9 @@ public class MementoXML
     /**
      * Transforma o objeto passado em um arquivo XML
      * @param memento objeto a ser transformado em xml e salvo
+     * @throws IOException 
      */
-    public void toFile(PrincipalMemento memento)
+    public void toFile(ProjectMemento memento) throws IOException
     {
         XMLFile xml = new XMLFile(file);
                
@@ -109,10 +111,11 @@ public class MementoXML
     /**
      * Transforma o arquivo XML em um objeto
      * @return retorna o objeto
+     * @throws Exception 
      */
-    public PrincipalMemento toMemento()
+    public ProjectMemento toMemento() throws Exception
     {     
-        PrincipalMemento memento = new PrincipalMemento();
+        ProjectMemento memento = new ProjectMemento();
         
         XMLFile xml = new XMLFile(file);
         xml.open();

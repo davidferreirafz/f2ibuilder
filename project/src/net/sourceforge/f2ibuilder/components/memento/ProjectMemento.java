@@ -41,7 +41,7 @@ import java.awt.Color;
  * Project: F2IBuilder
  * Date: 11/04/2008 
  */
-public class PrincipalMemento
+public class ProjectMemento
 {
     private boolean useMetrics;
     private boolean useAlpha;
@@ -62,7 +62,7 @@ public class PrincipalMemento
     
     private String imageType;
     
-    public PrincipalMemento()
+    public ProjectMemento()
     {
     }
 
