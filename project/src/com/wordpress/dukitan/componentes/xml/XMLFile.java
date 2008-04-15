@@ -63,42 +63,34 @@ public class XMLFile
     
     /**
      * Abre o arquivo
+     * @throws IOException 
+     * @throws JDOMException 
      */
-    public void open()
+    public void open() throws JDOMException, IOException
     {
         SAXBuilder sax = new SAXBuilder();  
         
-        try {
-            document = sax.build(file);
-        } catch (JDOMException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        document = sax.build(file);
+
         
         elementoRaiz = document.getRootElement();  
     }
     
     /**
      * Salva em arquivo
+     * @throws IOException 
      */
-    public void save()
+    public void save() throws IOException
     {
-        
         Format format = Format.getPrettyFormat().setEncoding("UTF-8");  
 
         XMLOutputter xout = new XMLOutputter(format);
 
         String text = xout.outputString(document);
 
-        FileWriter writer;
-        try {
-            writer = new FileWriter(file);
-            writer.write(text);
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } 
+        FileWriter writer = new FileWriter(file);
+        writer.write(text);
+        writer.close();
     } 
     
     /**
@@ -249,8 +241,9 @@ public class XMLFile
      * @param parent elemento pai
      * @param tag elemento que deseja-se o valor
      * @return valor do elemento
+     * @throws Exception 
      */
-    public boolean getBoolean(String parent, String tag, String atributo)
+    public boolean getBoolean(String parent, String tag, String atributo) throws Exception
     {
         return Boolean.parseBoolean(getString(parent,tag,atributo));
     }
@@ -260,8 +253,10 @@ public class XMLFile
      * @param parent elemento pai
      * @param tag elemento que deseja-se o valor
      * @return valor do elemento
+     * @throws Exception 
+     * @throws NumberFormatException 
      */
-    public int getInt(String parent, String tag, String atributo)
+    public int getInt(String parent, String tag, String atributo) throws NumberFormatException, Exception
     {
         return Integer.parseInt(getString(parent,tag,atributo));
     }    
@@ -273,7 +268,7 @@ public class XMLFile
      * @param tag elemento que deseja-se o valor
      * @return valor do elemento
      */
-    public String getString(String parent, String tag, String atributo)
+    public String getString(String parent, String tag, String atributo) throws Exception
     {
         String value = "";
         
@@ -281,11 +276,15 @@ public class XMLFile
         Iterator itRaiz  = listaRaiz.iterator();
 
         if(itRaiz.hasNext()){           
-            Element  elemento = (Element)itRaiz.next();
+            Element  parentElement = (Element)itRaiz.next();
 
-            Element a = elemento.getChild(tag);
+            Element tagElement = parentElement.getChild(tag);
+            
+            if (tagElement==null){
+                throw new Exception("Element not found ("+parent+">"+tag+") in file "+file.getName());
+            }
 
-            value=a.getChildText(atributo);
+            value=tagElement.getChildText(atributo);
         }
 
         return value;
