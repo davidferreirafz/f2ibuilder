@@ -1,0 +1,10 @@
+class SaveMetricLimit
+!!!143997.java!!!	SaveMetricLimit(inout fontText : FontText, inout minor : JTextField, inout higher : JTextField)
+        super(fontText);
+        this.minor=minor;
+        this.higher=higher;
+!!!144125.java!!!	action() : void
+        int menor=Integer.parseInt(minor.getText());
+        int maior=Integer.parseInt(higher.getText());
+        
+        fontText.setLimits(menor, maior);

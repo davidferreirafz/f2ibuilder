@@ -1,0 +1,52 @@
+format 55
+
+classcanvas 128014 class_ref 139389 // FileDialog
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 201 470 3005
+  end
+classcanvas 128526 class_ref 131069 // FontText
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 276 160 3005
+  end
+classcanvas 129038 class_ref 132477 // Options
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 119 84 3005
+  end
+classcanvas 129550 class_ref 135037 // MediatorView
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 139 307 2004
+  end
+packagecanvas 130062 
+  package_ref 131197 // model
+  name_in_tab yes show_context_mode java_package color lightgreen  xyzwh 42 38 1994 476 195
+packagecanvas 130190 
+  package_ref 131581 // mediator
+  name_in_tab yes show_context_mode java_package color lightred  xyzwh 43 251 1994 480 147
+packagecanvas 130318 
+  package_ref 134269 // dialog
+  name_in_tab yes show_context_mode java_package color lightblue  xyzwh 42 413 1994 484 141
+relationcanvas 128142 relation_ref 141949 // <unidirectional association>
+  from ref 128014 z 1999 to point 171 470
+  line 128270 z 1999 to point 171 500
+  line 128398 z 1999 to ref 128014
+  role_a_pos 141 479 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128654 relation_ref 136189 // <unidirectional association>
+  from ref 128526 z 1999 to point 246 160
+  line 128782 z 1999 to point 246 190
+  line 128910 z 1999 to ref 128526
+  role_a_pos 216 169 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129166 relation_ref 136957 // <unidirectional association>
+  from ref 129038 z 1999 to point 89 84
+  line 129294 z 1999 to point 89 114
+  line 129422 z 1999 to ref 129038
+  role_a_pos 59 93 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129678 relation_ref 134781 // <unidirectional association>
+  from ref 129550 z 1999 to point 109 307
+  line 129806 z 1999 to point 109 337
+  line 129934 z 1999 to ref 129550
+  role_a_pos 79 316 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

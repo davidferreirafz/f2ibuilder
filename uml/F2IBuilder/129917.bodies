@@ -1,0 +1,11 @@
+class ComboFonte
+!!!131709.java!!!	ComboFonte()
+	    load();
+!!!131837.java!!!	load() : void
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        
+        String fontNames[] = ge.getAvailableFontFamilyNames();
+
+        for (int i=0; i<fontNames.length; i++) {
+            addItem(fontNames[i]);
+        }	    

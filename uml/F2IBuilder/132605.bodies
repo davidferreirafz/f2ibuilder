@@ -1,0 +1,8 @@
+class CheckBoxCommand
+!!!136701.java!!!	CheckBoxCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!136829.java!!!	itemStateChanged(inout e : ItemEvent) : void
+                
+        if (e.getSource() instanceof JCheckBoxMenuItem) {
+            action((JCheckBoxMenuItem) e.getSource());
+        }         

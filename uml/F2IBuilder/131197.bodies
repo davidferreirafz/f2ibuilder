@@ -1,0 +1,5 @@
+class SaveCharset
+!!!134781.java!!!	SaveCharset(inout fontText : FontText, inout table : JTable)
+        super(fontText,table);       
+!!!134909.java!!!	setValue(in caracter : int, in value : int) : void
+        fontText.setCharacter(caracter,value);

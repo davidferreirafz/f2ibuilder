@@ -1,0 +1,11 @@
+class SelectTextureSizeCommand
+!!!139005.java!!!	SelectTextureSizeCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!139133.java!!!	action(in value : String) : void
+        int size = 0;
+        
+        if (!value.equalsIgnoreCase("auto")){
+            size=Integer.parseInt(value);
+        }           
+        
+        options.setTextureSize(size);

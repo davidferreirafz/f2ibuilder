@@ -1,0 +1,32 @@
+format 55
+
+classcanvas 128068 class_ref 134141 // SaveFileImage
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 79 187 2000
+  end
+classcanvas 128196 class_ref 134525 // SaveFileMetrics
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 334 189 2000
+  end
+classcanvas 128324 class_ref 134653 // SaveFileXNA
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 214 279 2005
+  end
+classcanvas 128580 class_ref 134269 // SaveFile
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 205 48 2010
+  end
+relationcanvas 128708 relation_ref 133373 // <generalisation>
+  from ref 128068 z 1999 to ref 128580
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128836 relation_ref 134013 // <generalisation>
+  from ref 128324 z 1999 to ref 128580
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128964 relation_ref 133757 // <generalisation>
+  from ref 128196 z 1999 to ref 128580
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

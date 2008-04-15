@@ -1,0 +1,328 @@
+format 55
+"observer" // src::com::wordpress::dukitan::componentes::gof::observer
+  revision 2
+  modified_by 14 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "com/wordpress/dukitan/componentes/gof/observer"
+  java_package "com.wordpress.dukitan.componentes.gof.observer"
+  classview 128381 "observer"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 128765 "IObservable"
+      visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Interface para implementação de classes observaveis.
+Esta interface notificará as classes interessadas 'Observer'.
+
+Design Pattern: GoF - Observer
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      operation 128765 "register"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Registra um observador 
+@param observer instancia de um observer
+"
+      end
+
+      operation 128893 "desregister"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Desregistra um observador
+@param observer instancia de um observer
+"
+      end
+    end
+
+    class 128893 "Observer"
+      visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Interface para implementação de classes observadoras.
+Estas classes serão notificadas quando houver alterações
+nas classes 'Observable'.
+
+Design Pattern: GoF - Observer
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      operation 129789 "update"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Método para implementar o que deverá ser feito ao ser notificado
+"
+      end
+    end
+
+    class 129021 "Observable"
+      visibility public stereotype "GoF - Observer"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Implementação de IObservable, está classe notificará as 
+classes Observer sobre alterações.
+ 
+Design Pattern: GoF - Observer
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 128381 // <realization>
+	relation 128381 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128381 // <realization>
+	  b parent class_ref 128765 // IObservable
+      end
+
+      classrelation 128509 // listObserver (<unidirectional association>)
+	relation 128509 --->
+	  stereotype "List"
+	  a role_name "listObserver" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 128509 // listObserver (<unidirectional association>)
+	  b parent class_ref 128893 // Observer
+      end
+
+      attribute 128125 "autoCommit"
+	private explicit_type "boolean"
+	init_value "=  true"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 129021 "Observable"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 129149 "register"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+{@inheritDoc}
+"
+      end
+
+      operation 129277 "desregister"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+{@inheritDoc}
+"
+      end
+
+      operation 129405 "updateObserver"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Notifica os observadores sobre as alterações de seu estado.
+Este método deve ser chamado pela classes que implementamente
+Observable nos métodos de alteração de seus valores ou que forem
+importantes.
+"
+      end
+
+      operation 129533 "beginModify"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Configura o Observable para não notificar as alterações.
+É aplicado um esquema transacional para evitar que a notificação
+sejam aplicada durante uma sequencia de modificações.
+"
+      end
+
+      operation 129661 "endModify"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Configura o Observable para notificar qualquer modificação
+aos Observers.
+Executa imediatamente a notificação aos Observers 
+"
+      end
+    end
+
+    classdiagram 128381 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 128381 "observer"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 128765 "IObservable"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128765 // IObservable
+      end
+    end
+
+    artifact 128893 "Observable"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+${definition}"
+      associated_classes
+	class_ref 129021 // Observable
+      end
+    end
+
+    artifact 129021 "Observer"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128893 // Observer
+      end
+    end
+  end
+end

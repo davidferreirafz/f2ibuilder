@@ -1,0 +1,15 @@
+class OpenJDialog
+!!!144765.java!!!	OpenJDialog(inout window : JDialog)
+        if (window==null){
+            System.err.println("No JDialog set! Please see OpenJDialog constructor");
+        } else {
+            this.window=window;
+            windowStyle();
+        }        
+!!!144893.java!!!	windowStyle() : void
+        this.window.setModal(true);
+!!!145021.java!!!	actionPerformed(inout e : ActionEvent) : void
+        show();
+        update();
+!!!145149.java!!!	show() : void
+        window.setVisible(true);

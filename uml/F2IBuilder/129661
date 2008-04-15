@@ -1,0 +1,240 @@
+format 55
+"combobox" // src::com::wordpress::dukitan::componentes::ui::combobox
+  revision 1
+  modified_by 125 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "com/wordpress/dukitan/componentes/ui/combobox"
+  java_package "com.wordpress.dukitan.componentes.ui.combobox"
+  classview 128765 "combobox"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 129661 "ComboBox"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe de ComboBox para manipular a lista de itens,
+controla a lista para não haver repetições, além de poder adicionar
+itens por meio de uma List.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 129277 // <generalisation>
+	relation 129277 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129277 // <generalisation>
+	  b parent class_ref 129789 // JComboBox
+      end
+
+      attribute 128509 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  -7872186258314692520L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 131325 "existeItem"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param in name "novoItem" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Verifica se o item existe
+@param novoItem a ser verificado
+@return true se o item existir
+"
+      end
+
+      operation 131453 "addItem"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "item" explicit_type "Object"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Adiciona item na combobox
+"
+      end
+
+      operation 131581 "setItens"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "lista" explicit_type "List"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@SuppressWarnings(\"unchecked\")
+"
+	
+	
+	
+	comment "
+Configura uma lista de itens
+@param lista lista de itens para adicionar a combobox
+"
+      end
+    end
+
+    class 129917 "ComboFonte"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Combobox, que lista as fontes instaladas no sistema operacional.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 129405 // <generalisation>
+	relation 129405 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129405 // <generalisation>
+	  b parent class_ref 129661 // ComboBox
+      end
+
+      attribute 128637 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  -5021290243258368931L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 131709 "ComboFonte"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor padrão
+"
+      end
+
+      operation 131837 "load"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Carrega as fontes instaladas no sistema operacional.
+"
+      end
+    end
+
+    classdiagram 128637 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 128637 "combobox"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 129405 "ComboBox"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.JComboBox;
+${definition}"
+      associated_classes
+	class_ref 129661 // ComboBox
+      end
+    end
+
+    artifact 129533 "ComboFonte"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.GraphicsEnvironment;
+${definition}"
+      associated_classes
+	class_ref 129917 // ComboFonte
+      end
+    end
+  end
+end

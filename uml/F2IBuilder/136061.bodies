@@ -1,0 +1,10 @@
+class OpenJDialogObserver
+!!!145405.java!!!	OpenJDialogObserver(inout window : JDialog)
+        super(window);
+!!!145533.java!!!	windowStyle() : void
+        window.setModal(false);
+!!!145661.java!!!	update() : void
+        if (window instanceof Observer) {
+            Observer observer = (Observer) window;
+            observer.update();
+        }

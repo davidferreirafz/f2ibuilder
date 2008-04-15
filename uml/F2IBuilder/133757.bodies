@@ -1,0 +1,12 @@
+class RadioCommand
+!!!139261.java!!!	RadioCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!139389.java!!!	itemStateChanged(inout e : ItemEvent) : void
+                       
+        if (e.getSource() instanceof JRadioButtonMenuItem) {
+            if (e.getStateChange() == ItemEvent.SELECTED) { 
+                action((JRadioButtonMenuItem) e.getSource());
+            } else {
+                deselect();
+            }
+        }

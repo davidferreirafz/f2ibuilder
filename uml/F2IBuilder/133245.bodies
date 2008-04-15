@@ -1,0 +1,12 @@
+class ComboboxCommand
+!!!138109.java!!!	ComboboxCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!138237.java!!!	itemStateChanged(inout e : ItemEvent) : void
+                
+        if (e.getStateChange()==ItemEvent.SELECTED){
+            String value = e.getItem().toString();
+            
+            if (value!=null){
+                action(value);
+            }
+        } 

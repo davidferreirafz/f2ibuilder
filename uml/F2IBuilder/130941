@@ -1,0 +1,507 @@
+format 55
+"generics" // src::net::sourceforge::f2ibuilder::application::controller::generics
+  revision 5
+  modified_by 102 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/controller/generics"
+  java_package "net.sourceforge.f2ibuilder.application.controller.generics"
+  package_ref 131069 // base
+
+  classview 129789 "generics"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 131325 "SaveItemTable"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130301 // <generalisation>
+	relation 130301 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 130301 // <generalisation>
+	  b parent class_ref 130685 // FontTextAction
+      end
+
+      attribute 129277 "table"
+	protected explicit_type "JTable"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 134397 "SaveItemTable"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "table" explicit_type "JTable"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 134525 "action"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 134653 "setValue"
+	abstract protected explicit_return_type "void"
+	nparams 2
+	  param in name "caracter" explicit_type "int"
+	  param in name "value" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 131581 "SelectItemTable"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130557 // <generalisation>
+	relation 130557 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 130557 // <generalisation>
+	  b parent class_ref 130685 // FontTextAction
+      end
+
+      attribute 129533 "table"
+	protected explicit_type "JTable"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129661 "asciiPreview"
+	private explicit_type "JLabel"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129789 "formatPreview"
+	private explicit_type "JLabel"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 135037 "SelectItemTable"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "table" explicit_type "JTable"
+	  param inout name "asciiPreview" explicit_type "JLabel"
+	  param inout name "formatPreview" explicit_type "JLabel"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 135165 "action"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent final java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 135293 "getPreview"
+	abstract protected explicit_return_type "String"
+	nparams 2
+	  param in name "x" explicit_type "int"
+	  param in name "y" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 135421 "display"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134269 "SaveFile"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 133245 // <realization>
+	relation 133245 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133245 // <realization>
+	  b parent class_ref 130813 // ActionListener
+      end
+
+      operation 140413 "actionPerformed"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "ActionEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 140541 "action"
+	abstract protected explicit_return_type "void"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134781 "CloseWindow"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 134269 // <realization>
+	relation 134269 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134269 // <realization>
+	  b parent class_ref 130813 // ActionListener
+      end
+
+      attribute 129917 "window"
+	protected explicit_type "Window"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 141437 "CloseWindow"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "window" explicit_type "Window"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141565 "getWindow"
+	public explicit_return_type "Window"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141693 "actionPerformed"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "ActionEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    class 134909 "OpenWebSite"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 134397 // <generalisation>
+	relation 134397 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134397 // <generalisation>
+	  b parent class_ref 129533 // MouseAdapter
+      end
+
+      classrelation 134525 // <realization>
+	relation 134525 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134525 // <realization>
+	  b parent class_ref 130813 // ActionListener
+      end
+
+      operation 141821 "mouseClicked"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "MouseEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 141949 "actionPerformed"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "ActionEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 142077 "action"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 128102 // <dependency>
+	relation 128102 -_->
+	  a default
+	    classrelation_ref 128102 // <dependency>
+	  b parent class_ref 128381 // FacadeBrowser
+      end
+    end
+
+    classdiagram 129533 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4-Landscape
+    end
+  end
+
+  deploymentview 129405 "generics"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 130301 "SaveItemTable"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 131325 // SaveItemTable
+      end
+    end
+
+    artifact 130557 "SelectItemTable"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 131581 // SelectItemTable
+      end
+    end
+
+    artifact 132861 "SaveFile"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+${definition}"
+      associated_classes
+	class_ref 134269 // SaveFile
+      end
+    end
+
+    artifact 133373 "CloseWindow"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Window;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+${definition}"
+      associated_classes
+	class_ref 134781 // CloseWindow
+      end
+    end
+
+    artifact 133501 "OpenWebSite"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import net.sourceforge.f2ibuilder.util.Constants;
+import com.wordpress.dukitan.componentes.browser.FacadeBrowser;
+${definition}"
+      associated_classes
+	class_ref 134909 // OpenWebSite
+      end
+    end
+  end
+end

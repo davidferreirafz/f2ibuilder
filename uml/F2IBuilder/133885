@@ -1,0 +1,265 @@
+format 55
+"panel" // src::net::sourceforge::f2ibuilder::components::panel
+  revision 2
+  modified_by 68 ""
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/components/panel"
+  java_package "net.sourceforge.f2ibuilder.components.panel"
+  classview 131837 "panel"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 137469 "ColorGroup"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Agrupamento de ColorPanel, é usado para montar a exibição das três
+caixas de cores, as quais representam:
+ Cor de Fundo, Cor da Fonte e Cor da Sombra
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 142461 // <generalisation>
+	relation 142461 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 142461 // <generalisation>
+	  b parent class_ref 129277 // JPanel
+      end
+
+      attribute 146813 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  9172638517131619642L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 142589 // panelFontColor (<unidirectional association>)
+	relation 142589 --->
+	  a role_name "panelFontColor" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142589 // panelFontColor (<unidirectional association>)
+	  b parent class_ref 129149 // ColorPanel
+      end
+
+      classrelation 142717 // panelFontShadowColor (<unidirectional association>)
+	relation 142717 --->
+	  a role_name "panelFontShadowColor" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142717 // panelFontShadowColor (<unidirectional association>)
+	  b parent class_ref 129149 // ColorPanel
+      end
+
+      classrelation 142845 // panelBackgroundColor (<unidirectional association>)
+	relation 142845 --->
+	  a role_name "panelBackgroundColor" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142845 // panelBackgroundColor (<unidirectional association>)
+	  b parent class_ref 129149 // ColorPanel
+      end
+
+      operation 173053 "ColorGroup"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor
+"
+      end
+
+      operation 173181 "register"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Registra os paineis de cores no Observer
+@param observer instância da classe Observer
+"
+      end
+
+      operation 173309 "getCorFundo"
+	public explicit_return_type "Color"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a cor de fundo
+@return cor de fundo
+"
+      end
+
+      operation 173437 "getCorSombra"
+	public explicit_return_type "Color"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a cor da sombra da fonte
+@return cor da sombra
+"
+      end
+
+      operation 173565 "getCorFonte"
+	public explicit_return_type "Color"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a cor da fonte
+@return cor da fonte
+"
+      end
+
+      operation 173693 "getPanelFontColor"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Inicializa o painel de cor da fonte
+@return JPanel
+"
+      end
+
+      operation 173821 "getPanelFontShadowColor"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Inicializa o painel de cor da sombra da fonte  
+@return JPanel
+"
+      end
+
+      operation 173949 "getPanelBackgroundColor"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Inicializa o painel de cor de fundo 
+@return JPanel
+"
+      end
+    end
+
+    classdiagram 128893 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 131965 "panel"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 138237 "ColorGroup"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Color;
+import javax.swing.JPanel;
+import com.wordpress.dukitan.componentes.gof.observer.Observer;
+import com.wordpress.dukitan.componentes.ui.color.ColorPanel;
+${definition}"
+      associated_classes
+	class_ref 137469 // ColorGroup
+      end
+    end
+  end
+end

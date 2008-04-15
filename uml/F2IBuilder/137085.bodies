@@ -1,0 +1,95 @@
+class Credit
+!!!153085.java!!!	Credit()
+		super();
+		initialize();
+!!!153213.java!!!	initialize() : void
+		this.setSize(409, 396);
+		this.setContentPane(getJPanel());
+		this.setResizable(false);
+		this.setAlwaysOnTop(true);
+		this.setTitle("About :: Credits");
+		Dimension dim = getToolkit().getScreenSize(); 		
+		int x = (int) (dim.getWidth()  - getSize().getWidth() )/2;
+		int y = (int) (dim.getHeight() - getSize().getHeight())/2;
+		this.setLocation(x,y);
+!!!153341.java!!!	getJButton() : JButton
+		if (jButton == null) {
+			jButton = new JButton();
+			jButton.setText("Ok");
+			jButton.setBounds(new java.awt.Rectangle(135,315,136,28));
+			jButton.addActionListener(new CloseWindow(this));
+		}
+		return jButton;
+!!!153469.java!!!	getJPanel() : JPanel
+		if (jPanel == null) {
+			jPanel = new JPanel();
+			jPanel.setLayout(null);
+			jPanel.add(getJButton(), null);
+			jPanel.add(getJPanel4(), null);
+			jPanel.add(getJPanel5(), null);
+			jPanel.add(getJPanel6(), null);
+			jPanel.add(getImagePanel(), null);
+			
+		}
+		return jPanel;
+!!!153597.java!!!	getJPanel4() : JPanel
+		if (jPanel4 == null) {
+			jLabel9 = new JLabel();
+			jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+			jLabel9.setText("  "+Constants.WEB_SITE);
+			jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			jLabel9.setName("jLabel8");
+			jLabel9.addMouseListener(new OpenWebSite());
+			jPanel4 = new JPanel();
+			jPanel4.setLayout(new CardLayout());
+			jPanel4.setBounds(new java.awt.Rectangle(105,60,286,46));
+			jPanel4.setBorder(BorderFactory.createTitledBorder(null, "Site", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel4.add(jLabel9, jLabel9.getName());
+		}
+		return jPanel4;
+!!!153725.java!!!	getJPanel5() : JPanel
+		if (jPanel5 == null) {		
+			jPanel5 = new JPanel();
+			jPanel5.setLayout(new CardLayout());
+			jPanel5.setBounds(new java.awt.Rectangle(15,105,376,196));
+			jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thanks", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), new java.awt.Color(51,51,51)));
+			jPanel5.add(getJTextArea(), getJTextArea().getName());
+		}
+		return jPanel5;
+!!!153853.java!!!	getJPanel6() : JPanel
+		if (jPanel6 == null) {
+			jLabel = new JLabel();
+			jLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel.setText(Constants.TITULO+" - "+Constants.GPL);
+			jLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			jLabel.setName("jLabel6");
+			jPanel6 = new JPanel();
+			jPanel6.setLayout(new CardLayout());
+			jPanel6.setBounds(new java.awt.Rectangle(105,15,286,46));
+			jPanel6.setBorder(BorderFactory.createTitledBorder(null, "Info", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
+			jPanel6.add(jLabel, jLabel.getName());
+		}
+		return jPanel6;
+!!!153981.java!!!	getJTextArea() : JTextArea
+		if (jTextArea == null) {
+			jTextArea = new JTextArea();
+			jTextArea.setName("jTextArea");
+			jTextArea.setEditable(false);
+			jTextArea.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+			jTextArea.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.lightGray,1));
+			jTextArea.setLineWrap(true);
+			StringBuffer texto = new StringBuffer();
+			texto.append("Alexandre Ribeiro de Sá <alexandreribeirodesa at msn.com>\n");
+			texto.append("Alysson Bandeira <alyssonbandeira at gmail.com>\n");
+			texto.append("Christiano Milfont <cmilfont at gmail.com>\n");
+			texto.append("David G. Maziero <dgmdavid at bol.com.br>\n");
+			jTextArea.setText(texto.toString());
+		}
+		return jTextArea;
+!!!154109.java!!!	getImagePanel() : ImagePanel
+		if (imagePanel == null) {
+			imagePanel = new ImagePanel();
+			imagePanel.setBounds(new java.awt.Rectangle(15,14,76,77));
+			imagePanel.loadImage(".//resource/dukitan.png");			
+		}
+		return imagePanel;

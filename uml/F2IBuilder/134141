@@ -1,0 +1,871 @@
+format 55
+"metrics" // src::net::sourceforge::f2ibuilder::application::view::metrics
+  revision 4
+  modified_by 13 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/view/metrics"
+  java_package "net.sourceforge.f2ibuilder.application.view.metrics"
+  classview 132093 "metrics"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 139133 "MetricsLimit"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe da tela MetricsLimit.
+Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+
+Designer Pattern: GoF - Observer
+Implementa mecanismo para receber as notificações de mudanças.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 141181 // <generalisation>
+	relation 141181 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 141181 // <generalisation>
+	  b parent class_ref 136957 // JDialog
+      end
+
+      classrelation 141309 // <realization>
+	relation 141309 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 141309 // <realization>
+	  b parent class_ref 128893 // Observer
+      end
+
+      attribute 143613 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  1L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 143741 "jContentPane"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 143869 "jButton"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 141437 // fontText (<unidirectional association>)
+	relation 141437 --->
+	  a role_name "fontText" init_value "=  null" private
+	    comment "  @jve:decl-index=0:"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 141437 // fontText (<unidirectional association>)
+	  b parent class_ref 131069 // FontText
+      end
+
+      attribute 143997 "jButton2"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144125 "jButton11"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144253 "jPanelMenor"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144381 "jPanelMaior"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144509 "menorLimite"
+	private explicit_type "JTextField"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144637 "maiorLimite"
+	private explicit_type "JTextField"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 144765 "jPanel2"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 168317 "MetricsLimit"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "owner" explicit_type "Frame"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param owner
+"
+      end
+
+      operation 168445 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes this
+"
+      end
+
+      operation 168573 "getJContentPane"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jContentPane
+
+@return javax.swing.JPanel
+"
+      end
+
+      operation 168701 "getJButton"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 168829 "getJButton11"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton11    
+ 
+@return javax.swing.JButton  
+"
+      end
+
+      operation 168957 "getJButton2"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton2	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 169085 "getJPanelMenor"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanelMenor	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 169213 "getJPanelMaior"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanelMaior	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 169341 "getMenorLimite"
+	private explicit_return_type "JTextField"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes menorLimite	
+	
+@return javax.swing.JTextField	
+"
+      end
+
+      operation 169469 "getMaiorLimite"
+	private explicit_return_type "JTextField"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes maiorLimite	
+	
+@return javax.swing.JTextField	
+"
+      end
+
+      operation 169597 "getJPanel2"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jPanel2	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 169725 "update"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+	comment "
+Implementação da notificação de mudanças nos objetos Observable.
+
+@see Observer
+"
+      end
+
+      classrelation 130701 // <dependency>
+	relation 130701 -_->
+	  a default
+	    classrelation_ref 130701 // <dependency>
+	  b parent class_ref 128397 // MetricsActionFactory
+      end
+    end
+
+    class 139261 "MetricsMap"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe da tela MetricsMap.
+Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
+
+Designer Pattern: GoF - Observer
+Implementa mecanismo para receber as notificações de mudanças.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 141565 // <generalisation>
+	relation 141565 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 141565 // <generalisation>
+	  b parent class_ref 136957 // JDialog
+      end
+
+      classrelation 141693 // <realization>
+	relation 141693 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 141693 // <realization>
+	  b parent class_ref 128893 // Observer
+      end
+
+      attribute 144893 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  1L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145021 "jContentPane"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145149 "Charset"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145277 "jButton"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145405 "jTable"
+	private explicit_type "JTable"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 141821 // fontText (<unidirectional association>)
+	relation 141821 --->
+	  a role_name "fontText" init_value "=  null" private
+	    comment "  @jve:decl-index=0:"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 141821 // fontText (<unidirectional association>)
+	  b parent class_ref 131069 // FontText
+      end
+
+      attribute 145533 "jButton2"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145661 "panelPreview"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145789 "asciiLabel"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 145917 "jButton11"
+	private explicit_type "JButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 146045 "panelPreviewFormatado"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 146173 "formatLabel"
+	private explicit_type "JLabel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 169853 "MetricsMap"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "owner" explicit_type "Frame"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param owner
+"
+      end
+
+      operation 169981 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes this
+"
+      end
+
+      operation 170109 "getJContentPane"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jContentPane
+
+@return javax.swing.JPanel
+"
+      end
+
+      operation 170237 "getCharset"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes Charset	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 170365 "getJButton"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 170493 "getJButton11"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton11    
+ 
+@return javax.swing.JButton  
+"
+      end
+
+      operation 170621 "getJTable"
+	private explicit_return_type "JTable"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jTable	
+	
+@return javax.swing.JTable	
+"
+      end
+
+      operation 170749 "getJButton2"
+	private explicit_return_type "JButton"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes jButton2	
+	
+@return javax.swing.JButton	
+"
+      end
+
+      operation 170877 "getPanelPreview"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes Preview	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 171005 "getPanelPreviewFormatado"
+	private explicit_return_type "JPanel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+This method initializes panelPreviewFormatado	
+	
+@return javax.swing.JPanel	
+"
+      end
+
+      operation 171133 "getAsciiLabel"
+	private explicit_return_type "JLabel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 171261 "getFormatLabel"
+	private explicit_return_type "JLabel"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 171389 "update"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+	comment "
+Implementação da notificação de mudanças nos objetos Observable.
+
+@see Observer
+"
+      end
+
+      classrelation 129933 // <dependency>
+	relation 129933 -_->
+	  a default
+	    classrelation_ref 129933 // <dependency>
+	  b parent class_ref 128397 // MetricsActionFactory
+      end
+    end
+  end
+
+  deploymentview 131581 "metrics"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 137469 "MetricsLimit"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Rectangle;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.metrics.ResetMetrics;
+import net.sourceforge.f2ibuilder.application.controller.metrics.SaveMetricLimit;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+import com.wordpress.dukitan.componentes.gof.observer.Observer;
+${definition}"
+      associated_classes
+	class_ref 139133 // MetricsLimit
+      end
+    end
+
+    artifact 137597 "MetricsMap"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Rectangle;
+import javax.swing.BorderFactory;
+import javax.swing.DefaultListSelectionModel;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.border.TitledBorder;
+import javax.swing.plaf.basic.BasicPanelUI;
+import javax.swing.table.DefaultTableModel;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.controller.metrics.ResetMetrics;
+import net.sourceforge.f2ibuilder.application.controller.metrics.SaveMetric;
+import net.sourceforge.f2ibuilder.application.controller.metrics.SelectMetric;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+import com.wordpress.dukitan.componentes.gof.observer.Observer;
+${definition}"
+      associated_classes
+	class_ref 139261 // MetricsMap
+      end
+    end
+  end
+end

@@ -1,0 +1,10 @@
+class MetricEffect
+!!!166653.java!!!	adjust(inout ajuste : Dimension, inout dimensao : Dimension, inout fontText : FontText) : Dimension
+        return ajuste;        
+!!!166781.java!!!	position(inout count : Counter, inout dimensao : Dimension, inout ajuste : Dimension, inout fontText : FontText) : Point
+        Point p = new Point(0,0);
+        
+        p.x=(count.column()*dimensao.width)+ajuste.width;
+        p.y=(count.line()*dimensao.height)+ajuste.height+fontText.getFontAscent();
+        
+        return p;

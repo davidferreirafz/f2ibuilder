@@ -1,0 +1,1055 @@
+format 55
+"model" // src::net::sourceforge::f2ibuilder::application::model
+  revision 5
+  modified_by 14 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/model"
+  java_package "net.sourceforge.f2ibuilder.application.model"
+  classview 129661 "model"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 131069 "FontText"
+      visibility public stereotype "GoF - Singleton, Observer"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe com os dados relacionados a fonte selecionada.
+
+Designer Pattern: Observer, Singleton
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 135933 // <generalisation>
+	relation 135933 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135933 // <generalisation>
+	  b parent class_ref 129021 // Observable
+      end
+
+      attribute 130813 "fontName"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130941 "fontSize"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131069 "fontStyle"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131197 "font"
+	private explicit_type "Font"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131325 "panel"
+	private explicit_type "JPanel"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131453 "dimensionDefault"
+	private explicit_type "Dimension"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136061 // limit (<unidirectional association>)
+	relation 136061 --->
+	  a role_name "limit" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136061 // limit (<unidirectional association>)
+	  b parent class_ref 136189 // Limit
+      end
+
+      attribute 131581 "workCharset"
+	private explicit_type "int"
+	multiplicity "[]"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131709 "workMetrics"
+	private explicit_type "int"
+	multiplicity "[]"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131837 "originalMetrics"
+	private explicit_type "int"
+	multiplicity "[]"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136189 // instance (<unidirectional association>)
+	relation 136189 --->
+	  a role_name "instance" class_relation private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136189 // instance (<unidirectional association>)
+	  b parent class_ref 131069 // FontText
+      end
+
+      operation 145789 "getInstance"
+	class_operation public return_type class_ref 131069 // FontText
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Instância de FontText
+@return instância única de FontText
+"
+      end
+
+      operation 145917 "FontText"
+	private explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor privado para implementação do Singleton
+"
+      end
+
+      operation 146045 "make"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Configura uma nova fonte a ser usada.
+"
+      end
+
+      operation 146173 "apllyNewFont"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Cria a fonte a ser usada.
+"
+      end
+
+      operation 146301 "metricsDefault"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Obtem as informações de métrica da fonte.
+"
+      end
+
+      operation 146429 "applyMetricsLimit"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Aplica os limites das métricas
+"
+      end
+
+      operation 146557 "resetMetrics"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retonar as métricas para a definição default da fonte.
+"
+      end
+
+      operation 146685 "resetCharset"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna os caracteres para definição default da tabelas ascii.
+"
+      end
+
+      operation 146813 "getCharacter"
+	public explicit_return_type "String"
+	nparams 1
+	  param in name "i" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Pega o caracter correspondente ao indice da tabela de caracteres passado.
+@param i indice na tabela de caracteres
+@return retorna a Letra correspondente
+"
+      end
+
+      operation 146941 "getCharacterNumber"
+	public explicit_return_type "int"
+	nparams 1
+	  param in name "i" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Pega o código ascii do caracter correspondente ao indice da tabela de caracteres passado.
+@param i indice na tabela de caracteres
+@return retorna o código ascii do caracter correspondente
+"
+      end
+
+      operation 147069 "setCharacter"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "i" explicit_type "int"
+	  param in name "valor" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Define outro caracter na tabela
+@param i indice na tabela de caracteres
+@param valor código ascii do caracter
+"
+      end
+
+      operation 147197 "setCharacterMetric"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "i" explicit_type "int"
+	  param in name "valor" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Define a métrica para um caracter.
+@param i indice na tabela de caracteres
+@param valor da largura do caracter
+"
+      end
+
+      operation 147325 "setMetrics"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "metricas" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Define as métricas para todos os caracteres
+@param metricas array com as métricas de todos os caracteres
+"
+      end
+
+      operation 147453 "setLimits"
+	public explicit_return_type "void"
+	nparams 2
+	  param in name "min" explicit_type "int"
+	  param in name "max" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Configura os novos limites das métricas.
+@param min largura mínima para os caracteres
+@param max largura máxima para os caracteres
+"
+      end
+
+      operation 147581 "searchLimits"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Procura pelos limites default.
+"
+      end
+
+      operation 147709 "getMaiorLargura"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 147837 "getMenorLargura"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 147965 "getFont"
+	public explicit_return_type "Font"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 148093 "setFontSize"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "size" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 148221 "getFontSize"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 148349 "setFontName"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "fontName" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 148477 "getFontName"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 148605 "getCharacterMetric"
+	public explicit_return_type "int"
+	nparams 1
+	  param in name "i" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a largura do caracter
+@param i indice na tabela de caracteres
+@return largura do caracter
+"
+      end
+
+      operation 148733 "setBold"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "value" explicit_type "boolean"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Configura o Estilo da Fonte, se é negrito ou não
+@param value true para utilizar negrito
+"
+      end
+
+      operation 148861 "getDefaultCharDimension"
+	public explicit_return_type "Dimension"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a dimensão default(Máxima) do caracter.
+@return dimensao do caracter 
+"
+      end
+
+      operation 148989 "getFontAscent"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a distancia entre o ponto que se deseja desenhar (virtual)
+e o ponto que de fato a fonte é desenhada.
+@return distancia
+"
+      end
+
+      operation 149117 "getDefaultID"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna o nome da fonte mais a informação de seu tamanho
+@return FonteName+\".\"+FontSize
+"
+      end
+    end
+
+    class 132477 "Options"
+      visibility public stereotype "GoF - Singleton, Observer"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe com os dados relacionados as opções para geração da imagem.
+
+Designer Pattern: Observer, Singleton
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 136317 // <generalisation>
+	relation 136317 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136317 // <generalisation>
+	  b parent class_ref 129021 // Observable
+      end
+
+      attribute 131965 "grid"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132093 "metrica"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132221 "antialias"
+	private explicit_type "boolean"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132349 "imagemTipo"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132477 "sombraVertical"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132605 "sombraHorizontal"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132733 "tamanhoTextura"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136445 // backgroundStrategy (<unidirectional association>)
+	relation 136445 --->
+	  a role_name "backgroundStrategy" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136445 // backgroundStrategy (<unidirectional association>)
+	  b parent class_ref 136317 // BackgroundStrategy
+      end
+
+      classrelation 136573 // antialiasStrategy (<unidirectional association>)
+	relation 136573 --->
+	  a role_name "antialiasStrategy" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136573 // antialiasStrategy (<unidirectional association>)
+	  b parent class_ref 136445 // AntialiasStrategy
+      end
+
+      classrelation 136701 // metricStrategy (<unidirectional association>)
+	relation 136701 --->
+	  a role_name "metricStrategy" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136701 // metricStrategy (<unidirectional association>)
+	  b parent class_ref 136573 // MetricStrategy
+      end
+
+      classrelation 136829 // shadowStrategy (<unidirectional association>)
+	relation 136829 --->
+	  a role_name "shadowStrategy" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136829 // shadowStrategy (<unidirectional association>)
+	  b parent class_ref 136701 // ShadowStrategy
+      end
+
+      attribute 132861 "IMAGE_TYPE_PNG"
+	class_attribute public explicit_type "int"
+	init_value "=  0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132989 "IMAGE_TYPE_BMP"
+	class_attribute public explicit_type "int"
+	init_value "=  1"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136957 // instance (<unidirectional association>)
+	relation 136957 --->
+	  a role_name "instance" class_relation private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136957 // instance (<unidirectional association>)
+	  b parent class_ref 132477 // Options
+      end
+
+      operation 149245 "Options"
+	private explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor privado para implementação do Singleton
+"
+      end
+
+      operation 149373 "getInstance"
+	class_operation public return_type class_ref 132477 // Options
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 149501 "setAntialias"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "antialias" explicit_type "boolean"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 149629 "isGrid"
+	public explicit_return_type "boolean"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 149757 "setGrid"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "grid" explicit_type "boolean"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 149885 "setMetrica"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "metrica" explicit_type "boolean"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150013 "getImagemTipo"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150141 "setImageType"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "imageType" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150269 "setAlpha"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "value" explicit_type "boolean"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150397 "setSombraHorizontal"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "sombraHorizontal" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150525 "setSombra"
+	private explicit_return_type "void"
+	nparams 2
+	  param in name "horizontal" explicit_type "int"
+	  param in name "vertical" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150653 "setSombraVertical"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "sombraVertical" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150781 "isTexturaAuto"
+	public explicit_return_type "boolean"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 150909 "getTamanhoTextura"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 151037 "setTextureSize"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tamanhoTextura" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 151165 "backgroundStrategy"
+	public return_type class_ref 136317 // BackgroundStrategy
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 151293 "antialiasStrategy"
+	public return_type class_ref 136445 // AntialiasStrategy
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 151421 "metricStrategy"
+	public return_type class_ref 136573 // MetricStrategy
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 151549 "shadowStrategy"
+	public return_type class_ref 136701 // ShadowStrategy
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    classdiagram 128179 "classes"
+      draw_all_relations default hide_attributes yes hide_operations yes show_members_full_definition no show_members_visibility yes show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 130557 "model"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 134781 "FontText"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Dimension;
+import java.awt.Font;
+import javax.swing.JPanel;
+import net.sourceforge.f2ibuilder.components.type.Limit;
+import com.wordpress.dukitan.componentes.gof.observer.Observable;
+${definition}"
+      associated_classes
+	class_ref 131069 // FontText
+      end
+    end
+
+    artifact 134909 "Options"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasNone;
+import net.sourceforge.f2ibuilder.application.view.image.draw.antialias.AntialiasStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundApha;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundFill;
+import net.sourceforge.f2ibuilder.application.view.image.draw.background.BackgroundStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricNone;
+import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricStrategy;
+import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowEffect;
+import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowStrategy;
+import com.wordpress.dukitan.componentes.gof.observer.Observable;
+${definition}"
+      associated_classes
+	class_ref 132477 // Options
+      end
+    end
+  end
+end

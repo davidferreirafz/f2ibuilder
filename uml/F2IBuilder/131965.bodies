@@ -1,0 +1,4 @@
+class SelectCommand
+!!!135933.java!!!	SelectCommand(inout options : Options, inout fontText : FontText)
+        this.options=options;
+        this.fontText=fontText;

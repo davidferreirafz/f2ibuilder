@@ -1,0 +1,349 @@
+format 55
+"metrics" // src::net::sourceforge::f2ibuilder::application::controller::metrics
+  revision 4
+  modified_by 14 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/application/controller/metrics"
+  java_package "net.sourceforge.f2ibuilder.application.controller.metrics"
+  classview 130941 "metrics"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 135165 "ResetMetrics"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 134909 // <generalisation>
+	relation 134909 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134909 // <generalisation>
+	  b parent class_ref 130685 // FontTextAction
+      end
+
+      operation 143485 "ResetMetrics"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "tableChar" type class_ref 131069 // FontText
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 143613 "action"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    class 135293 "SaveMetric"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135037 // <generalisation>
+	relation 135037 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135037 // <generalisation>
+	  b parent class_ref 131325 // SaveItemTable
+      end
+
+      operation 143741 "SaveMetric"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "table" explicit_type "JTable"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 143869 "setValue"
+	protected explicit_return_type "void"
+	nparams 2
+	  param in name "caracter" explicit_type "int"
+	  param in name "value" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    class 135421 "SaveMetricLimit"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135165 // <generalisation>
+	relation 135165 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135165 // <generalisation>
+	  b parent class_ref 130685 // FontTextAction
+      end
+
+      attribute 130173 "minor"
+	private explicit_type "JTextField"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130301 "higher"
+	private explicit_type "JTextField"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 143997 "SaveMetricLimit"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "minor" explicit_type "JTextField"
+	  param inout name "higher" explicit_type "JTextField"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 144125 "action"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    class 135549 "SelectMetric"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135293 // <generalisation>
+	relation 135293 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135293 // <generalisation>
+	  b parent class_ref 131581 // SelectItemTable
+      end
+
+      operation 144253 "SelectMetric"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "table" explicit_type "JTable"
+	  param inout name "fontText" type class_ref 131069 // FontText
+	  param inout name "asciiPreview" explicit_type "JLabel"
+	  param inout name "formatPreview" explicit_type "JLabel"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 144381 "getPreview"
+	protected explicit_return_type "String"
+	nparams 2
+	  param in name "x" explicit_type "int"
+	  param in name "y" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    classdiagram 128196 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+
+  end
+
+  deploymentview 130301 "metrics"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 133885 "ResetMetrics"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 135165 // ResetMetrics
+      end
+    end
+
+    artifact 134013 "SaveMetric"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.SaveItemTable;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 135293 // SaveMetric
+      end
+    end
+
+    artifact 134141 "SaveMetricLimit"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import javax.swing.JTextField;
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 135421 // SaveMetricLimit
+      end
+    end
+
+    artifact 134269 "SelectMetric"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.SelectItemTable;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+	class_ref 135549 // SelectMetric
+      end
+    end
+
+    artifact 128141 "MetricsActionFactory"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Window;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import net.sourceforge.f2ibuilder.application.controller.generics.CloseWindow;
+import net.sourceforge.f2ibuilder.application.model.FontText;
+${definition}"
+      associated_classes
+      end
+    end
+  end
+end

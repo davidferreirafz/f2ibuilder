@@ -1,0 +1,74 @@
+format 55
+
+classcanvas 128125 class_ref 139389 // FileDialog
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  hidden_attributes
+    attribute_ref 146301 // dialogImagem
+    attribute_ref 146429 // dialogMetrica
+    attribute_ref 146557 // imageFilePath
+    attribute_ref 146685 // metricFilePath
+  hidden_operations
+    operation_ref 171517 // FileDialog
+    operation_ref 171901 // getFilePathImage
+    operation_ref 172157 // getFilePathMetric
+  xyz 165 364 3005
+  end
+classcanvas 128398 class_ref 139645 // FileFilter
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightgray
+  xyz 147 16 2004
+  end
+classcanvas 128637 class_ref 139517 // DialogFileFilter
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 146 133 2000
+  end
+classcanvas 128765 class_ref 139773 // FileImageFilter
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 11 239 2004
+  end
+classcanvas 129021 class_ref 139901 // FileMetricFilter
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 338 243 2004
+  end
+relationcanvas 128253 relation_ref 141949 // <unidirectional association>
+  from ref 128125 z 1999 to point 135 364
+  line 128381 z 1999 to point 135 394
+  line 128509 z 1999 to ref 128125
+  role_a_pos 105 382 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128526 relation_ref 142077 // <generalisation>
+  geometry VHV
+  from ref 128637 z 1999 to point 235 92
+  line 128654 z 1999 to point 178 92
+  line 128782 z 1999 to ref 128398
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128893 relation_ref 142205 // <generalisation>
+  geometry VH
+  from ref 128765 z 1999 to point 67 178
+  line 129533 z 1999 to ref 128637
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129149 relation_ref 142333 // <generalisation>
+  geometry HVr
+  from ref 129021 z 1999 to point 394 178
+  line 129661 z 1999 to ref 128637
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129277 relation_ref 143357 // <dependency>
+  geometry VHr
+  from ref 128125 z 2003 to point 67 418
+  line 128270 z 2003 to ref 128765
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129405 relation_ref 143485 // <dependency>
+  geometry HV
+  from ref 128125 z 2003 to point 394 418
+  line 128014 z 2003 to ref 129021
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

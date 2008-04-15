@@ -1,0 +1,5 @@
+class UseAntialiasCommand
+!!!137597.java!!!	UseAntialiasCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!137725.java!!!	action(inout checkbox : JCheckBoxMenuItem) : void
+        options.setAntialias(checkbox.getState());

@@ -1,0 +1,9 @@
+class DialogFileFilter
+!!!172285.java!!!	accept(inout file : File) : boolean
+	 	if (file.isDirectory()) {
+            return true;
+        }
+	 	
+        FileInfo fileInfo = new FileInfo(file);
+        
+        return isAccept(fileInfo);

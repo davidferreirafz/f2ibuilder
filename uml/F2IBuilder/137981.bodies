@@ -1,0 +1,41 @@
+class PanelModel
+!!!163453.java!!!	PanelModel(inout fontText : FontText, inout options : Options, inout colorGroup : ColorGroup)
+		super();
+		this.fontText   = fontText;
+        this.options    = options;		
+        this.colorGroup = colorGroup;
+        
+        this.colorGroup.register(this);
+        this.fontText.register(this);
+        this.options.register(this);
+!!!163581.java!!!	getCharSpace() : Dimension
+        Dimension dimensao;
+
+        if (options.isTexturaAuto()) {
+            dimensao = fontText.getDefaultCharDimension();
+        } else {
+            dimensao = getWindowSize();
+
+            dimensao.width  = dimensao.width / 16;
+            dimensao.height = dimensao.height / 16;
+        }
+
+        return dimensao;
+!!!163709.java!!!	getWindowSize() : Dimension
+    
+        Dimension dimensao = new Dimension();
+
+        switch (options.getTamanhoTextura()) {
+            case 0:
+                dimensao = fontText.getDefaultCharDimension();
+                
+                dimensao.width *=16;
+                dimensao.height*=16;
+            break;
+            default:
+                dimensao.width  = options.getTamanhoTextura();
+                dimensao.height = options.getTamanhoTextura();
+            break;
+        }
+
+        return dimensao;

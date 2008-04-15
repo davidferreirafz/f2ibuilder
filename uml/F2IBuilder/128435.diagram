@@ -1,0 +1,337 @@
+format 55
+
+classcanvas 128051 class_ref 139261 // MetricsMap
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 144893 // serialVersionUID
+    attribute_ref 145021 // jContentPane
+    attribute_ref 145149 // Charset
+    attribute_ref 145277 // jButton
+    attribute_ref 145405 // jTable
+    attribute_ref 145533 // jButton2
+    attribute_ref 145661 // panelPreview
+    attribute_ref 145789 // asciiLabel
+    attribute_ref 145917 // jButton11
+    attribute_ref 146045 // panelPreviewFormatado
+    attribute_ref 146173 // formatLabel
+  hidden_operations
+    operation_ref 169853 // MetricsMap
+    operation_ref 169981 // initialize
+    operation_ref 170109 // getJContentPane
+    operation_ref 170237 // getCharset
+    operation_ref 170365 // getJButton
+    operation_ref 170493 // getJButton11
+    operation_ref 170621 // getJTable
+    operation_ref 170749 // getJButton2
+    operation_ref 170877 // getPanelPreview
+    operation_ref 171005 // getPanelPreviewFormatado
+    operation_ref 171133 // getAsciiLabel
+    operation_ref 171261 // getFormatLabel
+    operation_ref 171389 // update
+  xyz 255 223 2000
+  end
+classcanvas 128179 class_ref 139133 // MetricsLimit
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 143613 // serialVersionUID
+    attribute_ref 143741 // jContentPane
+    attribute_ref 143869 // jButton
+    attribute_ref 143997 // jButton2
+    attribute_ref 144125 // jButton11
+    attribute_ref 144253 // jPanelMenor
+    attribute_ref 144381 // jPanelMaior
+    attribute_ref 144509 // menorLimite
+    attribute_ref 144637 // maiorLimite
+    attribute_ref 144765 // jPanel2
+  hidden_operations
+    operation_ref 168317 // MetricsLimit
+    operation_ref 168445 // initialize
+    operation_ref 168573 // getJContentPane
+    operation_ref 168701 // getJButton
+    operation_ref 168829 // getJButton11
+    operation_ref 168957 // getJButton2
+    operation_ref 169085 // getJPanelMenor
+    operation_ref 169213 // getJPanelMaior
+    operation_ref 169341 // getMenorLimite
+    operation_ref 169469 // getMaiorLimite
+    operation_ref 169597 // getJPanel2
+    operation_ref 169725 // update
+  xyz 428 240 2000
+  end
+classcanvas 128307 class_ref 128893 // Observer
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 252 96 2004
+  end
+classcanvas 128691 class_ref 137597 // CharsetMap
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 141565 // serialVersionUID
+    attribute_ref 141693 // jContentPane
+    attribute_ref 141821 // Charset
+    attribute_ref 141949 // jButton
+    attribute_ref 142077 // jTable
+    attribute_ref 142205 // jButton2
+    attribute_ref 142333 // panelPreview
+    attribute_ref 142461 // asciiPreview
+    attribute_ref 142589 // jButton11
+    attribute_ref 142717 // panelPreviewFormatado
+    attribute_ref 142845 // formatLabel
+  hidden_operations
+    operation_ref 160765 // CharsetMap
+    operation_ref 160893 // initialize
+    operation_ref 161021 // getJContentPane
+    operation_ref 161149 // getCharset
+    operation_ref 161277 // getJButton
+    operation_ref 161405 // getJButton11
+    operation_ref 161533 // getAsciiLabel
+    operation_ref 161661 // getFormatLabel
+    operation_ref 161789 // getJTable
+    operation_ref 161917 // getJButton2
+    operation_ref 162045 // getPanelPreview
+    operation_ref 162173 // getPanelPreviewFormatado
+    operation_ref 162301 // update
+  xyz 57 233 2009
+  end
+classcanvas 128790 class_ref 136957 // JDialog
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightgray
+  xyz 269 317 2004
+  end
+classcanvas 129203 class_ref 136829 // About
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 133117 // serialVersionUID
+    attribute_ref 133245 // jButton
+    attribute_ref 133373 // jPanel
+    attribute_ref 133501 // jPanel2
+    attribute_ref 133629 // jLabel7
+    attribute_ref 133757 // jPanel3
+    attribute_ref 133885 // jLabel8
+    attribute_ref 134013 // jPanel4
+    attribute_ref 134141 // jLabel9
+    attribute_ref 134269 // jPanel5
+    attribute_ref 134397 // jLabel10
+    attribute_ref 134525 // jPanel6
+    attribute_ref 134653 // jLabel
+    attribute_ref 134781 // jPanel7
+    attribute_ref 134909 // jLabel1
+  hidden_operations
+    operation_ref 151677 // About
+    operation_ref 151805 // initialize
+    operation_ref 151933 // getJButton
+    operation_ref 152061 // getJPanel
+    operation_ref 152189 // getJPanel1
+    operation_ref 152317 // getJPanel2
+    operation_ref 152445 // getJPanel3
+    operation_ref 152573 // getJPanel4
+    operation_ref 152701 // getJPanel5
+    operation_ref 152829 // getJPanel6
+    operation_ref 152957 // getJPanel7
+  xyz 408 442 2000
+  end
+classcanvas 129331 class_ref 130429 // Principal
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 136189 // serialVersionUID
+    attribute_ref 136317 // jPanel
+    attribute_ref 136445 // jJMenuBar
+    attribute_ref 136573 // menuFile
+    attribute_ref 136701 // menuAjuda
+    attribute_ref 136829 // itemSaveImage
+    attribute_ref 136957 // itemSaveFontMetrics
+    attribute_ref 137085 // itemExportToXNA
+    attribute_ref 137213 // toolBar
+    attribute_ref 137341 // jPanel1
+    attribute_ref 137469 // jPanel2
+    attribute_ref 137597 // jPanel3
+    attribute_ref 137725 // botaoNegrito
+    attribute_ref 137853 // menuConfiguracao
+    attribute_ref 137981 // menuItemShowGrid
+    attribute_ref 138109 // menuImageType
+    attribute_ref 138237 // itemImageTypePNG
+    attribute_ref 138365 // itemImageTypeBMP
+    attribute_ref 138493 // menuShadow
+    attribute_ref 138621 // menuShadowVertical
+    attribute_ref 138749 // menuShadowHorizontal
+    attribute_ref 138877 // jRadioButtonMenuItem2
+    attribute_ref 139005 // jRadioButtonMenuItem3
+    attribute_ref 139133 // jRadioButtonMenuItem4
+    attribute_ref 139261 // jRadioButtonShadowVerticalNone
+    attribute_ref 139389 // jRadioButtonShadowVerticalUp
+    attribute_ref 139517 // jRadioButtonShadowVerticalDown
+    attribute_ref 139645 // menuItemUseMetric
+    attribute_ref 139773 // menuCharacterSet
+    attribute_ref 139901 // jRadioButtonMenuItem8
+    attribute_ref 140029 // jRadioButtonMenuItem9
+    attribute_ref 140157 // menuSobre
+    attribute_ref 140285 // menuWebSite
+    attribute_ref 140413 // jPanel4
+    attribute_ref 140541 // menuCreditos
+    attribute_ref 140669 // menuItemAntialias
+    attribute_ref 140797 // menuItemAdjustCharset
+    attribute_ref 140925 // menuAvancado
+    attribute_ref 141053 // menuItemAdjustMetrics
+    attribute_ref 141181 // menuItemMetricsLimit
+    attribute_ref 141309 // jScrollPane
+    attribute_ref 141437 // menuItemUseAlpha
+  hidden_operations
+    operation_ref 154237 // Principal
+    operation_ref 154365 // getFontText
+    operation_ref 154493 // getOptions
+    operation_ref 154621 // getImagePanel
+    operation_ref 154749 // initialize
+    operation_ref 154877 // getJPanel
+    operation_ref 155005 // getComboFonte
+    operation_ref 155133 // getWorkspace
+    operation_ref 155261 // getJJMenuBar
+    operation_ref 155389 // getMenuFile
+    operation_ref 155517 // getMenuAjuda
+    operation_ref 155645 // getItemSaveImage
+    operation_ref 155773 // getItemSaveFontMetrics
+    operation_ref 155901 // getItemExportToXNA
+    operation_ref 156029 // getToolBar
+    operation_ref 156157 // getJPanel1
+    operation_ref 156285 // getComboTamanho
+    operation_ref 156413 // getJPanel2
+    operation_ref 156541 // getJPanel3
+    operation_ref 156669 // getColorGrupo
+    operation_ref 156797 // getBotaoNegrito
+    operation_ref 156925 // getMenuConfiguracao
+    operation_ref 157053 // getMenuItemShowGrid
+    operation_ref 157181 // getMenuImageType
+    operation_ref 157309 // getItemImageTypePNG
+    operation_ref 157437 // getItemImageTypeBMP
+    operation_ref 157565 // getMenuShadow
+    operation_ref 157693 // getMenuShadowVertical
+    operation_ref 157821 // getMenuShadowHorizontal
+    operation_ref 157949 // getJRadioButtonMenuItem2
+    operation_ref 158077 // getJRadioButtonMenuItem3
+    operation_ref 158205 // getJRadioButtonMenuItem4
+    operation_ref 158333 // getjRadioButtonShadowVerticalNone
+    operation_ref 158461 // getjRadioButtonShadowVerticalUp
+    operation_ref 158589 // getjRadioButtonShadowVerticalDown
+    operation_ref 158717 // getMenuItemUseMetric
+    operation_ref 158845 // getMenuItemUseAlpha
+    operation_ref 158973 // getMenuCharacterSet
+    operation_ref 159101 // getJRadioButtonMenuItem8
+    operation_ref 159229 // getJRadioButtonMenuItem9
+    operation_ref 159357 // getMenuSobre
+    operation_ref 159485 // getMenuWebSite
+    operation_ref 159613 // getJPanel4
+    operation_ref 159741 // getComboTexturaSize
+    operation_ref 159869 // getMenuCreditos
+    operation_ref 159997 // getMenuItemAntialias
+    operation_ref 160125 // getMenuItemAdjustCharset
+    operation_ref 160253 // getMenuAvancado
+    operation_ref 160381 // getMenuItemAdjustMetrics
+    operation_ref 160509 // getMenuItemMetricsLimit
+    operation_ref 160637 // getJScrollPane
+  xyz 622 234 2000
+  end
+classcanvas 129459 class_ref 137085 // Credit
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 135037 // serialVersionUID
+    attribute_ref 135165 // jButton
+    attribute_ref 135293 // jPanel
+    attribute_ref 135421 // jPanel4
+    attribute_ref 135549 // jPanel5
+    attribute_ref 135677 // jPanel6
+    attribute_ref 135805 // jLabel
+    attribute_ref 135933 // jLabel9
+    attribute_ref 136061 // jTextArea
+  hidden_operations
+    operation_ref 153085 // Credit
+    operation_ref 153213 // initialize
+    operation_ref 153341 // getJButton
+    operation_ref 153469 // getJPanel
+    operation_ref 153597 // getJPanel4
+    operation_ref 153725 // getJPanel5
+    operation_ref 153853 // getJPanel6
+    operation_ref 153981 // getJTextArea
+    operation_ref 154109 // getImagePanel
+  xyz 130 449 2005
+  end
+classcanvas 129558 class_ref 137213 // JFrame
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightgray
+  xyz 743 181 2004
+  end
+classcanvas 129587 class_ref 137341 // SurfacePanel
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_attributes
+    attribute_ref 142973 // serialVersionUID
+    attribute_ref 143101 // image
+    attribute_ref 143229 // imageGraphic
+  hidden_operations
+    operation_ref 163837 // SurfacePanel
+    operation_ref 163965 // createImage
+    operation_ref 164093 // getImage
+    operation_ref 164221 // drawBackground
+    operation_ref 164349 // drawGrid
+    operation_ref 164477 // drawFont
+    operation_ref 164605 // drawShadow
+    operation_ref 164733 // drawText
+    operation_ref 164861 // prepareWorkArea
+    operation_ref 164989 // paint
+    operation_ref 165117 // update
+  xyz 609 105 3005
+  end
+classcanvas 129843 class_ref 137981 // PanelModel
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_operations
+    operation_ref 163453 // PanelModel
+    operation_ref 163581 // getCharSpace
+    operation_ref 163709 // getWindowSize
+  xyz 447 108 2004
+  end
+relationcanvas 128435 relation_ref 141309 // <realization>
+  from ref 128179 z 1999 to ref 128307
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128563 relation_ref 141693 // <realization>
+  from ref 128051 z 1999 to ref 128307
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128819 relation_ref 138877 // <realization>
+  from ref 128691 z 1999 to ref 128307
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128918 relation_ref 141565 // <generalisation>
+  from ref 128051 z 1999 to ref 128790
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129046 relation_ref 137341 // <generalisation>
+  from ref 129459 z 1999 to ref 128790
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129174 relation_ref 138749 // <generalisation>
+  from ref 128691 z 1999 to ref 128790
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129302 relation_ref 141181 // <generalisation>
+  from ref 128179 z 1999 to ref 128790
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129430 relation_ref 137085 // <generalisation>
+  from ref 129203 z 1999 to ref 128790
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129686 relation_ref 137597 // <generalisation>
+  from ref 129331 z 1999 to ref 129558
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129715 relation_ref 137853 // <unidirectional association>
+  from ref 129331 z 1999 to ref 129587
+  role_a_pos 666 153 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129971 relation_ref 139517 // <realization>
+  from ref 129843 z 1999 to ref 128307
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130099 relation_ref 140029 // <generalisation>
+  from ref 129587 z 1999 to ref 129843
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

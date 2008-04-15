@@ -1,0 +1,12 @@
+class ImagePanel
+!!!131965.java!!!	loadImage(in path : String) : void
+		this.image = new ImageIcon(path).getImage();
+
+		/* Redimensiona a imagem */
+		this.image = this.image.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
+!!!132093.java!!!	paintComponent(inout g : Graphics) : void
+		super.paintComponent(g);
+		
+		if (this.image != null){
+			g.drawImage(image, 0, 0, this);
+		}

@@ -1,0 +1,7 @@
+class FacadeBrowser
+!!!128253.java!!!	openURL(in url : String) : void
+	    //Obtem uma instance de browser
+        Browser browser = BrowserFactory.getBrowser();
+        
+        //Tenta abrir a url no navegador
+        browser.open(url);

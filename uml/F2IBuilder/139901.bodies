@@ -1,0 +1,5 @@
+class FileMetricFilter
+!!!172797.java!!!	isAccept(inout info : FileInfo) : boolean
+        return info.isMetrics();
+!!!172925.java!!!	getDescription() : String
+		return "Metrics Description (.dat)";

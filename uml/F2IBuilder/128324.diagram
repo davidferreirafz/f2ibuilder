@@ -1,0 +1,37 @@
+format 55
+
+classcanvas 128068 class_ref 135677 // LoadApplication
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 63 259 2000
+  end
+classcanvas 128196 class_ref 135933 // OpenJDialog
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 259 47 2000
+  end
+classcanvas 128324 class_ref 136061 // OpenJDialogObserver
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 244 258 2004
+  end
+classcanvas 129988 class_ref 131069 // FontText
+  draw_all_relations default hide_attributes yes hide_operations yes show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 123 466 3005
+  end
+relationcanvas 128452 relation_ref 135805 // <generalisation>
+  from ref 128324 z 1999 to ref 128196
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130116 relation_ref 136189 // <unidirectional association>
+  from ref 129988 z 1999 to point 93 466
+  line 130244 z 1999 to point 93 496
+  line 130372 z 1999 to ref 129988
+  role_a_pos 63 475 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130500 relation_ref 135549 // <unidirectional association>
+  geometry VHV
+  from ref 128068 z 1999 to point 124 412
+  line 131140 z 1999 to point 219 412
+  line 131268 z 1999 to ref 129988
+  role_a_pos 231 443 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

@@ -1,0 +1,22 @@
+class SelectItemTable
+!!!135037.java!!!	SelectItemTable(inout fontText : FontText, inout table : JTable, inout asciiPreview : JLabel, inout formatPreview : JLabel)
+        super(fontText);
+        this.table = table;
+        this.asciiPreview = asciiPreview;
+        this.formatPreview = formatPreview;
+
+!!!135165.java!!!	action() : void
+        int x = table.getSelectedColumn();
+        int y = table.getSelectedRow();
+
+        asciiPreview.setText(getPreview(x,y));
+        
+        display();
+!!!135421.java!!!	display() : void
+        int tamanho = fontText.getFontSize();
+        if (tamanho > 26){
+            tamanho = 26;
+        }
+        
+        formatPreview.setFont(new Font(fontText.getFontName(),Font.PLAIN,tamanho));
+        formatPreview.setText(asciiPreview.getText());

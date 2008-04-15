@@ -1,0 +1,19 @@
+class BrowserLinux
+!!!128509.java!!!	open(in url : String) : boolean
+        boolean open = true;        
+        Runtime rt = Runtime.getRuntime();
+        
+        try {
+            //tenta executar o firefox pelo comando 'firefox'
+            rt.exec("firefox "+url);
+        } catch (IOException e) {
+            //caso não consiga executar pelo comando 'firefox'
+            //tenta executar pelo comando mozilla-firefox
+            try {
+                rt.exec("mozilla-firefox "+url);
+            } catch (IOException e1) {
+                open = false;
+            }
+        }
+        
+        return open;

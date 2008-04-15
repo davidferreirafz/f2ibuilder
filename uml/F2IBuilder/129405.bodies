@@ -1,0 +1,16 @@
+class ColorPanelControl
+!!!130685.java!!!	ColorPanelControl()
+        setTitle("Choose Color");
+!!!130813.java!!!	setTitle(in title : String) : void
+        this.title = title;
+!!!130941.java!!!	getTitle() : String
+        return title;
+!!!131069.java!!!	mouseClicked(inout e : MouseEvent) : void
+       
+        if (e.getComponent() instanceof ColorPanel) {
+            execute(e.getComponent());
+        }
+!!!131197.java!!!	execute(inout component : Component) : void
+        Color cor = JColorChooser.showDialog(component,getTitle(),component.getForeground());
+
+        component.setBackground(cor);

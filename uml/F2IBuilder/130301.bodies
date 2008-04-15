@@ -1,0 +1,15 @@
+class F2IBuilderMain
+!!!132861.java!!!	criarJanela() : void
+		janela = new Principal();
+		Dimension dim = janela.getToolkit().getScreenSize();      
+		int x = (int) (dim.getWidth()  - janela.getSize().getWidth() )/2;
+		int y = (int) (dim.getHeight() - janela.getSize().getHeight())/2;
+		janela.setLocation(x,y);
+		janela.setVisible(true);
+!!!132989.java!!!	main(in args : String) : void
+		try {
+			F2IBuilderMain executar = new F2IBuilderMain();
+			executar.criarJanela();
+		} catch (Exception e){
+			 JOptionPane.showMessageDialog(null,"F2IBuilder: "+e.getMessage());
+		}

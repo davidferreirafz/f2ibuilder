@@ -1,0 +1,27 @@
+class ShadowEffect
+!!!167933.java!!!	ShadowEffect(in horizontal : int, in vertical : int)
+        super(horizontal, vertical);
+!!!168061.java!!!	adjustShadow() : Dimension
+        Dimension ajuste = new Dimension(horizontal(),vertical());
+        
+        if (ajuste.width<0){
+            ajuste.width=0;
+        }
+
+        if (ajuste.height<0){
+            ajuste.height=0;
+        }        
+        
+        return ajuste;
+!!!168189.java!!!	adjustFont() : Dimension
+        Dimension ajuste = new Dimension(0,0);
+        
+        if (horizontal()<0){
+            ajuste.width=horizontal()*(-1);
+        }
+
+        if (vertical()<0){
+            ajuste.height=vertical()*(-1);
+        }        
+        
+        return ajuste;

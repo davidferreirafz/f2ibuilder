@@ -1,0 +1,32 @@
+class Counter
+!!!174077.java!!!	Counter(in maxCount : int)
+        this.maxCount = maxCount;    
+        reset();
+!!!174205.java!!!	Counter(in line : int, in column : int)
+        this(line*column);
+!!!174333.java!!!	reset() : void
+        this.column=0;
+        this.line=0;      
+        i=0;
+!!!174461.java!!!	getIndice() : int
+        return i;
+!!!174589.java!!!	toString() : String
+        return  "Counter ("+line+","+column+"):"+i;
+!!!174717.java!!!	next() : boolean
+        i++;
+        
+        if (i<maxCount){
+            return true;
+        } else {
+            i=maxCount;
+            return false;
+        }
+!!!174845.java!!!	column() : int
+    
+        column = i % 16;
+        
+        return column;
+!!!174973.java!!!	line() : int
+        line = (i / 16);
+        
+        return line;

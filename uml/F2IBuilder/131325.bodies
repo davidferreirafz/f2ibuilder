@@ -1,0 +1,23 @@
+class SaveItemTable
+!!!134397.java!!!	SaveItemTable(inout fontText : FontText, inout table : JTable)
+        super(fontText);
+        this.table = table;
+!!!134525.java!!!	action() : void
+        int caracter=0;
+        
+        fontText.beginModify();
+        
+        for (int l=0; l<16; l++){
+            for (int c=0;c<16;c++){               
+                Object o = table.getModel().getValueAt(l,c);
+                
+                if (o!=null){
+                    int valor = Integer.parseInt((String) o);
+                    
+                    setValue(caracter,valor);
+                }
+                caracter++;
+            }
+        }
+        
+        fontText.endModify();

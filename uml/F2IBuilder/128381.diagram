@@ -1,0 +1,31 @@
+format 55
+
+classcanvas 128125 class_ref 129021 // Observable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 345 183 2000
+  end
+classcanvas 128253 class_ref 128893 // Observer
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 30 195 2004
+  end
+classcanvas 128509 class_ref 128765 // IObservable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 115 34 2004
+  end
+relationcanvas 128381 relation_ref 128509 // <unidirectional association>
+  geometry HVH
+  from ref 128125 z 1999 stereotype "<<List>>" xyz 259 272 3000 to point 239 272
+  line 128893 z 1999 to point 239 230
+  line 129021 z 1999 to ref 128253
+  role_a_pos 148 210 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128637 relation_ref 128381 // <realization>
+  geometry VH
+  from ref 128125 z 1999 to point 410 79
+  line 128765 z 1999 to ref 128509
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

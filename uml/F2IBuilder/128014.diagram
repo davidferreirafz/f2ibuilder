@@ -1,0 +1,31 @@
+format 55
+
+classcanvas 128253 class_ref 128125 // BrowserFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 25 22 2004
+  end
+classcanvas 129038 class_ref 128381 // FacadeBrowser
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 90 179 2004
+  end
+classcanvas 129550 class_ref 134909 // OpenWebSite
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  hidden_operations
+    operation_ref 141821 // mouseClicked
+    operation_ref 141949 // actionPerformed
+  xyz 94 357 2004
+  end
+relationcanvas 129166 relation_ref 142973 // <dependency>
+  geometry VHV
+  from ref 129038 z 1999 to point 141 135
+  line 129294 z 1999 to point 109 135
+  line 129422 z 1999 to ref 128253
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129678 relation_ref 128102 // <dependency>
+  from ref 129550 z 1999 to ref 129038
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

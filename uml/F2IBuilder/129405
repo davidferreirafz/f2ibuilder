@@ -1,0 +1,364 @@
+format 55
+"color" // src::com::wordpress::dukitan::componentes::ui::color
+  revision 1
+  modified_by 125 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "com/wordpress/dukitan/componentes/ui/color"
+  java_package "com.wordpress.dukitan.componentes.ui.color"
+  classview 128509 "color"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 129149 "ColorPanel"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe para Criar um painel para seleção de cores
+ 
+Design Pattern: GoF - Observer
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 128637 // <generalisation>
+	relation 128637 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128637 // <generalisation>
+	  b parent class_ref 129277 // JPanel
+      end
+
+      classrelation 128765 // <realization>
+	relation 128765 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128765 // <realization>
+	  b parent class_ref 128765 // IObservable
+      end
+
+      attribute 128253 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  3411829393903616525L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 128893 // control (<unidirectional association>)
+	relation 128893 --->
+	  a role_name "control" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128893 // control (<unidirectional association>)
+	  b parent class_ref 129405 // ColorPanelControl
+      end
+
+      classrelation 129021 // listObserver (<unidirectional association>)
+	relation 129021 --->
+	  stereotype "List"
+	  a role_name "listObserver" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 129021 // listObserver (<unidirectional association>)
+	  b parent class_ref 128893 // Observer
+      end
+
+      operation 129917 "ColorPanel"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor
+"
+      end
+
+      operation 130045 "setTitulo"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "titulo" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Título da Janela de Dialog para seleção de cores
+@param titulo
+"
+      end
+
+      operation 130173 "desregister"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 130301 "register"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "observer" type class_ref 128893 // Observer
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 130429 "setBackground"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "bg" explicit_type "Color"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 130557 "updateObserver"
+	protected explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Notifica os Observers
+"
+      end
+    end
+
+    class 129405 "ColorPanelControl"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Classe de Controle para ColorPanel, encapsula as ações de seleção de cores
+e muda a cor de ColorPanel para a cor selecionada.
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 129149 // <generalisation>
+	relation 129149 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129149 // <generalisation>
+	  b parent class_ref 129533 // MouseAdapter
+      end
+
+      attribute 128381 "title"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 130685 "ColorPanelControl"
+	package explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Constutor
+"
+      end
+
+      operation 130813 "setTitle"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "title" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Informa título da janela de dialog
+@param title título da janela
+"
+      end
+
+      operation 130941 "getTitle"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna o título da janela
+@return título da janela
+"
+      end
+
+      operation 131069 "mouseClicked"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "MouseEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 131197 "execute"
+	protected explicit_return_type "void"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Executa a operação de abrir a caixa de dialog e selecionar a cor.
+@param component
+"
+      end
+    end
+
+    classdiagram 128765 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 128509 "color"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 129149 "ColorPanel"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+import javax.swing.JPanel;
+import com.wordpress.dukitan.componentes.gof.observer.IObservable;
+import com.wordpress.dukitan.componentes.gof.observer.Observer;
+${definition}"
+      associated_classes
+	class_ref 129149 // ColorPanel
+      end
+    end
+
+    artifact 129277 "ColorPanelControl"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JColorChooser;
+${definition}"
+      associated_classes
+	class_ref 129405 // ColorPanelControl
+      end
+    end
+  end
+end

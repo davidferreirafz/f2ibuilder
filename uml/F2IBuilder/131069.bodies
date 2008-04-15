@@ -1,0 +1,146 @@
+class FontText
+!!!145789.java!!!	getInstance() : FontText
+        if (instance == null){
+            instance = new FontText();
+        }
+        
+        return instance;
+!!!145917.java!!!	FontText()
+        workCharset = new int[256];
+        workMetrics = new int[256];
+        
+        panel = new JPanel();
+        fontName   = "Arial";
+        fontStyle  = Font.PLAIN;
+        fontSize = 14;        
+        
+        dimensionDefault = new Dimension();
+        limit = new Limit(0,dimensionDefault.width);
+        
+        resetCharset();        
+!!!146045.java!!!	make() : void
+        apllyNewFont();
+        metricsDefault();
+        applyMetricsLimit();
+        
+        updateObserver();
+!!!146173.java!!!	apllyNewFont() : void
+        font = new Font(fontName,fontStyle,fontSize);
+        
+        panel.setFont(font);
+!!!146301.java!!!	metricsDefault() : void
+        originalMetrics=panel.getFontMetrics(font).getWidths();
+        
+        dimensionDefault.width=0;
+        
+        for (int i=0; i<256; i++){  
+            if (originalMetrics[i]>dimensionDefault.width){
+                dimensionDefault.width=originalMetrics[i];
+            }
+        }   
+        
+        dimensionDefault.height=panel.getFontMetrics(font).getHeight();
+        
+        if (dimensionDefault.height<=0){
+            dimensionDefault.height=dimensionDefault.width;
+        }
+        
+        limit.max=dimensionDefault.width;
+!!!146429.java!!!	applyMetricsLimit() : void
+        workMetrics=originalMetrics.clone();
+        
+        for (int i=0; i<256; i++){              
+            if (workMetrics[i]<limit.min){
+                workMetrics[i]=limit.min;
+            } else if (workMetrics[i]>limit.max){
+                workMetrics[i]=limit.max;
+            }
+        }
+        
+        dimensionDefault.width=limit.max;
+!!!146557.java!!!	resetMetrics() : void
+        if (originalMetrics!=null){
+            workMetrics=originalMetrics.clone();
+            searchLimits();
+        }
+
+        updateObserver();
+!!!146685.java!!!	resetCharset() : void
+        for (int i=0; i<256; i++){
+            workCharset[i]=i;
+        }
+        
+        resetMetrics();
+!!!146813.java!!!	getCharacter(in i : int) : String
+        return String.valueOf((char)workCharset[i]);
+!!!146941.java!!!	getCharacterNumber(in i : int) : int
+        return workCharset[i];
+!!!147069.java!!!	setCharacter(in i : int, in valor : int) : void
+       
+        workCharset[i]=valor;
+        workMetrics[i]=workMetrics[valor];
+        
+        updateObserver();
+!!!147197.java!!!	setCharacterMetric(in i : int, in valor : int) : void
+        workMetrics[i]=valor;
+        searchLimits();
+        
+        updateObserver();       
+!!!147325.java!!!	setMetrics(in metricas : int) : void
+        originalMetrics=metricas;    
+        searchLimits();
+        applyMetricsLimit();        
+        
+        updateObserver();       
+!!!147453.java!!!	setLimits(in min : int, in max : int) : void
+        limit.min = min;
+        limit.max = max;
+        
+        applyMetricsLimit();
+        updateObserver();
+!!!147581.java!!!	searchLimits() : void
+        limit.max=0; limit.min=1000;
+        
+        for (int i=0; i<256; i++){
+            if (workMetrics[i]>limit.max){
+                limit.max=workMetrics[i];
+            } else if (workMetrics[i]<limit.min){
+                limit.min=workMetrics[i];
+            }
+        }
+        
+        dimensionDefault.width=limit.max;        
+!!!147709.java!!!	getMaiorLargura() : int
+        return limit.max;
+!!!147837.java!!!	getMenorLargura() : int
+        return limit.min;
+!!!147965.java!!!	getFont() : Font
+        return font;
+!!!148093.java!!!	setFontSize(in size : int) : void
+        this.fontSize=size;
+        
+        make();
+!!!148221.java!!!	getFontSize() : int
+        return fontSize;
+!!!148349.java!!!	setFontName(in fontName : String) : void
+        this.fontName=fontName;
+        
+        make();
+!!!148477.java!!!	getFontName() : String
+        return fontName;
+!!!148605.java!!!	getCharacterMetric(in i : int) : int
+        return workMetrics[i];
+!!!148733.java!!!	setBold(inout value : boolean) : void
+        if (value){
+            fontStyle=Font.BOLD;
+        } else {
+            fontStyle=Font.PLAIN;
+        }
+        
+        make();
+!!!148861.java!!!	getDefaultCharDimension() : Dimension
+        return (Dimension) dimensionDefault.clone();
+!!!148989.java!!!	getFontAscent() : int
+        return panel.getFontMetrics(font).getAscent();
+!!!149117.java!!!	getDefaultID() : String
+        return getFontName()+"."+getFontSize();

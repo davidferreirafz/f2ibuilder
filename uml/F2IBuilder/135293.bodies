@@ -1,0 +1,5 @@
+class SaveMetric
+!!!143741.java!!!	SaveMetric(inout fontText : FontText, inout table : JTable)
+        super(fontText,table);       
+!!!143869.java!!!	setValue(in caracter : int, in value : int) : void
+        fontText.setCharacterMetric(caracter,value);

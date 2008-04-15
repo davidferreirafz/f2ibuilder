@@ -1,0 +1,8 @@
+class BackgroundApha
+!!!165885.java!!!	draw(inout graphics : Graphics, inout color : Color, inout dimension : Dimension) : void
+        Graphics2D g2 = (Graphics2D) graphics;
+        AlphaComposite ac =AlphaComposite.getInstance(AlphaComposite.SRC,1.0f);         
+        g2.setComposite(ac);
+!!!166013.java!!!	getColorChannel() : int
+        //Caso a imagem seja PNG, usar RGB com Alpha
+        return BufferedImage.TYPE_INT_ARGB;

@@ -1,0 +1,8 @@
+class SelectSizeCommand
+!!!138749.java!!!	SelectSizeCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!138877.java!!!	action(in value : String) : void
+        if (!value.equals("")){
+            int size = Integer.parseInt(value); 
+            fontText.setFontSize(size);
+        }

@@ -1,0 +1,43 @@
+class ColorGroup
+!!!173053.java!!!	ColorGroup()
+		setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Color", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), null));		
+		add(getPanelFontColor(), null);
+		add(getPanelFontShadowColor(), null);
+		add(getPanelBackgroundColor(), null);
+!!!173181.java!!!	register(inout observer : Observer) : void
+	    panelFontColor.register(observer);
+	    panelFontShadowColor.register(observer);
+	    panelBackgroundColor.register(observer);
+!!!173309.java!!!	getCorFundo() : Color
+		return panelBackgroundColor.getBackground();
+!!!173437.java!!!	getCorSombra() : Color
+		return panelFontShadowColor.getBackground();
+!!!173565.java!!!	getCorFonte() : Color
+		return panelFontColor.getBackground();
+!!!173693.java!!!	getPanelFontColor() : JPanel
+		if (panelFontColor == null) {
+			panelFontColor = new ColorPanel();
+			panelFontColor.setBackground(java.awt.Color.white);
+			panelFontColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelFontColor.setToolTipText("Font Color");
+			panelFontColor.setTitulo("Choose Font Color");
+		}
+		return panelFontColor;		
+!!!173821.java!!!	getPanelFontShadowColor() : JPanel
+		if (panelFontShadowColor == null) {
+			panelFontShadowColor = new ColorPanel();
+			panelFontShadowColor.setBackground(java.awt.Color.DARK_GRAY);
+			panelFontShadowColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelFontShadowColor.setToolTipText("Shadow Color");
+			panelFontShadowColor.setTitulo("Choose Shadow Color");
+		}
+		return panelFontShadowColor;
+!!!173949.java!!!	getPanelBackgroundColor() : JPanel
+		if (panelBackgroundColor == null) {
+			panelBackgroundColor = new ColorPanel();
+			panelBackgroundColor.setBackground(java.awt.Color.black);
+			panelBackgroundColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+			panelBackgroundColor.setToolTipText("Background Color");
+			panelBackgroundColor.setTitulo("Choose Background Color");		
+		}
+		return panelBackgroundColor;

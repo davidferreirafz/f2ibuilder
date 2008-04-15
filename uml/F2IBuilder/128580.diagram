@@ -1,0 +1,320 @@
+format 55
+
+classcanvas 128013 class_ref 128653 // ActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 439 297 3005
+  end
+classcanvas 128068 class_ref 137597 // CharsetMap
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language java show_context_mode no auto_label_position default show_infonote default shadow default
+  xyz 200 458 2004
+  end
+classcanvas 128102 class_ref 135037 // MediatorView
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 129 706 3005
+  end
+classcanvas 128196 class_ref 131069 // FontText
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 650 336 3005
+  end
+classcanvas 128742 class_ref 132221 // IMediatorView
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 485 786 3010
+  end
+classcanvas 128781 class_ref 128525 // AboutActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 327 7 2018
+  end
+classcanvas 129165 class_ref 128781 // CreditActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 328 108 2023
+  end
+classcanvas 129732 class_ref 130685 // FontTextAction
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightmagenta
+  xyz 557 526 2004
+  end
+classcanvas 130116 class_ref 131965 // SelectCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 917 567 2004
+  end
+classcanvas 130372 class_ref 131581 // SelectItemTable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 645 631 2004
+  end
+classcanvas 130756 class_ref 131325 // SaveItemTable
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 510 631 2009
+  end
+packagecanvas 131140 
+  package_ref 130557 // view
+  name_in_tab yes show_context_mode java_package color verylightgray  xyzwh 36 48 1994 270 473
+classcanvas 131213 class_ref 128397 // MetricsActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightorange
+  xyz 124 619 2004
+  end
+classcanvas 131524 class_ref 139133 // MetricsLimit
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 120 385 2004
+  end
+classcanvas 131780 class_ref 139261 // MetricsMap
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 43 455 2010
+  end
+classcanvas 132237 class_ref 128269 // CharsetActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightorange
+  xyz 290 540 2004
+  end
+classcanvas 133005 class_ref 128909 // PrincipalActionFactory
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color verylightorange
+  xyz 323 203 2028
+  end
+classcanvas 134852 class_ref 132093 // Colleague
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightred
+  xyz 769 707 2004
+  end
+classcanvas 135876 class_ref 131837 // ButtonCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightmagenta
+  xyz 1035 473 2004
+  end
+classcanvas 136132 class_ref 132605 // CheckBoxCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightmagenta
+  xyz 1192 473 2009
+  end
+classcanvas 136470 class_ref 130429 // Principal
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 100 261 2004
+  end
+classcanvas 136854 class_ref 136829 // About
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 133 122 2000
+  end
+classcanvas 136982 class_ref 137085 // Credit
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  xyz 200 124 2005
+  end
+packagecanvas 137366 
+  package_ref 131197 // model
+  name_in_tab yes show_context_mode java_package color lightgreen  xyzwh 550 50 1994 397 421
+classcanvas 137412 class_ref 133245 // ComboboxCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightmagenta
+  xyz 1039 630 2004
+  end
+classcanvas 138692 class_ref 133757 // RadioCommand
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightmagenta
+  xyz 1040 709 2004
+  end
+classcanvas 144324 class_ref 132477 // Options
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  color lightblue
+  xyz 649 154 3005
+  end
+relationcanvas 128230 relation_ref 134781 // <unidirectional association>
+  from ref 128102 z 1999 to point 342 698
+  line 128358 z 1999 to point 342 732
+  line 128486 z 1999 to ref 128102
+  role_a_pos 331 712 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128614 relation_ref 138621 // <unidirectional association>
+  geometry HVH unfixed
+  from ref 136470 z 1999 to point 15 279
+  line 130662 z 1999 to point 15 735
+  line 130790 z 1999 to ref 128102
+  role_a_pos 65 715 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128708 relation_ref 139005 // <unidirectional association>
+  geometry VH
+  from ref 128068 z 1999 to point 240 365
+  line 129686 z 1999 to ref 128196
+  role_a_pos 591 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128870 relation_ref 130813 // <unidirectional association>
+  geometry HVr
+  from ref 134852 z 1999 to point 832 815
+  line 130150 z 1999 to ref 128742
+  role_a_pos 595 795 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128909 relation_ref 129293 // <generalisation>
+  geometry HV
+  from ref 128781 z 1999 to point 486 25
+  line 139533 z 1999 to ref 128013
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 128998 relation_ref 134653 // <realization>
+  geometry VH
+  from ref 128102 z 1999 to point 223 815
+  line 130918 z 1999 to ref 128742
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129037 relation_ref 130829 // <dependency>
+  geometry VH
+  from ref 136854 z 1999 to point 155 25
+  line 136205 z 1999 to ref 128781
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129293 relation_ref 129421 // <generalisation>
+  geometry HV
+  from ref 129165 z 1999 to point 486 126
+  line 136845 z 1999 to ref 128013
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129421 relation_ref 130957 // <dependency>
+  geometry HVH
+  from ref 136982 z 2004 to point 286 142
+  line 139661 z 2004 to point 286 126
+  line 139789 z 2004 to ref 129165
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 129860 relation_ref 130045 // <unidirectional association>
+  geometry VH
+  from ref 129732 z 1999 to point 625 365
+  line 131302 z 1999 to ref 128196
+  role_a_pos 591 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130244 relation_ref 131325 // <unidirectional association>
+  geometry HVH
+  from ref 130116 z 1999 to point 879 585
+  line 128534 z 1999 to point 879 365
+  line 128662 z 1999 to ref 128196
+  role_a_pos 856 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130500 relation_ref 130557 // <generalisation>
+  geometry VHr
+  from ref 130372 z 1999 to point 625 649
+  line 130966 z 1999 to ref 129732
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 130884 relation_ref 130301 // <generalisation>
+  geometry HV
+  from ref 130756 z 1999 to point 625 649
+  line 130701 z 1999 to ref 129732
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131341 relation_ref 130061 // <generalisation>
+  geometry HV
+  from ref 131213 z 1999 to point 486 648
+  line 135949 z 1999 to ref 128013
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131652 relation_ref 141437 // <unidirectional association>
+  geometry VH
+  from ref 131524 z 1999 to point 162 365
+  line 129558 z 1999 to ref 128196
+  role_a_pos 591 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131908 relation_ref 141821 // <unidirectional association>
+  geometry VH
+  from ref 131780 z 1999 to point 82 365
+  line 129430 z 1999 to ref 128196
+  role_a_pos 591 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 131981 relation_ref 129933 // <dependency>
+  geometry VH
+  from ref 131780 z 1999 to point 82 648
+  line 139405 z 1999 to ref 131213
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 132109 relation_ref 130701 // <dependency>
+  geometry VHV
+  from ref 131524 z 1999 to point 162 520
+  line 135437 z 1999 to point 199 520
+  line 135565 z 1999 to ref 131213
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 132749 relation_ref 129677 // <generalisation>
+  geometry HV
+  from ref 132237 z 1999 to point 486 569
+  line 139277 z 1999 to ref 128013
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 132877 relation_ref 129165 // <dependency>
+  geometry VH
+  from ref 128068 z 1999 to point 240 569
+  line 136077 z 1999 to ref 132237
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 133133 relation_ref 129549 // <generalisation>
+  geometry VH
+  from ref 133005 z 1999 to point 398 315
+  line 136461 z 1999 to ref 128013
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 133261 relation_ref 131341 // <dependency>
+  geometry HVH
+  from ref 136470 z 2003 to point 243 279
+  line 135693 z 2003 to point 243 232
+  line 135821 z 2003 to ref 133005
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 134980 relation_ref 130941 // <generalisation>
+  geometry VHr
+  from ref 130116 z 1999 to point 832 585
+  line 133389 z 1999 to ref 134852
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136004 relation_ref 131453 // <generalisation>
+  geometry HVr
+  from ref 135876 z 1999 to point 1103 585
+  line 134166 z 1999 to ref 130116
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136086 relation_ref 136189 // <unidirectional association>
+  from ref 128196 z 3004 to point 663 315
+  line 136214 z 3004 to point 699 299
+  line 136342 z 3004 to ref 128196
+  role_a_pos 729 313 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136260 relation_ref 131709 // <generalisation>
+  geometry HVr
+  from ref 136132 z 1999 to point 1260 585
+  line 134294 z 1999 to ref 130116
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136598 relation_ref 138365 // <unidirectional association>
+  geometry VH
+  from ref 136470 z 1999 to point 132 183
+  line 137238 z 1999 to ref 144324
+  role_a_pos 596 163 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 136726 relation_ref 138493 // <unidirectional association>
+  geometry VH
+  from ref 136470 z 1999 to point 132 365
+  line 137110 z 1999 to ref 128196
+  role_a_pos 591 345 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 137540 relation_ref 132349 // <generalisation>
+  geometry VHr
+  from ref 137412 z 1999 to point 972 659
+  line 133645 z 1999 to ref 130116
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 138820 relation_ref 132861 // <generalisation>
+  geometry VHr
+  from ref 138692 z 1999 to point 972 738
+  line 133517 z 1999 to ref 130116
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 144452 relation_ref 136957 // <unidirectional association>
+  from ref 144324 z 1999 to point 866 162
+  line 137741 z 1999 to point 863 195
+  line 144708 z 1999 to ref 144324
+  role_a_pos 855 173 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+relationcanvas 144964 relation_ref 131197 // <unidirectional association>
+  geometry VHV unfixed
+  from ref 130116 z 1999 to point 972 248
+  line 128790 z 1999 to point 745 248
+  line 128918 z 1999 to ref 144324
+  role_a_pos 757 224 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end

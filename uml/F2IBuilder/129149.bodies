@@ -1,0 +1,24 @@
+class ColorPanel
+!!!129917.java!!!	ColorPanel()
+        listObserver = new ArrayList<Observer>();
+        
+		control = new ColorPanelControl();
+		
+		addMouseListener(control);
+!!!130045.java!!!	setTitulo(in titulo : String) : void
+    	control.setTitle(titulo);
+!!!130173.java!!!	desregister(inout observer : Observer) : void
+        listObserver.remove(observer);
+!!!130301.java!!!	register(inout observer : Observer) : void
+        listObserver.add(observer);
+!!!130429.java!!!	setBackground(inout bg : Color) : void
+        super.setBackground(bg);
+        updateObserver();
+!!!130557.java!!!	updateObserver() : void
+        if ((listObserver!=null)&&(!listObserver.isEmpty())){
+            ListIterator<Observer> i= listObserver.listIterator(0);
+        
+            while (i.hasNext()){
+                i.next().update();
+            }
+        }

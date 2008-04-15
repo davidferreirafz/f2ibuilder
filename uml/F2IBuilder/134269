@@ -1,0 +1,263 @@
+format 55
+"dialog" // src::net::sourceforge::f2ibuilder::components::dialog
+  revision 3
+  modified_by 14 "david"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default
+  
+  java_dir "net/sourceforge/f2ibuilder/components/dialog"
+  java_package "net.sourceforge.f2ibuilder.components.dialog"
+  classview 132221 "dialog"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default draw_all_relations default shadow default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default
+    class 139389 "FileDialog"
+      visibility public stereotype "GoF - Singleton"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Caixa de Dialogo para salvar os arquivos.
+Esta classe suporte as opções de salvar a imagem e a métrica das fontes.
+
+Designer Pattern: Singleton
+
+@author David Ferreira - davidferreira.fz@gmail.com
+"
+      classrelation 141949 // instance (<unidirectional association>)
+	relation 141949 --->
+	  a role_name "instance" class_relation private
+	    comment "instância única da classe
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 141949 // instance (<unidirectional association>)
+	  b parent class_ref 139389 // FileDialog
+      end
+
+      attribute 146301 "dialogImagem"
+	private explicit_type "JFileChooser"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "Caixas de dialogo para salvar
+"
+      end
+
+      attribute 146429 "dialogMetrica"
+	private explicit_type "JFileChooser"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 146557 "imageFilePath"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	comment "Caminhos dos arquivos
+"
+      end
+
+      attribute 146685 "metricFilePath"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 171517 "FileDialog"
+	private explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Construtor privado para implementação do Singleton
+"
+      end
+
+      operation 171645 "getInstance"
+	class_operation public return_type class_ref 139389 // FileDialog
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna a instância de FileDialog.
+@return instância de FileDialog
+"
+      end
+
+      operation 171773 "showSaveDialogImage"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param inout name "componente" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Exibe a caixa de dialogo para salvar a imagem.
+@param componente 
+@return true em caso de sucesso
+"
+      end
+
+      operation 171901 "getFilePathImage"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna o caminho da imagem 
+@return caminho do arquivo
+"
+      end
+
+      operation 172029 "showSaveDialogMetric"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param inout name "componente" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Exibe a caixa de dialogo para salvar a imagem.
+@param componente
+@return true em caso de sucesso
+"
+      end
+
+      operation 172157 "getFilePathMetric"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna o caminho do arquivo de métricas.
+@return caminho do arquivo
+"
+      end
+
+      classrelation 143357 // <dependency>
+	relation 143357 -_->
+	  a package
+	    classrelation_ref 143357 // <dependency>
+	  b parent class_ref 139773 // FileImageFilter
+      end
+
+      classrelation 143485 // <dependency>
+	relation 143485 -_->
+	  a package
+	    classrelation_ref 143485 // <dependency>
+	  b parent class_ref 139901 // FileMetricFilter
+      end
+    end
+
+    classdiagram 129021 "classes"
+      draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
+      size A4
+    end
+  end
+
+  deploymentview 131709 "dialog"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default
+    artifact 137725 "FileDialog"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Component;
+import java.io.File;
+import javax.swing.JFileChooser;
+import net.sourceforge.f2ibuilder.components.dialog.filter.FileImageFilter;
+import net.sourceforge.f2ibuilder.components.dialog.filter.FileMetricFilter;
+${definition}"
+      associated_classes
+	class_ref 139389 // FileDialog
+      end
+    end
+  end
+
+  package_ref 134397 // filter
+end

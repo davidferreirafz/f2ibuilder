@@ -1,0 +1,5 @@
+class ShowGridCommand
+!!!137085.java!!!	ShowGridCommand(inout options : Options, inout fontText : FontText)
+        super(options,fontText);
+!!!137213.java!!!	action(inout checkbox : JCheckBoxMenuItem) : void
+        options.setGrid(checkbox.getState());

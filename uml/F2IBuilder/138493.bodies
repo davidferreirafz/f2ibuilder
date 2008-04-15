@@ -1,0 +1,7 @@
+class BackgroundFill
+!!!166141.java!!!	draw(inout graphics : Graphics, inout color : Color, inout dimension : Dimension) : void
+        graphics.setColor(color);
+        graphics.fillRect(0,0,dimension.width, dimension.height);
+!!!166269.java!!!	getColorChannel() : int
+        //Padrão é usar RGB
+        return BufferedImage.TYPE_INT_RGB;

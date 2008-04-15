@@ -1,0 +1,23 @@
+class ComboBox
+!!!131325.java!!!	existeItem(in novoItem : String) : boolean
+		boolean achou = false;
+		String item = null;
+		int total = getItemCount();
+
+		for (int i=0; i<total; i++){
+			item = getItemAt(i).toString();
+			if (item.equalsIgnoreCase(novoItem)){
+				achou = true;
+			}
+		}
+		
+		return achou;
+!!!131453.java!!!	addItem(inout item : Object) : void
+    	if ((item!=null)&&(existeItem(item.toString())==false)){
+        	super.addItem(item);
+    	}
+!!!131581.java!!!	setItens(inout lista : List) : void
+		Iterator i =lista.iterator();
+		while(i.hasNext()){
+			addItem((String) i.next());
+		}
