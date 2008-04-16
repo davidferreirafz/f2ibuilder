@@ -57,7 +57,7 @@ relationcanvas 128029 relation_ref 136957 // <unidirectional association>
   from ref 128947 z 3004 to point 671 121
   line 128157 z 3004 to point 671 151
   line 128285 z 3004 to ref 128947
-  role_a_pos 641 131 3000 no_role_b
+  role_a_pos 641 130 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128307 relation_ref 139389 // <generalisation>
   geometry VHV
@@ -70,7 +70,7 @@ relationcanvas 128413 relation_ref 136189 // <unidirectional association>
   from ref 129587 z 3009 to point 220 106
   line 128541 z 3009 to point 220 136
   line 128669 z 3009 to ref 129587
-  role_a_pos 190 116 3000 no_role_b
+  role_a_pos 190 115 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128563 relation_ref 140029 // <generalisation>
   geometry VHV
