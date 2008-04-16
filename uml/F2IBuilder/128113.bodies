@@ -1,0 +1,32 @@
+class RadioGroup
+!!!128113.java!!!	RadioGroup()
+        imageTypeGroup = new ButtonGroup();
+        
+        table = new HashMap<String,JRadioButtonMenuItem>();
+!!!128241.java!!!	add(inout item : JMenuItem) : JMenuItem
+        table.put(item.getName(), (JRadioButtonMenuItem) item);
+        imageTypeGroup.add(item);
+        
+        return super.add(item);
+!!!128369.java!!!	remove(inout item : JMenuItem) : void
+        table.remove(item.getName());
+        super.remove(item);
+!!!128497.java!!!	setSelected(in key : String) : void
+        if (table.containsKey(key)){
+            table.get(key).setSelected(true);            
+        }
+!!!128625.java!!!	getSelected() : String
+        String key = "";
+        
+        Iterator<Entry<String, JRadioButtonMenuItem>> it = table.entrySet().iterator();
+
+        while (it.hasNext()) {
+            
+            Entry<String, JRadioButtonMenuItem> a = it.next();
+            
+            if (a.getValue().isSelected()){
+                key = a.getKey();
+            }
+        }    
+        
+        return key;

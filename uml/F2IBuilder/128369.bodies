@@ -1,0 +1,89 @@
+class XMLFile
+!!!128753.java!!!	XMLFile(inout file : File)
+        this.file=file;
+!!!128881.java!!!	open() : void
+        SAXBuilder sax = new SAXBuilder();  
+        
+        document = sax.build(file);
+
+        
+        elementoRaiz = document.getRootElement();  
+!!!129009.java!!!	save() : void
+        Format format = Format.getPrettyFormat().setEncoding("UTF-8");  
+
+        XMLOutputter xout = new XMLOutputter(format);
+
+        String text = xout.outputString(document);
+
+        FileWriter writer = new FileWriter(file);
+        writer.write(text);
+        writer.close();
+!!!129137.java!!!	createRoot(in name : String) : Element
+        elementoRaiz = new Element(name);
+        
+        document = new Document();  
+        document.setRootElement(elementoRaiz);  
+        
+        return elementoRaiz;        
+!!!129265.java!!!	createElement(inout parent : Element, in name : String) : Element
+        Element element = new Element(name);
+        parent.addContent(element);
+        
+        return element;
+!!!129393.java!!!	createElement(inout parente : Element, in name : String, inout value : boolean) : Element
+        
+        return createElement(parente,name,String.valueOf(value));
+!!!129521.java!!!	createElement(inout parent : Element, in name : String, in value : int) : Element
+        
+        return createElement(parent,name,String.valueOf(value));
+!!!129649.java!!!	createElement(inout parent : Element, in name : String, in value : String) : Element
+        Element element = createElement(parent,name);
+        setValue(element,value);
+        
+        return element; 
+!!!129777.java!!!	setValue(inout element : Element, inout value : boolean) : void
+        setValue(element,String.valueOf(value));
+!!!129905.java!!!	setValue(inout element : Element, in value : int) : void
+        setValue(element,String.valueOf(value));
+!!!130033.java!!!	setValue(inout element : Element, in value : String) : void
+        element.setText(value);
+!!!130161.java!!!	getBoolean(in parent : String, in tag : String) : boolean
+        return Boolean.parseBoolean(getString(parent,tag));
+!!!130289.java!!!	getInt(in parent : String, in tag : String) : int
+        return Integer.parseInt(getString(parent,tag));
+!!!130417.java!!!	getString(in parent : String, in tag : String) : String
+        String value = "";
+        
+        List listaRaiz = elementoRaiz.getChildren(parent);
+        Iterator itRaiz = listaRaiz.iterator();
+        
+        if(itRaiz.hasNext()){           
+            Element  elemento = (Element)itRaiz.next();
+
+            value = elemento.getChildText(tag);
+        }
+
+        return value;
+!!!130545.java!!!	getBoolean(in parent : String, in tag : String, in atributo : String) : boolean
+        return Boolean.parseBoolean(getString(parent,tag,atributo));
+!!!130673.java!!!	getInt(in parent : String, in tag : String, in atributo : String) : int
+        return Integer.parseInt(getString(parent,tag,atributo));
+!!!130801.java!!!	getString(in parent : String, in tag : String, in atributo : String) : String
+        String value = "";
+        
+        List listaRaiz   = elementoRaiz.getChildren(parent);
+        Iterator itRaiz  = listaRaiz.iterator();
+
+        if(itRaiz.hasNext()){           
+            Element  parentElement = (Element)itRaiz.next();
+
+            Element tagElement = parentElement.getChild(tag);
+            
+            if (tagElement==null){
+                throw new Exception("Element not found ("+parent+">"+tag+") in file "+file.getName());
+            }
+
+            value=tagElement.getChildText(atributo);
+        }
+
+        return value;

@@ -1,11 +1,7 @@
 format 55
 "F2IBuilder"
-  revision 4
-  modified_by 13 "david"
-
-
-  
-  // class settings
+  revision 9
+  owner 13 "david"
   default_attribute_visibility protected default_relation_visibility protected default_operation_visibility public
   //class diagram settings
   draw_all_relations yes hide_attributes no hide_operations no show_members_full_definition no show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes show_members_initialization no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_infonote no shadow yes
@@ -36,8 +32,8 @@ format 55
 
   mark_for_import
   
-  java_dir "net/sourceforge/f2ibuilder"
-  java_package "net.sourceforge.f2ibuilder"
+  java_dir "net"
+  java_package "net"
   comment "F2IBuilder - Font To Image Builder
 http://f2ibuilder.sourceforge.net
 
@@ -47,4 +43,5 @@ http://davidferreirafz.wordpress.com"
 
   package_ref 129533 // javax.swing
 
+  package_ref 128241 // unknown
 end

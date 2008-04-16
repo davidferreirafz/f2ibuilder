@@ -26,8 +26,19 @@ class FileDialog
 		}
 		
 		return ok;		
-!!!171901.java!!!	getFilePathImage() : String
-		return imageFilePath;
+!!!146445.java!!!	showSaveDialogProject(inout component : Component) : boolean
+        int codeOption = dialogProject.showSaveDialog(component);
+        boolean ok = false;
+        
+        if (codeOption == JFileChooser.APPROVE_OPTION) {
+            File file = dialogProject.getSelectedFile();
+            
+            projectFilePath=file.getAbsolutePath();
+
+            ok=true;
+        }
+        
+        return ok;
 !!!172029.java!!!	showSaveDialogMetric(inout componente : Component) : boolean
 		int codeOption = dialogMetrica.showSaveDialog(componente);
 		boolean ok = false;
@@ -42,5 +53,22 @@ class FileDialog
 		}
 		
 		return ok;
+!!!146573.java!!!	showOpenDialogProject(inout component : Component) : boolean
+        int codeOption = dialogProject.showOpenDialog(component);
+        boolean ok = false;
+        
+        if (codeOption == JFileChooser.APPROVE_OPTION) {
+            File file = dialogProject.getSelectedFile();
+            
+            projectFilePath=file.getAbsolutePath();
+
+            ok=true;
+        }
+        
+        return ok;
+!!!171901.java!!!	getFilePathImage() : String
+		return imageFilePath;
 !!!172157.java!!!	getFilePathMetric() : String
 		return metricFilePath;
+!!!146701.java!!!	getFilePathProject() : String
+        return projectFilePath;

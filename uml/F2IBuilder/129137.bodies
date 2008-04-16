@@ -1,0 +1,5 @@
+class FileProjectFilter
+!!!131825.java!!!	isAccept(inout info : FileInfo) : boolean
+        return info.isProject();
+!!!131953.java!!!	getDescription() : String
+		return "Project File (.f2i)";

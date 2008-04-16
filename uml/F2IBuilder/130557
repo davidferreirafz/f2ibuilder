@@ -1,9 +1,7 @@
 format 55
-"view" // src::net::sourceforge::f2ibuilder::application::view
-  revision 6
-  modified_by 13 "david"
-  // class settings
-  //class diagram settings
+"view"
+  revision 10
+  owner 13 "david"
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   //use case diagram settings
   package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
@@ -69,35 +67,46 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 	  b parent class_ref 137213 // JFrame
       end
 
-      attribute 136189 "serialVersionUID"
-	class_attribute const_attribute private explicit_type "long"
-	init_value "=  -2624245426643411739L"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
+      classrelation 134669 // <realization>
+	relation 134669 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134669 // <realization>
+	  b parent class_ref 128881 // IMementoSupported
       end
 
-      attribute 136317 "jPanel"
-	private explicit_type "JPanel"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      classrelation 137725 // comboFonte (<unidirectional association>)
-	relation 137725 --->
-	  a role_name "comboFonte" init_value "=  null" private
+      classrelation 135309 // menuImageType (<unidirectional association>)
+	relation 135309 --->
+	  a role_name "menuImageType" init_value "=  null" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 137725 // comboFonte (<unidirectional association>)
-	  b parent class_ref 129917 // ComboFonte
+	    classrelation_ref 135309 // menuImageType (<unidirectional association>)
+	  b parent class_ref 128113 // RadioGroup
+      end
+
+      classrelation 135437 // menuShadowVertical (<unidirectional association>)
+	relation 135437 --->
+	  a role_name "menuShadowVertical" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135437 // menuShadowVertical (<unidirectional association>)
+	  b parent class_ref 128113 // RadioGroup
+      end
+
+      classrelation 135565 // menuShadowHorizontal (<unidirectional association>)
+	relation 135565 --->
+	  a role_name "menuShadowHorizontal" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135565 // menuShadowHorizontal (<unidirectional association>)
+	  b parent class_ref 128113 // RadioGroup
+      end
+
+      classrelation 131341 // <dependency>
+	relation 131341 -_->
+	  a default
+	    classrelation_ref 131341 // <dependency>
+	  b parent class_ref 128909 // PrincipalActionFactory
       end
 
       classrelation 137853 // workspace (<unidirectional association>)
@@ -109,94 +118,6 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 	  b parent class_ref 137341 // SurfacePanel
       end
 
-      attribute 136445 "jJMenuBar"
-	private explicit_type "JMenuBar"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 136573 "menuFile"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 136701 "menuAjuda"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 136829 "itemSaveImage"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 136957 "itemSaveFontMetrics"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137085 "itemExportToXNA"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137213 "toolBar"
-	private explicit_type "JToolBar"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137341 "jPanel1"
-	private explicit_type "JPanel"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
       classrelation 137981 // comboTamanho (<unidirectional association>)
 	relation 137981 --->
 	  a role_name "comboTamanho" init_value "=  null" private
@@ -206,277 +127,13 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 	  b parent class_ref 129661 // ComboBox
       end
 
-      attribute 137469 "jPanel2"
-	private explicit_type "JPanel"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137597 "jPanel3"
-	private explicit_type "JPanel"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      classrelation 138109 // colorGroupo (<unidirectional association>)
+      classrelation 138109 // colorGroup (<unidirectional association>)
 	relation 138109 --->
-	  a role_name "colorGroupo" init_value "=  null" private
+	  a role_name "colorGroup" init_value "=  null" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 138109 // colorGroupo (<unidirectional association>)
+	    classrelation_ref 138109 // colorGroup (<unidirectional association>)
 	  b parent class_ref 137469 // ColorGroup
-      end
-
-      attribute 137725 "botaoNegrito"
-	private explicit_type "JToggleButton"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137853 "menuConfiguracao"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 137981 "menuItemShowGrid"
-	private explicit_type "JCheckBoxMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138109 "menuImageType"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138237 "itemImageTypePNG"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138365 "itemImageTypeBMP"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138493 "menuShadow"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138621 "menuShadowVertical"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138749 "menuShadowHorizontal"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 138877 "jRadioButtonMenuItem2"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139005 "jRadioButtonMenuItem3"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139133 "jRadioButtonMenuItem4"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139261 "jRadioButtonShadowVerticalNone"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139389 "jRadioButtonShadowVerticalUp"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139517 "jRadioButtonShadowVerticalDown"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139645 "menuItemUseMetric"
-	private explicit_type "JCheckBoxMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139773 "menuCharacterSet"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 139901 "jRadioButtonMenuItem8"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140029 "jRadioButtonMenuItem9"
-	private explicit_type "JRadioButtonMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140157 "menuSobre"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140285 "menuWebSite"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140413 "jPanel4"
-	private explicit_type "JPanel"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
       end
 
       classrelation 138237 // comboTexturaSize (<unidirectional association>)
@@ -486,83 +143,6 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 "
 	    classrelation_ref 138237 // comboTexturaSize (<unidirectional association>)
 	  b parent class_ref 129661 // ComboBox
-      end
-
-      attribute 140541 "menuCreditos"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140669 "menuItemAntialias"
-	private explicit_type "JCheckBoxMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140797 "menuItemAdjustCharset"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 140925 "menuAvancado"
-	private explicit_type "JMenu"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 141053 "menuItemAdjustMetrics"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 141181 "menuItemMetricsLimit"
-	private explicit_type "JMenuItem"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 141309 "jScrollPane"
-	private explicit_type "JScrollPane"
-	init_value "=  null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
       end
 
       classrelation 138365 // options (<unidirectional association>)
@@ -583,8 +163,27 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 	  b parent class_ref 131069 // FontText
       end
 
-      attribute 141437 "menuItemUseAlpha"
-	private explicit_type "JCheckBoxMenuItem"
+      classrelation 138621 // mediador (<unidirectional association>)
+	relation 138621 --->
+	  a role_name "mediador" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138621 // mediador (<unidirectional association>)
+	  b parent class_ref 135037 // MediatorView
+      end
+
+      classrelation 137725 // comboFonte (<unidirectional association>)
+	relation 137725 --->
+	  a role_name "comboFonte" init_value "=  null" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137725 // comboFonte (<unidirectional association>)
+	  b parent class_ref 129917 // ComboFonte
+      end
+
+      attribute 136189 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  -2624245426643411739L"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -593,13 +192,443 @@ Gerada e mantida pelo plugin Visual Editor da IDE Eclipse.
 	idl_decl ""
       end
 
-      classrelation 138621 // mediador (<unidirectional association>)
-	relation 138621 --->
-	  a role_name "mediador" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+      attribute 128141 "jPanel"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 138621 // mediador (<unidirectional association>)
-	  b parent class_ref 135037 // MediatorView
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128269 "jJMenuBar"
+	private explicit_type "JMenuBar"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128397 "menuFile"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128525 "menuAjuda"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128653 "itemSaveImage"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128781 "itemSaveFontMetrics"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128909 "itemExportToXNA"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129037 "itemOpenProject"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129165 "itemSaveProject"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129293 "toolBar"
+	private explicit_type "JToolBar"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129421 "jPanel1"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129549 "jPanel2"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129677 "jPanel3"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129805 "botaoNegrito"
+	private explicit_type "JToggleButton"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129933 "menuConfiguracao"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130061 "menuItemShowGrid"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130189 "radioImageTypePNG"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130317 "radioImageTypeBMP"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130445 "menuShadow"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130573 "radioShadowHorizontalNone"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130701 "radioShadowHorizontalLeft"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130829 "radioShadowHorizontalRight"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130957 "radioShadowVerticalNone"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131085 "radioShadowVerticalUp"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131213 "radioShadowVerticalDown"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131341 "menuItemUseMetric"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131469 "menuCharacterSet"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131597 "radioCharacterSetFull"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131725 "radioCharacterSetNumeric"
+	private explicit_type "JRadioButtonMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131853 "menuSobre"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 131981 "menuWebSite"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132109 "jPanel4"
+	private explicit_type "JPanel"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132237 "menuCreditos"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132365 "menuItemAntialias"
+	private explicit_type "JCheckBoxMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132493 "menuItemAdjustCharset"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132621 "menuAvancado"
+	private explicit_type "JMenu"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132749 "menuItemAdjustMetrics"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132877 "menuItemMetricsLimit"
+	private explicit_type "JMenuItem"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133005 "jScrollPane"
+	private explicit_type "JScrollPane"
+	init_value "=  null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133133 "menuItemUseAlpha"
+	private explicit_type "JCheckBoxMenuItem"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
 
       operation 154237 "Principal"
@@ -617,7 +646,7 @@ This is the default constructor
 "
       end
 
-      operation 154365 "getFontText"
+      operation 137741 "getFontText"
 	private return_type class_ref 131069 // FontText
 	nparams 0
 	
@@ -629,7 +658,7 @@ This is the default constructor
 	
       end
 
-      operation 154493 "getOptions"
+      operation 137869 "getOptions"
 	private return_type class_ref 132477 // Options
 	nparams 0
 	
@@ -641,7 +670,7 @@ This is the default constructor
 	
       end
 
-      operation 154621 "getImagePanel"
+      operation 137997 "getImagePanel"
 	protected return_type class_ref 137341 // SurfacePanel
 	nparams 0
 	
@@ -653,7 +682,7 @@ This is the default constructor
 	
       end
 
-      operation 154749 "initialize"
+      operation 138125 "initialize"
 	private explicit_return_type "void"
 	nparams 0
 	
@@ -668,7 +697,7 @@ This method initializes this
 "
       end
 
-      operation 154877 "getJPanel"
+      operation 138253 "getJPanel"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -685,7 +714,7 @@ This method initializes jPanel
 "
       end
 
-      operation 155005 "getComboFonte"
+      operation 138381 "getComboFonte"
 	private explicit_return_type "JComboBox"
 	nparams 0
 	
@@ -702,7 +731,7 @@ This method initializes comboURL
 "
       end
 
-      operation 155133 "getWorkspace"
+      operation 138509 "getWorkspace"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -719,7 +748,7 @@ This method initializes jPanel2
 "
       end
 
-      operation 155261 "getJJMenuBar"
+      operation 138637 "getJJMenuBar"
 	private explicit_return_type "JMenuBar"
 	nparams 0
 	
@@ -736,7 +765,7 @@ This method initializes jJMenuBar
 "
       end
 
-      operation 155389 "getMenuFile"
+      operation 138765 "getMenuFile"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -753,7 +782,7 @@ This method initializes File
 "
       end
 
-      operation 155517 "getMenuAjuda"
+      operation 138893 "getMenuAjuda"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -770,7 +799,7 @@ This method initializes menuSobre
 "
       end
 
-      operation 155645 "getItemSaveImage"
+      operation 139021 "getItemSaveImage"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -787,7 +816,7 @@ This method initializes itemSaveImage
 "
       end
 
-      operation 155773 "getItemSaveFontMetrics"
+      operation 139149 "getItemSaveFontMetrics"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -804,7 +833,7 @@ This method initializes itemSaveFontMetrics
 "
       end
 
-      operation 155901 "getItemExportToXNA"
+      operation 139277 "getItemExportToXNA"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -816,7 +845,31 @@ This method initializes itemSaveFontMetrics
 	
       end
 
-      operation 156029 "getToolBar"
+      operation 139405 "getItemOpenProject"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139533 "getItemSaveProject"
+	private explicit_return_type "JMenuItem"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139661 "getToolBar"
 	private explicit_return_type "JToolBar"
 	nparams 0
 	
@@ -833,7 +886,7 @@ This method initializes toolBar
 "
       end
 
-      operation 156157 "getJPanel1"
+      operation 139789 "getJPanel1"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -850,7 +903,7 @@ This method initializes jPanel1
 "
       end
 
-      operation 156285 "getComboTamanho"
+      operation 139917 "getComboTamanho"
 	private return_type class_ref 129661 // ComboBox
 	nparams 0
 	
@@ -867,7 +920,7 @@ This method initializes comboBox
 "
       end
 
-      operation 156413 "getJPanel2"
+      operation 140045 "getJPanel2"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -884,7 +937,7 @@ This method initializes jPanel2
 "
       end
 
-      operation 156541 "getJPanel3"
+      operation 140173 "getJPanel3"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -901,7 +954,7 @@ This method initializes jPanel3
 "
       end
 
-      operation 156669 "getColorGrupo"
+      operation 140301 "getColorGrupo"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -918,7 +971,7 @@ This method initializes jPanel4
 "
       end
 
-      operation 156797 "getBotaoNegrito"
+      operation 140429 "getBotaoNegrito"
 	private explicit_return_type "JToggleButton"
 	nparams 0
 	
@@ -935,7 +988,7 @@ This method initializes botaoNegrito
 "
       end
 
-      operation 156925 "getMenuConfiguracao"
+      operation 140557 "getMenuConfiguracao"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -952,7 +1005,7 @@ This method initializes menuConfiguracao
 "
       end
 
-      operation 157053 "getMenuItemShowGrid"
+      operation 140685 "getMenuItemShowGrid"
 	private explicit_return_type "JCheckBoxMenuItem"
 	nparams 0
 	
@@ -969,7 +1022,7 @@ This method initializes jCheckBoxMenuItem
 "
       end
 
-      operation 157181 "getMenuImageType"
+      operation 140813 "getMenuImageType"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -986,7 +1039,7 @@ This method initializes menuImageType
 "
       end
 
-      operation 157309 "getItemImageTypePNG"
+      operation 140941 "getRadioImageTypePNG"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -997,13 +1050,13 @@ This method initializes menuImageType
 	
 	
 	comment "
-This method initializes itemImageTypePNG	
+This method initializes radioImageTypePNG	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 157437 "getItemImageTypeBMP"
+      operation 141069 "getRadioImageTypeBMP"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1014,13 +1067,13 @@ This method initializes itemImageTypePNG
 	
 	
 	comment "
-This method initializes itemImageTypeBMP	
+This method initializes radioImageTypeBMP	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 157565 "getMenuShadow"
+      operation 141197 "getMenuShadow"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -1037,7 +1090,7 @@ This method initializes menuShadow
 "
       end
 
-      operation 157693 "getMenuShadowVertical"
+      operation 141325 "getMenuShadowVertical"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -1054,7 +1107,7 @@ This method initializes menuShadowVertical
 "
       end
 
-      operation 157821 "getMenuShadowHorizontal"
+      operation 141453 "getMenuShadowHorizontal"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -1071,7 +1124,7 @@ This method initializes menuShadowHorizontal
 "
       end
 
-      operation 157949 "getJRadioButtonMenuItem2"
+      operation 141581 "getRadioShadowHorizontalNone"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1082,13 +1135,13 @@ This method initializes menuShadowHorizontal
 	
 	
 	comment "
-This method initializes jRadioButtonMenuItem2	
+This method initializes radioShadowHorizontalNone	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 158077 "getJRadioButtonMenuItem3"
+      operation 141709 "getRadioShadowHorizontalLeft"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1099,13 +1152,13 @@ This method initializes jRadioButtonMenuItem2
 	
 	
 	comment "
-This method initializes jRadioButtonMenuItem3	
+This method initializes radioShadowHorizontalLeft	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 158205 "getJRadioButtonMenuItem4"
+      operation 141837 "getRadioShadowHorizontalRight"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1116,13 +1169,13 @@ This method initializes jRadioButtonMenuItem3
 	
 	
 	comment "
-This method initializes jRadioButtonMenuItem4	
+This method initializes radioShadowHorizontalRight	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 158333 "getjRadioButtonShadowVerticalNone"
+      operation 141965 "getRadioShadowVerticalNone"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1139,7 +1192,7 @@ This method initializes jRadioButtonMenuItem5
 "
       end
 
-      operation 158461 "getjRadioButtonShadowVerticalUp"
+      operation 142093 "getRadioShadowVerticalUp"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1156,7 +1209,7 @@ This method initializes jRadioButtonMenuItem6
 "
       end
 
-      operation 158589 "getjRadioButtonShadowVerticalDown"
+      operation 142221 "getRadioShadowVerticalDown"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1173,7 +1226,7 @@ This method initializes jRadioButtonMenuItem7
 "
       end
 
-      operation 158717 "getMenuItemUseMetric"
+      operation 142349 "getMenuItemUseMetric"
 	private explicit_return_type "JCheckBoxMenuItem"
 	nparams 0
 	
@@ -1190,7 +1243,7 @@ This method initializes jCheckBoxMenuItem1
 "
       end
 
-      operation 158845 "getMenuItemUseAlpha"
+      operation 142477 "getMenuItemUseAlpha"
 	private explicit_return_type "JCheckBoxMenuItem"
 	nparams 0
 	
@@ -1207,7 +1260,7 @@ This method initializes jCheckBoxMenuItem1
 "
       end
 
-      operation 158973 "getMenuCharacterSet"
+      operation 142605 "getMenuCharacterSet"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -1224,7 +1277,7 @@ This method initializes menuCharacterSet
 "
       end
 
-      operation 159101 "getJRadioButtonMenuItem8"
+      operation 142733 "getRadioCharacterSetFull"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1235,13 +1288,13 @@ This method initializes menuCharacterSet
 	
 	
 	comment "
-This method initializes jRadioButtonMenuItem8	
+This method initializes radioCharacterSetFull	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 159229 "getJRadioButtonMenuItem9"
+      operation 142861 "getRadioCharacterSetNumeric"
 	private explicit_return_type "JRadioButtonMenuItem"
 	nparams 0
 	
@@ -1252,13 +1305,13 @@ This method initializes jRadioButtonMenuItem8
 	
 	
 	comment "
-This method initializes jRadioButtonMenuItem9	
+This method initializes radioCharacterSetNumeric	
 	
 @return javax.swing.JRadioButtonMenuItem	
 "
       end
 
-      operation 159357 "getMenuSobre"
+      operation 142989 "getMenuSobre"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1275,7 +1328,7 @@ This method initializes jMenuItem2
 "
       end
 
-      operation 159485 "getMenuWebSite"
+      operation 143117 "getMenuWebSite"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1292,7 +1345,7 @@ This method initializes jMenuItem3
 "
       end
 
-      operation 159613 "getJPanel4"
+      operation 143245 "getJPanel4"
 	private explicit_return_type "JPanel"
 	nparams 0
 	
@@ -1309,7 +1362,7 @@ This method initializes jPanel4
 "
       end
 
-      operation 159741 "getComboTexturaSize"
+      operation 143373 "getComboTexturaSize"
 	private return_type class_ref 129661 // ComboBox
 	nparams 0
 	
@@ -1326,7 +1379,7 @@ This method initializes comboBox
 "
       end
 
-      operation 159869 "getMenuCreditos"
+      operation 143501 "getMenuCreditos"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1343,7 +1396,7 @@ This method initializes jMenuItem4
 "
       end
 
-      operation 159997 "getMenuItemAntialias"
+      operation 143629 "getMenuItemAntialias"
 	private explicit_return_type "JCheckBoxMenuItem"
 	nparams 0
 	
@@ -1360,7 +1413,7 @@ This method initializes jCheckBoxMenuItem2
 "
       end
 
-      operation 160125 "getMenuItemAdjustCharset"
+      operation 143757 "getMenuItemAdjustCharset"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1377,7 +1430,7 @@ This method initializes menuItemAdjustCharset
 "
       end
 
-      operation 160253 "getMenuAvancado"
+      operation 143885 "getMenuAvancado"
 	private explicit_return_type "JMenu"
 	nparams 0
 	
@@ -1394,7 +1447,7 @@ This method initializes menuAvancado
 "
       end
 
-      operation 160381 "getMenuItemAdjustMetrics"
+      operation 144013 "getMenuItemAdjustMetrics"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1411,7 +1464,7 @@ This method initializes menuItemAdjustMetrics
 "
       end
 
-      operation 160509 "getMenuItemMetricsLimit"
+      operation 144141 "getMenuItemMetricsLimit"
 	private explicit_return_type "JMenuItem"
 	nparams 0
 	
@@ -1428,7 +1481,7 @@ This method initializes menuItemMetricsLimit
 "
       end
 
-      operation 160637 "getJScrollPane"
+      operation 144269 "getJScrollPane"
 	private explicit_return_type "JScrollPane"
 	nparams 0
 	
@@ -1440,11 +1493,49 @@ This method initializes menuItemMetricsLimit
 	
       end
 
-      classrelation 131341 // <dependency>
-	relation 131341 -_->
+      operation 144397 "createMemento"
+	public return_type class_ref 129265 // ProjectMemento
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Implementação do suporte para a externalização do estado da classe, sem expor
+seus valores para manipulação de outras classes.
+
+Suporte ao design pattern: GoF - Memento
+"
+      end
+
+      operation 144525 "setMemento"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "memento" type class_ref 129265 // ProjectMemento
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Suporte para recuperação de um estado anterior
+
+Suporte ao design pattern: GoF - Memento
+
+@param memento objeto com o estado anterior
+"
+      end
+
+      classrelation 136973 // <dependency>
+	relation 136973 -_->
 	  a default
-	    classrelation_ref 131341 // <dependency>
-	  b parent class_ref 128909 // PrincipalActionFactory
+	    classrelation_ref 136973 // <dependency>
+	  b parent class_ref 129265 // ProjectMemento
       end
     end
 

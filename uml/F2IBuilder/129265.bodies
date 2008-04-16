@@ -1,0 +1,57 @@
+class ProjectMemento
+!!!132849.java!!!	isBold() : boolean
+        return bold;
+!!!132977.java!!!	setBold(inout bold : boolean) : void
+        this.bold = bold;
+!!!133105.java!!!	isUseMetrics() : boolean
+        return useMetrics;
+!!!133233.java!!!	setUseMetrics(inout useMetrics : boolean) : void
+        this.useMetrics = useMetrics;
+!!!133361.java!!!	isUseAlpha() : boolean
+        return useAlpha;
+!!!133489.java!!!	setUseAlpha(inout useAlpha : boolean) : void
+        this.useAlpha = useAlpha;
+!!!133617.java!!!	isAntialias() : boolean
+        return antialias;
+!!!133745.java!!!	setAntialias(inout antialias : boolean) : void
+        this.antialias = antialias;
+!!!133873.java!!!	isShowGrid() : boolean
+        return showGrid;
+!!!134001.java!!!	setShowGrid(inout showGrid : boolean) : void
+        this.showGrid = showGrid;
+!!!134129.java!!!	getFontSize() : String
+        return fontSize;
+!!!134257.java!!!	setFontSize(in fontSize : String) : void
+        this.fontSize = fontSize;
+!!!134385.java!!!	getFontName() : String
+        return fontName;
+!!!134513.java!!!	setFontName(in fontName : String) : void
+        this.fontName = fontName;
+!!!134641.java!!!	getTexturaSize() : String
+        return texturaSize;
+!!!134769.java!!!	setTexturaSize(in texturaSize : String) : void
+        this.texturaSize = texturaSize;
+!!!134897.java!!!	getFontColor() : Color
+        return new Color(fontColor);
+!!!135025.java!!!	setFontColor(in fontColor : int) : void
+        this.fontColor = fontColor;
+!!!135153.java!!!	getShadowColor() : Color
+        return new Color(shadowColor);
+!!!135281.java!!!	setShadowColor(in shadowColor : int) : void
+        this.shadowColor = shadowColor;
+!!!135409.java!!!	getBackgroundColor() : Color
+        return new Color(backgroundColor);
+!!!135537.java!!!	setBackgroundColor(in backgroundColor : int) : void
+        this.backgroundColor = backgroundColor;
+!!!135665.java!!!	getHorizontalShadow() : String
+        return horizontalShadow;
+!!!135793.java!!!	setHorizontalShadow(in horizontalShadow : String) : void
+        this.horizontalShadow = horizontalShadow;
+!!!135921.java!!!	getVerticalShadow() : String
+        return verticalShadow;
+!!!136049.java!!!	setVerticalShadow(in verticalShadow : String) : void
+        this.verticalShadow = verticalShadow;
+!!!136177.java!!!	getImageType() : String
+        return imageType;
+!!!136305.java!!!	setImageType(in imageType : String) : void
+        this.imageType = imageType;
