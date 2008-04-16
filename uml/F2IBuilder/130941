@@ -1,9 +1,7 @@
 format 55
-"generics" // src::net::sourceforge::f2ibuilder::application::controller::generics
-  revision 5
-  modified_by 102 "david"
-  // class settings
-  //class diagram settings
+"generics"
+  revision 11
+  owner 13 "david"
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   //use case diagram settings
   package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
@@ -419,6 +417,52 @@ ${members}}
       end
     end
 
+    class 128625 "OpenFile"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128241 // <realization>
+	relation 128241 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128241 // <realization>
+	  b parent class_ref 128753 // ActionListener
+      end
+
+      operation 131057 "actionPerformed"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "e" explicit_type "ActionEvent"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 131185 "action"
+	abstract protected explicit_return_type "void"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
     classdiagram 129533 "classes"
       draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
       size A4-Landscape
@@ -501,6 +545,20 @@ import com.wordpress.dukitan.componentes.browser.FacadeBrowser;
 ${definition}"
       associated_classes
 	class_ref 134909 // OpenWebSite
+      end
+    end
+
+    artifact 128369 "OpenFile"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+${definition}"
+      associated_classes
+	class_ref 128625 // OpenFile
       end
     end
   end

@@ -1,0 +1,23 @@
+class OpenFileProject
+!!!131313.java!!!	OpenFileProject(inout form : IMementoSupported)
+        this.form = form;
+!!!131441.java!!!	action(inout component : Component) : void
+        
+        FileDialog fd = FileDialog.getInstance();
+        
+        if(fd.showOpenDialogProject(component)){
+            
+            String filename = fd.getFilePathProject();
+ 
+            if (!filename.endsWith(".f2i")){
+                filename+=".f2i";
+            }
+            
+            MementoXML xml = new MementoXML(new File(filename));
+            
+            try {
+                form.setMemento(xml.toMemento());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null,"Open Project: "+e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }        

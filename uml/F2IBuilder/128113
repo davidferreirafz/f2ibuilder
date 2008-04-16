@@ -1,6 +1,7 @@
 format 55
-"background"
-  revision 9
+"radio"
+  revision 1
+  modified_by 113 "david"
   owner 13 "david"
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   //use case diagram settings
@@ -24,9 +25,9 @@ format 55
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default
   
-  java_dir "net/sourceforge/f2ibuilder/application/view/image/draw/background"
-  java_package "net.sourceforge.f2ibuilder.application.view.image.draw.background"
-  classview 131325 "background"
+  java_dir "com/wordpress/dukitan/componentes/ui/radio"
+  java_package "com.wordpress.dukitan.componentes.ui.radio"
+  classview 128113 "radio"
     //class diagram settings
     draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
     //collaboration diagram settings
@@ -42,63 +43,7 @@ format 55
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default
-    class 136317 "BackgroundStrategy"
-      abstract visibility public stereotype "GoF - Strategy"
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      comment "
-Algoritmo para desenhar o background da imagem.
-
-Design Pattern: GoF - Strategy 
-
-@author David Ferreira - davidferreira.fz@gmail.com
-"
-      operation 165629 "draw"
-	abstract public explicit_return_type "void"
-	nparams 3
-	  param inout name "graphics" explicit_type "Graphics"
-	  param inout name "color" explicit_type "Color"
-	  param inout name "dimension" explicit_type "Dimension"
-	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "
-Desenha a cor de fundo
-@param graphics Contexto Gráfico
-@param color cor de fundo
-@param dimension dimensão da imagem
-"
-      end
-
-      operation 165757 "getColorChannel"
-	abstract public explicit_return_type "int"
-	nparams 0
-	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "
-Retorna o tipo de sistema de cores a ser utilizado na imagem
-@return Tipo de cores a ser utilizado
-"
-      end
-    end
-
-    class 138365 "BackgroundApha"
+    class 128113 "RadioGroup"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -110,43 +55,70 @@ ${members}}
       explicit_switch_type ""
       
       comment "
-Aplica o algoritmo para usar alpha no background.
+@author David Ferreira <davidferreira.fz@gmail.com>
 
-Designer Pattern: Strategy
+Project: F2IBuilder
+Date: 11/04/2008
 
-@author David Ferreira - davidferreira.fz@gmail.com
 "
-      classrelation 140541 // <generalisation>
-	relation 140541 ---|>
+      classrelation 128113 // <generalisation>
+	relation 128113 ---|>
 	  a public
 	    java "${type}"
-	    classrelation_ref 140541 // <generalisation>
-	  b parent class_ref 136317 // BackgroundStrategy
+	    classrelation_ref 128113 // <generalisation>
+	  b parent class_ref 128241 // JMenu
       end
 
-      operation 165885 "draw"
-	public explicit_return_type "void"
-	nparams 3
-	  param inout name "graphics" explicit_type "Graphics"
-	  param inout name "color" explicit_type "Color"
-	  param inout name "dimension" explicit_type "Dimension"
+      attribute 128113 "serialVersionUID"
+	class_attribute const_attribute private explicit_type "long"
+	init_value "=  -3405989630214570088L"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128241 "table"
+	private explicit_type "String,JRadioButtonMenuItem"
+	stereotype "HashMap"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128369 "imageTypeGroup"
+	package explicit_type "ButtonGroup"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 128113 "RadioGroup"
+	public explicit_return_type ""
+	nparams 0
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
-	comment "
-{@inheritDoc}
-"
       end
 
-      operation 166013 "getColorChannel"
-	public explicit_return_type "int"
-	nparams 0
+      operation 128241 "add"
+	public explicit_return_type "JMenuItem"
+	nparams 1
+	  param inout name "item" explicit_type "JMenuItem"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	java_annotation "@Override
@@ -154,61 +126,17 @@ Designer Pattern: Strategy
 	
 	
 	
-	comment "
-{@inheritDoc}
+	comment " (non-Javadoc)
+@see javax.swing.JMenu#add(javax.swing.JMenuItem)
 "
       end
-    end
 
-    class 138493 "BackgroundFill"
-      visibility public 
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      comment "
-Aplica o algoritmo para usar background com preenchimento completo.
-
-Designer Pattern: Strategy
-
-@author David Ferreira - davidferreira.fz@gmail.com
-"
-      classrelation 140669 // <generalisation>
-	relation 140669 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 140669 // <generalisation>
-	  b parent class_ref 136317 // BackgroundStrategy
-      end
-
-      operation 166141 "draw"
+      operation 128369 "remove"
 	public explicit_return_type "void"
-	nparams 3
-	  param inout name "graphics" explicit_type "Graphics"
-	  param inout name "color" explicit_type "Color"
-	  param inout name "dimension" explicit_type "Dimension"
+	nparams 1
+	  param inout name "item" explicit_type "JMenuItem"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "
-{@inheritDoc}
-"
-      end
-
-      operation 166269 "getColorChannel"
-	public explicit_return_type "int"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	java_annotation "@Override
@@ -216,60 +144,57 @@ Designer Pattern: Strategy
 	
 	
 	
-	comment "
-{@inheritDoc}
+	comment " (non-Javadoc)
+@see javax.swing.JMenu#remove(javax.swing.JMenuItem)
 "
+      end
+
+      operation 128497 "setSelected"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "key" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 128625 "getSelected"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
       end
     end
   end
 
-  deploymentview 131197 "background"
+  deploymentview 128113 "radio"
     //deployment diagram settings
     package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
     draw_component_as_icon default show_component_req_prov default show_component_rea default
-    artifact 136445 "BackgroundStrategy"
+    artifact 128113 "RadioGroup"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import javax.swing.ButtonGroup;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JRadioButtonMenuItem;
 ${definition}"
       associated_classes
-	class_ref 136317 // BackgroundStrategy
-      end
-    end
-
-    artifact 136573 "BackgroundApha"
-      stereotype "source"
-      java_src "${comment}
-${package}
-${imports}
-import java.awt.AlphaComposite;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-${definition}"
-      associated_classes
-	class_ref 138365 // BackgroundApha
-      end
-    end
-
-    artifact 136701 "BackgroundFill"
-      stereotype "source"
-      java_src "${comment}
-${package}
-${imports}
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-${definition}"
-      associated_classes
-	class_ref 138493 // BackgroundFill
+	class_ref 128113 // RadioGroup
       end
     end
   end

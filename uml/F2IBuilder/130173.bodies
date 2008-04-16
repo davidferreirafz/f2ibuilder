@@ -28,3 +28,9 @@ class FileInfo
         } else {
             return false;
         }
+!!!130929.java!!!	isProject() : boolean
+        if (extension.equalsIgnoreCase("f2i")){
+            return true;
+        } else {
+            return false;
+        }

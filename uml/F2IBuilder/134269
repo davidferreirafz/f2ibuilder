@@ -1,9 +1,7 @@
 format 55
-"dialog" // src::net::sourceforge::f2ibuilder::components::dialog
-  revision 3
-  modified_by 14 "david"
-  // class settings
-  //class diagram settings
+"dialog"
+  revision 4
+  owner 13 "david"
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   //use case diagram settings
   package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
@@ -96,6 +94,16 @@ Designer Pattern: Singleton
 	idl_decl ""
       end
 
+      attribute 134541 "dialogProject"
+	private explicit_type "JFileChooser"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
       attribute 146557 "imageFilePath"
 	private explicit_type "String"
 	cpp_decl ""
@@ -109,6 +117,16 @@ Designer Pattern: Singleton
       end
 
       attribute 146685 "metricFilePath"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134925 "projectFilePath"
 	private explicit_type "String"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -167,19 +185,20 @@ Exibe a caixa de dialogo para salvar a imagem.
 "
       end
 
-      operation 171901 "getFilePathImage"
-	public explicit_return_type "String"
-	nparams 0
+      operation 146445 "showSaveDialogProject"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
 	comment "
-Retorna o caminho da imagem 
-@return caminho do arquivo
+@param component
+@return
 "
       end
 
@@ -201,6 +220,35 @@ Exibe a caixa de dialogo para salvar a imagem.
 "
       end
 
+      operation 146573 "showOpenDialogProject"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 171901 "getFilePathImage"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+Retorna o caminho da imagem 
+@return caminho do arquivo
+"
+      end
+
       operation 172157 "getFilePathMetric"
 	public explicit_return_type "String"
 	nparams 0
@@ -214,6 +262,21 @@ Exibe a caixa de dialogo para salvar a imagem.
 	comment "
 Retorna o caminho do arquivo de métricas.
 @return caminho do arquivo
+"
+      end
+
+      operation 146701 "getFilePathProject"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
 "
       end
 
@@ -236,6 +299,7 @@ Retorna o caminho do arquivo de métricas.
       draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
       size A4
     end
+
   end
 
   deploymentview 131709 "dialog"

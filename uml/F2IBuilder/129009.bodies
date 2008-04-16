@@ -1,0 +1,23 @@
+class SaveFileProject
+!!!131569.java!!!	SaveFileProject(inout form : IMementoSupported)
+        this.form=form;
+!!!131697.java!!!	action(inout component : Component) : void
+   
+        FileDialog fd = FileDialog.getInstance();            
+        
+        if(fd.showSaveDialogProject(component)){
+            
+            String filename = fd.getFilePathProject();
+
+            if (!filename.endsWith(".f2i")){
+                filename+=".f2i";
+            }
+            
+            MementoXML xml = new MementoXML(new File(filename));
+
+            try {
+                xml.toFile(form.createMemento());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null,"Save Project: "+e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }

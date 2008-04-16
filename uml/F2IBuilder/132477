@@ -1,9 +1,7 @@
 format 55
-"file" // src::net::sourceforge::f2ibuilder::application::controller::file
-  revision 2
-  modified_by 68 ""
-  // class settings
-  //class diagram settings
+"file"
+  revision 4
+  owner 13 "david"
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   //use case diagram settings
   package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default
@@ -229,6 +227,134 @@ ${members}}
       draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
       size A4
     end
+
+    class 128497 "OpenFileProject"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128369 // <generalisation>
+	relation 128369 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128369 // <generalisation>
+	  b parent class_ref 128625 // OpenFile
+      end
+
+      classrelation 128497 // form (<unidirectional association>)
+	relation 128497 --->
+	  a role_name "form" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128497 // form (<unidirectional association>)
+	  b parent class_ref 128881 // IMementoSupported
+      end
+
+      operation 131313 "OpenFileProject"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "form" type class_ref 128881 // IMementoSupported
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 131441 "action"
+	protected explicit_return_type "void"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      classrelation 136845 // <dependency>
+	relation 136845 -_->
+	  a default
+	    classrelation_ref 136845 // <dependency>
+	  b parent class_ref 129393 // MementoXML
+      end
+    end
+
+    class 129009 "SaveFileProject"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128625 // <generalisation>
+	relation 128625 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128625 // <generalisation>
+	  b parent class_ref 134269 // SaveFile
+      end
+
+      classrelation 128753 // form (<unidirectional association>)
+	relation 128753 --->
+	  a role_name "form" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128753 // form (<unidirectional association>)
+	  b parent class_ref 128881 // IMementoSupported
+      end
+
+      operation 131569 "SaveFileProject"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "form" type class_ref 128881 // IMementoSupported
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 131697 "action"
+	protected explicit_return_type "void"
+	nparams 1
+	  param inout name "component" explicit_type "Component"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      classrelation 136717 // <dependency>
+	relation 136717 -_->
+	  a default
+	    classrelation_ref 136717 // <dependency>
+	  b parent class_ref 129393 // MementoXML
+      end
+    end
   end
 
   deploymentview 130173 "file"
@@ -288,6 +414,42 @@ import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
 ${definition}"
       associated_classes
 	class_ref 134653 // SaveFileXNA
+      end
+    end
+
+    artifact 128497 "OpenFileProject"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Component;
+import java.io.File;
+import javax.swing.JOptionPane;
+import net.sourceforge.f2ibuilder.application.controller.generics.OpenFile;
+import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
+import net.sourceforge.f2ibuilder.components.memento.MementoXML;
+${definition}"
+      associated_classes
+	class_ref 128497 // OpenFileProject
+      end
+    end
+
+    artifact 128625 "SaveFileProject"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Component;
+import java.io.File;
+import javax.swing.JOptionPane;
+import net.sourceforge.f2ibuilder.application.controller.generics.SaveFile;
+import net.sourceforge.f2ibuilder.components.dialog.FileDialog;
+import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
+import net.sourceforge.f2ibuilder.components.memento.MementoXML;
+${definition}"
+      associated_classes
+	class_ref 129009 // SaveFileProject
       end
     end
   end

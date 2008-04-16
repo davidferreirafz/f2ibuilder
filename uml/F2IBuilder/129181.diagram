@@ -3,7 +3,7 @@ format 55
 classcanvas 128013 class_ref 128397 // MetricsActionFactory
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   color lightblue
-  xyz 506 207 2005
+  xyz 506 203 2005
   end
 classcanvas 128029 class_ref 139261 // MetricsMap
   draw_all_relations default hide_attributes default hide_operations no show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
@@ -20,7 +20,7 @@ classcanvas 128029 class_ref 139261 // MetricsMap
     operation_ref 171005 // getPanelPreviewFormatado
     operation_ref 171133 // getAsciiLabel
     operation_ref 171261 // getFormatLabel
-  xyz 254 177 2004
+  xyz 259 172 2004
   end
 classcanvas 128095 class_ref 128893 // Observer
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
@@ -82,7 +82,7 @@ classcanvas 131613 class_ref 130685 // FontTextAction
     operation_ref 133757 // mouseExited
     operation_ref 133885 // mousePressed
     operation_ref 134013 // mouseReleased
-  xyz 733 660 2004
+  xyz 725 652 2004
   end
 classcanvas 132125 class_ref 130813 // ActionListener
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
@@ -97,24 +97,24 @@ classcanvas 132509 class_ref 130941 // MouseListener
 classcanvas 133661 class_ref 131325 // SaveItemTable
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   color lightred
-  xyz 671 563 2009
+  xyz 667 563 2009
   end
 classcanvas 134045 class_ref 131581 // SelectItemTable
   draw_all_relations default hide_attributes default hide_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_infonote default shadow default
   color lightred
-  xyz 519 562 2014
+  xyz 514 562 2014
   end
 relationcanvas 128141 relation_ref 129933 // <dependency>
   geometry HVH
-  from ref 128029 z 2003 to point 419 202
-  line 130189 z 2003 to point 419 236
+  from ref 128029 z 2003 to point 422 196
+  line 130189 z 2003 to point 422 231
   line 130317 z 2003 to ref 128013
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128157 relation_ref 141565 // <generalisation>
   geometry HVH
-  from ref 128029 z 1999 to point 163 202
-  line 128541 z 1999 to point 163 261
+  from ref 128029 z 1999 to point 166 196
+  line 128541 z 1999 to point 166 261
   line 128669 z 1999 to ref 128351
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -131,14 +131,14 @@ relationcanvas 128397 relation_ref 129805 // <dependency>
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128413 relation_ref 141821 // <unidirectional association>
   geometry VHV
-  from ref 128029 z 1999 to point 293 349
-  line 128797 z 1999 to point 301 349
+  from ref 128029 z 1999 to point 299 346
+  line 128797 z 1999 to point 300 346
   line 128925 z 1999 to ref 128406
-  role_a_pos 313 449 3000 no_role_b
+  role_a_pos 312 450 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128525 relation_ref 130061 // <generalisation>
   geometry HVH
-  from ref 128013 z 2004 to point 697 236
+  from ref 128013 z 2004 to point 697 231
   line 129037 z 2004 to point 697 231
   line 129165 z 2004 to ref 128269
   no_role_a no_role_b
@@ -147,7 +147,7 @@ relationcanvas 128534 relation_ref 136189 // <unidirectional association>
   from ref 128406 z 1999 to point 175 472
   line 128662 z 1999 to point 175 502
   line 128790 z 1999 to ref 128406
-  role_a_pos 145 481 3000 no_role_b
+  role_a_pos 145 482 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 128653 relation_ref 130189 // <dependency>
   from ref 128013 z 2004 to ref 129437
@@ -163,14 +163,14 @@ relationcanvas 128909 relation_ref 130445 // <dependency>
   no_multiplicity_a no_multiplicity_b
 relationcanvas 131741 relation_ref 130045 // <unidirectional association>
   geometry VHr
-  from ref 131613 z 1999 to point 301 695
+  from ref 131613 z 1999 to point 300 686
   line 134429 z 1999 to ref 128406
-  role_a_pos 313 542 3000 no_role_b
+  role_a_pos 312 540 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 131869 relation_ref 134909 // <generalisation>
   geometry VHV
-  from ref 129181 z 1999 to point 823 559
-  line 133405 z 1999 to point 801 559
+  from ref 129181 z 1999 to point 824 555
+  line 133405 z 1999 to point 793 555
   line 133533 z 1999 to ref 131613
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -182,41 +182,41 @@ relationcanvas 132253 relation_ref 134269 // <realization>
   no_multiplicity_a no_multiplicity_b
 relationcanvas 132381 relation_ref 129789 // <realization>
   geometry HV
-  from ref 131613 z 1999 to point 1030 695
+  from ref 131613 z 1999 to point 1030 686
   line 133021 z 1999 to ref 132125
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 132637 relation_ref 129917 // <realization>
   geometry HV
-  from ref 131613 z 1999 to point 949 695
+  from ref 131613 z 1999 to point 950 686
   line 133149 z 1999 to ref 132509
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 133789 relation_ref 130301 // <generalisation>
   geometry VHV
-  from ref 133661 z 1999 to point 720 629
-  line 134813 z 1999 to point 801 629
+  from ref 133661 z 1999 to point 716 625
+  line 134813 z 1999 to point 793 625
   line 134941 z 1999 to ref 131613
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 133917 relation_ref 135037 // <generalisation>
   geometry VHV
-  from ref 129309 z 1999 to point 725 511
-  line 135325 z 1999 to point 720 511
+  from ref 129309 z 1999 to point 726 511
+  line 135325 z 1999 to point 716 511
   line 135453 z 1999 to ref 133661
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 134173 relation_ref 130557 // <generalisation>
   geometry VHV
-  from ref 134045 z 1999 to point 572 629
-  line 134557 z 1999 to point 801 629
+  from ref 134045 z 1999 to point 567 625
+  line 134557 z 1999 to point 793 625
   line 134685 z 1999 to ref 131613
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 relationcanvas 134301 relation_ref 135293 // <generalisation>
   geometry VHV
-  from ref 129437 z 1999 to point 614 510
-  line 135069 z 1999 to point 572 510
+  from ref 129437 z 1999 to point 615 510
+  line 135069 z 1999 to point 567 510
   line 135197 z 1999 to ref 134045
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
