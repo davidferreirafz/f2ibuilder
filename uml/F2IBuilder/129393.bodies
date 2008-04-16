@@ -1,0 +1,70 @@
+class MementoXML
+!!!132337.java!!!	MementoXML(inout file : File)
+        this.file=file;
+!!!132465.java!!!	toFile(inout memento : ProjectMemento) : void
+        XMLFile xml = new XMLFile(file);
+               
+        Element root = xml.createRoot("F2IBuilder");
+
+        Element application = xml.createElement(root,"application");
+        
+        xml.createElement(application,"name","F2IBuilder");
+        xml.createElement(application,"version","3.5");
+
+        Element project = xml.createElement(root,"project"); 
+        
+        xml.createElement(project,"useMetrics",memento.isUseMetrics());
+        xml.createElement(project,"useAlpha",memento.isUseAlpha());
+        xml.createElement(project,"showGrid",memento.isShowGrid());
+        xml.createElement(project,"antialias",memento.isAntialias());
+
+        xml.createElement(project,"imageType",memento.getImageType());        
+
+        Element color =  xml.createElement(project,"color");
+        xml.createElement(color,"font",memento.getFontColor().getRGB());
+        xml.createElement(color,"shadow",memento.getShadowColor().getRGB());
+        xml.createElement(color,"background",memento.getBackgroundColor().getRGB());        
+
+        Element style =  xml.createElement(project,"style");
+        xml.createElement(style,"bold",memento.isBold());
+
+        Element font =  xml.createElement(project,"font");
+        xml.createElement(font,"name",memento.getFontName());
+        xml.createElement(font,"size",memento.getFontSize());
+
+        Element texture =  xml.createElement(project,"texture");
+        xml.createElement(texture,"size",memento.getTexturaSize());
+        
+        Element shadow =  xml.createElement(project,"shadow");
+        xml.createElement(shadow,"vertical",memento.getVerticalShadow());
+        xml.createElement(shadow,"horizontal",memento.getHorizontalShadow());
+        
+        xml.save();
+!!!132593.java!!!	toMemento() : ProjectMemento
+     
+        ProjectMemento memento = new ProjectMemento();
+        
+        XMLFile xml = new XMLFile(file);
+        xml.open();
+        
+        memento.setShowGrid(xml.getBoolean("project","showGrid"));
+        memento.setUseAlpha(xml.getBoolean("project","useAlpha"));
+        memento.setAntialias(xml.getBoolean("project","antialias"));
+        memento.setUseMetrics(xml.getBoolean("project","useMetrics"));
+        
+        memento.setImageType(xml.getString("project", "imageType"));
+        memento.setBold(xml.getBoolean("project","style", "bold"));
+        
+        memento.setTexturaSize(xml.getString("project","texture","size"));
+        
+        memento.setFontName(xml.getString("project","font","name"));
+        memento.setFontSize(xml.getString("project","font","size"));
+        
+        memento.setHorizontalShadow(xml.getString("project","shadow","horizontal"));
+        memento.setVerticalShadow(xml.getString("project","shadow","vertical"));
+        
+        memento.setBackgroundColor(xml.getInt("project","color","background"));
+        memento.setFontColor(xml.getInt("project","color","font"));
+        memento.setShadowColor(xml.getInt("project","color","shadow"));
+                
+        return memento;

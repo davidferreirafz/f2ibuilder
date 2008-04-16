@@ -1,7 +1,12 @@
 format 55
 "F2IBuilder"
-  revision 9
-  owner 13 "david"
+  revision 10
+  modified_by 95 "david"
+  owner 95 "david"
+
+
+  
+  // class settings
   default_attribute_visibility protected default_relation_visibility protected default_operation_visibility public
   //class diagram settings
   draw_all_relations yes hide_attributes no hide_operations no show_members_full_definition no show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes show_members_initialization no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_infonote no shadow yes
@@ -39,7 +44,9 @@ http://f2ibuilder.sourceforge.net
 
 David Ferreira
 http://davidferreirafz.wordpress.com"
-  package_ref 128125 // src
+  package_ref 128253 // com
+
+  package_ref 130045 // net
 
   package_ref 129533 // javax.swing
 
