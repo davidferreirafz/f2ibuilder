@@ -85,6 +85,7 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectTextureSizeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder{F2IBuilderMain.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileProject.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{IMementoSupported.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseAlphaCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;com.wordpress.dukitan.componentes.browser.type{BrowserMsWindows.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.button{BoldCommand.java"/>
@@ -99,8 +100,8 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileXNA.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectImageTypeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetMap.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{ProjectMemento.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{AboutActionFactory.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{PrincipalMemento.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetric.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{SelectItemTable.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{ResetMetrics.java"/>
