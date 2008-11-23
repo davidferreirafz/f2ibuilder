@@ -39,7 +39,7 @@ import net.sourceforge.f2ibuilder.application.view.image.draw.metric.MetricStrat
 import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowEffect;
 import net.sourceforge.f2ibuilder.application.view.image.draw.shadow.ShadowStrategy;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observable;
+import com.dukitan.componentes.gof.observer.Observable;
 
 /**
  * Classe com os dados relacionados as opções para geração da imagem.

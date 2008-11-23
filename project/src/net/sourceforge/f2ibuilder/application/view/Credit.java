@@ -41,7 +41,7 @@ import javax.swing.border.TitledBorder;
 import net.sourceforge.f2ibuilder.application.controller.CreditActionFactory;
 import net.sourceforge.f2ibuilder.util.Constants;
 
-import com.wordpress.dukitan.componentes.ui.image.ImagePanel;
+import com.dukitan.componentes.ui.image.ImagePanel;
 
 /**
  * Classe da tela Credit.

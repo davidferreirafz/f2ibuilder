@@ -27,7 +27,7 @@
 /*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.dialog.filter;
 
-import com.wordpress.dukitan.componentes.util.FileInfo;
+import com.dukitan.componentes.util.FileInfo;
 
 /**
  * Classe para filtrar a exibição dos arquivos,

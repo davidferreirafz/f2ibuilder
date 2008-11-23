@@ -34,7 +34,7 @@ import javax.swing.JPanel;
 
 import net.sourceforge.f2ibuilder.components.type.Limit;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observable;
+import com.dukitan.componentes.gof.observer.Observable;
 
 /**
  * Classe com os dados relacionados a fonte selecionada.

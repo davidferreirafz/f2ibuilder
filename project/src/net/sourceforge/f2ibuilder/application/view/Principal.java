@@ -61,9 +61,9 @@ import net.sourceforge.f2ibuilder.components.memento.ProjectMemento;
 import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 import net.sourceforge.f2ibuilder.util.Constants;
 
-import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
-import com.wordpress.dukitan.componentes.ui.combobox.ComboFonte;
-import com.wordpress.dukitan.componentes.ui.radio.RadioGroup;
+import com.dukitan.componentes.ui.combobox.ComboBox;
+import com.dukitan.componentes.ui.combobox.ComboFonte;
+import com.dukitan.componentes.ui.radio.RadioGroup;
 
 /**
  * Classe da tela Principal.

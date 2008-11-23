@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
 Sealed: true
-Class-Path: lib/jdom.jar    
+Class-Path: lib/dukitan-componentes.jar    
   
 Main-Class: net.sourceforge.f2ibuilder.F2IBuilderMain
-

@@ -31,8 +31,8 @@ import java.awt.Color;
 
 import javax.swing.JPanel;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observer;
-import com.wordpress.dukitan.componentes.ui.color.ColorPanel;
+import com.dukitan.componentes.gof.observer.Observer;
+import com.dukitan.componentes.ui.color.ColorPanel;
 
 /**
  * Agrupamento de ColorPanel, é usado para montar a exibição das três
