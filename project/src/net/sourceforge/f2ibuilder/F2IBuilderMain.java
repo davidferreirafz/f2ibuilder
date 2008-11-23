@@ -2,7 +2,7 @@
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
 /* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Blog            -  http://davidferreirafz.wordpress.com                   */
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
@@ -28,12 +28,8 @@
 package net.sourceforge.f2ibuilder;
 
 import java.awt.Dimension;
-
 import javax.swing.JOptionPane;
-
 import net.sourceforge.f2ibuilder.application.view.Principal;
-
-
 
 /**
  * Classe para iniciar a aplicação F2IBuilder
@@ -42,33 +38,34 @@ import net.sourceforge.f2ibuilder.application.view.Principal;
  */
 public class F2IBuilderMain
 {
-	protected Principal janela = null;
+    protected Principal janela = null;
 
-	/**
-	 * Cria janela e a centraliza.
-	 */
-	public void criarJanela()
-	{
-		janela = new Principal();
-		Dimension dim = janela.getToolkit().getScreenSize();      
-		int x = (int) (dim.getWidth()  - janela.getSize().getWidth() )/2;
-		int y = (int) (dim.getHeight() - janela.getSize().getHeight())/2;
-		janela.setLocation(x,y);
-		janela.setVisible(true);
-	}
-	
-	/**
-	 * Entry point da aplicação 
-	 * @param args
-	 */
-	public static void main(String[] args) 
-	{
-		try {
-			F2IBuilderMain executar = new F2IBuilderMain();
-			executar.criarJanela();
-		} catch (Exception e){
-			 JOptionPane.showMessageDialog(null,"F2IBuilder: "+e.getMessage());
-		}
-	}
+    /**
+     * Cria janela e a centraliza.
+     */
+    public void criarJanela()
+    {
+        janela = new Principal();
+        Dimension dim = janela.getToolkit().getScreenSize();
+        int x = (int) (dim.getWidth() - janela.getSize().getWidth()) / 2;
+        int y = (int) (dim.getHeight() - janela.getSize().getHeight()) / 2;
+        janela.setLocation(x, y);
+        janela.setVisible(true);
+    }
+
+    /**
+     * Entry point da aplicação
+     * 
+     * @param args
+     */
+    public static void main(String[] args)
+    {
+        try {
+            F2IBuilderMain executar = new F2IBuilderMain();
+            executar.criarJanela();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "F2IBuilder: " + e.getMessage());
+        }
+    }
 
 }
