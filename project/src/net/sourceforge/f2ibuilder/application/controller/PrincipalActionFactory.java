@@ -38,7 +38,7 @@ import net.sourceforge.f2ibuilder.application.view.metrics.MetricsLimit;
 import net.sourceforge.f2ibuilder.application.view.metrics.MetricsMap;
 import net.sourceforge.f2ibuilder.components.memento.IMementoSupported;
 
-import com.wordpress.dukitan.componentes.ui.combobox.ComboBox;
+import com.dukitan.componentes.ui.combobox.ComboBox;
 
 /**
  * 

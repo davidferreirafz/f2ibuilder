@@ -33,7 +33,7 @@ import java.io.IOException;
 
 import org.jdom.Element;
 
-import com.wordpress.dukitan.componentes.xml.XMLFile;
+import com.dukitan.componentes.xml.XMLFile;
 
 /**
  * Classe resposavel por transformar o objeto em xml, e o xml em objeto.

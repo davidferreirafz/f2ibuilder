@@ -34,9 +34,9 @@ package net.sourceforge.f2ibuilder.util;
  */
 public final class Constants
 {
-	final static public String TITULO = "F2IBuilder v3.3";
-	final static public String VERSAO = "3.3";	
-	final static public String VERSAO_EXPLICITA = "Version 3.3 - GPLv3 (Free Software)";
+	final static public String TITULO = "F2IBuilder v3.5";
+	final static public String VERSAO = "3.5";	
+	final static public String VERSAO_EXPLICITA = "Version 3.5 - GPLv3 (Free Software)";
 	final static public String GPL    = "GPL (Free Software)";
 	final static public String WEB_SITE = "http://f2ibuilder.sourceforge.net";
 }

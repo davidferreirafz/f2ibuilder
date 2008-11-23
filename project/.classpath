@@ -3,5 +3,6 @@
 	<classpathentry excluding="&apos;*.svn&apos;|&apos;*svn*&apos;|&apos;.svn/*&apos;|*svn*" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/dukitan-componentes.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

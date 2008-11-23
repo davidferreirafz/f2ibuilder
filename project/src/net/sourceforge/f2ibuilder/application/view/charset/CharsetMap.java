@@ -52,7 +52,7 @@ import javax.swing.table.DefaultTableModel;
 import net.sourceforge.f2ibuilder.application.controller.CharsetActionFactory;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observer;
+import com.dukitan.componentes.gof.observer.Observer;
 
 /**
  * Classe da tela CharsetMap.

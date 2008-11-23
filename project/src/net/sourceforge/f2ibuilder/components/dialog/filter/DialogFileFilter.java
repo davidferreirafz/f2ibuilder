@@ -31,7 +31,7 @@ import java.io.File;
 
 import javax.swing.filechooser.FileFilter;
 
-import com.wordpress.dukitan.componentes.util.FileInfo;
+import com.dukitan.componentes.util.FileInfo;
 
 /**
  * Classe de filtros, permite filtras os tipos de arquivos aceitos.

@@ -33,7 +33,7 @@ import net.sourceforge.f2ibuilder.application.model.FontText;
 import net.sourceforge.f2ibuilder.application.model.Options;
 import net.sourceforge.f2ibuilder.components.panel.ColorGroup;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observer;
+import com.dukitan.componentes.gof.observer.Observer;
 
 
 /**

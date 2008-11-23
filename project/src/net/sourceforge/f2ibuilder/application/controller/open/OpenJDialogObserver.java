@@ -29,7 +29,7 @@ package net.sourceforge.f2ibuilder.application.controller.open;
 
 import javax.swing.JDialog;
 
-import com.wordpress.dukitan.componentes.gof.observer.Observer;
+import com.dukitan.componentes.gof.observer.Observer;
 
 public class OpenJDialogObserver extends OpenJDialog
 {

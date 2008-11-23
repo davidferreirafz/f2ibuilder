@@ -34,7 +34,7 @@ import java.awt.event.MouseEvent;
 
 import net.sourceforge.f2ibuilder.util.Constants;
 
-import com.wordpress.dukitan.componentes.browser.FacadeBrowser;
+import com.dukitan.componentes.browser.FacadeBrowser;
 
 
 
