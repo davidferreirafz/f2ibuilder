@@ -1,5 +1,4 @@
 Manifest-Version: 1.0
-Sealed: true
-Class-Path: lib/dukitan-componentes.jar    
-  
+Class-Path: lib/dukitan-componentes.jar
 Main-Class: net.sourceforge.f2ibuilder.F2IBuilderMain
+
