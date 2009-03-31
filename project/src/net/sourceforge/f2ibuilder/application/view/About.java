@@ -257,7 +257,7 @@ public class About extends JDialog {
 			jLabel1 = new JLabel();
 			jLabel1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
-			jLabel1.setText("Fortaleza - Ceará - Brasil");
+			jLabel1.setText("Fortaleza - Ceará - Brazil");
 			jLabel1.setName("jLabel6");
 			jPanel7 = new JPanel();
 			jPanel7.setLayout(new CardLayout());
