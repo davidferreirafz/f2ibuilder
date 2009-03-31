@@ -51,6 +51,7 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.util{Constants.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.generics{OpenWebSite.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectSizeCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{SaveCharsetPosition.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.checkbox{UseMetricsCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{CharsetActionFactory.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view{About.java"/>
@@ -59,6 +60,7 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{Options.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetMap.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectImageTypeCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetPosition.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{AboutActionFactory.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{ProjectMemento.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetric.java"/>
@@ -74,6 +76,7 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.mediator{IMediatorView.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileMetrics.java"/>
         <file path="/F2IBuilder/resource/dukitan.png"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.charset{ResetCharsetPosition.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{ResetMetrics.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.combobox{SelectFontCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.dialog{FileDialog.java"/>
