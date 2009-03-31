@@ -54,25 +54,6 @@ public class ShadowEffect extends ShadowStrategy
     @Override
     public Dimension adjustShadow()
     {
-        Dimension ajuste = new Dimension(horizontal(),vertical());
-        
-        if (ajuste.width<0){
-            ajuste.width=0;
-        }
-
-        if (ajuste.height<0){
-            ajuste.height=0;
-        }        
-        
-        return ajuste;
-    }
-
-    @Override
-    /**
-     * {@inheritDoc}
-     */
-    public Dimension adjustFont()
-    {
         Dimension ajuste = new Dimension(0,0);
         
         if (horizontal()<0){
@@ -83,6 +64,25 @@ public class ShadowEffect extends ShadowStrategy
             ajuste.height=vertical()*(-1);
         }        
         
-        return ajuste;
+        return ajuste;        
+    }
+
+    @Override
+    /**
+     * {@inheritDoc}
+     */
+    public Dimension adjustFont()
+    {
+        Dimension ajuste = new Dimension(horizontal(),vertical());
+        
+        if (ajuste.width<0){
+            ajuste.width=0;
+        }
+
+        if (ajuste.height<0){
+            ajuste.height=0;
+        }        
+        
+        return ajuste;        
     }
 }
