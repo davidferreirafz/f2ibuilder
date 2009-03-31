@@ -220,7 +220,7 @@ public class PrincipalActionFactory extends ActionFactory
 
 
 
-    public static ActionListener makeOpenAdjustPosition(Frame frame,FontText fontText)
+    public static ActionListener makeOpenCharsetPosition(Frame frame,FontText fontText)
     {
         return new OpenJDialogObserver(new CharsetPosition(frame,fontText));
     }

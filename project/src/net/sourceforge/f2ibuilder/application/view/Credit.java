@@ -197,6 +197,7 @@ public class Credit extends JDialog {
 			texto.append("Alysson Bandeira <alyssonbandeira at gmail.com>\n");
 			texto.append("Christiano Milfont <cmilfont at gmail.com>\n");
 			texto.append("David G. Maziero <dgmdavid at bol.com.br>\n");
+            texto.append("Francois Orsini <francois.orsini at gmail.com>\n");			
 			jTextArea.setText(texto.toString());
 		}
 		return jTextArea;

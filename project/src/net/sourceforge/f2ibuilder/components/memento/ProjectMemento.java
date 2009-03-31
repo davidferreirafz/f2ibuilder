@@ -52,6 +52,8 @@ public class ProjectMemento
     private String fontSize;
     private String fontName;
     private String texturaSize;
+    private int fontPositionWidth;
+    private int fontPositionHeight;    
     
     private int fontColor;
     private int shadowColor;
@@ -230,6 +232,26 @@ public class ProjectMemento
     public void setImageType(String imageType)
     {
         this.imageType = imageType;
+    }
+
+    public int getFontPositionWidth()
+    {
+        return fontPositionWidth;
+    }
+
+    public void setFontPositionWidth(int fontPositionWidth)
+    {
+        this.fontPositionWidth = fontPositionWidth;
+    }
+
+    public int getFontPositionHeight()
+    {
+        return fontPositionHeight;
+    }
+
+    public void setFontPositionHeight(int fontPositionHeight)
+    {
+        this.fontPositionHeight = fontPositionHeight;
     }
 
 

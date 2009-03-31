@@ -74,7 +74,7 @@ public class MementoXML
         Element application = xml.createElement(root,"application");
         
         xml.createElement(application,"name","F2IBuilder");
-        xml.createElement(application,"version","3.5");
+        xml.createElement(application,"version","3.8");
 
         Element project = xml.createElement(root,"project"); 
         
@@ -96,6 +96,8 @@ public class MementoXML
         Element font =  xml.createElement(project,"font");
         xml.createElement(font,"name",memento.getFontName());
         xml.createElement(font,"size",memento.getFontSize());
+        xml.createElement(font,"positionWidth",memento.getFontPositionWidth());
+        xml.createElement(font,"positionHeight",memento.getFontPositionHeight());        
 
         Element texture =  xml.createElement(project,"texture");
         xml.createElement(texture,"size",memento.getTexturaSize());
@@ -132,6 +134,8 @@ public class MementoXML
         
         memento.setFontName(xml.getString("project","font","name"));
         memento.setFontSize(xml.getString("project","font","size"));
+        memento.setFontPositionWidth(xml.getInt("project","font","positionWidth"));
+        memento.setFontPositionHeight(xml.getInt("project","font","positionHeight"));               
         
         memento.setHorizontalShadow(xml.getString("project","shadow","horizontal"));
         memento.setVerticalShadow(xml.getString("project","shadow","vertical"));

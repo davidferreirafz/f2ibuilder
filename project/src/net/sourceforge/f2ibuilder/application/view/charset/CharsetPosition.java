@@ -40,7 +40,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import net.sourceforge.f2ibuilder.application.controller.CharsetActionFactory;
-import net.sourceforge.f2ibuilder.application.controller.MetricsActionFactory;
 import net.sourceforge.f2ibuilder.application.model.FontText;
 import com.dukitan.componentes.gof.observer.Observer;
 
@@ -177,7 +176,7 @@ public class CharsetPosition extends JDialog implements Observer{
 		if (jPanelWidth == null) {
 			jPanelWidth = new JPanel();
 			jPanelWidth.setLayout(new CardLayout());	
-			jPanelWidth.setBorder(BorderFactory.createTitledBorder(null, "Width", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
+			jPanelWidth.setBorder(BorderFactory.createTitledBorder(null, "Width (right)", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
 			jPanelWidth.setBounds(new Rectangle(15, 15, 110, 50));
 			jPanelWidth.add(getAjusteLargura(), getAjusteLargura().getName());
 		}
@@ -193,7 +192,7 @@ public class CharsetPosition extends JDialog implements Observer{
 		if (jPanelHeight == null) {
 			jPanelHeight = new JPanel();
 			jPanelHeight.setLayout(new CardLayout());
-			jPanelHeight.setBorder(BorderFactory.createTitledBorder(null, "Height", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
+			jPanelHeight.setBorder(BorderFactory.createTitledBorder(null, "Height (upper)", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
 			jPanelHeight.setBounds(new Rectangle(150, 15, 110, 50));
 			jPanelHeight.add(getAjusteAltura(), getAjusteAltura().getName());
 		}

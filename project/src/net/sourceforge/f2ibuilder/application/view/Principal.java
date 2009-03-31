@@ -912,7 +912,9 @@ public class Principal extends JFrame implements IMementoSupported
 			comboTexturaSize.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			comboTexturaSize.addItem("Auto");		
 			comboTexturaSize.addItem("128");  comboTexturaSize.addItem("256");
-			comboTexturaSize.addItem("512");  comboTexturaSize.addItem("1024");
+            comboTexturaSize.addItem("320");  comboTexturaSize.addItem("512");			
+			comboTexturaSize.addItem("640");  comboTexturaSize.addItem("800");
+			comboTexturaSize.addItem("960");  comboTexturaSize.addItem("1024");
 			comboTexturaSize.addItemListener(PrincipalActionFactory.makeSelectTextureSizeCommand(getOptions(),getFontText()));			
 		}
 		return comboTexturaSize;
@@ -989,9 +991,9 @@ public class Principal extends JFrame implements IMementoSupported
     private JMenuItem getMenuItemAdjustPosition() {
         if (menuItemAdjustPosition == null) {
             menuItemAdjustPosition = new JMenuItem();
-            menuItemAdjustPosition.setActionCommand("Adjust Position Charset");
-            menuItemAdjustPosition.setText("Adjust Position Charset...");
-            menuItemAdjustPosition.addActionListener(PrincipalActionFactory.makeOpenAdjustPosition(null,getFontText()));
+            menuItemAdjustPosition.setActionCommand("Adjust Charset Position");
+            menuItemAdjustPosition.setText("Adjust Charset Position...");
+            menuItemAdjustPosition.addActionListener(PrincipalActionFactory.makeOpenCharsetPosition(null,getFontText()));
         }
         return menuItemAdjustPosition;
     }
@@ -1054,7 +1056,7 @@ public class Principal extends JFrame implements IMementoSupported
         memento.setBold(botaoNegrito.isSelected());
         
         memento.setFontSize((String)comboTamanho.getSelectedItem());
-        memento.setFontName((String)comboFonte.getSelectedItem());
+        memento.setFontName((String)comboFonte.getSelectedItem());       
         memento.setTexturaSize((String)comboTexturaSize.getSelectedItem());
         
         memento.setFontColor(colorGroup.getCorFonte().getRGB());
@@ -1065,6 +1067,9 @@ public class Principal extends JFrame implements IMementoSupported
         memento.setVerticalShadow(menuShadowVertical.getSelected());
 
         memento.setImageType(menuImageType.getSelected());
+        
+        memento.setFontPositionWidth(fontText.getPositionAdjust().width);
+        memento.setFontPositionHeight(fontText.getPositionAdjust().height);
         
         return memento;
     }
@@ -1086,9 +1091,9 @@ public class Principal extends JFrame implements IMementoSupported
         botaoNegrito.setSelected(memento.isBold());
         
         comboTamanho.setSelectedItem(memento.getFontSize());
-        comboFonte.setSelectedItem(memento.getFontName());
+        comboFonte.setSelectedItem(memento.getFontName());       
         comboTexturaSize.setSelectedItem(memento.getTexturaSize());
-        
+               
         colorGroup.setCorFonte(memento.getFontColor());
         colorGroup.setCorSombra(memento.getShadowColor());
         colorGroup.setCorFundo(memento.getBackgroundColor());        
@@ -1097,6 +1102,8 @@ public class Principal extends JFrame implements IMementoSupported
         menuShadowVertical.setSelected(memento.getVerticalShadow());        
         
         menuImageType.setSelected(memento.getImageType());
+        
+        fontText.setPositionAdjust(memento.getFontPositionWidth(), memento.getFontPositionHeight());       
     }	
 	
 }  //  @jve:decl-index=0:visual-constraint="-35,-24"
