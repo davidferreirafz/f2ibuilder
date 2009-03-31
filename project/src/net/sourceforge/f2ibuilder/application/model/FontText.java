@@ -52,6 +52,7 @@ public class FontText extends Observable
     private JPanel panel;
     private Dimension dimensionDefault;
     private Limit limit;    
+    private Dimension positionAdjust;
     
     private int[] workCharset;
     private int[] workMetrics;
@@ -88,6 +89,7 @@ public class FontText extends Observable
         fontSize = 14;        
         
         dimensionDefault = new Dimension();
+        positionAdjust   = new Dimension(0,0);        
         limit = new Limit(0,dimensionDefault.width);
         
         resetCharset();        
@@ -179,6 +181,13 @@ public class FontText extends Observable
         resetMetrics();
     }
     /**
+     * Restaura o posicionamento de caracteres.
+     */
+    public void resetCharsetPosition()
+    {
+        setPositionAdjust(0,0);
+    }    
+    /**
      * Pega o caracter correspondente ao indice da tabela de caracteres passado.
      * @param i indice na tabela de caracteres
      * @return retorna a Letra correspondente
@@ -246,6 +255,19 @@ public class FontText extends Observable
         applyMetricsLimit();
         updateObserver();
     }
+    
+    /**
+     * Configura os novos limites das métricas.
+     * @param min largura mínima para os caracteres
+     * @param max largura máxima para os caracteres
+     */
+    public void setPositionAdjust(int largura, int altura)
+    {
+        positionAdjust.width=largura;
+        positionAdjust.height=altura;        
+        
+        updateObserver();
+    }    
     
     /**
      * Procura pelos limites default.
@@ -339,6 +361,14 @@ public class FontText extends Observable
     public int getFontAscent()
     {
         return panel.getFontMetrics(font).getAscent();
+    }
+    /**
+     * Retorna o Ajuste da posição.
+     * @return dimensao do ajuste na posição 
+     */
+    public Dimension getPositionAdjust()
+    {
+        return positionAdjust;
     }
     /**
      * Retorna o nome da fonte mais a informação de seu tamanho

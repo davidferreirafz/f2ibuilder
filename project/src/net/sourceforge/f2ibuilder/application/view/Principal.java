@@ -165,6 +165,8 @@ public class Principal extends JFrame implements IMementoSupported
 
 	private JMenuItem menuItemAdjustMetrics = null;
 
+	private JMenuItem menuItemAdjustPosition = null;
+	
 	private JMenuItem menuItemMetricsLimit = null;
 
 	private JScrollPane jScrollPane = null;
@@ -971,13 +973,29 @@ public class Principal extends JFrame implements IMementoSupported
 		if (menuAvancado == null) {
 			menuAvancado = new JMenu();
 			menuAvancado.setText("Advanced");
+            menuAvancado.add(getMenuItemAdjustPosition());			
 			menuAvancado.add(getMenuItemAdjustCharset());
 			menuAvancado.add(getMenuItemAdjustMetrics());
-			menuAvancado.add(getMenuItemMetricsLimit());
+			menuAvancado.add(getMenuItemMetricsLimit());		
 		}
 		return menuAvancado;
 	}
 
+    /**
+     * This method initializes menuItemAdjustMetrics    
+     *  
+     * @return javax.swing.JMenuItem    
+     */
+    private JMenuItem getMenuItemAdjustPosition() {
+        if (menuItemAdjustPosition == null) {
+            menuItemAdjustPosition = new JMenuItem();
+            menuItemAdjustPosition.setActionCommand("Adjust Position Charset");
+            menuItemAdjustPosition.setText("Adjust Position Charset...");
+            menuItemAdjustPosition.addActionListener(PrincipalActionFactory.makeOpenAdjustPosition(null,getFontText()));
+        }
+        return menuItemAdjustPosition;
+    }
+    
 	/**
 	 * This method initializes menuItemAdjustMetrics	
 	 * 	

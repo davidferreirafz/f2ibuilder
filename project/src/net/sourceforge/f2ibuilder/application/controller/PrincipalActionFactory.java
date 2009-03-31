@@ -33,6 +33,7 @@ import net.sourceforge.f2ibuilder.application.model.Options;
 import net.sourceforge.f2ibuilder.application.view.About;
 import net.sourceforge.f2ibuilder.application.view.Credit;
 import net.sourceforge.f2ibuilder.application.view.charset.CharsetMap;
+import net.sourceforge.f2ibuilder.application.view.charset.CharsetPosition;
 import net.sourceforge.f2ibuilder.application.view.image.FontImage;
 import net.sourceforge.f2ibuilder.application.view.metrics.MetricsLimit;
 import net.sourceforge.f2ibuilder.application.view.metrics.MetricsMap;
@@ -218,6 +219,12 @@ public class PrincipalActionFactory extends ActionFactory
     }
 
 
+
+    public static ActionListener makeOpenAdjustPosition(Frame frame,FontText fontText)
+    {
+        return new OpenJDialogObserver(new CharsetPosition(frame,fontText));
+    }
+    
     public static ActionListener makeOpenCharsetMap(Frame frame,FontText fontText)
     {
         return new OpenJDialogObserver(new CharsetMap(frame,fontText));

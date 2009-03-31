@@ -25,44 +25,34 @@
 /* License.                                                                  */
 /*                                                                           */
 /*****************************************************************************/
-package net.sourceforge.f2ibuilder.application.view.image.draw.metric;
+package net.sourceforge.f2ibuilder.application.controller.charset;
 
-import java.awt.Dimension;
-import java.awt.Point;
+import javax.swing.JTextField;
 
+import net.sourceforge.f2ibuilder.application.controller.generics.base.FontTextAction;
 import net.sourceforge.f2ibuilder.application.model.FontText;
-import net.sourceforge.f2ibuilder.components.type.Counter;
 
-/**
- * Aplica o algoritmo para utilização métricas.
- * 
- * Designer Pattern: Strategy
- * 
- * @author David Ferreira - davidferreira.fz@gmail.com
- */
-public class MetricEffect extends MetricStrategy
+
+public class SaveCharsetPosition extends FontTextAction
 {
+    private JTextField width;
+    private JTextField height;  
+    
+    public SaveCharsetPosition(FontText fontText, JTextField width, JTextField height)
+    {
+        super(fontText);
+        this.width=width;
+        this.height=height;
+    }
 
     @Override
-    /**
-     * {@inheritDoc}
-     */    
-    public Dimension adjust(Dimension ajuste, Dimension dimensao, FontText fontText)
+    protected void action()
     {
-        return ajuste;        
-    }
-    /**
-     * {@inheritDoc}
-     */
-    public Point position(Counter count, Dimension dimensao, Dimension ajuste, FontText fontText)
-    {
-        Point p = new Point(0,0);
+        int largura=Integer.parseInt(width.getText());
+        int altura=Integer.parseInt(height.getText());
         
-        p.x=(count.column()*dimensao.width)+ajuste.width+fontText.getPositionAdjust().width;
-        p.y=(count.line()*dimensao.height)+ajuste.height+fontText.getFontAscent()-fontText.getPositionAdjust().height;
-        
-        return p;
+        fontText.setPositionAdjust(largura, altura);
     }
-   
+    
 
 }
