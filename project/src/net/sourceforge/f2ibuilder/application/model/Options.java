@@ -68,8 +68,8 @@ public class Options extends Observable
     private MetricStrategy metricStrategy;
     private ShadowStrategy shadowStrategy;
 
-    static public int IMAGE_TYPE_PNG = 0;
-    static public int IMAGE_TYPE_BMP = 1;
+    static final public int IMAGE_TYPE_PNG = 0;
+    static final public int IMAGE_TYPE_BMP = 1;
     
     static private Options instance;
 
