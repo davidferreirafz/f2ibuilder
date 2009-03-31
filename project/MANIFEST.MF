@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Class-Path: lib/dukitan-componentes.jar
+Class-Path: lib/dukitan-componentes.jar lib/jdom.jar
 Main-Class: net.sourceforge.f2ibuilder.F2IBuilderMain
 
