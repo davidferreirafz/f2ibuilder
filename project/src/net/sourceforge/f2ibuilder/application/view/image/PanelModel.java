@@ -8,12 +8,12 @@
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo ï¿½ parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder ï¿½ um software livre; vocï¿½ pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licenï¿½a Pï¿½blica Geral (GPL) GNU          */
+/* como publicada pela Fundaï¿½ï¿½o do Software Livre (FSF); na versï¿½o 2 da      */
+/* Licenï¿½a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -37,7 +37,7 @@ import com.dukitan.componentes.gof.observer.Observer;
 
 
 /**
- * Panel com Scrollbar e acesso aos dados da aplicação.
+ * Panel com Scrollbar e acesso aos dados da aplicaï¿½ï¿½o.
  * 
  * Designer Pattern: GoF - Observer
  * 
@@ -47,6 +47,7 @@ import com.dukitan.componentes.gof.observer.Observer;
  * 
  * @author David Ferreira - davidferreira.fz@gmail.com
  */
+@SuppressWarnings("serial")
 public abstract class PanelModel extends JPanelScrolling implements Observer
 {   
     protected FontText fontText;
@@ -56,9 +57,9 @@ public abstract class PanelModel extends JPanelScrolling implements Observer
 	/**
 	 * Construtor
 	 * 
-	 * @param fontText instância de FontText
-	 * @param options instância de Options
-	 * @param colorGroup instância de ColorGroup
+	 * @param fontText instï¿½ncia de FontText
+	 * @param options instï¿½ncia de Options
+	 * @param colorGroup instï¿½ncia de ColorGroup
 	 */
 	public PanelModel(FontText fontText, Options options, ColorGroup colorGroup)
     {
@@ -73,8 +74,8 @@ public abstract class PanelModel extends JPanelScrolling implements Observer
 	}	
 
 	/**
-	 * Retorna a dimensão default do maior caracter possível.
-	 * @return dimensão do caracter
+	 * Retorna a dimensï¿½o default do maior caracter possï¿½vel.
+	 * @return dimensï¿½o do caracter
 	 */
     protected Dimension getCharSpace()
     {

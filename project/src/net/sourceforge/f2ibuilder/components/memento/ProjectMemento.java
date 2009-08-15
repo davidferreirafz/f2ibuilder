@@ -54,6 +54,8 @@ public class ProjectMemento
     private String texturaSize;
     private int fontPositionWidth;
     private int fontPositionHeight;    
+    private int metricBigger;
+    private int metricLesser;
     
     private int fontColor;
     private int shadowColor;
@@ -254,7 +256,19 @@ public class ProjectMemento
         this.fontPositionHeight = fontPositionHeight;
     }
 
+	public int getMetricBigger() {
+		return metricBigger;
+	}
 
+	public void setMetricBigger(int metricBigger) {
+		this.metricBigger = metricBigger;
+	}
 
-    
+	public int getMetricLesser() {
+		return metricLesser;
+	}
+
+	public void setMetricLesser(int metricLesser) {
+		this.metricLesser = metricLesser;
+	}    
 }

@@ -3,6 +3,7 @@
 	<name>F2IBuilder</name>
 	<comment></comment>
 	<projects>
+		<project>DukItanComponentes</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

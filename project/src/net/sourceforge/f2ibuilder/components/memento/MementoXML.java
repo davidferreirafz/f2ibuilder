@@ -31,6 +31,8 @@ import java.io.File;
 import java.io.IOException;
 
 
+import net.sourceforge.f2ibuilder.util.Constants;
+
 import org.jdom.Element;
 
 import com.dukitan.componentes.xml.XMLFile;
@@ -74,7 +76,7 @@ public class MementoXML
         Element application = xml.createElement(root,"application");
         
         xml.createElement(application,"name","F2IBuilder");
-        xml.createElement(application,"version","3.8");
+        xml.createElement(application,"version",Constants.VERSAO);
 
         Element project = xml.createElement(root,"project"); 
         
@@ -98,7 +100,9 @@ public class MementoXML
         xml.createElement(font,"size",memento.getFontSize());
         xml.createElement(font,"positionWidth",memento.getFontPositionWidth());
         xml.createElement(font,"positionHeight",memento.getFontPositionHeight());        
-
+        xml.createElement(font,"metricLesser",memento.getMetricLesser());
+        xml.createElement(font,"metricBigger",memento.getMetricBigger());
+        
         Element texture =  xml.createElement(project,"texture");
         xml.createElement(texture,"size",memento.getTexturaSize());
         
@@ -136,6 +140,8 @@ public class MementoXML
         memento.setFontSize(xml.getString("project","font","size"));
         memento.setFontPositionWidth(xml.getInt("project","font","positionWidth"));
         memento.setFontPositionHeight(xml.getInt("project","font","positionHeight"));               
+        memento.setMetricLesser(xml.getInt("project","font","metricLesser"));
+        memento.setMetricBigger(xml.getInt("project","font","metricBigger")); 
         
         memento.setHorizontalShadow(xml.getString("project","shadow","horizontal"));
         memento.setVerticalShadow(xml.getString("project","shadow","vertical"));
