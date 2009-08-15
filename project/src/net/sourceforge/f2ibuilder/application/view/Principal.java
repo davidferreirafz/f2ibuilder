@@ -1071,6 +1071,9 @@ public class Principal extends JFrame implements IMementoSupported
         memento.setFontPositionWidth(fontText.getPositionAdjust().width);
         memento.setFontPositionHeight(fontText.getPositionAdjust().height);
         
+        memento.setMetricBigger(fontText.getMaiorLargura());
+        memento.setMetricLesser(fontText.getMenorLargura());
+        
         return memento;
     }
 
@@ -1103,7 +1106,8 @@ public class Principal extends JFrame implements IMementoSupported
         
         menuImageType.setSelected(memento.getImageType());
         
-        fontText.setPositionAdjust(memento.getFontPositionWidth(), memento.getFontPositionHeight());       
+        fontText.setPositionAdjust(memento.getFontPositionWidth(), memento.getFontPositionHeight());
+        fontText.setLimits(memento.getMetricLesser(), memento.getMetricBigger());
     }	
 	
 }  //  @jve:decl-index=0:visual-constraint="-35,-24"

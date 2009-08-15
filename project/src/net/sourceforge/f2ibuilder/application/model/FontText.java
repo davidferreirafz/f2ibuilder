@@ -249,8 +249,12 @@ public class FontText extends Observable
      */
     public void setLimits(int min, int max)
     {
-        limit.min = min;
-        limit.max = max;
+    	if ((min<0)||(max<=0)){
+            searchLimits();
+    	} else {
+    		limit.min = min;
+    		limit.max = max;		
+    	}
         
         applyMetricsLimit();
         updateObserver();
@@ -265,6 +269,10 @@ public class FontText extends Observable
     {
         positionAdjust.width=largura;
         positionAdjust.height=altura;        
+        
+        for (int i=0; i<256; i++){              
+            workMetrics[i]=originalMetrics[i]+largura;
+        }
         
         updateObserver();
     }    

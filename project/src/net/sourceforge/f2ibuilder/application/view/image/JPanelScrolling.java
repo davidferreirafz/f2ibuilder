@@ -8,12 +8,12 @@
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo ï¿½ parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder ï¿½ um software livre; vocï¿½ pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licenï¿½a Pï¿½blica Geral (GPL) GNU          */
+/* como publicada pela Fundaï¿½ï¿½o do Software Livre (FSF); na versï¿½o 2 da      */
+/* Licenï¿½a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -40,6 +40,7 @@ import javax.swing.SwingConstants;
  * 
  * @author David Ferreira - davidferreira.fz@gmail.com
  */
+@SuppressWarnings("serial")
 public abstract class JPanelScrolling extends JPanel implements Scrollable
 {
     /**
@@ -92,7 +93,7 @@ public abstract class JPanelScrolling extends JPanel implements Scrollable
 
     /**
      * Retorna o tamanho da area do panel.
-     * @return Dimensão do panel
+     * @return Dimensï¿½o do panel
      */
     abstract protected Dimension getWindowSize();
 }
