@@ -8,12 +8,12 @@
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo ï¿½ parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder ï¿½ um software livre; vocï¿½ pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licenï¿½a Pï¿½blica Geral (GPL) GNU          */
+/* como publicada pela Fundaï¿½ï¿½o do Software Livre (FSF); na versï¿½o 2 da      */
+/* Licenï¿½a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -911,10 +911,16 @@ public class Principal extends JFrame implements IMementoSupported
 			comboTexturaSize.setEditable(false);
 			comboTexturaSize.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			comboTexturaSize.addItem("Auto");		
-			comboTexturaSize.addItem("128");  comboTexturaSize.addItem("256");
-            comboTexturaSize.addItem("320");  comboTexturaSize.addItem("512");			
-			comboTexturaSize.addItem("640");  comboTexturaSize.addItem("800");
-			comboTexturaSize.addItem("960");  comboTexturaSize.addItem("1024");
+			comboTexturaSize.addItem("128");
+			comboTexturaSize.addItem("256");			
+            comboTexturaSize.addItem("320"); 
+            comboTexturaSize.addItem("512");            
+			comboTexturaSize.addItem("640");  
+			comboTexturaSize.addItem("800");			
+			comboTexturaSize.addItem("960");
+			comboTexturaSize.addItem("1024");			
+			comboTexturaSize.addItem("2048");
+			comboTexturaSize.addItem("4096");			
 			comboTexturaSize.addItemListener(PrincipalActionFactory.makeSelectTextureSizeCommand(getOptions(),getFontText()));			
 		}
 		return comboTexturaSize;
@@ -1039,8 +1045,8 @@ public class Principal extends JFrame implements IMementoSupported
 	
 
 	/**
-	 * Implementação do suporte para a externalização do estado da classe, sem expor
-	 * seus valores para manipulação de outras classes.
+	 * Implementaï¿½ï¿½o do suporte para a externalizaï¿½ï¿½o do estado da classe, sem expor
+	 * seus valores para manipulaï¿½ï¿½o de outras classes.
 	 * 
 	 * Suporte ao design pattern: GoF - Memento
 	 */
@@ -1078,7 +1084,7 @@ public class Principal extends JFrame implements IMementoSupported
     }
 
     /**
-     * Suporte para recuperação de um estado anterior
+     * Suporte para recuperaï¿½ï¿½o de um estado anterior
      * 
      * Suporte ao design pattern: GoF - Memento
      * 

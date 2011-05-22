@@ -58,9 +58,9 @@
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.file{SaveFileXNA.java"/>
         <file path="/F2IBuilder/copying"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.model{Options.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetMap.java"/>
-        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectImageTypeCommand.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetPosition.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.command.radio{SelectImageTypeCommand.java"/>
+        <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.view.charset{CharsetMap.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller{AboutActionFactory.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.components.memento{ProjectMemento.java"/>
         <javaElement handleIdentifier="=F2IBuilder/src&lt;net.sourceforge.f2ibuilder.application.controller.metrics{SaveMetric.java"/>
