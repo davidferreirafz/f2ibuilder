@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export VERSAO=3.9
+export VERSAO=3.10
 export PACKAGE_NAME=F2IBuilder.$VERSAO.bin.all.zip
 
 export RAIZ=/home/desenvolvimento/f2ibuilder
