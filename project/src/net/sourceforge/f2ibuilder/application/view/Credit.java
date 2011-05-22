@@ -8,12 +8,12 @@
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo ï¿½ parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder ï¿½ um software livre; vocï¿½ pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licenï¿½a Pï¿½blica Geral (GPL) GNU          */
+/* como publicada pela Fundaï¿½ï¿½o do Software Livre (FSF); na versï¿½o 2 da      */
+/* Licenï¿½a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -197,7 +197,8 @@ public class Credit extends JDialog {
 			texto.append("Alysson Bandeira <alyssonbandeira at gmail.com>\n");
 			texto.append("Christiano Milfont <cmilfont at gmail.com>\n");
 			texto.append("David G. Maziero <dgmdavid at bol.com.br>\n");
-            texto.append("Francois Orsini <francois.orsini at gmail.com>\n");			
+            texto.append("Francois Orsini <francois.orsini at gmail.com>\n");
+            texto.append("Jamie Woodhouse <me at jamiewoodhouse.co.uk>\n");		            
 			jTextArea.setText(texto.toString());
 		}
 		return jTextArea;

@@ -5,15 +5,15 @@
 /* Blog            -  http://davidferreirafz.wordpress.com                   */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
-/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
+/* Copyright (C) 2006-2011  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo ï¿½ parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder ï¿½ um software livre; vocï¿½ pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licenï¿½a Pï¿½blica Geral (GPL) GNU          */
+/* como publicada pela Fundaï¿½ï¿½o do Software Livre (FSF); na versï¿½o 2 da      */
+/* Licenï¿½a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -28,15 +28,15 @@
 package net.sourceforge.f2ibuilder.util;
 
 /**
- * Constantes informativas da aplicação.
+ * Constantes informativas da aplicaï¿½ï¿½o.
  * 
  * @author David Ferreira - davidferreira.fz@gmail.com
  */
 public final class Constants
 {
-	final static public String TITULO = "F2IBuilder v3.9";
-	final static public String VERSAO = "3.9";	
-	final static public String VERSAO_EXPLICITA = "Version 3.9 - GPLv3 (Free Software)";
+	final static public String TITULO = "F2IBuilder v3.10";
+	final static public String VERSAO = "3.10";	
+	final static public String VERSAO_EXPLICITA = "Version 3.10 - GPLv3 (Free Software)";
 	final static public String GPL    = "GPL (Free Software)";
 	final static public String WEB_SITE = "http://f2ibuilder.sourceforge.net";
 }
