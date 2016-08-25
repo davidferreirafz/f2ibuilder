@@ -5,9 +5,12 @@ F2IBuilder is a tool for generation of images i contend the characters, the gene
 
 F2IBuilder is a generator of bitmap fonts, opensource and multiplatform.
 
+Site: http://f2ibuilder.dukitan.com/
 
 -
 
 F2IBuilder, é uma ferramenta para geração de imagens contendo os caracteres de uma fonte (letra), a imagem gerada é utilizada basicamente em uma técnica chamada FontBitmap, que consiste na utilização de uma imagem contendo os caracteres que se deseja desenhar na tela, tal técnica é amplamente emprega em software multimídias e jogos.
 
 F2IBuilder, é um gerador de fontes bitmap, opensource e multiplataforma.
+
+Site: http://f2ibuilder.dukitan.com/
