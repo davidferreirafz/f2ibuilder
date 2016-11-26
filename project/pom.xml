@@ -1,0 +1,11 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.dukitan.f2ibuilder</groupId>
+  <artifactId>f2ibuilder</artifactId>
+  <version>3.10.1-SNAPSHOT</version>
+  <name>F2IBuilder</name>
+  <description>F2IBuilder is a tool for generation of images i contend the characters, the generated image is used basically in one called technique Bitmap Font, that consists of the use of an image contends the characters that if it desires to draw in the screen, such technique is widely uses in software multimedia and games.</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+  </build>
+</project>
