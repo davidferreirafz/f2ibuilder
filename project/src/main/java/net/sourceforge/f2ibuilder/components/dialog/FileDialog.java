@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -38,7 +38,7 @@ import net.sourceforge.f2ibuilder.components.dialog.filter.FileProjectFilter;
 
 /**
  * Caixa de Dialogo para salvar os arquivos.
- * Esta classe suporte as opções de salvar a imagem e a métrica das fontes.
+ * Esta classe suporte as opï¿½ï¿½es de salvar a imagem e a mï¿½trica das fontes.
  * 
  * Designer Pattern: Singleton
  * 
@@ -46,7 +46,7 @@ import net.sourceforge.f2ibuilder.components.dialog.filter.FileProjectFilter;
  */
 public class FileDialog
 {
-    //instância única da classe
+    //instï¿½ncia ï¿½nica da classe
 	static private FileDialog instance;
 	
 	//Caixas de dialogo para salvar
@@ -60,7 +60,7 @@ public class FileDialog
     private String projectFilePath;	
 	
 	/**
-	 * Construtor privado para implementação do Singleton
+	 * Construtor privado para implementaï¿½ï¿½o do Singleton
 	 */
 	private FileDialog()
 	{
@@ -77,8 +77,8 @@ public class FileDialog
 		dialogProject.setFileFilter(new FileProjectFilter());		
 	}
 	/**
-	 * Retorna a instância de FileDialog.
-	 * @return instância de FileDialog
+	 * Retorna a instï¿½ncia de FileDialog.
+	 * @return instï¿½ncia de FileDialog
 	 */
 	static public FileDialog getInstance()
 	{
@@ -140,7 +140,7 @@ public class FileDialog
 		return ok;
 	}
     /**
-     * Retorna o caminho do arquivo de métricas.
+     * Retorna o caminho do arquivo de mï¿½tricas.
      * @return caminho do arquivo
      */
 	public String getFilePathMetric()

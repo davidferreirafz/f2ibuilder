@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -45,7 +45,7 @@ import net.sourceforge.f2ibuilder.components.type.Counter;
 
 
 /**
- * Panel que desenha a imagem das letras e demais opções de acordo com as classes de modelo
+ * Panel que desenha a imagem das letras e demais opï¿½ï¿½es de acordo com as classes de modelo
  * 
  * Designer Pattern: Observer, Strategy
  * 
@@ -59,9 +59,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 	
     /**
      * Construtor
-     * @param fontText instância de {@link FontText}
-     * @param options  instância de {@link Options}
-     * @param colorGroup instância de {@link ColorGroup}
+     * @param fontText instï¿½ncia de {@link FontText}
+     * @param options  instï¿½ncia de {@link Options}
+     * @param colorGroup instï¿½ncia de {@link ColorGroup}
      */
 	public SurfacePanel(FontText fontText, Options options, ColorGroup colorGroup)
     {
@@ -145,9 +145,9 @@ public class SurfacePanel extends PanelModel implements FontImage
 	}
 	/**
 	 * Desenha o texto.
-	 * <BR> É utilizada por drawFont e drawShadow
-	 * @param dimensao Dimensão padrão da fonte
-	 * @param ajuste Ajuste necessário para o posicionamento da letra
+	 * <BR> ï¿½ utilizada por drawFont e drawShadow
+	 * @param dimensao Dimensï¿½o padrï¿½o da fonte
+	 * @param ajuste Ajuste necessï¿½rio para o posicionamento da letra
 	 */
 	private void drawText(Dimension dimensao, Dimension ajuste)
 	{

@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -63,8 +63,8 @@ public class FontText extends Observable
     
    
     /**
-     * Instância de FontText
-     * @return instância única de FontText
+     * Instï¿½ncia de FontText
+     * @return instï¿½ncia ï¿½nica de FontText
      */
     public static FontText getInstance()
     {
@@ -76,7 +76,7 @@ public class FontText extends Observable
     }
     
     /**
-     * Construtor privado para implementação do Singleton
+     * Construtor privado para implementaï¿½ï¿½o do Singleton
      */
     private FontText()
     {
@@ -117,7 +117,7 @@ public class FontText extends Observable
         panel.setFont(font);
     }
     /**
-     * Obtem as informações de métrica da fonte.
+     * Obtem as informaï¿½ï¿½es de mï¿½trica da fonte.
      */
     private void metricsDefault()
     {
@@ -140,7 +140,7 @@ public class FontText extends Observable
         limit.max=dimensionDefault.width;
     }
     /**
-     * Aplica os limites das métricas
+     * Aplica os limites das mï¿½tricas
      */
     private void applyMetricsLimit()
     {
@@ -157,7 +157,7 @@ public class FontText extends Observable
         dimensionDefault.width=limit.max;
     }
     /**
-     * Retonar as métricas para a definição default da fonte.
+     * Retonar as mï¿½tricas para a definiï¿½ï¿½o default da fonte.
      */
     public void resetMetrics()
     {
@@ -170,7 +170,7 @@ public class FontText extends Observable
     }
 
     /**
-     * Retorna os caracteres para definição default da tabelas ascii.
+     * Retorna os caracteres para definiï¿½ï¿½o default da tabelas ascii.
      */
     public void resetCharset()
     {
@@ -197,9 +197,9 @@ public class FontText extends Observable
         return String.valueOf((char)workCharset[i]);
     }
     /**
-     * Pega o código ascii do caracter correspondente ao indice da tabela de caracteres passado.
+     * Pega o cï¿½digo ascii do caracter correspondente ao indice da tabela de caracteres passado.
      * @param i indice na tabela de caracteres
-     * @return retorna o código ascii do caracter correspondente
+     * @return retorna o cï¿½digo ascii do caracter correspondente
      */
     public int getCharacterNumber(int i)
     {
@@ -208,7 +208,7 @@ public class FontText extends Observable
     /**
      * Define outro caracter na tabela
      * @param i indice na tabela de caracteres
-     * @param valor código ascii do caracter
+     * @param valor cï¿½digo ascii do caracter
      */
     public void setCharacter(int i,int valor)
     {       
@@ -218,7 +218,7 @@ public class FontText extends Observable
         updateObserver();
     }
     /**
-     * Define a métrica para um caracter.
+     * Define a mï¿½trica para um caracter.
      * @param i indice na tabela de caracteres
      * @param valor da largura do caracter
      */    
@@ -230,8 +230,8 @@ public class FontText extends Observable
         updateObserver();       
     }
     /**
-     * Define as métricas para todos os caracteres
-     * @param metricas array com as métricas de todos os caracteres
+     * Define as mï¿½tricas para todos os caracteres
+     * @param metricas array com as mï¿½tricas de todos os caracteres
      */
     public void setMetrics(int[] metricas)
     {
@@ -243,9 +243,9 @@ public class FontText extends Observable
     }        
 
     /**
-     * Configura os novos limites das métricas.
-     * @param min largura mínima para os caracteres
-     * @param max largura máxima para os caracteres
+     * Configura os novos limites das mï¿½tricas.
+     * @param min largura mï¿½nima para os caracteres
+     * @param max largura mï¿½xima para os caracteres
      */
     public void setLimits(int min, int max)
     {
@@ -261,9 +261,9 @@ public class FontText extends Observable
     }
     
     /**
-     * Configura os novos limites das métricas.
-     * @param min largura mínima para os caracteres
-     * @param max largura máxima para os caracteres
+     * Configura os novos limites das mï¿½tricas.
+     * @param min largura mï¿½nima para os caracteres
+     * @param max largura mï¿½xima para os caracteres
      */
     public void setPositionAdjust(int largura, int altura)
     {
@@ -340,7 +340,7 @@ public class FontText extends Observable
         return workMetrics[i];
     }
     /**
-     * Configura o Estilo da Fonte, se é negrito ou não
+     * Configura o Estilo da Fonte, se ï¿½ negrito ou nï¿½o
      * @param value true para utilizar negrito
      */
     public void setBold(boolean value)
@@ -354,7 +354,7 @@ public class FontText extends Observable
         make();
     }    
     /**
-     * Retorna a dimensão default(Máxima) do caracter.
+     * Retorna a dimensï¿½o default(Mï¿½xima) do caracter.
      * @return dimensao do caracter 
      */
     public Dimension getDefaultCharDimension()
@@ -363,7 +363,7 @@ public class FontText extends Observable
     }
     /**
      * Retorna a distancia entre o ponto que se deseja desenhar (virtual)
-     * e o ponto que de fato a fonte é desenhada.
+     * e o ponto que de fato a fonte ï¿½ desenhada.
      * @return distancia
      */   
     public int getFontAscent()
@@ -371,15 +371,15 @@ public class FontText extends Observable
         return panel.getFontMetrics(font).getAscent();
     }
     /**
-     * Retorna o Ajuste da posição.
-     * @return dimensao do ajuste na posição 
+     * Retorna o Ajuste da posiï¿½ï¿½o.
+     * @return dimensao do ajuste na posiï¿½ï¿½o 
      */
     public Dimension getPositionAdjust()
     {
         return positionAdjust;
     }
     /**
-     * Retorna o nome da fonte mais a informação de seu tamanho
+     * Retorna o nome da fonte mais a informaï¿½ï¿½o de seu tamanho
      * @return FonteName+"."+FontSize
      */
     public String getDefaultID()

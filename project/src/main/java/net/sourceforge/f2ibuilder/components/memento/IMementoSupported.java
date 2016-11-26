@@ -1,6 +1,30 @@
-/**
- * 
- */
+/*****************************************************************************/
+/* F2IBuilder      -  Font to Image Builder                                  */
+/* E-Mail          -  davidferreira.fz@gmail.com                             */
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
+/* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
+/* G.talk: davidferreira.fz@gmail.com                                        */
+/* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
+/*****************************************************************************/
+/*                                                                           */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
+/*                                                                           */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
+/*                                                                           */
+/*****************************************************************************/
+/*                                                                           */
+/* This file is part of F2IBuilder.                                          */
+/*                                                                           */
+/* F2IBuilder is free software; you can redistribute it and/or modify        */
+/* it under the terms of the GNU  Lesser General Public License (LGPL) as    */
+/* published by the Free Software Foundation; either version 2 of the        */
+/* License.                                                                  */
+/*                                                                           */
+/*****************************************************************************/
 package net.sourceforge.f2ibuilder.components.memento;
 
 /**
@@ -13,7 +37,7 @@ package net.sourceforge.f2ibuilder.components.memento;
 public interface IMementoSupported
 {
     /**
-     * Suporte para recuperação de um estado anterior
+     * Suporte para recuperaï¿½ï¿½o de um estado anterior
      * 
      * Suporte ao design pattern: GoF - Memento
      * 
@@ -22,8 +46,8 @@ public interface IMementoSupported
     public void setMemento(ProjectMemento memento);
     
     /**
-     * Implementação do suporte para a externalização do estado da classe, sem expor
-     * seus valores para manipulação de outras classes.
+     * Implementaï¿½ï¿½o do suporte para a externalizaï¿½ï¿½o do estado da classe, sem expor
+     * seus valores para manipulaï¿½ï¿½o de outras classes.
      * 
      * Suporte ao design pattern: GoF - Memento
      */

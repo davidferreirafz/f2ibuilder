@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo � parte do programa F2IBuilder.                              */
+/* Este arquivo é parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder � um software livre; voc� pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licen�a P�blica Geral (GPL) GNU          */
-/* como publicada pela Funda��o do Software Livre (FSF); na vers�o 2 da      */
-/* Licen�a                                                                   */
+/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
+/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
+/* Licença                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */

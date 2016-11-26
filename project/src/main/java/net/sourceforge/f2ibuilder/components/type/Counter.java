@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -39,14 +39,14 @@ public class Counter
     private int column;
     //Linha da contagem.
     private int line;
-    //Contar até
+    //Contar atï¿½
     private int maxCount;
     //Variavel contador interno
     private int i;
     
     /**
      * Construtor
-     * @param maxCount o valor máximo da contagem
+     * @param maxCount o valor mï¿½ximo da contagem
      */    
     public Counter(int maxCount)
     {

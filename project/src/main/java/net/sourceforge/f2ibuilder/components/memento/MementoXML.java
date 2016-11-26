@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -40,10 +40,10 @@ import com.dukitan.componentes.xml.XMLFile;
 /**
  * Classe resposavel por transformar o objeto em xml, e o xml em objeto.
  * 
- * Obs.: Devido a inúmeras recomendações encontradas na Internet, decidimos 
- * que não implementariamos a serelização default, e sim um mecanismo próprio
- * baseado em xml, o qual permitirá um maior controle e flexibilidade para 
- * manuteções e compatibilidades futuras.
+ * Obs.: Devido a inï¿½meras recomendaï¿½ï¿½es encontradas na Internet, decidimos 
+ * que nï¿½o implementariamos a serelizaï¿½ï¿½o default, e sim um mecanismo prï¿½prio
+ * baseado em xml, o qual permitirï¿½ um maior controle e flexibilidade para 
+ * manuteï¿½ï¿½es e compatibilidades futuras.
  * 
  * @author David Ferreira <davidferreira.fz@gmail.com>
  *

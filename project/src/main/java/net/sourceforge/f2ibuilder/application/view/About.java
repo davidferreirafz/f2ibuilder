@@ -1,19 +1,19 @@
 /*****************************************************************************/
 /* F2IBuilder      -  Font to Image Builder                                  */
 /* E-Mail          -  davidferreira.fz@gmail.com                             */
-/* Site            -  http://f2ibuilder.sourceforge.net                      */
-/* Blog            -  http://davidferreirafz.wordpress.com                   */ 
+/* Site            -  http://f2ibuilder.dukitan.com                          */
+/* Blog            -  http://fztech.dukitan.com                              */ 
 /* ICQ: 21877381      MSN: davidaf@uol.com.br                                */
 /* G.talk: davidferreira.fz@gmail.com                                        */
 /* Copyright (C) 2006-2008  David de Almeida Ferreira                        */
 /*****************************************************************************/
 /*                                                                           */
-/* Este arquivo é parte do programa F2IBuilder.                              */
+/* Este arquivo Ã© parte do programa F2IBuilder.                              */
 /*                                                                           */
-/* F2IBuilder é um software livre; você pode redistribui-lo e/ou             */
-/* modifica-lo dentro dos termos da Licença Pública Geral (GPL) GNU          */
-/* como publicada pela Fundação do Software Livre (FSF); na versão 2 da      */
-/* Licença                                                                   */
+/* F2IBuilder Ã© um software livre; vocÃª pode redistribui-lo e/ou             */
+/* modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral (GPL) GNU          */
+/* como publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da      */
+/* LicenÃ§a                                                                   */
 /*                                                                           */
 /*****************************************************************************/
 /*                                                                           */
@@ -140,7 +140,7 @@ public class About extends JDialog {
 		if (jPanel1 == null) {
 			jPanel1 = new ImagePanel();
 			jPanel1.setBounds(new java.awt.Rectangle(15,15,151,106));
-			jPanel1.loadImage("resource/david_ferreira.jpg");
+			jPanel1.loadImage("images/david_ferreira.jpg");
 		}
 		return jPanel1;
 	}
@@ -257,7 +257,7 @@ public class About extends JDialog {
 			jLabel1 = new JLabel();
 			jLabel1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
-			jLabel1.setText("Fortaleza - Ceará - Brazil");
+			jLabel1.setText("Fortaleza - CearÃ¡ - Brazil");
 			jLabel1.setName("jLabel6");
 			jPanel7 = new JPanel();
 			jPanel7.setLayout(new CardLayout());
