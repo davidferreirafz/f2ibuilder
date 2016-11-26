@@ -1,11 +1,84 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.dukitan.f2ibuilder</groupId>
-  <artifactId>f2ibuilder</artifactId>
-  <version>3.10.1-SNAPSHOT</version>
-  <name>F2IBuilder</name>
-  <description>F2IBuilder is a tool for generation of images i contend the characters, the generated image is used basically in one called technique Bitmap Font, that consists of the use of an image contends the characters that if it desires to draw in the screen, such technique is widely uses in software multimedia and games.</description>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-  </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dukitan.f2ibuilder</groupId>
+	<artifactId>f2ibuilder</artifactId>
+	<version>3.10.1-SNAPSHOT</version>
+	<name>F2IBuilder</name>
+	<description>F2IBuilder is a tool for generation of images i contend the characters, the generated image is used basically in one called technique Bitmap Font, that consists of the use of an image contends the characters that if it desires to draw in the screen, such technique is widely uses in software multimedia and games.</description>
+	<properties>
+		<jdk.version>1.7</jdk.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>localrepository</id>
+			<url>file://${project.basedir}/repo</url>
+		</repository>
+	</repositories>
+	<url>http://f2ibuilder.dukitan.com</url>
+	<organization>
+		<name>DukItan Software &amp; Games</name>
+		<url>http://softwares.dukitan.com</url>
+	</organization>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dukitan</groupId>
+			<artifactId>dukitan-componentes</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>net.sourceforge.f2ibuilder.F2IBuilderMain</mainClass>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- Copy project dependency -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration><!-- exclude junit, we need runtime dependency only -->
+							<includeScope>runtime</includeScope>
+							<outputDirectory>${project.build.directory}/lib/</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.dukitan</groupId>
+				<artifactId>dukitan-componentes</artifactId>
+				<version>1.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
