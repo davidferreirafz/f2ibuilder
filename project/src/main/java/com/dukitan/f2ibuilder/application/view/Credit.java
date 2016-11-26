@@ -150,7 +150,7 @@ public class Credit extends JDialog {
 		if (jPanel5 == null) {		
 			jPanel5 = new JPanel();
 			jPanel5.setLayout(new CardLayout());
-			jPanel5.setBounds(new java.awt.Rectangle(15,105,376,196));
+			jPanel5.setBounds(new java.awt.Rectangle(15,105,380,196));
 			jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thanks", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12), new java.awt.Color(51,51,51)));
 			jPanel5.add(getJTextArea(), getJTextArea().getName());
 		}
